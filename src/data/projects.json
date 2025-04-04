@@ -37,6 +37,17 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "imeg": "images/el-zakeroon (1).png",
+      "title": "El-Zakeroon",
+      "description": "Discover El-Zakeroon, a free Islamic web application that helps you Track your daily adhkar easily.",
+      "technology": ["NextJs", "TailwindCss", "typescript"],
+      "demo": "https://el-zakeroon.vercel.app/",
+      "github": "",
+      "video": "https://youtu.be/16rQx06Fl4Q",
+      "videoKey": "16rQx06Fl4Q",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "imeg": "images/finalFawriElmaliiik_cover.png",
       "title": "Fawri Elmaliiik",
       "description": "This project is a comprehensive system for managing customers tailored for express agency offices, developed using modern technologies to ensure high performance and user-friendliness. The system aims to simplify and improve the process of managing customers, allowing for easy and efficient addition, deletion, modification, and search of customers.",

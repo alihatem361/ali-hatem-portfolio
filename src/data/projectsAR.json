@@ -36,6 +36,19 @@
       "videoKey": "40jQddkcsg8",
       "codeStatus": "PRIVATE"
     },
+
+    {
+      "imeg": "images/el-zakeroon (1).png",
+      "title": "الذكرون",
+      "description": " الذاكرون - مساعدك الرقمي للأذكار والتسبيح ",
+      "technology": ["NextJs", "TailwindCss", "typescript"],
+      "demo": "https://el-zakeroon.vercel.app/",
+      "github": "",
+      "video": "https://youtu.be/16rQx06Fl4Q",
+      "videoKey": "16rQx06Fl4Q",
+      "codeStatus": "PRIVATE"
+    },
+
     {
       "imeg": "images/finalFawriElmaliiik_cover.png",
       "title": "فوري الماليك",
