@@ -1,368 +1,348 @@
 {
   "aboutme": [
     {
-      "heaaderimag": "images/header-background2.jpeg",
-      "name": "علي حاتم",
+      "heaaderimag": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/my_photo%2F4_5766984486784864570.jpg?alt=media&token=ca881978-cac8-4ce0-b62e-7fa22235f313",
+      "name": "عبد الرحمن حاتم رمضان",
       "bio": [
-        "مهندس برمجيات متخصص في React و Next.js ⚛️.",
-        "ملتزم بإنشاء واجهات مستخدم رائعة باستخدام HTML و CSS و JavaScript 💻.",
-        "لنتعاون ونصمم تجارب ويب استثنائية معًا! 🌟"
+        "مطور تطبيقات Flutter بخبرة تزيد عن سنتين، عملت على تطوير العديد من التطبيقات المتوفرة حاليًا على متجر Google Play، منها تطبيق باص مصر المشابه لتطبيق GoBus. لدي خبرة قوية في تصميم وتنفيذ واجهات المستخدم، إدارة الحالة باستخدام BLoC وProvider، ودمج واجهات برمجية RESTful وFirebase. أعمل بكفاءة ضمن فرق تطوير أو كمطور مستقل، وأسعى دائمًا إلى كتابة كود نظيف، منظم، وقابل للتوسع"
       ],
-      "cv": "https://drive.google.com/file/d/1dU6upNzlpnAvgxSFynd2X6sij8cemv8V/view?usp=share_link",
-      "footer": "images/footer.jpeg"
+      "cv": "https://drive.google.com/file/d/1YGfpPKc4UtOXZxx73Fv73hQ5nGsOozyM/view?usp=sharing",
+      "footer": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/my_photo%2F4_5766984486784864570.jpg?alt=media&token=ca881978-cac8-4ce0-b62e-7fa22235f313",
+      "title": "مطور تطبيقات الهواتف المحمولة"
     }
   ],
-
   "Projects": [
     {
-      "imeg": "images/2-5.png",
-      "title": "1M الإخوة",
-      "description": "الجزء الأمامي من مشروع تخرج للعام الأخير. مسؤول عن تطوير الجزء الأمامي بالكامل. موقع تبرع لحالات المرضى. يمكن للمستخدمين التبرع وتقديم حالات جديدة. تحميل الأوراق وانتظار موافقة المشرف. تكامل موفر الدفع. تصميم واجهة مستخدم بديهية. عرض لمهارات HTML و CSS و JavaScript. موقع وظيفي وجذاب بصريًا. تطبيق عملي في العالم الحقيقي.",
-      "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
-      "demo": "http://imbr.surge.sh/",
-      "github": "https://github.com/alihatem360/1m-brother_frontend",
-      "video": "https://youtu.be/BDsHi7dYvxc",
-      "videoKey": "BDsHi7dYvxc",
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2Fimages%2Fdonation_cover.png?alt=media&token=19bc0ff4-86de-4e09-b1e1-43c8d226790a",
+      "title": "1M Brothers",
+      "description": "تعتبر تطبيق 1M Brother هو تطبيق مصمم للتعامل مع حالات حرجة تتطلب مبالغ كبيرة من المال في وقت قصير. إنه يعتبر منصة لجمع التبرعات للأفراد والمناطق والمراكز الطبية التي تحتاج إلى أجهزة طبية مهمة. يهدف التطبيق إلى توحيد الأفراد الرحيمين الذين يمكنهم المساهمة في هذه القضايا العاجلة، مما يؤثر بشكل كبير على حياة الأشخاص.",
+      "technology": ["flutter", "bloc", ".net", "Api"],
+      "demo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2FAPK%2Fapp-release.apk?alt=media&token=07179037-1ebe-4192-9dfd-ac331f7a44eb",
+      "video": "https://youtu.be/WmriaoIy-C8",
+      "videoKey": "WmriaoIy-C8",
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/alshaatir-academy.png",
-      "title": "منصة الشاطر التعليمية",
-      "description": "منصة الشاطر هي تطبيق تعليمي مبتكر يساعد الطلاب على تحسين مهاراتهم وتنظيم وقتهم من خلال دروس تفاعلية، اختبارات، وأدوات مخصصة.",
-      "technology": ["NextJs", "Tailwind"],
-      "demo": "https://alshaatir-academy.vercel.app/",
-      "github": "",
-      "video": "https://youtu.be/40jQddkcsg8",
-      "videoKey": "40jQddkcsg8",
-      "codeStatus": "PRIVATE"
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/almawsueat%20aljamieih.png?alt=media&token=663093ca-2059-44f9-a4cc-d65783eaad4f",
+      "title": "موسعتي الجامعية",
+      "description": "تطبيق موسوعتي الجامعيه وهوه تطبيق يضم كل ما يفيد الطالب الجامعي من شروحات وكتب ومراجع ومحاضرات سواء كانت صوت او فيديو بالاضافه الى نماذج للأمتحانات فيما يخص كل الجامعات و المعاهد الموجوده في اليمن مدعوم بشكل رسمي من وزارة التعليم العالي",
+      "technology": ["Flutter", "Bloc", "Shared preferences", "Apis", "Dio"],
+      "demo": "https://play.google.com/store/apps/details?id=com.univ&pcampaignid=web_share"
     },
-
     {
-      "imeg": "images/el-zakeroon (1).png",
-      "title": "الذكرون",
-      "description": " الذاكرون - مساعدك الرقمي للأذكار والتسبيح ",
-      "technology": ["NextJs", "TailwindCss", "typescript"],
-      "demo": "https://el-zakeroon.vercel.app/",
-      "github": "",
-      "video": "https://youtu.be/16rQx06Fl4Q",
-      "videoKey": "16rQx06Fl4Q",
-      "codeStatus": "PRIVATE"
-    },
-
-    {
-      "imeg": "images/finalFawriElmaliiik_cover.png",
-      "title": "فوري الماليك",
-      "description": "هذا المشروع هو نظام متكامل لإدارة العملاء مخصص لمكاتب توكيل فوري، تم تطويره باستخدام تقنيات حديثة لضمان الأداء العالي وسهولة الاستخدام. يهدف النظام إلى تبسيط وتحسين عملية إدارة العملاء، مما يسمح بإضافة، حذف، تعديل، والبحث عن العملاء بكفاءة وسهولة.",
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Palestine.png?alt=media&token=c30b7ecf-34e7-49a3-816e-482706151514",
+      "title": "تطبيق فلسطين",
+      "description": "فلسطين الآن هو تطبيق فلسطيني يهدف إلى توثيق ومتابعة آخر الأحداث والتطورات في فلسطين لحظة بلحظة، من خلال واجهة حديثة وسهلة الاستخدام تتيح للمستخدمين الوصول إلى الأخبار والمستجدات بشكل مباشر وموثوق. يتميز التطبيق بشاشة تمهيدية (Onboarding) تسلط الضوء على أبرز المعالم التاريخية والدينية والثقافية في مدن وقرى فلسطين، مما يعزز الوعي بالهوية الفلسطينية ويربط المستخدم بجذور الأرض والتاريخ. صُمم التطبيق ليكون مصدرًا متكاملاً يجمع بين التوثيق الإعلامي والتعريف بالمعالم، ويخدم جميع المهتمين بالشأن الفلسطيني داخل وخارج الوطن",
       "technology": [
-        "ReactJs",
-        "Redux",
-        "material-ui",
-        "Api",
+        "Flutter",
+        "Bloc",
+        "Shared preferences",
         "Firebase",
-        "NodeJs"
+        "firebase authentication",
+        "firebase messaging",
+        "firebase storage"
       ],
-      "demo": "",
-      "github": "",
-      "video": "https://youtu.be/Zw9_UgIOrGg",
-      "videoKey": "Zw9_UgIOrGg",
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/makhabrash.png",
-      "title": "Makhabrash",
-      "description": "(مخبارش) هو تطبيق ويب يتيح للمستخدمين إرسال رسائل إلى أي شخص بشكل مجهول. تم تصميمه باستخدام React للواجهة الأمامية وFirebase لخدمات الواجهة الخلفية.",
-      "technology": ["ReactJs", "Tailwind", "Firebase"],
-      "demo": "https://makhabrash.vercel.app/",
-      "github": "https://github.com/alihatem360/Makhabrash",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "images/EcommerceWebsite.webp",
-      "title": "التجارة الإلكترونية باستخدام ReactJs",
-      "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
-      "demo": "",
-      "github": "https://github.com/alihatem360/ecommerceReactJS",
-      "video": "https://youtu.be/GBpBnKl0Rr8",
-      "videoKey": "GBpBnKl0Rr8",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "images/attendance recording.jpg",
-      "title": "إدارة المحاضرات ونظام تسجيل الحضور",
-      "technology": ["ReactJs", "Material-ui", "Firebase"],
-      "demo": "",
-      "github": "",
-      "video": "https://youtu.be/12NFx9-F-IU",
-      "videoKey": "12NFx9-F-IU",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "images/pdfEcommerce.png",
-      "title": "Preisliste-ecommerce (Full Stack)",
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Mawaheb%2Fimages%2FMavaheb_app.png?alt=media&token=8a582c83-5d75-499d-969b-af726c4d19df",
+      "title": "MAWAHEB",
+      "description": "تطبيق Maweheb هو تطبيق يربط لاعبي كرة القدم الموهوبين بأندية رياضية ومشرفي المواهب. يعتبر التطبيق منصة حيث تقوم الشركات (أندية رياضية ومشرفي المواهب) والأفراد (اللاعبين) بالتسجيل والتواصل مع بعضهم البعض. يمكن للاعبين معرفة آخر المعلومات حول الفرص التجريبية المتاحة وتحميل مقاطع فيديو تظهر فيها مهاراتهم في لعب كرة القدم ليراها مشرفو المواهب. يمكن للشركات استخدام التطبيق لمراجعة اللاعبين المحتملين والترويج للفرص التجريبية المتاحة للاعبين المصريين الطموحين.",
       "technology": [
-        "ReactJs",
-        "material-ui",
-        "nodeJs",
-        "expressJs",
-        "firebase"
+        "Flutter",
+        "Bloc",
+        "Shared preferences",
+        "Firebase",
+        "مصادقة Firebase"
       ],
-      "demo": "",
-      "github": "",
-      "video": "https://youtu.be/lCVyxbbBXVM",
-      "videoKey": "lCVyxbbBXVM"
+      "demo": "https://play.google.com/store/apps/details?id=com.abdulrahman.mawaheb.application"
     },
     {
-      "imeg": "images/Dr. Mayada Salah.png",
-      "title": "د.ميادة صلاح",
-      "technology": ["HTML", "CSS", "JavaScript"],
-      "demo": "https://alihatem360.github.io/basmatalnarjis/",
-      "github": "https://github.com/alihatem360/basmatalnarjis.git",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "images/pest-sweepy Dashboard.png",
-      "title": "pest-sweepy Dashboard",
-      "technology": ["ReactJs", "Redux", "material-ui", "Api"],
-      "demo": "https://nifty-tendency.surge.sh/",
-      "github": "https://github.com/alihatem360/pest-sweepy-dashboard.git",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "images/mohammed-al-huwaila.png",
-      "title": "محمد الحويلة",
-      "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
-      "demo": "https://mohammed-al-huwaila2.vercel.app/",
-      "github": "https://github.com/alihatem360/Mohammed-Al-Huwaila2",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "images/thamer-al-suwait.png",
-      "title": "ثامر السويط",
-      "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
-      "demo": "https://thamer-al-suwait.vercel.app/",
-      "github": "https://github.com/alihatem360/Thamer-Al-Suwait",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "images/saoud-al-asfour.png",
-      "title": "سعود العصفور",
-      "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
-      "demo": "https://saoud-al-asfour.vercel.app/",
-      "github": "https://github.com/alihatem360/Saoud_Al-Asfour",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "images/abdullah-mutlaq-awad-al-mutairi.png",
-      "title": "عبد الله مطلق عوض المطيري",
-      "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
-      "demo": "https://abdullah-mutlaq-awad-al-mutairi.vercel.app/",
-      "github": "https://github.com/alihatem360/abdullah_mutlaq_awad_al-mutairi",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "images/CalorieBot.jpg",
-      "title": "بوت تلجرام لحساب السعرات الحرارية",
-      "technology": ["NodeJs", "ExpressJs", "TelegramBotApi", "NutritionixApi"],
-      "demo": "",
-      "github": "",
-      "video": "https://youtu.be/XDYKVguRDUU",
-      "videoKey": "XDYKVguRDUU",
-      "codeStatus": "PRIVATE",
-      "description": "مرحبًا بك في Calorie Bot، وهو روبوت Telegram المفضل لديك للوصول السريع والسهل إلى المعلومات الغذائية حول الأطعمة المختلفة! 🍏🥦🍕"
-    },
-    {
-      "imeg": "images/LaptopStore Contract.png",
-      "title": "فاتورة متجر الكمبيوتر",
-      "technology": ["ReactJs", "material-ui", "react-to-print", "PWA"],
-      "demo": "https://laptop-store.surge.sh/",
-      "github": "https://github.com/alihatem360/laptop_store.git",
-      "description": "مشروع مبيعات أجهزة الكمبيوتر المحمول هو تطبيق ويب تم إنشاؤه باستخدام React.js وMaterial-UI، وهو مصمم لتبسيط عملية بيع أجهزة الكمبيوتر المحمولة. تمكن الأفراد البيع من ملء نموذج العقد وطباعة العقد باستخدام Microsoft Print. يعمل هذا المشروع على تبسيط إنشاء عقود بيع أجهزة الكمبيوتر المحمول.💻📝🖨️"
-    },
-    {
-      "imeg": "images/E-Learning.png",
-      "title": "E-Learning باستخدام ReactJS",
-      "technology": ["Tailwind", "React", "Vite"],
-      "demo": "https://e-learningreactjs.pages.dev/",
-      "github": "https://github.com/alihatem360/e-learningReactJS",
-      "video": "https://youtu.be/L6EqydzzSr8",
-      "videoKey": "L6EqydzzSr8"
-    },
-    {
-      "imeg": "images/greeting-card.png",
-      "title": "بطاقة التهنئة",
-      "technology": ["ReactJs", "Tailwind", "Vite"],
-      "demo": "https://greeting-card-pied.vercel.app/",
-      "github": "https://github.com/alihatem360/greeting-card",
-      "video": "https://youtu.be/XDKyLS0QXpg",
-      "videoKey": "XDKyLS0QXpg"
-    },
-    {
-      "imeg": "images/Hospital-LandingPage.png",
-      "title": "صفحة هبوط المستشفى",
-      "technology": ["HTML", "CSS", "JavaScript"],
-      "demo": "https://hospital-landing-page-sooty.vercel.app/",
-      "github": "https://github.com/alihatem360/Hospital-LandingPage",
-      "video": ""
-    },
-    {
-      "imeg": "images/MovieReactJs.webp",
-      "title": "تطبيق أفلام باستخدام ReactJs",
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Souq%2024.png?alt=media&token=1a0272b2-3363-4da8-ab53-ec84e7ade237&_gl=1*x7j4bz*_ga*MjA0ODUzODcwMC4xNjkzMzk3NDUy*_ga_CW55HF8NVT*MTY5OTQzMzU5My45OS4xLjE2OTk0MzM2NzYuNDUuMC4w",
+      "title": "SOUQ 24",
+      "description": "سوق 24 هو تطبيق متكامل للتجارة الإلكترونية يتيح للمستخدمين تصفح وشراء مجموعة متنوعة من المنتجات من خلال واجهة سهلة الاستخدام وباقات مرنة تناسب جميع الفئات، كما يوفر لوحة تحكم مخصصة للإدارة تمكّن المسؤول من إضافة وتعديل المنتجات، إرسال الإشعارات، وتنظيم الباقات ومحتوى التطبيق بكل احترافية.",
       "technology": [
-        "ReactJs",
-        "contextApi",
+        "Flutter",
+        "Bloc",
+        "Shared preferences",
+        "Firebase",
+        "مصادقة Firebase"
+      ]
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Husary%20(1).png?alt=media&token=12c32b30-9313-46a1-91dd-6d898594abf9&_gl=1*l1osgr*_ga*MjA0ODUzODcwMC4xNjkzMzk3NDUy*_ga_CW55HF8NVT*MTY5ODkwNDg0OC43NC4xLjE2OTg5MDQ5MjkuNjAuMC4w",
+      "title": "تطبيق الذاكرون",
+      "description": "تطبيق الدكرون هو تطبيق إسلامي شامل يهدف إلى تلبية احتياجات المسلم اليومية من خلال مجموعة من الأدوات والخدمات المفيدة، مثل القرآن الكريم مع التفسير، الأذكار اليومية، مواقيت الصلاة الدقيقة، تحديد اتجاه القبلة، التقويم الهجري، وغيرها من الوظائف التي تسهّل على المسلم أداء عباداته وتنظيم وقته بروحانية وطمأنينة.",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Shared preferences",
+        "Apis",
+        "Dio",
+        "Audio_service",
+        "Just_audio"
+      ],
+      "demo": "https://drive.google.com/drive/folders/1iymvVFLjBBwrUDzdcYkmYaZm-psKeYH0?usp=sharing",
+      "video": "https://youtu.be/xIuVC3CZd-o?si=uBPbN1jOq7jp6MAw",
+      "videoKey": "xIuVC3CZd-o"
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Qr%20code%2Fimages%2Fqr%20code%20.png?alt=media&token=be5868fd-5db8-4bab-8e2d-c9ebea14a217",
+      "title": "تطبيق Qr Code Flutter",
+      "description": "مولد ومستودع رموز الاستجابة السريعة (QR Code) هو تطبيق محمول متعدد الاستخدامات وسهل الاستخدام مصمم لإنشاء رموز الاستجابة السريعة وتوفير حلاً مريحًا لإدارة وتخزين رموز الاستجابة السريعة. تم تطوير التطبيق باستخدام Flutter و Dart، ويستفيد هذا التطبيق من تقنيات متعددة مثل بنية BloC وتفضيلات المشاركة وقاعدة بيانات SQLite لتقديم تجربة سلسة للمستخدمين.",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "تفضيلات المشاركة",
+        "قاعدة بيانات SQLite",
+        "مولد وماسح QR"
+      ],
+      "demo": "https://play.google.com/store/apps/details?id=com.abdulrahmanHatem.qr.code.scanner",
+      "video": "https://youtu.be/1TnyM-Tt8RA",
+      "videoKey": "1TnyM-Tt8RA"
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/flutter_payment%2Fimages%2Fpayment%20app.png?alt=media&token=6c309565-4d04-4491-835c-2c77ef9a570b",
+      "title": "تطبيق الدفع بواسطة Flutter",
+      "description": "عملت على هذا التطبيق لإنشاء عمليات الدفع باستخدام بوابة paymob. يمكنك عرض الشيفرة ومعرفة كيفية التعامل مع مختلف العمليات.",
+      "technology": [
+        "Flutter",
+        "Dart",
+        "Bloc",
         "Api",
-        "ReactJs-hook",
-        "Bootstrap"
+        "Dio",
+        "تفضيلات المشاركة",
+        "Paymob",
+        "مكتبة SDK لـ Paymob",
+        "عمليات الدفع"
       ],
-      "demo": "https://shoping-cart-redux-vite.pages.dev/",
-      "github": "https://github.com/alihatem360/movieReactJs"
+      "demo": "https://youtube.com/playlist?list=PL41hvuiq3bcnlfsKcQ7vwf4pjModyV0F8",
+      "github": "https://github.com/abdulrahmanHatem911/Flutter_Payment_App",
+      "video": "https://youtube.com/playlist?list=PL41hvuiq3bcnlfsKcQ7vwf4pjModyV0F8",
+      "videoKey": "Mr9Twzps7Is"
     },
     {
-      "imeg": "images/alhatab.webp",
-      "title": "الحطاب",
-      "technology": ["HTML", "CSS"],
-      "demo": "https://alihatem360.github.io/alhatab/",
-      "github": "https://github.com/alihatem360/alhatab",
-      "video": "https://youtu.be/eGk8rV_FJJ4",
-      "videoKey": "eGk8rV_FJJ4"
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/e%20commerce%20app.png?alt=media&token=91516ff5-3704-4f32-a859-da47af79b717",
+      "title": "تطبيق التسوق الإلكتروني",
+      "description": "تعتبر التطبيق التسوق الإلكتروني تطبيقًا مصممًا لتزويد المستخدمين بتجربة ممتعة لمشاهدة الأفلام والمسلسلات. يقدم مجموعة واسعة من الميزات التي تسمح للمستخدمين بالحصول على جميع التفاصيل حول الفيلم أو المسلسل الذي يشاهدونه.",
+      "technology": ["flutter", "bloc", "Api", "Dio", "Paymob SDK"],
+      "github": "https://github.com/abdulrahmanHatem911/e_commerce_flutter",
+      "video": "https://youtu.be/5wP_F5Z8SlQ?si=A6DEtkQrh1_RghVu",
+      "videoKey": "5wP_F5Z8SlQ"
     },
     {
-      "imeg": "images/2-4.webp",
-      "title": "أجريكا",
-      "technology": ["HTML", "Sass", "JavaScript", "Bootstrap"],
-      "demo": "https://alihatem360.github.io/agrica/",
-      "github": "https://github.com/alihatem360/agrica",
-      "video": "https://youtu.be/IkweYBUhlM4",
-      "videoKey": "IkweYBUhlM4"
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Movie%2Fimages%2Fmovie%20app.png?alt=media&token=269d034a-8344-472d-acf9-3ec204fab16b",
+      "title": "تطبيق الأفلام",
+      "description": "تطبيق الأفلام هو تطبيق مصمم لتوفير تجربة ممتعة للمستخدمين أثناء مشاهدة الأفلام والمسلسلات. يقدم مجموعة واسعة من الميزات التي تتيح للمستخدمين الحصول على جميع التفاصيل حول الفيلم أو المسلسل الذي يشاهدونه.",
+      "technology": [
+        "flutter",
+        "bloc",
+        "Api",
+        "Dio",
+        "moview apis",
+        "Shared preferences"
+      ],
+      "demo": "https://e-learningreactjs.pages.dev/",
+      "github": "https://github.com/abdulrahmanHatem911/movie-app.git",
+      "video": "https://youtu.be/glC6gbfso8Q",
+      "videoKey": "glC6gbfso8Q"
     },
     {
-      "imeg": "images/1-1.webp",
-      "title": "موقع السيرة الذاتية",
-      "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
-      "demo": "https://alihatem360.github.io/Portfolio-Template/",
-      "github": "https://github.com/alihatem360/Portfolio-Template"
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/la%20vie%20Oranang.png?alt=media&token=186f26ef-19de-4a11-927c-e2895e9e955c",
+      "title": "Orange Digital Center LaVie",
+      "description": "تطبيق La Vie هو تطبيق محمول متعدد المنصات تم بناؤه باستخدام Flutter، وهو إطار تطوير محمول يستخدم لغة برمجة Dart. يهدف التطبيق إلى مساعدة المستخدمين في العناية بنباتاتهم وشراء نباتات جديدة والتواصل مع عشاق النباتات الآخرين.",
+      "technology": [
+        "Flutter",
+        "Dart",
+        "Bloc",
+        "Api",
+        "Dio",
+        "تفضيلات المشاركة"
+      ],
+      "github": "https://github.com/abdulrahmanHatem911/Orange-Digital-Center-LaVie"
     },
     {
-      "imeg": "images/1-3.webp",
-      "title": "قالب JavaScript",
-      "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
-      "demo": "https://alihatem360.github.io/Js-Template/",
-      "github": "https://github.com/alihatem360/Js-Template",
-      "video": "https://youtu.be/IkweYBUhlM4",
-      "videoKey": "IkweYBUhlM4"
+      "imeg": "https://img.youtube.com/vi/fqKIbF8Com4/0.jpg",
+      "title": "Onboarding Screens in Flutter",
+      "description": "عندما يبدأ التطبيق، سترى شاشة الإعداد. اسحب لليسار أو لليمين للتنقل بين الشاشات المختلفة. توفر كل شاشة معلومات حول التطبيق وميزاته. يمكنك أيضًا النقر على زر \"البدء\" في الشاشة الأخيرة للانتقال إلى الشاشة الرئيسية للتطبيق.",
+      "technology": ["Flutter", "Dart", "ui"],
+      "github": "https://github.com/abdulrahmanHatem911/on_boarding_task",
+      "video": "https://youtu.be/fqKIbF8Com4?si=i341mvLhAUN1Dkel",
+      "videoKey": "fqKIbF8Com4"
     },
     {
-      "imeg": "images/BookDownloadPage.png",
-      "title": "صفحة تحميل الكتب",
-      "technology": ["HTML", "CSS"],
-      "demo": "https://alihatem360.github.io/BookDownloadPage/",
-      "github": "https://github.com/alihatem360/BookDownloadPage",
+      "imeg": "https://raw.githubusercontent.com/abdulrahmanHatem911/flutter-chat-gpt-text/main/assets/image/images.jpg",
+      "title": "Chat GPT Flutter",
+      "description": "Chat GPT Flutter هو تطبيق مبتكر للهاتف المحمول يدمج Flutter بسلاسة مع واجهات برمجة التطبيقات الخاصة بـ Chat GPT. يتيح هذا التطبيق القوي للمستخدمين المشاركة في محادثات باللغة الطبيعية مع Chat GPT، مما يوفر تجربة دردشة سلسة وبديهية. استفد من إمكانيات Chat GPT لتحسين التواصل والتفاعل في تطبيقك",
+      "technology": [
+        "Flutter",
+        "Dart",
+        "ui",
+        "Chat GPT",
+        "Chat-bot",
+        "Api",
+        "Dio"
+      ],
+      "github": "https://github.com/abdulrahmanHatem911/flutter-chat-gpt-text"
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/News%20app.png?alt=media&token=df4d9187-2457-4d89-9756-ef37aaecb4ae",
+      "title": "News app",
+      "description": "هذا تطبيق أخبار يتيح للمستخدمين الوصول إلى مجموعة متنوعة من المقالات الإخبارية من فئات مختلفة، مثل الأعمال والرياضة والعلوم والمزيد. فهو يوفر واجهة سهلة الاستخدام لعرض أحدث العناوين والبحث عن المقالات الإخبارية بناءً على كلمات رئيسية محددة. تم إنشاء التطبيق باستخدام Flutter ويستخدم مكتبات متنوعة مثل Dio وIntl وWebView وغيرها لتوفير تجربة قراءة أخبار سلسة.",
+      "technology": [
+        "flutter",
+        "bloc",
+        "Api",
+        "Dio",
+        "Shared preferences",
+        "webview"
+      ],
+      "github": "https://github.com/abdulrahmanHatem911/news_app",
+      "video": "https://youtu.be/69Ai5XB1Vd4?si=BnfgONl62JHU42IN",
+      "videoKey": "69Ai5XB1Vd4"
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Maktabty.png?alt=media&token=01825c2b-7c97-4b72-b6ae-f17e261ccf4c",
+      "title": "Maktabty",
+      "description": "يمكن للمستخدمين تصفح وشراء الكتب من خلال التطبيق باستخدام واجهات برمجة التطبيقات (API) من منصات شهيرة. يستخدم التطبيق بنية BloC وتفضيلات المشاركة لإدارة الحالة بشكل فعال. يعزز هذا الحل الشامل تجربة المستخدم ويزيد من فعالية استخدام هذه التقنيات (من 70 إلى 95٪).",
+      "technology": [
+        "flutter",
+        "bloc",
+        "Api",
+        "Dio",
+        "moview apis",
+        "Shared preferences"
+      ],
+      "github": "https://github.com/abdulrahmanHatem911/Maktapty_Books_App"
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/HOMERO%2Fimages%2Fhomero%20app.png?alt=media&token=8ee7e3e6-3d7b-4fc9-a0af-4f3bf9846c3f",
+      "title": "تطبيق Homero",
+      "description": "HOMERO هو تطبيق Flutter يقدم خدمات متنوعة للمستخدمين، مثل تنظيف المنزل وصيانة المعدات. يوفر ملف README هذا نظرة عامة على المشروع وميزاته",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Firebase",
+        "Google Maps",
+        "Google Places",
+        "Google Geocoding",
+        "firebase authentication"
+      ],
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/movies-list-redux.webp",
-      "title": "قائمة الأفلام باستخدام Redux",
-      "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
-      "demo": "https://movies-list-redux.pages.dev/",
-      "github": "https://github.com/alihatem360/movies-list-redux"
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Monitoring%2Fimages%2FMonitoring%20app.png?alt=media&token=2ca16249-9bd9-424f-92e7-8d7df6912e89",
+      "title": "تطبيق Monitoring",
+      "description": "تطبيق Monitoring هو نظام متكامل يتيح لمديري المدارس مراقبة الأساتذة والطلاب والأنشطة في المدرسة. يمكن لأولياء الأمور أيضًا التسجيل في التطبيق ورؤية بيانات أطفالهم وتسجيل أطفالهم في المدارس والأنشطة المتاحة. يتضمن التطبيق أيضًا مشرفين يديرون المدارس ويقومون بمهام أخرى.",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Shared preferences",
+        "Firebase",
+        "firebase authentication",
+        "firebase storage",
+        "firebase messaging",
+        "local notification"
+      ],
+      "video": "https://youtu.be/Pl07Z-1_W2M",
+      "videoKey": "Pl07Z-1_W2M",
+      "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/NFT-Shop.webp",
-      "title": "NFT-Shop",
-      "technology": ["ReactJs", "Bootstrap", "Api"],
-      "demo": "",
-      "github": "https://github.com/alihatem360/NFT-Shop",
-      "video": ""
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Social%20app.png?alt=media&token=354ccec4-e7e8-457f-874b-01fa06f4b305",
+      "title": "تطبيق Social",
+      "description": "لقد قمت بتطوير تطبيق محاكاة جذاب باستخدام Flutter و Firebase، مصمم خصيصًا لمنصات وسائل التواصل الاجتماعي. من خلال استغلال قوة Flutter واستفادة من قدرات Firebase، يوفر هذا المحاكي تجربة جذابة ومشوقة لعشاق وسائل التواصل الاجتماعي.",
+      "technology": ["Flutter", "Bloc", "Firebase"],
+      "github": "https://github.com/abdulrahmanHatem911/Social-app"
     },
     {
-      "imeg": "images/1-2.webp",
-      "title": "موقع المطعم",
-      "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
-      "demo": "https://alihatem360.github.io/Restaurant-Template/",
-      "github": "https://github.com/alihatem360/Restaurant-Template"
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/shop_app.jpg?alt=media&token=297d4862-ced8-4528-b1a8-d08db2c46fee",
+      "title": "تطبيق Shop",
+      "description": "يعد تطبيق Shop تجربة تسوق ممتعة للمستخدمين، حيث يمكنهم استعراض المنتجات المتاحة وإضافتها إلى عربة التسوق وإجراء عمليات الشراء بأمان. يعتمد التطبيق على تقنيات Flutter و Firebase لتحقيق أقصى أداء وأمان.",
+      "technology": ["Flutter", "Firebase"],
+      "github": "https://github.com/abdulrahmanHatem911/Shop-app"
     },
     {
-      "imeg": "images/2-1.webp",
-      "title": "مشروع MyReads من Udacity",
-      "technology": ["ReactJs", "Bootstrap", "Api"],
-      "demo": "https://udacitymyreadsproject.pages.dev/",
-      "github": "https://github.com/alihatem360/UdacityMyReadsProject"
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/MultiKart.png?alt=media&token=62eb4afc-22d6-45a0-93fc-4222fef51b14",
+      "title": "Multikart Shopping app",
+      "description": "يعرض هذا التطبيق منتجات مختلفة، بما في ذلك الملابس. أدى تنفيذ واجهات برمجة التطبيقات والتقنيات المتقدمة الأخرى، مثل بنية Flutter وBLoC، إلى تحسين تجربة المستخدم. تتراوح كفاءتي في استخدام هذه التقنيات من 90% إلى 100%. بشكل عام، يعرض التطبيق قدرتي على دمج الميزات المتقدمة بسلاسة في تصميم سهل الاستخدام",
+      "technology": [
+        "flutter",
+        "bloc",
+        "Api",
+        "Dio",
+        "ui",
+        "Shared preferences"
+      ],
+      "github": "https://github.com/abdulrahmanHatem911/MutliKart"
     },
     {
-      "imeg": "images/2-2.webp",
-      "title": "مكبرات الصوت باستخدام Reactjs",
-      "technology": ["ReactJs", "Bootstrap"],
-      "demo": "https://speakersreactjs.pages.dev/",
-      "github": "https://github.com/alihatem360/SpeakersReactjs"
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/To%20Do%20%20app.png?alt=media&token=870448b9-f86d-4f90-a06b-670bcd493c89",
+      "title": "TODO App",
+      "description": "يتيح تطبيق إدارة المهام هذا للمستخدمين تسجيل مهامهم اليومية وتخزينها بسهولة. بفضل خبرتي في برمجة Flutter وDart، إلى جانب الكفاءة في بنية Firebase وBLoC التي تتراوح من 90% إلى 100%، قمت بتنفيذ إدارة الحالة الفعالة وتخزين البيانات المحلية لتحسين تجربة المستخدم. يوفر التطبيق واجهة سهلة الاستخدام ويستخدم الميزات المتقدمة بشكل فعال لتحسين الإنتاجية",
+      "technology": ["flutter", "bloc", "SQLite"],
+      "github": "https://github.com/abdulrahmanHatem911/TODO-App"
     },
     {
-      "imeg": "images/farooq-task.webp",
-      "title": "مهمة فاروق",
-      "technology": ["ReactJs", "reactbootstrap", "Api"],
-      "demo": "https://farooq-task.pages.dev/",
-      "github": "https://github.com/alihatem360/farooq-task"
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/invitation%20%20app.png?alt=media&token=5ffaa124-3ba4-40b7-ba38-b04bcfbc8138",
+      "title": "Dash Invitation",
+      "description": "هو تطبيق لإرسال دعوة للأشخاص لحضور حفلة معينة",
+      "technology": ["flutter", "bloc", "SQLite"],
+      "github": "https://github.com/abdulrahmanHatem911/dash-invitation"
     },
     {
-      "imeg": "images/2-3.webp",
-      "title": "مشروع تجارة إلكترونية باستخدام Angular",
-      "technology": ["angular", "Bootstrap", "Api"],
-      "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
-      "github": "https://github.com/alihatem360/angularECommerceGradProj"
-    },
-    {
-      "imeg": "images/1-5.webp",
-      "title": "أفلام IMDb",
-      "technology": ["C#", "ASP.NET", "MVC", "Entity Framework", "SQL"],
-      "demo": "",
-      "github": "https://github.com/alihatem360/IMDb"
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Applications_images.png?alt=media&token=258ea257-2915-4f0c-bc73-72e0176cec5d",
+      "title": "BMI Calculator",
+      "description": "يقوم التطبيق بحساب مؤشر كتلة الجسم (BMI) للمستخدم بناءً على طوله ووزنه. تم استخدام التقنيات المتقدمة مثل Flutter وDart أثناء عملية التطوير، إلى جانب الخبرة الكبيرة في العمل مع واجهات برمجة التطبيقات (APIs) والهندسة المعمارية النظيفة. مع مستوى مهارة يتراوح من 90% إلى 100% في Flutter وخبرة تتراوح من 90% إلى 95% في Dart وAPIs والبنية النظيفة، يعد التطبيق عبارة عن حاسبة مؤشر كتلة الجسم سهلة الاستخدام وفعالة تساعد المستخدمين على تتبع أهداف اللياقة البدنية الخاصة بهم",
+      "technology": ["flutter", "bloc", "SQLite"],
+      "github": "https://github.com/abdulrahmanHatem911/bmi-calculator"
     }
   ],
-
   "socials": [
     {
       "id": "1",
-      "name": "فيسبوك",
-      "link": "https://www.facebook.com/profile.php?id=100012592714147"
+      "name": "facebook",
+      "link": "https://www.facebook.com/abdalrahman.hatem.338"
     },
     {
       "id": "2",
-      "name": "تويتر",
-      "link": "https://twitter.com/AliHate21071474"
+      "name": "twitter",
+      "link": "https://twitter.com/Abdelra87827997"
     },
     {
       "id": "3",
-      "name": "جيثب",
-      "link": "https://github.com/alihatem360"
+      "name": "github",
+      "link": "https://github.com/abdulrahmanHatem911"
     },
     {
       "id": "4",
-      "name": "لينكد إن",
-      "link": "https://www.linkedin.com/in/aliihatem-753025203/"
+      "name": "linkedin",
+      "link": "https://www.linkedin.com/in/abdulrahman-hatem-ramadan-64780a210/"
     },
     {
       "id": "5",
-      "name": "إنستجرام",
-      "link": "https://www.instagram.com/alihatem5496/"
+      "name": "instagram",
+      "link": ""
     },
     {
       "id": "6",
-      "name": "يوتيوب",
+      "name": "youtube",
       "link": "https://www.youtube.com/channel/UC8VBtReu7uU0w7bCVgE-KVA"
     },
     {
       "id": "7",
-      "name": "البريد الإلكتروني",
-      "link": "mailto:alihatemramadan5@gmail.com"
+      "name": "email",
+      "link": "mailto:abdulrahmanhatem04@gmail.com"
     },
     {
       "id": "8",
-      "name": "الهاتف",
-      "link": "+201026159353"
+      "name": "phone",
+      "link": "+201111447437"
     },
     {
       "id": "9",
-      "name": "واتساب",
-      "link": "http://wa.me/+201026159353"
+      "name": "whatsapp",
+      "link": "http://wa.me/+201111447437"
     }
   ]
 }

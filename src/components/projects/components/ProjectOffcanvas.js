@@ -20,16 +20,18 @@ const ProjectOffcanvas = ({ show, project, handleClose }) => {
         style={{
           backgroundColor: "#1a1a1a",
           color: "white",
+          width: "60%", // Increased width from default
+          maxWidth: "800px", // Added max width for very large screens
         }}
         className="text-capitalize custom-offcanvas"
       >
         <Offcanvas.Header closeButton>
           {" "}
-          <h1 className="text-capitalize">
+          <h1 className="text-capitalize" style={{ fontSize: "2.5rem" }}>
             {project.title ? project.title : ""}
           </h1>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body className="p-4">
           <div className="img-container w-100">
             {project.loomVideo ? (
               <LoomVideo videoUrl={project.loomVideo} />
@@ -42,12 +44,15 @@ const ProjectOffcanvas = ({ show, project, handleClose }) => {
                 effect="blur"
                 className="card-img-top w-100"
                 placeholderSrc={project.imeg ? project.imeg : ""}
+                style={{ maxHeight: "500px", objectFit: "cover" }}
               />
             )}
           </div>
-
-          <div className="d-flex justify-content-between align-items-center mt-3">
-            <h2 className="card-title text-capitalize">
+          <div className="d-flex justify-content-between align-items-center mt-4">
+            <h2
+              className="card-title text-capitalize"
+              style={{ fontSize: "2.2rem" }}
+            >
               all technology used{" "}
               <PiShootingStarBold className="text-warning" />
             </h2>
@@ -56,12 +61,12 @@ const ProjectOffcanvas = ({ show, project, handleClose }) => {
               <span
                 className=" rounded text-center"
                 style={{
-                  fontSize: "1.2rem",
+                  fontSize: "1.4rem",
                   backgroundColor: "var(--danger-color)",
                   boxShadow: "0 0 5px var(--danger-color)",
                   color: "white",
-                  padding: "5px",
-                  borderRadius: "5px",
+                  padding: "8px 12px",
+                  borderRadius: "8px",
                 }}
               >
                 {project.codeStatus === "PRIVATE"
@@ -73,22 +78,23 @@ const ProjectOffcanvas = ({ show, project, handleClose }) => {
                 <FaLock className="ms-2" />
               </span>
             ) : null}
-          </div>
-          <div className="card-text d-flex justify-content-start flex-wrap gap-2 mt-3">
+          </div>{" "}          <div className="card-text d-flex justify-content-start flex-wrap gap-3 mt-4">
             {project.technology &&
-              project.technology.map((tech) => {
+              project.technology.map((tech, index) => {
                 return (
-                  <h5>
+                  <h5 key={index}>
                     <span
-                      // text large
                       className="badge"
                       style={{
                         color: "white",
-                        borderRadius: "5px",
+                        borderRadius: "15px",
                         outline: "none",
-                        padding: "7px",
-                        fontSize: "1.2rem",
-                        backgroundColor: "var(--primary-color)",
+                        padding: "10px 15px",
+                        fontSize: "1.3rem",
+                        backgroundColor: "var(--tertiary-color)",
+                        transition: "all 0.3s ease",
+                        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
+                        border: "1px solid rgba(255, 255, 255, 0.05)"
                       }}
                     >
                       # {tech}
@@ -97,17 +103,22 @@ const ProjectOffcanvas = ({ show, project, handleClose }) => {
                 );
               })}
           </div>
-
-          <h3 className="card-title text-capitalize my-3">
+          <h3
+            className="card-title text-capitalize my-4"
+            style={{ fontSize: "1.8rem" }}
+          >
             description <IoRocket className="text-warning" />
-          </h3>
-          <p
+          </h3>          <p
             className="card-text"
             style={{
               color: "white",
-              fontSize: "1.2rem",
+              fontSize: "1.4rem",
               fontWeight: "400",
               lineHeight: "1.8",
+              marginBottom: "2rem",
+              padding: "0.5rem",
+              borderLeft: "3px solid var(--warning-color)",
+              paddingLeft: "1rem",
             }}
           >
             {project.description ? project.description : "no description"}

@@ -115,7 +115,7 @@ input[type="password"]:focus {
 
 @media (min-width: 992px) {
   .custom-offcanvas {
-    width: 550px !important;
+    width: 600px !important;
   }
 }
 
