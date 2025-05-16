@@ -1,10 +1,9 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
-import SocialMedia from "../SocialMedia/index";
-import CV from "../../assets/Ali_Hatem_Ramadan_Resume.pdf";
+import { FaFileDownload } from "react-icons/fa";
+import CV from "../../assets/abdulrahman_mobileDeveloper13.pdf";
 import { handleDownloadCv } from "../../helpers/index.js";
 import PreviewCvModal from "../Auth/PreviewCvModal";
-import { FaFileDownload } from "react-icons/fa";
+import SocialMedia from "../SocialMedia/index";
 const HeaderBio = ({ aboutmeData }) => {
   const { t, i18n } = useTranslation();
   return (
