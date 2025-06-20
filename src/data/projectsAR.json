@@ -27,6 +27,23 @@
       "videoKey": "WmriaoIy-C8",
       "codeStatus": "PRIVATE"
     },
+     {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/medscan.png?alt=media&token=5e2fc22a-2440-4d81-9c02-ae66946deb3d",
+      "title": "ميد سكان",
+      "description": "Tarzi is an application for administrators that provides a comprehensive control panel to manage everything related to the Tarzi app for users.It allows users to easily and flexibly manage products, designers, fabrics, packages, and all other details.It provides administrators with advanced tools to organize content and customize the experience to suit the platform's needs",
+      "technology": [
+        "flutter",
+        "bloc",
+        "firebase authentication",
+        "firebase messaging",
+        "firebase storage",
+        "firebase firestore",
+        "firebase core",
+        "Dio",
+        "Shared preferences"
+      ],
+      "codeStatus": "PRIVATE"
+    },
     {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzydashoard.png?alt=media&token=03b40ac4-2c49-438a-86f5-665723a0ed6d",
       "title": "لوحة تحكم ترزي",
