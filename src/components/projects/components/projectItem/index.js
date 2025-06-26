@@ -27,6 +27,11 @@ const PojectItem = ({ project }) => {
             effect="blur"
             className="card-img-top w-100"
             placeholderSrc={project.imeg}
+            onClick={() => {
+              setShow(true);
+              setProjectData(project);
+            }}
+            style={{ cursor: "pointer" }}
           />
         </div>
         <div className="card-body">

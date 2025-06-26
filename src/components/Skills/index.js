@@ -1,80 +1,59 @@
 import React from "react";
 import "./Styles.css";
+import { FaGithub, FaAndroid, FaApple } from "react-icons/fa";
 import {
-  FaHtml5,
-  FaCss3,
-  FaReact,
-  FaBootstrap,
-  FaGithub,
-  FaNodeJs,
-  FaSass,
-} from "react-icons/fa";
-import { TbBrandJavascript, TbBrandRedux, TbBrandNextjs } from "react-icons/tb";
-import { SiTailwindcss } from "react-icons/si";
-import { DiMongodb } from "react-icons/di";
-import { SiMui } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
+  SiDart,
+  SiFlutter,
+  SiFigma,
+  SiGoogleplay,
+  SiAppstore,
+  SiVisualstudiocode,
+} from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
+import { TbApi } from "react-icons/tb";
+
 const SkillsComponent = () => {
   const skills = [
     {
-      icon: FaReact,
-      name: "React",
+      icon: SiFlutter,
+      name: "Flutter",
     },
     {
-      icon: TbBrandNextjs,
-      name: "Nextjs",
-    },
-    {
-      icon: TbBrandRedux,
-      name: "Redux",
-    },
-
-    {
-      icon: TbBrandJavascript,
-      name: "Javascript",
-    },
-    {
-      icon: SiTypescript,
-      name: "Typescript",
-    },
-    {
-      icon: FaNodeJs,
-      name: "Nodejs",
-    },
-    {
-      icon: DiMongodb,
-      name: "MongoDB",
+      icon: SiDart,
+      name: "Dart",
     },
     {
       icon: IoLogoFirebase,
       name: "Firebase",
     },
     {
-      icon: SiMui,
-      name: "Material UI",
+      icon: FaAndroid,
+      name: "Android",
     },
     {
-      icon: FaHtml5,
-      name: "HTML",
+      icon: FaApple,
+      name: "iOS",
     },
     {
-      icon: FaCss3,
-      name: "CSS",
+      icon: SiGoogleplay,
+      name: "Google Play",
     },
     {
-      icon: FaSass,
-      name: "SASS",
+      icon: SiAppstore,
+      name: "App Store",
     },
     {
-      icon: FaBootstrap,
-      name: "Bootstrap",
+      icon: SiFigma,
+      name: "Figma",
     },
     {
-      icon: SiTailwindcss,
-      name: "Tailwindcss",
+      icon: TbApi,
+      name: "RESTful APIs",
     },
-
+    {
+      icon: SiVisualstudiocode,
+      name: "VS Code",
+    },
     {
       icon: FaGithub,
       name: "Github",
