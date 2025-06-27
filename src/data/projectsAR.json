@@ -315,6 +315,14 @@
       "technology": ["C#", "ASP.NET", "MVC", "Entity Framework", "SQL"],
       "demo": "",
       "github": "https://github.com/alihatem360/IMDb"
+    },
+    {
+      "imeg": "images/hadafik-altaelimia.png",
+      "title": "منصة هدفك التعليمية",
+      "description": "حدافك التعليمية هي منصة تعليمية مجانية توفر للطلاب فرصة التعلم وتطوير مهاراتهم في مجالات متنوعة. تقدم المنصة مجموعة واسعة من الدورات والموارد لمساعدة الطلاب على تحقيق أهدافهم الأكاديمية والمهنية.",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "demo": "https://hadafuk.vercel.app/",
+      "codeStatus": "PRIVATE"
     }
   ],
 

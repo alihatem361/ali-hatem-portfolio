@@ -37,6 +37,14 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "imeg": "images/hadafik-altaelimia.png",
+      "title": "Hadafik Altaelimia",
+      "description": "Hadafik Altaelimia is a free educational platform that provides students with the opportunity to learn and develop their skills in various fields. The platform offers a wide range of courses and resources to help students achieve their academic and professional goals.",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "demo": "https://hadafuk.vercel.app/",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "imeg": "images/el-zakeroon (1).png",
       "title": "El-Zakeroon",
       "description": "Discover El-Zakeroon, a free Islamic web application that helps you Track your daily adhkar easily.",
