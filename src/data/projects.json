@@ -27,6 +27,19 @@
       "videoKey": "WmriaoIy-C8",
       "codeStatus": "PRIVATE"
     },
+      {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/gif_travel_report.gif?alt=media&token=358f6047-b034-4021-a73a-de5e4be96162",
+      "title": "Travel Report",
+      "description": "A comprehensive evaluation system tailored for aviation training environments. The app enables administrators to assign predefined competency-based forms to multiple trainers. Each trainer accesses and fills only their assigned section, with the ability to save responses locally using SQLite. Once all trainers complete their parts, the admin can view and export the fully compiled report, ensuring a streamlined, offline-first evaluation workflow.",
+      "technology": [
+        "flutter",
+        ".net",
+        "Dio",
+        "Shared preferences",
+        "Api"
+      ],
+      "codeStatus": "PRIVATE"
+    },
     {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/medscan.png?alt=media&token=5e2fc22a-2440-4d81-9c02-ae66946deb3d",
       "title": "MEDSCAN APP",
