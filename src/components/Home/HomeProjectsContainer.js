@@ -9,8 +9,6 @@ import GProject from "../Gproject/index";
 import SwiperSlideCom from "../Utilities/SwiperSlide/SwiperSlideCom";
 import FloatingWhatsAppCom from "../WhatsappChat/FloatingWhatsAppCom";
 import SkillComponent from "../Skills/index";
-import UppeCurve from "../Utilities/UppeCurve";
-import LowerCurve from "../Utilities/LowerCurve";
 const HomeProjectsContainer = () => {
   const { t, i18n } = useTranslation();
   const [projectsDta, setProjectsData] = useState([]);
@@ -26,8 +24,6 @@ const HomeProjectsContainer = () => {
   return (
     <React.Fragment>
       <div className="projects-container ">
-        <UppeCurve />
-
         <SwiperSlideCom />
         {/* send the index of the project */}
         <GProject gproject={projectsDta[2]} />
@@ -48,7 +44,6 @@ const HomeProjectsContainer = () => {
             </Link>
           </div>
         </div>
-        <LowerCurve />
       </div>
     </React.Fragment>
   );

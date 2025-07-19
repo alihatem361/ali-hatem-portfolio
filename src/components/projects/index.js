@@ -7,7 +7,6 @@ import PojectItem from "./components/projectItem";
 import Footer from "../footer";
 import GetAllData from "../../data/projects";
 import LoaderCom from "../Utilities/LoaderCom";
-import LowerCurve from "../Utilities/LowerCurve";
 import { techSkills } from "../../data/index";
 const Projects = () => {
   const { t, i18n } = useTranslation();
@@ -98,7 +97,6 @@ const Projects = () => {
           )}
         </div>
       </div>
-      <LowerCurve />
       <Footer />
     </React.Fragment>
   );
