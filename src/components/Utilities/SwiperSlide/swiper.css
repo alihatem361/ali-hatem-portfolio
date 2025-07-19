@@ -653,8 +653,8 @@ html {
   width: 250px;
   height: 250px;
   background: var(--gradient-accent);
-  bottom: 20%;
-  left: 30%;
+  bottom: 22%;
+  left: 3%;
   animation-delay: -14s;
 }
 
