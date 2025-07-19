@@ -21,19 +21,19 @@ const HomeProjectsContainer = () => {
       // console.log(" : ======", data[0]);
       setProjectsData(data[0].slice(0, 3));
     });
-  }, i18n.language);
+  }, [i18n.language]);
 
   return (
     <React.Fragment>
       <div className="projects-container ">
         <UppeCurve />
 
+        <SwiperSlideCom />
         {/* send the index of the project */}
         <GProject gproject={projectsDta[2]} />
         <FloatingWhatsAppCom />
         <div className="container">
           <SkillComponent />
-          <SwiperSlideCom />
           <div className="text-center ">
             <Link to="/projects" className="btn button1">
               {t("projects.homebutton")}
