@@ -83,7 +83,7 @@
 }
 
 .gproject_card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) rotateX(2deg);
 }
 
 .btn {
@@ -101,4 +101,223 @@
 
 .gproject_card:hover h3 svg {
   transform: rotate(45deg);
+}
+
+/* Enhanced Image Styling with Animations */
+.gproject_card_image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gproject_card_image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease;
+  z-index: 2;
+}
+
+.gproject_card_image:hover::before {
+  left: 100%;
+}
+
+.gproject_card_image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 123, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.gproject_card_image:hover::after {
+  opacity: 1;
+}
+
+.rounded-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.9) contrast(1.1);
+  position: relative;
+  z-index: 0;
+}
+
+.gproject_card_image:hover .rounded-img {
+  transform: scale(1.05);
+  filter: brightness(1.1) contrast(1.2) saturate(1.2);
+}
+
+/* Floating animation for the image container */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 123, 255, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+}
+
+.gproject_card_image {
+  animation: float 6s ease-in-out infinite, pulse 4s ease-in-out infinite;
+}
+
+.gproject_card_image:hover {
+  animation-play-state: paused;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 5px 15px rgba(0, 123, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Glow effect on hover */
+.gproject_card_image:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 123, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Loading state animation */
+.gproject_card_image .rounded-img {
+  opacity: 0;
+  animation: fadeInScale 0.8s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-2deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Enhanced card entrance animation */
+.gproject_card_container {
+  perspective: 1000px;
+}
+
+.gproject_card {
+  transform-style: preserve-3d;
+}
+
+/* Add a subtle 3D tilt effect on hover */
+.gproject_card:hover {
+  transform: translateY(-8px) rotateX(2deg);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .gproject_card_image {
+    border-radius: 12px;
+  }
+
+  .rounded-img {
+    border-radius: 10px;
+  }
+
+  .gproject_card_image:hover .rounded-img {
+    transform: scale(1.03);
+  }
+}
+
+/* Loading spinner */
+.image-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error state */
+.image-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 3;
+}
+
+.image-error svg {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.image-error span {
+  display: block;
+  font-size: 0.9rem;
 }

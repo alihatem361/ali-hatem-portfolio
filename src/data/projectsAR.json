@@ -15,7 +15,7 @@
 
   "Projects": [
     {
-      "imeg": "images/2-5.png",
+      "imeg": "images/1MBrothers.png",
       "title": "1M الإخوة",
       "description": "الجزء الأمامي من مشروع تخرج للعام الأخير. مسؤول عن تطوير الجزء الأمامي بالكامل. موقع تبرع لحالات المرضى. يمكن للمستخدمين التبرع وتقديم حالات جديدة. تحميل الأوراق وانتظار موافقة المشرف. تكامل موفر الدفع. تصميم واجهة مستخدم بديهية. عرض لمهارات HTML و CSS و JavaScript. موقع وظيفي وجذاب بصريًا. تطبيق عملي في العالم الحقيقي.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -23,6 +23,37 @@
       "github": "https://github.com/alihatem360/1m-brother_frontend",
       "video": "https://youtu.be/BDsHi7dYvxc",
       "videoKey": "BDsHi7dYvxc",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "images/alHawmahCulturalHub.png",
+      "title": "مركز الحومة الثقافي",
+      "description": "موقع مركز ثقافي يعرض التراث الغني وتقاليد منطقة الحومة. يتميز الموقع بتصميم حديث مع التركيز على تجربة المستخدم، مما يوفر للزوار سهولة الوصول إلى معلومات حول تاريخ المركز وفعالياته وأنشطته.",
+      "technology": ["React", "Tailwind", "Vite", "shadcn-ui"],
+      "demo": "https://alhawmah-cultural-hub.vercel.app/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "images/contiva.png",
+      "title": "كونتيفا",
+      "description": "كونتيفا هو موقع حديث ومبتكر يوفر منصة للمستخدمين لاستكشاف واكتشاف محتوى متنوع. يتميز الموقع بتصميم أنيق وواجهة سهلة الاستخدام وتخطيط متجاوب، مما يضمن تجربة مشاهدة مثلى عبر جميع الأجهزة.",
+      "technology": ["React", "Tailwind", "Vite", "shadcn-ui"],
+      "demo": "https://contiva-learning.vercel.app/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+
+    {
+      "imeg": "images/hadafik-altaelimia.png",
+      "title": "Hadafik Altaelimia",
+      "description": "منصة هدفك التعليمية هي منصة تعليمية مجانية توفر للطلاب فرصة التعلم وتطوير مهاراتهم في مجالات متنوعة. تقدم المنصة مجموعة واسعة من الدورات والموارد لمساعدة الطلاب على تحقيق أهدافهم الأكاديمية والمهنية.",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "demo": "https://hadafuk.vercel.app/",
       "codeStatus": "PRIVATE"
     },
     {

@@ -1,8 +1,11 @@
-import React from "react";
-import { FaRocket, FaGithub, FaGlobe, FaPlay } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaRocket, FaGithub, FaGlobe, FaPlay, FaImage } from "react-icons/fa";
 import "./style.css";
 
 function Gproject({ gproject }) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+  console.log("GProject Data:", gproject);
   const getVideoId = (url) => {
     const regExp =
       /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
@@ -36,11 +39,11 @@ function Gproject({ gproject }) {
     <div className="gproject_card_container" data-aos="fade-up">
       <div className="gproject_card">
         <h3 data-aos="fade-right" data-aos-delay="200">
-          <FaRocket />
           {title || ""}
+          <FaRocket className="mx-2" />
         </h3>
         <div className="gproject_card_body">
-          {video && (
+          {video ? (
             <div
               className="gproject_card_video"
               data-aos="zoom-in"
@@ -56,6 +59,37 @@ function Gproject({ gproject }) {
                 height="315"
               />
             </div>
+          ) : (
+            <div
+              className="gproject_card_image"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              {!imageLoaded && !imageError && (
+                <div className="image-loader">
+                  <div className="loader-spinner"></div>
+                </div>
+              )}
+              <img
+                src={
+                  gproject.imeg ||
+                  "https://via.placeholder.com/400x250/007bff/ffffff?text=Project+Image"
+                }
+                className="rounded-img"
+                alt={title || "Project Image"}
+                onLoad={() => setImageLoaded(true)}
+                onError={() => setImageError(true)}
+                style={{
+                  display: imageLoaded || imageError ? "block" : "none",
+                }}
+              />
+              {imageError && (
+                <div className="image-error">
+                  <FaImage />
+                  <span>Image not available</span>
+                </div>
+              )}
+            </div>
           )}
           <div
             className="gproject_card_content"
@@ -68,9 +102,9 @@ function Gproject({ gproject }) {
               data-aos="fade-up"
               data-aos-delay="800"
             >
-              {renderButton(github, "GitHub", <FaGithub />)}
-              {renderButton(demo, "Demo", <FaGlobe />)}
-              {renderButton(video, "Video", <FaPlay />)}
+              {renderButton(github, "GitHub", <FaGithub className="mx-2" />)}
+              {renderButton(demo, "Demo", <FaGlobe className="mx-2" />)}
+              {renderButton(video, "Video", <FaPlay className="mx-2" />)}
             </div>
           </div>
         </div>

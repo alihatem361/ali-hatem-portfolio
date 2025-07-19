@@ -15,7 +15,7 @@
 
   "Projects": [
     {
-      "imeg": "images/2-5.png",
+      "imeg": "images/1MBrothers.png",
       "title": "1M Brothers",
       "description": "Front-end part of a graduation project for my final year. Responsible for entire front-end development. Donation website for patient cases. Users can donate and submit new cases. Upload papers and await admin approval. Integrated payment provider. Designed intuitive user interface. Showcase of HTML, CSS, and JavaScript skills. Functional and visually appealing website. Real-world application.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -23,6 +23,28 @@
       "github": "https://github.com/alihatem360/1m-brother_frontend",
       "video": "https://youtu.be/BDsHi7dYvxc",
       "videoKey": "BDsHi7dYvxc",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "images/alHawmahCulturalHub.png",
+      "title": "alHawmah Cultural Hub",
+      "description": "A cultural hub website that showcases the rich heritage and traditions of the Hawmah region. The website features a modern design with a focus on user experience, providing visitors with easy access to information about the hub's history, events, and activities.",
+      "technology": ["React", "Tailwind", "Vite", "shadcn-ui"],
+      "demo": "https://alhawmah-cultural-hub.vercel.app/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "images/contiva.png",
+      "title": "Contiva",
+      "description": "Contiva is a modern and innovative website that provides a platform for users to explore and discover various content. The website features a sleek design, user-friendly interface, and responsive layout, ensuring an optimal viewing experience across all devices.",
+      "technology": ["React", "Tailwind", "Vite", "shadcn-ui"],
+      "demo": "https://contiva-learning.vercel.app/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
       "codeStatus": "PRIVATE"
     },
     {

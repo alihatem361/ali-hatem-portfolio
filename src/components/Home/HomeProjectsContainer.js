@@ -27,7 +27,9 @@ const HomeProjectsContainer = () => {
     <React.Fragment>
       <div className="projects-container ">
         <UppeCurve />
-        <GProject gproject={projectsDta[0]} />
+
+        {/* send the index of the project */}
+        <GProject gproject={projectsDta[2]} />
         <FloatingWhatsAppCom />
         <div className="container">
           <SkillComponent />
