@@ -24,7 +24,6 @@ const Header = () => {
         <HeaderImage aboutmeData={aboutmeData} />
       </div>
 
-      <LowerCurve />
     </div>
   );
 };
