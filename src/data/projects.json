@@ -95,6 +95,15 @@
       "videoKey": "Zw9_UgIOrGg",
       "codeStatus": "PRIVATE"
     },
+    {
+      "imeg": "images/salil.png",
+      "title": "Salil",
+      "description": "\"Saleel\" is an architectural masterpiece that embodies the highest meanings of luxury and comfort. Designed to be more than just a residence, it is an integrated lifestyle that offers its residents an exceptional experience combining the tranquility of nature with the liveliness of the city, while providing all the amenities and services that meet your aspirations.",
+      "technology": ["Html", "Css", "JavaScript", "Tailwind CSS"],
+      "demo": "https://salil-real-estate-project-page.pages.dev/",
+      "github": "https://github.com/alihatem361/Salil-Real-Estate-Project-Page",
+      "codeStatus": "PRIVATE"
+    },
 
     {
       "imeg": "images/makhabrash.png",

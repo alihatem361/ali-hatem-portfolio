@@ -99,6 +99,16 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "imeg": "images/salil.png",
+      "title": "سليل",
+      "description": "\"سليل\" هو تحفة معمارية تجسد أرقى معاني الفخامة والراحة. صُمم ليكون أكثر من مجرد سكن، فهو أسلوب حياة متكامل يمنح سكانه تجربة استثنائية تجمع بين هدوء الطبيعة وحيوية المدينة، ويوفر جميع وسائل الراحة والخدمات التي تلبي تطلعاتك.",
+      "technology": ["Html", "Css", "JavaScript", "Tailwind CSS"],
+      "demo": "https://salil-real-estate-project-page.pages.dev/",
+      "github": "https://github.com/alihatem361/Salil-Real-Estate-Project-Page",
+      "codeStatus": "PRIVATE"
+    },
+
+    {
       "imeg": "images/makhabrash.png",
       "title": "Makhabrash",
       "description": "(مخبارش) هو تطبيق ويب يتيح للمستخدمين إرسال رسائل إلى أي شخص بشكل مجهول. تم تصميمه باستخدام React للواجهة الأمامية وFirebase لخدمات الواجهة الخلفية.",
