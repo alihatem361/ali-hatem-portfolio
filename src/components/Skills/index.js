@@ -142,28 +142,6 @@ const SkillsComponent = () => {
             })}
           </div>
         </div>
-
-        <div className="skills-grid">
-          {skills.map((skill, index) => {
-            return (
-              <div
-                className="skill-grid-item"
-                key={`grid-${index}`}
-                style={{ "--skill-color": skill.color }}
-              >
-                <div className="skill-icon-wrapper">
-                  <skill.icon className="skill-icon" />
-                  <div className="skill-glow"></div>
-                </div>
-                <div className="skill-info">
-                  <h3 className="skill-name">{skill.name}</h3>
-                  <span className="skill-category">{skill.category}</span>
-                </div>
-                <div className="skill-hover-effect"></div>
-              </div>
-            );
-          })}
-        </div>
       </div>
     </div>
   );
