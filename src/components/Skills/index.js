@@ -20,81 +20,146 @@ const SkillsComponent = () => {
     {
       icon: FaReact,
       name: "React",
+      color: "#61DAFB",
+      category: "Frontend",
     },
     {
       icon: TbBrandNextjs,
-      name: "Nextjs",
+      name: "Next.js",
+      color: "#000000",
+      category: "Frontend",
     },
     {
       icon: TbBrandRedux,
       name: "Redux",
+      color: "#764ABC",
+      category: "Frontend",
     },
-
     {
       icon: TbBrandJavascript,
-      name: "Javascript",
+      name: "JavaScript",
+      color: "#F7DF1E",
+      category: "Programming",
     },
     {
       icon: SiTypescript,
-      name: "Typescript",
+      name: "TypeScript",
+      color: "#3178C6",
+      category: "Programming",
     },
     {
       icon: FaNodeJs,
-      name: "Nodejs",
+      name: "Node.js",
+      color: "#339933",
+      category: "Backend",
     },
     {
       icon: DiMongodb,
       name: "MongoDB",
+      color: "#47A248",
+      category: "Database",
     },
     {
       icon: IoLogoFirebase,
       name: "Firebase",
+      color: "#FFCA28",
+      category: "Backend",
     },
     {
       icon: SiMui,
       name: "Material UI",
+      color: "#0081CB",
+      category: "UI Framework",
     },
     {
       icon: FaHtml5,
-      name: "HTML",
+      name: "HTML5",
+      color: "#E34F26",
+      category: "Markup",
     },
     {
       icon: FaCss3,
-      name: "CSS",
+      name: "CSS3",
+      color: "#1572B6",
+      category: "Styling",
     },
     {
       icon: FaSass,
       name: "SASS",
+      color: "#CC6699",
+      category: "Styling",
     },
     {
       icon: FaBootstrap,
       name: "Bootstrap",
+      color: "#7952B3",
+      category: "UI Framework",
     },
     {
       icon: SiTailwindcss,
-      name: "Tailwindcss",
+      name: "Tailwind CSS",
+      color: "#06B6D4",
+      category: "UI Framework",
     },
-
     {
       icon: FaGithub,
-      name: "Github",
+      name: "GitHub",
+      color: "#181717",
+      category: "Tools",
     },
   ];
   return (
     <div className="skills-container" data-aos="fade-up">
       <div className="skills-header">
-        <h2>Skills</h2>
-        <p>My technical level</p>
+        <h2>
+          <span className="skills-title-accent">My</span> Skills
+        </h2>
+        <p className="skills-subtitle">Technologies I work with</p>
+        <div className="skills-divider"></div>
       </div>
-      <div className="skills">
-        <div className="skills-track">
-          {[...skills, ...skills].map((skill, index) => {
-            return (
-              <div className="iconbox" key={index}>
-                <div className="skill-icon">
-                  <skill.icon />
+
+      <div className="skills-content">
+        <div className="skills-carousel">
+          <div className="skills-track">
+            {[...skills, ...skills].map((skill, index) => {
+              return (
+                <div
+                  className="skill-card"
+                  key={index}
+                  style={{ "--skill-color": skill.color }}
+                >
+                  <div className="skill-icon-wrapper">
+                    <skill.icon className="skill-icon" />
+                    <div className="skill-glow"></div>
+                  </div>
+                  <div className="skill-info">
+                    <h3 className="skill-name">{skill.name}</h3>
+                    <span className="skill-category">{skill.category}</span>
+                  </div>
+                  <div className="skill-hover-effect"></div>
                 </div>
-                <p>{skill.name}</p>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="skills-grid">
+          {skills.map((skill, index) => {
+            return (
+              <div
+                className="skill-grid-item"
+                key={`grid-${index}`}
+                style={{ "--skill-color": skill.color }}
+              >
+                <div className="skill-icon-wrapper">
+                  <skill.icon className="skill-icon" />
+                  <div className="skill-glow"></div>
+                </div>
+                <div className="skill-info">
+                  <h3 className="skill-name">{skill.name}</h3>
+                  <span className="skill-category">{skill.category}</span>
+                </div>
+                <div className="skill-hover-effect"></div>
               </div>
             );
           })}
