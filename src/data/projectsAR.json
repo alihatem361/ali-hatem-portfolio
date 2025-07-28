@@ -120,6 +120,7 @@
     {
       "imeg": "images/EcommerceWebsite.webp",
       "title": "التجارة الإلكترونية باستخدام ReactJs",
+      "description": "مشروع التجارة الإلكترونية هو تطبيق ويب تم إنشاؤه باستخدام React.js وRedux، وهو مصمم لتوفير تجربة تسوق سلسة للمستخدمين. يتيح للمستخدمين تصفح المنتجات، إضافتها إلى عربة التسوق، وإجراء عمليات الدفع بسهولة.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "",
       "github": "https://github.com/alihatem360/ecommerceReactJS",
@@ -130,6 +131,7 @@
     {
       "imeg": "images/attendance recording.jpg",
       "title": "إدارة المحاضرات ونظام تسجيل الحضور",
+      "description": "نظام إدارة المحاضرات وتسجيل الحضور هو تطبيق ويب مصمم لتسهيل عملية إدارة المحاضرات وتسجيل حضور الطلاب. يتيح للمستخدمين إضافة محاضرات جديدة، تسجيل حضور الطلاب، وعرض قائمة المحاضرات المسجلة.",
       "technology": ["ReactJs", "Material-ui", "Firebase"],
       "demo": "",
       "github": "",
@@ -150,11 +152,13 @@
       "demo": "",
       "github": "",
       "video": "https://youtu.be/lCVyxbbBXVM",
-      "videoKey": "lCVyxbbBXVM"
+      "videoKey": "lCVyxbbBXVM",
+      "hidden": true
     },
     {
       "imeg": "images/Dr. Mayada Salah.png",
       "title": "د.ميادة صلاح",
+      "description": "موقع ويب شخصي للدكتورة ميادة صلاح، طبيبة متخصصة في طب الأطفال. يهدف الموقع إلى تقديم معلومات حول خدماتها الطبية، خبراتها، ومواعيد العمل.",
       "technology": ["HTML", "CSS", "JavaScript"],
       "demo": "https://alihatem360.github.io/basmatalnarjis/",
       "github": "https://github.com/alihatem360/basmatalnarjis.git",
@@ -166,11 +170,13 @@
       "technology": ["ReactJs", "Redux", "material-ui", "Api"],
       "demo": "https://nifty-tendency.surge.sh/",
       "github": "https://github.com/alihatem360/pest-sweepy-dashboard.git",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "hidden": true
     },
     {
       "imeg": "images/mohammed-al-huwaila.png",
       "title": "محمد الحويلة",
+      "description": "موقع ويب شخصي لمحمد الحويلة، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://mohammed-al-huwaila2.vercel.app/",
       "github": "https://github.com/alihatem360/Mohammed-Al-Huwaila2",
@@ -179,6 +185,7 @@
     {
       "imeg": "images/thamer-al-suwait.png",
       "title": "ثامر السويط",
+      "description": "موقع ويب شخصي لثامر السويط، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://thamer-al-suwait.vercel.app/",
       "github": "https://github.com/alihatem360/Thamer-Al-Suwait",
@@ -187,6 +194,7 @@
     {
       "imeg": "images/saoud-al-asfour.png",
       "title": "سعود العصفور",
+      "description": "موقع ويب شخصي لسعود العصفور، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://saoud-al-asfour.vercel.app/",
       "github": "https://github.com/alihatem360/Saoud_Al-Asfour",
@@ -195,6 +203,7 @@
     {
       "imeg": "images/abdullah-mutlaq-awad-al-mutairi.png",
       "title": "عبد الله مطلق عوض المطيري",
+      "description": "موقع ويب شخصي لعبد الله مطلق عوض المطيري، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://abdullah-mutlaq-awad-al-mutairi.vercel.app/",
       "github": "https://github.com/alihatem360/abdullah_mutlaq_awad_al-mutairi",
@@ -203,13 +212,13 @@
     {
       "imeg": "images/CalorieBot.jpg",
       "title": "بوت تلجرام لحساب السعرات الحرارية",
+      "description": "بوت تلجرام لحساب السعرات الحرارية هو بوت مصمم لمساعدتك في تتبع مدخولك اليومي من السعرات الحرارية. يمكنك ببساطة إرسال اسم الطعام الذي تناولته، وسيقوم البوت بالرد بمعلومات حول السعرات الحرارية والمغذيات الأخرى لهذا الطعام.",
       "technology": ["NodeJs", "ExpressJs", "TelegramBotApi", "NutritionixApi"],
       "demo": "",
       "github": "",
       "video": "https://youtu.be/XDYKVguRDUU",
       "videoKey": "XDYKVguRDUU",
-      "codeStatus": "PRIVATE",
-      "description": "مرحبًا بك في Calorie Bot، وهو روبوت Telegram المفضل لديك للوصول السريع والسهل إلى المعلومات الغذائية حول الأطعمة المختلفة! 🍏🥦🍕"
+      "codeStatus": "PRIVATE"
     },
     {
       "imeg": "images/LaptopStore Contract.png",
@@ -217,7 +226,8 @@
       "technology": ["ReactJs", "material-ui", "react-to-print", "PWA"],
       "demo": "https://laptop-store.surge.sh/",
       "github": "https://github.com/alihatem360/laptop_store.git",
-      "description": "مشروع مبيعات أجهزة الكمبيوتر المحمول هو تطبيق ويب تم إنشاؤه باستخدام React.js وMaterial-UI، وهو مصمم لتبسيط عملية بيع أجهزة الكمبيوتر المحمولة. تمكن الأفراد البيع من ملء نموذج العقد وطباعة العقد باستخدام Microsoft Print. يعمل هذا المشروع على تبسيط إنشاء عقود بيع أجهزة الكمبيوتر المحمول.💻📝🖨️"
+      "description": "مشروع مبيعات أجهزة الكمبيوتر المحمول هو تطبيق ويب تم إنشاؤه باستخدام React.js وMaterial-UI، وهو مصمم لتبسيط عملية بيع أجهزة الكمبيوتر المحمولة. تمكن الأفراد البيع من ملء نموذج العقد وطباعة العقد باستخدام Microsoft Print. يعمل هذا المشروع على تبسيط إنشاء عقود بيع أجهزة الكمبيوتر المحمول.💻📝🖨️",
+      "hidden": true
     },
     {
       "imeg": "images/E-Learning.png",
@@ -226,11 +236,13 @@
       "demo": "https://e-learningreactjs.pages.dev/",
       "github": "https://github.com/alihatem360/e-learningReactJS",
       "video": "https://youtu.be/L6EqydzzSr8",
-      "videoKey": "L6EqydzzSr8"
+      "videoKey": "L6EqydzzSr8",
+      "hidden": true
     },
     {
       "imeg": "images/greeting-card.png",
       "title": "بطاقة التهنئة",
+      "description": "تطبيق ويب بسيط لإنشاء بطاقات التهنئة باستخدام React وTailwind CSS.",
       "technology": ["ReactJs", "Tailwind", "Vite"],
       "demo": "https://greeting-card-pied.vercel.app/",
       "github": "https://github.com/alihatem360/greeting-card",
@@ -243,7 +255,8 @@
       "technology": ["HTML", "CSS", "JavaScript"],
       "demo": "https://hospital-landing-page-sooty.vercel.app/",
       "github": "https://github.com/alihatem360/Hospital-LandingPage",
-      "video": ""
+      "video": "",
+      "hidden": true
     },
     {
       "imeg": "images/MovieReactJs.webp",
@@ -256,7 +269,8 @@
         "Bootstrap"
       ],
       "demo": "https://shoping-cart-redux-vite.pages.dev/",
-      "github": "https://github.com/alihatem360/movieReactJs"
+      "github": "https://github.com/alihatem360/movieReactJs",
+      "hidden": true
     },
     {
       "imeg": "images/alhatab.webp",
@@ -265,7 +279,8 @@
       "demo": "https://alihatem360.github.io/alhatab/",
       "github": "https://github.com/alihatem360/alhatab",
       "video": "https://youtu.be/eGk8rV_FJJ4",
-      "videoKey": "eGk8rV_FJJ4"
+      "videoKey": "eGk8rV_FJJ4",
+      "hidden": true
     },
     {
       "imeg": "images/2-4.webp",
@@ -274,14 +289,16 @@
       "demo": "https://alihatem360.github.io/agrica/",
       "github": "https://github.com/alihatem360/agrica",
       "video": "https://youtu.be/IkweYBUhlM4",
-      "videoKey": "IkweYBUhlM4"
+      "videoKey": "IkweYBUhlM4",
+      "hidden": true
     },
     {
       "imeg": "images/1-1.webp",
       "title": "موقع السيرة الذاتية",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Portfolio-Template/",
-      "github": "https://github.com/alihatem360/Portfolio-Template"
+      "github": "https://github.com/alihatem360/Portfolio-Template",
+      "hidden": true
     },
     {
       "imeg": "images/1-3.webp",
@@ -290,7 +307,8 @@
       "demo": "https://alihatem360.github.io/Js-Template/",
       "github": "https://github.com/alihatem360/Js-Template",
       "video": "https://youtu.be/IkweYBUhlM4",
-      "videoKey": "IkweYBUhlM4"
+      "videoKey": "IkweYBUhlM4",
+      "hidden": true
     },
     {
       "imeg": "images/BookDownloadPage.png",
@@ -298,14 +316,16 @@
       "technology": ["HTML", "CSS"],
       "demo": "https://alihatem360.github.io/BookDownloadPage/",
       "github": "https://github.com/alihatem360/BookDownloadPage",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "hidden": true
     },
     {
       "imeg": "images/movies-list-redux.webp",
       "title": "قائمة الأفلام باستخدام Redux",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://movies-list-redux.pages.dev/",
-      "github": "https://github.com/alihatem360/movies-list-redux"
+      "github": "https://github.com/alihatem360/movies-list-redux",
+      "hidden": true
     },
     {
       "imeg": "images/NFT-Shop.webp",
@@ -313,57 +333,56 @@
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "",
       "github": "https://github.com/alihatem360/NFT-Shop",
-      "video": ""
+      "video": "",
+      "hidden": true
     },
     {
       "imeg": "images/1-2.webp",
       "title": "موقع المطعم",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Restaurant-Template/",
-      "github": "https://github.com/alihatem360/Restaurant-Template"
+      "github": "https://github.com/alihatem360/Restaurant-Template",
+      "hidden": true
     },
     {
       "imeg": "images/2-1.webp",
       "title": "مشروع MyReads من Udacity",
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "https://udacitymyreadsproject.pages.dev/",
-      "github": "https://github.com/alihatem360/UdacityMyReadsProject"
+      "github": "https://github.com/alihatem360/UdacityMyReadsProject",
+      "hidden": true
     },
     {
       "imeg": "images/2-2.webp",
       "title": "مكبرات الصوت باستخدام Reactjs",
       "technology": ["ReactJs", "Bootstrap"],
       "demo": "https://speakersreactjs.pages.dev/",
-      "github": "https://github.com/alihatem360/SpeakersReactjs"
+      "github": "https://github.com/alihatem360/SpeakersReactjs",
+      "hidden": true
     },
     {
       "imeg": "images/farooq-task.webp",
       "title": "مهمة فاروق",
       "technology": ["ReactJs", "reactbootstrap", "Api"],
       "demo": "https://farooq-task.pages.dev/",
-      "github": "https://github.com/alihatem360/farooq-task"
+      "github": "https://github.com/alihatem360/farooq-task",
+      "hidden": true
     },
     {
       "imeg": "images/2-3.webp",
       "title": "مشروع تجارة إلكترونية باستخدام Angular",
       "technology": ["angular", "Bootstrap", "Api"],
       "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
-      "github": "https://github.com/alihatem360/angularECommerceGradProj"
+      "github": "https://github.com/alihatem360/angularECommerceGradProj",
+      "hidden": true
     },
     {
       "imeg": "images/1-5.webp",
       "title": "أفلام IMDb",
       "technology": ["C#", "ASP.NET", "MVC", "Entity Framework", "SQL"],
       "demo": "",
-      "github": "https://github.com/alihatem360/IMDb"
-    },
-    {
-      "imeg": "images/hadafik-altaelimia.png",
-      "title": "منصة هدفك التعليمية",
-      "description": "حدافك التعليمية هي منصة تعليمية مجانية توفر للطلاب فرصة التعلم وتطوير مهاراتهم في مجالات متنوعة. تقدم المنصة مجموعة واسعة من الدورات والموارد لمساعدة الطلاب على تحقيق أهدافهم الأكاديمية والمهنية.",
-      "technology": ["HTML", "CSS", "JavaScript"],
-      "demo": "https://hadafuk.vercel.app/",
-      "codeStatus": "PRIVATE"
+      "github": "https://github.com/alihatem360/IMDb",
+      "hidden": true
     }
   ],
 

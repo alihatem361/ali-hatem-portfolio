@@ -117,6 +117,7 @@
     {
       "imeg": "images/EcommerceWebsite.webp",
       "title": "ReactJs Ecommerce",
+      "description": "This project is a fully functional e-commerce website built using React.js and Redux. It provides a seamless shopping experience with features like product browsing, cart management, and checkout.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "",
       "github": "https://github.com/alihatem360/ecommerceReactJS",
@@ -147,11 +148,13 @@
       "demo": "",
       "github": "",
       "video": "https://youtu.be/lCVyxbbBXVM",
-      "videoKey": "lCVyxbbBXVM"
+      "videoKey": "lCVyxbbBXVM",
+      "hidden": true
     },
     {
       "imeg": "images/Dr. Mayada Salah.png",
       "title": "Dr. Mayada Salah",
+      "description": "A personal website for Dr. Mayada Salah, showcasing her professional profile, achievements, and contact information.",
       "technology": ["HTML", "CSS", "JavaScript"],
       "demo": "https://alihatem360.github.io/basmatalnarjis/",
       "github": "https://github.com/alihatem360/basmatalnarjis.git",
@@ -165,11 +168,13 @@
       "demo": "https://nifty-tendency.surge.sh/",
       "github": "https://github.com/alihatem360/pest-sweepy-dashboard.git",
       "codeStatus": "PRIVATE",
+      "hidden": true,
       "loomVideo": "https://www.loom.com/share/c701533416d94618a1bcdafa8713a405?sid=b71a4010-c8aa-4f27-a617-2a123dbad16a"
     },
     {
       "imeg": "images/mohammed-al-huwaila.png",
       "title": "mohammed-al-huwaila",
+      "description": "A personal website for Mohammed Al-Huwaila, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://mohammed-al-huwaila2.vercel.app/",
       "github": "https://github.com/alihatem360/Mohammed-Al-Huwaila2",
@@ -179,6 +184,7 @@
     {
       "imeg": "images/thamer-al-suwait.png",
       "title": "thamer-al-suwait",
+      "description": "A personal website for Thamer Al-Suwait, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://thamer-al-suwait.vercel.app/",
       "github": "https://github.com/alihatem360/Thamer-Al-Suwait",
@@ -187,6 +193,7 @@
     {
       "imeg": "images/saoud-al-asfour.png",
       "title": "saoud-al-asfour",
+      "description": "A personal website for Saoud Al-Asfour, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://saoud-al-asfour.vercel.app/",
       "github": "https://github.com/alihatem360/Saoud_Al-Asfour",
@@ -195,6 +202,7 @@
     {
       "imeg": "images/abdullah-mutlaq-awad-al-mutairi.png",
       "title": "abdullah-mutlaq-awad-al-mutairi",
+      "description": "A personal website for Abdullah Mutlaq Awad Al-Mutairi, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://abdullah-mutlaq-awad-al-mutairi.vercel.app/",
       "github": "https://github.com/alihatem360/abdullah_mutlaq_awad_al-mutairi",
@@ -203,13 +211,13 @@
     {
       "imeg": "images/CalorieBot.jpg",
       "title": "Calorie Bot",
+      "description": "Welcome to Calorie Bot, your go-to Telegram bot for quick and easy access to nutritional information about various foods! 🍏🥦🍕",
       "technology": ["NodeJs", "ExpressJs", "TelegramBotApi", "NutritionixApi"],
       "demo": "",
       "github": "",
       "video": "https://youtu.be/XDYKVguRDUU",
       "videoKey": "XDYKVguRDUU",
-      "codeStatus": "PRIVATE",
-      "description": "Welcome to Calorie Bot, your go-to Telegram bot for quick and easy access to nutritional information about various foods! 🍏🥦🍕"
+      "codeStatus": "PRIVATE"
     },
     {
       "imeg": "images/LaptopStore Contract.png",
@@ -218,6 +226,7 @@
       "demo": "https://laptop-store.surge.sh/",
       "github": "https://github.com/alihatem360/laptop_store.git",
       "codeStatus": "PRIVATE",
+      "hidden": true,
       "description": "The Laptop Sales Project is a web application built using React.js and Material-UI, designed to streamline the process of selling laptops. It enables selling individuals to fill out a contract form and print the contract using Microsoft Print. This project simplifies the creation of laptop sales contracts.💻📝🖨️"
     },
 
@@ -228,11 +237,13 @@
       "demo": "https://e-learningreactjs.pages.dev/",
       "github": "https://github.com/alihatem360/e-learningReactJS",
       "video": "https://youtu.be/L6EqydzzSr8",
-      "videoKey": "L6EqydzzSr8"
+      "videoKey": "L6EqydzzSr8",
+      "hidden": true
     },
     {
       "imeg": "images/greeting-card.png",
       "title": "greeting-card",
+      "description": "A beautiful greeting card template built with React and Tailwind CSS.",
       "technology": ["ReactJs", "Tailwind", "Vite"],
       "demo": "https://greeting-card-pied.vercel.app/",
       "github": "https://github.com/alihatem360/greeting-card",
@@ -245,7 +256,8 @@
       "technology": ["HTML", "CSS", "JavaScript"],
       "demo": "https://hospital-landing-page-sooty.vercel.app/",
       "github": "https://github.com/alihatem360/Hospital-LandingPage",
-      "video": ""
+      "video": "",
+      "hidden": true
     },
     {
       "imeg": "images/MovieReactJs.webp",
@@ -258,7 +270,8 @@
         "Bootstrap"
       ],
       "demo": "https://shoping-cart-redux-vite.pages.dev/",
-      "github": "https://github.com/alihatem360/movieReactJs"
+      "github": "https://github.com/alihatem360/movieReactJs",
+      "hidden": true
     },
 
     {
@@ -268,7 +281,8 @@
       "demo": "https://alihatem360.github.io/alhatab/",
       "github": "https://github.com/alihatem360/alhatab",
       "video": "https://youtu.be/eGk8rV_FJJ4",
-      "videoKey": "eGk8rV_FJJ4"
+      "videoKey": "eGk8rV_FJJ4",
+      "hidden": true
     },
     {
       "imeg": "images/2-4.webp",
@@ -277,14 +291,16 @@
       "demo": "https://alihatem360.github.io/agrica/",
       "github": "https://github.com/alihatem360/agrica",
       "video": "https://youtu.be/ei4yh9LXXbU",
-      "videoKey": "ei4yh9LXXbU"
+      "videoKey": "ei4yh9LXXbU",
+      "hidden": true
     },
     {
       "imeg": "images/1-1.webp",
       "title": "Portfolio Website",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Portfolio-Template/",
-      "github": "https://github.com/alihatem360/Portfolio-Template"
+      "github": "https://github.com/alihatem360/Portfolio-Template",
+      "hidden": true
     },
     {
       "imeg": "images/1-3.webp",
@@ -293,7 +309,8 @@
       "demo": "https://alihatem360.github.io/Js-Template/",
       "github": "https://github.com/alihatem360/Js-Template",
       "video": "https://youtu.be/IkweYBUhlM4",
-      "videoKey": "IkweYBUhlM4"
+      "videoKey": "IkweYBUhlM4",
+      "hidden": true
     },
     {
       "imeg": "images/BookDownloadPage.png",
@@ -301,7 +318,8 @@
       "technology": ["HTML", "CSS"],
       "demo": "https://alihatem360.github.io/BookDownloadPage/",
       "github": "https://github.com/alihatem360/BookDownloadPage",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "hidden": true
     },
 
     {
@@ -309,7 +327,8 @@
       "title": "movies-list-redux",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://movies-list-redux.pages.dev/",
-      "github": "https://github.com/alihatem360/movies-list-redux"
+      "github": "https://github.com/alihatem360/movies-list-redux",
+      "hidden": true
     },
     {
       "imeg": "images/NFT-Shop.webp",
@@ -317,49 +336,56 @@
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "",
       "github": "https://github.com/alihatem360/NFT-Shop",
-      "video": ""
+      "video": "",
+      "hidden": true
     },
     {
       "imeg": "images/1-2.webp",
       "title": "Restaurant Website",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Restaurant-Template/",
-      "github": "https://github.com/alihatem360/Restaurant-Template"
+      "github": "https://github.com/alihatem360/Restaurant-Template",
+      "hidden": true
     },
     {
       "imeg": "images/2-1.webp",
       "title": "UdacityMyReadsProject",
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "https://udacitymyreadsproject.pages.dev/",
-      "github": "https://github.com/alihatem360/UdacityMyReadsProject"
+      "github": "https://github.com/alihatem360/UdacityMyReadsProject",
+      "hidden": true
     },
     {
       "imeg": "images/2-2.webp",
       "title": "SpeakersReactjs",
       "technology": ["ReactJs", "Bootstrap"],
       "demo": "https://speakersreactjs.pages.dev/",
-      "github": "https://github.com/alihatem360/SpeakersReactjs"
+      "github": "https://github.com/alihatem360/SpeakersReactjs",
+      "hidden": true
     },
     {
       "imeg": "images/farooq-task.webp",
       "title": "farooq-task",
       "technology": ["ReactJs", "reactbootstrap", "Api"],
       "demo": "https://farooq-task.pages.dev/",
-      "github": "https://github.com/alihatem360/farooq-task"
+      "github": "https://github.com/alihatem360/farooq-task",
+      "hidden": true
     },
     {
       "imeg": "images/2-3.webp",
       "title": "angularECommerceGradProj",
       "technology": ["angular", "Bootstrap", "Api"],
       "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
-      "github": "https://github.com/alihatem360/angularECommerceGradProj"
+      "github": "https://github.com/alihatem360/angularECommerceGradProj",
+      "hidden": true
     },
     {
       "imeg": "images/1-5.webp",
       "title": "IMDb Movies",
       "technology": ["C#", "ASP.NET", "MVC", "Entity Framework", "SQL"],
       "demo": "",
-      "github": "https://github.com/alihatem360/IMDb"
+      "github": "https://github.com/alihatem360/IMDb",
+      "hidden": true
     }
   ],
 

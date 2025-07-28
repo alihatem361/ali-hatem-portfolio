@@ -6,6 +6,15 @@ const GetAllData = () => {
   const { t, i18n } = useTranslation();
 
   const getProjects = () => {
+    const projects =
+      i18n.language === "en" ? ProjectsApi.Projects : ProjectsApiAR.Projects;
+    // Filter out hidden projects
+    const visibleProjects = projects.filter((project) => !project.hidden);
+    return Promise.resolve([visibleProjects]);
+  };
+
+  const getAllProjects = () => {
+    // This function returns all projects including hidden ones
     return Promise.resolve(
       i18n.language === "en" ? [ProjectsApi.Projects] : [ProjectsApiAR.Projects]
     );
@@ -23,7 +32,7 @@ const GetAllData = () => {
     );
   };
 
-  return { getProjects, getSocials, getAboutme };
+  return { getProjects, getAllProjects, getSocials, getAboutme };
 };
 
 export default GetAllData;
