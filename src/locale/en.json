@@ -12,5 +12,14 @@
     "arabic": "Arabic",
     "english": "English"
   },
-  "login": "Login"
+  "login": "Login",
+  "cv": {
+    "previewButton": "Preview CV",
+    "downloadButton": "Download CV",
+    "modalTitle": "CV Preview",
+    "loading": "Loading CV...",
+    "error": "Failed to load CV. Please try again.",
+    "retry": "Retry",
+    "close": "Close"
+  }
 }
