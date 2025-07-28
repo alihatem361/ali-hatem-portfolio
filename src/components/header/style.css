@@ -59,6 +59,7 @@
 @media screen and (max-width: 768px) {
   .header .header-text p {
     width: 100%;
+    text-align: left;
   }
 }
 .header .header-text .header-buttons button:first-child,
@@ -86,9 +87,12 @@
     display: flex;
     justify-content: center !important;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   .header .header-text .header-buttons button:first-child {
-    margin: 0 10px 0 0;
+    margin: 0;
+    flex-shrink: 0;
   }
 }
 .header .header-text .list-unstyled {
@@ -138,6 +142,19 @@
       padding: 0 15px;
       line-height: 30px;
     }
+
+    .header .header-text .header-buttons {
+      margin-top: 20px;
+      justify-content: center !important;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .header .header-text .header-buttons button,
+    .header .header-text .header-buttons .cv__modal__btn {
+      flex: 0 0 auto;
+      min-width: 120px;
+    }
   }
   .header .header-img {
     width: 70%;
@@ -156,5 +173,16 @@
   .header-social {
     display: flex;
     justify-content: center;
+  }
+
+  /* Additional mobile styles for buttons */
+  .header .header-text .header-buttons {
+    padding: 0 20px;
+    margin-top: 25px;
+  }
+
+  .header .header-text .header-buttons button:first-child {
+    font-size: 1.8rem !important;
+    padding: 10px 20px;
   }
 } /*# sourceMappingURL=style.css.map */
