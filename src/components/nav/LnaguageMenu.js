@@ -1,6 +1,7 @@
 import React from "react";
 import { FaEarthAfrica } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
+
 function LnaguageMenu() {
   const { i18n } = useTranslation();
 
@@ -26,7 +27,14 @@ function LnaguageMenu() {
         border: "1px solid var(--accent-color)",
         background: "rgba(212, 175, 55, 0.1)",
         backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
         transition: "var(--transition)",
+        borderRadius: "20px",
+        padding: "0.8rem 1.5rem",
+        fontSize: "1rem",
+        fontWeight: "500",
+        color: "#fff",
+        cursor: "pointer",
       }}
     >
       <span style={{ fontWeight: "500" }}>
