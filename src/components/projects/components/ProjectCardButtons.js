@@ -5,33 +5,46 @@ import { BiGlobe } from "react-icons/bi";
 
 const ProjectCardButtons = ({ project, noVideo }) => {
   return (
-    <div className="card-buttons">
-      {project.github === "" || project.github === undefined ? null : (
+    <div className="card-buttons enhanced-buttons">
+      {project.github && project.github !== "" && (
         <a
-          className="btn"
+          className="btn enhanced-btn github-btn"
           href={project.codeStatus === "PRIVATE" ? null : project.github}
           target="_blank"
           rel="noreferrer"
+          title={
+            project.codeStatus === "PRIVATE"
+              ? "Private Repository"
+              : "View Source Code"
+          }
+          style={{
+            pointerEvents: project.codeStatus === "PRIVATE" ? "none" : "auto",
+            opacity: project.codeStatus === "PRIVATE" ? 0.5 : 1,
+          }}
         >
           <FaGithub />
+          <span className="btn-text">Code</span>
         </a>
       )}
 
-      {project.demo === "" || project.demo === undefined ? null : (
-        <a className="btn" href={project.demo} target="_blank" rel="noreferrer">
+      {project.demo && project.demo !== "" && (
+        <a
+          className="btn enhanced-btn demo-btn"
+          href={project.demo}
+          target="_blank"
+          rel="noreferrer"
+          title="View Live Demo"
+        >
           <BiGlobe />
+          <span className="btn-text">Demo</span>
         </a>
       )}
 
-      {project.video === "" ||
-      project.loomVideo === "" ||
-      project.video === undefined ||
-      noVideo ? null : (
+      {!noVideo && project.video && project.video !== "" && (
         <VideoPopup videoKey={project.videoKey} project={project} />
       )}
-      {project.loomVideo === "" ||
-      project.loomVideo === undefined ||
-      noVideo ? null : (
+
+      {!noVideo && project.loomVideo && project.loomVideo !== "" && (
         <VideoPopup videoKey={project.videoKey} project={project} />
       )}
     </div>

@@ -7,20 +7,30 @@ const LoomVideo = ({ videoUrl }) => {
   return (
     <React.Fragment>
       <div
-        style={{ position: "relative", paddingBottom: "56.25%", height: "0" }}
+        className="loom-video-wrapper"
+        style={{
+          position: "relative",
+          paddingBottom: "56.25%",
+          height: "0",
+          borderRadius: "15px",
+          overflow: "hidden",
+          background: "#000",
+        }}
       >
         <iframe
           src={embedUrl}
-          frameborder="0"
-          webkitallowfullscreen
-          mozallowfullscreen
-          allowfullscreen
+          frameBorder="0"
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true"
+          allowFullScreen
+          loading="lazy"
           style={{
             position: "absolute",
             top: "0",
             left: "0",
             width: "100%",
             height: "100%",
+            borderRadius: "15px",
           }}
         ></iframe>
       </div>
