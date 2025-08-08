@@ -49,6 +49,15 @@
     },
 
     {
+      "imeg": "images/shahadat-alhadaf.png",
+      "title": "شهادات الهدف",
+      "description": "أكثر من 50 شهادة معتمدة دولياً، مدعومة 100% من صندوق تنمية الموارد البشرية (هدف)",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "demo": "https://certificates-5z9.pages.dev/",
+      "codeStatus": "PRIVATE"
+    },
+
+    {
       "imeg": "images/hadafik-altaelimia.png",
       "title": "Hadafik Altaelimia",
       "description": "منصة هدفك التعليمية هي منصة تعليمية مجانية توفر للطلاب فرصة التعلم وتطوير مهاراتهم في مجالات متنوعة. تقدم المنصة مجموعة واسعة من الدورات والموارد لمساعدة الطلاب على تحقيق أهدافهم الأكاديمية والمهنية.",

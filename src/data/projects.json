@@ -48,6 +48,14 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "imeg": "images/shahadat-alhadaf.png",
+      "title": "shahadat alhadaf",
+      "description": "50+ internationally accredited certificates, 100% supported by the Human Resources Development Fund (HADAF)",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "demo": "https://certificates-5z9.pages.dev/",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "imeg": "images/alshaatir-academy.png",
       "title": "Alshaatir Academy",
       "description": "Al Shater Platform is an innovative educational application that helps students improve their skills and organize their time through interactive lessons, tests, and customized tools. Enjoy a smart and easy learning experience anytime, anywhere!.",

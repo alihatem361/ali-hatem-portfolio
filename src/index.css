@@ -75,6 +75,25 @@ body {
   box-shadow: none !important;
 }
 
+.language-toggle {
+  background: rgba(212, 175, 55, 0.1) !important;
+  border: 1px solid var(--accent-color) !important;
+  color: var(--text-color) !important;
+  transition: var(--smooth-transition) !important;
+}
+
+.language-toggle:hover {
+  background: var(--accent-color) !important;
+  color: var(--primary-color) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3) !important;
+}
+
+.language-toggle:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2) !important;
+}
+
 .project-header {
   background: linear-gradient(135deg, #d4af37 0%, #f7dc6f 50%, #d4af37 100%);
   background-size: 200% auto;
