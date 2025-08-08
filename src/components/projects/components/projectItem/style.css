@@ -10,7 +10,7 @@
   --card-buttons-border-radius: 25px;
   --card-buttons-padding: 8px 16px;
   --card-buttons-min-width: 100px;
-  --card-buttons-font-size: 2rem;
+  --card-buttons-font-size: 1.6rem;
   --card-buttons-hover-transform: translateY(-2px);
   --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   --card-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.2);
@@ -432,13 +432,28 @@
 
   .card-buttons {
     justify-content: center;
-    gap: 8px;
+    gap: 12px;
   }
 
   .card-buttons a {
-    min-width: 80px;
-    padding: 8px 12px;
-    font-size: 12px;
+    min-width: 55px;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-buttons a i,
+  .card-buttons a svg {
+    font-size: 1.5rem !important;
+    margin: 0;
+  }
+
+  .card-buttons a span {
+    display: none !important;
   }
 
   .tech-badges {
@@ -458,20 +473,62 @@
   }
 }
 
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .card-buttons {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .card-buttons a {
+    min-width: 45px;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-buttons a i,
+  .card-buttons a svg {
+    font-size: 1.4rem !important;
+    margin: 0;
+  }
+
+  .card-buttons a span {
+    display: none !important;
+  }
+}
+
 @media (max-width: 546px) {
   .projects {
     grid-template-columns: 1fr;
     padding: 10px;
   }
 
+  .card-buttons {
+    gap: 12px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .card-buttons a {
-    min-width: 60px;
-    padding: 8px;
+    min-width: 50px;
+    padding: 12px;
+    font-size: 14px;
+    flex: none;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .card-buttons a i,
   .card-buttons a svg {
-    font-size: 1rem !important;
+    font-size: 1.6rem !important;
     margin: 0;
   }
 
