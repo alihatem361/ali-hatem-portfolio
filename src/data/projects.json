@@ -143,7 +143,7 @@
       "description": "\"Saleel\" is an architectural masterpiece that embodies the highest meanings of luxury and comfort. Designed to be more than just a residence, it is an integrated lifestyle that offers its residents an exceptional experience combining the tranquility of nature with the liveliness of the city, while providing all the amenities and services that meet your aspirations.",
       "technology": ["Html", "Css", "JavaScript", "Tailwind CSS"],
       "demo": "https://salil-real-estate-project-page.pages.dev/",
-      "github": "https://github.com/alihatem361/Salil-Real-Estate-Project-Page",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
 
@@ -153,7 +153,7 @@
       "description": "(Makhabrash) is a web application that allows users to send messages to anyone anonymously. It is built using React for the frontend and Firebase for backend services.",
       "technology": ["ReactJs", "Tailwind", "Firebase"],
       "demo": "https://makhabrash.vercel.app/",
-      "github": "https://github.com/alihatem360/Makhabrash",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -162,7 +162,7 @@
       "description": "This project is a fully functional e-commerce website built using React.js and Redux. It provides a seamless shopping experience with features like product browsing, cart management, and checkout.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "",
-      "github": "https://github.com/alihatem360/ecommerceReactJS",
+      "github": "",
       "video": "https://youtu.be/GBpBnKl0Rr8",
       "videoKey": "GBpBnKl0Rr8",
       "codeStatus": "PRIVATE"
@@ -199,7 +199,7 @@
       "description": "A personal website for Dr. Mayada Salah, showcasing her professional profile, achievements, and contact information.",
       "technology": ["HTML", "CSS", "JavaScript"],
       "demo": "https://alihatem360.github.io/basmatalnarjis/",
-      "github": "https://github.com/alihatem360/basmatalnarjis.git",
+      "github": "",
       "codeStatus": "PRIVATE",
       "loomVideo": "https://www.loom.com/share/c17e174a3721453bbfb77ce2911fa553?sid=cb9b92d1-0401-4cdf-90c1-3be5b8342e5d"
     },
@@ -208,7 +208,7 @@
       "title": "pest-sweepy Dashboard",
       "technology": ["ReactJs", "Redux", "material-ui", "Api"],
       "demo": "https://nifty-tendency.surge.sh/",
-      "github": "https://github.com/alihatem360/pest-sweepy-dashboard.git",
+      "github": "",
       "codeStatus": "PRIVATE",
       "hidden": true,
       "loomVideo": "https://www.loom.com/share/c701533416d94618a1bcdafa8713a405?sid=b71a4010-c8aa-4f27-a617-2a123dbad16a"
@@ -219,7 +219,7 @@
       "description": "A personal website for Mohammed Al-Huwaila, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://mohammed-al-huwaila2.vercel.app/",
-      "github": "https://github.com/alihatem360/Mohammed-Al-Huwaila2",
+      "github": "",
       "codeStatus": "PRIVATE",
       "loomVideo": "https://www.loom.com/share/fb99053bff5846338219c06e556ad8a2?sid=3c8e1162-0251-405f-83d7-3082772b7efb"
     },
@@ -229,7 +229,7 @@
       "description": "A personal website for Thamer Al-Suwait, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://thamer-al-suwait.vercel.app/",
-      "github": "https://github.com/alihatem360/Thamer-Al-Suwait",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -238,7 +238,7 @@
       "description": "A personal website for Saoud Al-Asfour, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://saoud-al-asfour.vercel.app/",
-      "github": "https://github.com/alihatem360/Saoud_Al-Asfour",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -247,7 +247,7 @@
       "description": "A personal website for Abdullah Mutlaq Awad Al-Mutairi, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://abdullah-mutlaq-awad-al-mutairi.vercel.app/",
-      "github": "https://github.com/alihatem360/abdullah_mutlaq_awad_al-mutairi",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -266,7 +266,7 @@
       "title": "LaptopStore Contract",
       "technology": ["ReactJs", "material-ui", "react-to-print", "PWA"],
       "demo": "https://laptop-store.surge.sh/",
-      "github": "https://github.com/alihatem360/laptop_store.git",
+      "github": "",
       "codeStatus": "PRIVATE",
       "hidden": true,
       "description": "The Laptop Sales Project is a web application built using React.js and Material-UI, designed to streamline the process of selling laptops. It enables selling individuals to fill out a contract form and print the contract using Microsoft Print. This project simplifies the creation of laptop sales contracts.💻📝🖨️"
@@ -277,7 +277,7 @@
       "title": "E-Learning ReactJS",
       "technology": ["Tailwind", "React", "Vite"],
       "demo": "https://e-learningreactjs.pages.dev/",
-      "github": "https://github.com/alihatem360/e-learningReactJS",
+      "github": "",
       "video": "https://youtu.be/L6EqydzzSr8",
       "videoKey": "L6EqydzzSr8",
       "hidden": true
@@ -288,7 +288,7 @@
       "description": "A beautiful greeting card template built with React and Tailwind CSS.",
       "technology": ["ReactJs", "Tailwind", "Vite"],
       "demo": "https://greeting-card-pied.vercel.app/",
-      "github": "https://github.com/alihatem360/greeting-card",
+      "github": "",
       "video": "https://youtu.be/XDKyLS0QXpg",
       "videoKey": "XDKyLS0QXpg"
     },
@@ -297,7 +297,7 @@
       "title": "hospital-landing-page",
       "technology": ["HTML", "CSS", "JavaScript"],
       "demo": "https://hospital-landing-page-sooty.vercel.app/",
-      "github": "https://github.com/alihatem360/Hospital-LandingPage",
+      "github": "",
       "video": "",
       "hidden": true
     },
@@ -312,7 +312,7 @@
         "Bootstrap"
       ],
       "demo": "https://shoping-cart-redux-vite.pages.dev/",
-      "github": "https://github.com/alihatem360/movieReactJs",
+      "github": "",
       "hidden": true
     },
 
@@ -321,7 +321,7 @@
       "title": "alhatab",
       "technology": ["HTML", "CSS"],
       "demo": "https://alihatem360.github.io/alhatab/",
-      "github": "https://github.com/alihatem360/alhatab",
+      "github": "",
       "video": "https://youtu.be/eGk8rV_FJJ4",
       "videoKey": "eGk8rV_FJJ4",
       "hidden": true
@@ -331,7 +331,7 @@
       "title": "agrica",
       "technology": ["HTML", "Sass", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/agrica/",
-      "github": "https://github.com/alihatem360/agrica",
+      "github": "",
       "video": "https://youtu.be/ei4yh9LXXbU",
       "videoKey": "ei4yh9LXXbU",
       "hidden": true
@@ -341,7 +341,7 @@
       "title": "Portfolio Website",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Portfolio-Template/",
-      "github": "https://github.com/alihatem360/Portfolio-Template",
+      "github": "",
       "hidden": true
     },
     {
@@ -349,7 +349,7 @@
       "title": "Js Template",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Js-Template/",
-      "github": "https://github.com/alihatem360/Js-Template",
+      "github": "",
       "video": "https://youtu.be/IkweYBUhlM4",
       "videoKey": "IkweYBUhlM4",
       "hidden": true
@@ -359,7 +359,7 @@
       "title": "BookDownloadPage",
       "technology": ["HTML", "CSS"],
       "demo": "https://alihatem360.github.io/BookDownloadPage/",
-      "github": "https://github.com/alihatem360/BookDownloadPage",
+      "github": "",
       "codeStatus": "PRIVATE",
       "hidden": true
     },
@@ -369,7 +369,7 @@
       "title": "movies-list-redux",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://movies-list-redux.pages.dev/",
-      "github": "https://github.com/alihatem360/movies-list-redux",
+      "github": "",
       "hidden": true
     },
     {
@@ -377,7 +377,7 @@
       "title": "NFT-Shop",
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "",
-      "github": "https://github.com/alihatem360/NFT-Shop",
+      "github": "",
       "video": "",
       "hidden": true
     },
@@ -386,7 +386,7 @@
       "title": "Restaurant Website",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Restaurant-Template/",
-      "github": "https://github.com/alihatem360/Restaurant-Template",
+      "github": "",
       "hidden": true
     },
     {
@@ -394,7 +394,7 @@
       "title": "UdacityMyReadsProject",
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "https://udacitymyreadsproject.pages.dev/",
-      "github": "https://github.com/alihatem360/UdacityMyReadsProject",
+      "github": "",
       "hidden": true
     },
     {
@@ -402,7 +402,7 @@
       "title": "SpeakersReactjs",
       "technology": ["ReactJs", "Bootstrap"],
       "demo": "https://speakersreactjs.pages.dev/",
-      "github": "https://github.com/alihatem360/SpeakersReactjs",
+      "github": "",
       "hidden": true
     },
     {
@@ -410,7 +410,7 @@
       "title": "farooq-task",
       "technology": ["ReactJs", "reactbootstrap", "Api"],
       "demo": "https://farooq-task.pages.dev/",
-      "github": "https://github.com/alihatem360/farooq-task",
+      "github": "",
       "hidden": true
     },
     {
@@ -418,7 +418,7 @@
       "title": "angularECommerceGradProj",
       "technology": ["angular", "Bootstrap", "Api"],
       "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
-      "github": "https://github.com/alihatem360/angularECommerceGradProj",
+      "github": "",
       "hidden": true
     },
     {
@@ -426,7 +426,7 @@
       "title": "IMDb Movies",
       "technology": ["C#", "ASP.NET", "MVC", "Entity Framework", "SQL"],
       "demo": "",
-      "github": "https://github.com/alihatem360/IMDb",
+      "github": "",
       "hidden": true
     }
   ],

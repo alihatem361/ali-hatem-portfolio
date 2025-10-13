@@ -147,7 +147,7 @@
       "description": "\"سليل\" هو تحفة معمارية تجسد أرقى معاني الفخامة والراحة. صُمم ليكون أكثر من مجرد سكن، فهو أسلوب حياة متكامل يمنح سكانه تجربة استثنائية تجمع بين هدوء الطبيعة وحيوية المدينة، ويوفر جميع وسائل الراحة والخدمات التي تلبي تطلعاتك.",
       "technology": ["Html", "Css", "JavaScript", "Tailwind CSS"],
       "demo": "https://salil-real-estate-project-page.pages.dev/",
-      "github": "https://github.com/alihatem361/Salil-Real-Estate-Project-Page",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
 
@@ -157,7 +157,7 @@
       "description": "(مخبارش) هو تطبيق ويب يتيح للمستخدمين إرسال رسائل إلى أي شخص بشكل مجهول. تم تصميمه باستخدام React للواجهة الأمامية وFirebase لخدمات الواجهة الخلفية.",
       "technology": ["ReactJs", "Tailwind", "Firebase"],
       "demo": "https://makhabrash.vercel.app/",
-      "github": "https://github.com/alihatem360/Makhabrash",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -166,7 +166,7 @@
       "description": "مشروع التجارة الإلكترونية هو تطبيق ويب تم إنشاؤه باستخدام React.js وRedux، وهو مصمم لتوفير تجربة تسوق سلسة للمستخدمين. يتيح للمستخدمين تصفح المنتجات، إضافتها إلى عربة التسوق، وإجراء عمليات الدفع بسهولة.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "",
-      "github": "https://github.com/alihatem360/ecommerceReactJS",
+      "github": "",
       "video": "https://youtu.be/GBpBnKl0Rr8",
       "videoKey": "GBpBnKl0Rr8",
       "codeStatus": "PRIVATE"
@@ -204,7 +204,7 @@
       "description": "موقع ويب شخصي للدكتورة ميادة صلاح، طبيبة متخصصة في طب الأطفال. يهدف الموقع إلى تقديم معلومات حول خدماتها الطبية، خبراتها، ومواعيد العمل.",
       "technology": ["HTML", "CSS", "JavaScript"],
       "demo": "https://alihatem360.github.io/basmatalnarjis/",
-      "github": "https://github.com/alihatem360/basmatalnarjis.git",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -212,7 +212,7 @@
       "title": "pest-sweepy Dashboard",
       "technology": ["ReactJs", "Redux", "material-ui", "Api"],
       "demo": "https://nifty-tendency.surge.sh/",
-      "github": "https://github.com/alihatem360/pest-sweepy-dashboard.git",
+      "github": "",
       "codeStatus": "PRIVATE",
       "hidden": true
     },
@@ -222,7 +222,7 @@
       "description": "موقع ويب شخصي لمحمد الحويلة، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://mohammed-al-huwaila2.vercel.app/",
-      "github": "https://github.com/alihatem360/Mohammed-Al-Huwaila2",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -231,7 +231,7 @@
       "description": "موقع ويب شخصي لثامر السويط، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://thamer-al-suwait.vercel.app/",
-      "github": "https://github.com/alihatem360/Thamer-Al-Suwait",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -240,7 +240,7 @@
       "description": "موقع ويب شخصي لسعود العصفور، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://saoud-al-asfour.vercel.app/",
-      "github": "https://github.com/alihatem360/Saoud_Al-Asfour",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -249,7 +249,7 @@
       "description": "موقع ويب شخصي لعبد الله مطلق عوض المطيري، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://abdullah-mutlaq-awad-al-mutairi.vercel.app/",
-      "github": "https://github.com/alihatem360/abdullah_mutlaq_awad_al-mutairi",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -268,7 +268,7 @@
       "title": "فاتورة متجر الكمبيوتر",
       "technology": ["ReactJs", "material-ui", "react-to-print", "PWA"],
       "demo": "https://laptop-store.surge.sh/",
-      "github": "https://github.com/alihatem360/laptop_store.git",
+      "github": "",
       "description": "مشروع مبيعات أجهزة الكمبيوتر المحمول هو تطبيق ويب تم إنشاؤه باستخدام React.js وMaterial-UI، وهو مصمم لتبسيط عملية بيع أجهزة الكمبيوتر المحمولة. تمكن الأفراد البيع من ملء نموذج العقد وطباعة العقد باستخدام Microsoft Print. يعمل هذا المشروع على تبسيط إنشاء عقود بيع أجهزة الكمبيوتر المحمول.💻📝🖨️",
       "hidden": true
     },
@@ -277,7 +277,7 @@
       "title": "E-Learning باستخدام ReactJS",
       "technology": ["Tailwind", "React", "Vite"],
       "demo": "https://e-learningreactjs.pages.dev/",
-      "github": "https://github.com/alihatem360/e-learningReactJS",
+      "github": "",
       "video": "https://youtu.be/L6EqydzzSr8",
       "videoKey": "L6EqydzzSr8",
       "hidden": true
@@ -288,7 +288,7 @@
       "description": "تطبيق ويب بسيط لإنشاء بطاقات التهنئة باستخدام React وTailwind CSS.",
       "technology": ["ReactJs", "Tailwind", "Vite"],
       "demo": "https://greeting-card-pied.vercel.app/",
-      "github": "https://github.com/alihatem360/greeting-card",
+      "github": "",
       "video": "https://youtu.be/XDKyLS0QXpg",
       "videoKey": "XDKyLS0QXpg"
     },
@@ -297,7 +297,7 @@
       "title": "صفحة هبوط المستشفى",
       "technology": ["HTML", "CSS", "JavaScript"],
       "demo": "https://hospital-landing-page-sooty.vercel.app/",
-      "github": "https://github.com/alihatem360/Hospital-LandingPage",
+      "github": "",
       "video": "",
       "hidden": true
     },
@@ -312,7 +312,7 @@
         "Bootstrap"
       ],
       "demo": "https://shoping-cart-redux-vite.pages.dev/",
-      "github": "https://github.com/alihatem360/movieReactJs",
+      "github": "",
       "hidden": true
     },
     {
@@ -320,7 +320,7 @@
       "title": "الحطاب",
       "technology": ["HTML", "CSS"],
       "demo": "https://alihatem360.github.io/alhatab/",
-      "github": "https://github.com/alihatem360/alhatab",
+      "github": "",
       "video": "https://youtu.be/eGk8rV_FJJ4",
       "videoKey": "eGk8rV_FJJ4",
       "hidden": true
@@ -330,7 +330,7 @@
       "title": "أجريكا",
       "technology": ["HTML", "Sass", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/agrica/",
-      "github": "https://github.com/alihatem360/agrica",
+      "github": "",
       "video": "https://youtu.be/IkweYBUhlM4",
       "videoKey": "IkweYBUhlM4",
       "hidden": true
@@ -340,7 +340,7 @@
       "title": "موقع السيرة الذاتية",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Portfolio-Template/",
-      "github": "https://github.com/alihatem360/Portfolio-Template",
+      "github": "",
       "hidden": true
     },
     {
@@ -348,7 +348,7 @@
       "title": "قالب JavaScript",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Js-Template/",
-      "github": "https://github.com/alihatem360/Js-Template",
+      "github": "",
       "video": "https://youtu.be/IkweYBUhlM4",
       "videoKey": "IkweYBUhlM4",
       "hidden": true
@@ -358,7 +358,7 @@
       "title": "صفحة تحميل الكتب",
       "technology": ["HTML", "CSS"],
       "demo": "https://alihatem360.github.io/BookDownloadPage/",
-      "github": "https://github.com/alihatem360/BookDownloadPage",
+      "github": "",
       "codeStatus": "PRIVATE",
       "hidden": true
     },
@@ -367,7 +367,7 @@
       "title": "قائمة الأفلام باستخدام Redux",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://movies-list-redux.pages.dev/",
-      "github": "https://github.com/alihatem360/movies-list-redux",
+      "github": "",
       "hidden": true
     },
     {
@@ -375,7 +375,7 @@
       "title": "NFT-Shop",
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "",
-      "github": "https://github.com/alihatem360/NFT-Shop",
+      "github": "",
       "video": "",
       "hidden": true
     },
@@ -384,7 +384,7 @@
       "title": "موقع المطعم",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Restaurant-Template/",
-      "github": "https://github.com/alihatem360/Restaurant-Template",
+      "github": "",
       "hidden": true
     },
     {
@@ -392,7 +392,7 @@
       "title": "مشروع MyReads من Udacity",
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "https://udacitymyreadsproject.pages.dev/",
-      "github": "https://github.com/alihatem360/UdacityMyReadsProject",
+      "github": "",
       "hidden": true
     },
     {
@@ -400,7 +400,7 @@
       "title": "مكبرات الصوت باستخدام Reactjs",
       "technology": ["ReactJs", "Bootstrap"],
       "demo": "https://speakersreactjs.pages.dev/",
-      "github": "https://github.com/alihatem360/SpeakersReactjs",
+      "github": "",
       "hidden": true
     },
     {
@@ -408,7 +408,7 @@
       "title": "مهمة فاروق",
       "technology": ["ReactJs", "reactbootstrap", "Api"],
       "demo": "https://farooq-task.pages.dev/",
-      "github": "https://github.com/alihatem360/farooq-task",
+      "github": "",
       "hidden": true
     },
     {
@@ -416,7 +416,7 @@
       "title": "مشروع تجارة إلكترونية باستخدام Angular",
       "technology": ["angular", "Bootstrap", "Api"],
       "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
-      "github": "https://github.com/alihatem360/angularECommerceGradProj",
+      "github": "",
       "hidden": true
     },
     {
@@ -424,7 +424,7 @@
       "title": "أفلام IMDb",
       "technology": ["C#", "ASP.NET", "MVC", "Entity Framework", "SQL"],
       "demo": "",
-      "github": "https://github.com/alihatem360/IMDb",
+      "github": "",
       "hidden": true
     }
   ],
