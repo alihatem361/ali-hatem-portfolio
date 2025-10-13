@@ -75,6 +75,40 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "imeg": "images/mr-mohamed.png",
+      "title": "Mr Mohamed",
+      "description": "A personal website for Mr. Mohamed, showcasing his professional profile, achievements, and contact information, with arabic / English language support , dark / light mode.",
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "demo": "https://vclasses-msr-mohamed.pages.dev/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "images/mr-abdullah.png",
+      "title": "Mr Abdullah",
+      "description": "A personal website for Mr. Abdullah, showcasing his professional profile, achievements, and contact information, with arabic / English language support , dark / light mode.",
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "demo": "https://vclasses-abdullah-nasr.pages.dev",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+
+    {
+      "imeg": "images/mr-ahmed.png",
+      "title": "Mr Ahmed",
+      "description": "A personal website for Mr. Ahmed, showcasing his professional profile, achievements, and contact information, with arabic / English language support , dark / light mode.",
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "demo": "https://vclasses-mr-ahmed.pages.dev/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "imeg": "images/el-zakeroon (1).png",
       "title": "El-Zakeroon",
       "description": "Discover El-Zakeroon, a free Islamic web application that helps you Track your daily adhkar easily.",

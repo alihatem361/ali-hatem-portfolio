@@ -66,6 +66,40 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "imeg": "images/mr-mohamed.png",
+      "title": "الأستاذ محمد",
+      "description": "موقع ويب شخصي للأستاذ محمد، يعرض ملفه الشخصي المهني وإنجازاته ومعلومات التواصل معه، مع دعم اللغتين العربية والإنجليزية والوضع الداكن والفاتح.",
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "demo": "https://vclasses-msr-mohamed.pages.dev/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "images/mr-abdullah.png",
+      "title": "الأستاذ عبد الله",
+      "description": "موقع ويب شخصي للأستاذ عبد الله، يعرض ملفه الشخصي المهني وإنجازاته ومعلومات التواصل معه، مع دعم اللغتين العربية والإنجليزية والوضع الداكن والفاتح.",
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "demo": "https://vclasses-abdullah-nasr.pages.dev",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+
+    {
+      "imeg": "images/mr-ahmed.png",
+      "title": "الأستاذ أحمد",
+      "description": "موقع ويب شخصي للأستاذ أحمد، يعرض ملفه الشخصي المهني وإنجازاته ومعلومات التواصل معه، مع دعم اللغتين العربية والإنجليزية والوضع الداكن والفاتح.",
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "demo": "https://vclasses-mr-ahmed.pages.dev/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "imeg": "images/alshaatir-academy.png",
       "title": "منصة الشاطر التعليمية",
       "description": "منصة الشاطر هي تطبيق تعليمي مبتكر يساعد الطلاب على تحسين مهاراتهم وتنظيم وقتهم من خلال دروس تفاعلية، اختبارات، وأدوات مخصصة.",
