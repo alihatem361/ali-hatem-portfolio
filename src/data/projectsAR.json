@@ -20,7 +20,7 @@
       "description": "الجزء الأمامي من مشروع تخرج للعام الأخير. مسؤول عن تطوير الجزء الأمامي بالكامل. موقع تبرع لحالات المرضى. يمكن للمستخدمين التبرع وتقديم حالات جديدة. تحميل الأوراق وانتظار موافقة المشرف. تكامل موفر الدفع. تصميم واجهة مستخدم بديهية. عرض لمهارات HTML و CSS و JavaScript. موقع وظيفي وجذاب بصريًا. تطبيق عملي في العالم الحقيقي.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "http://imbr.surge.sh/",
-      "github": "https://github.com/alihatem360/1m-brother_frontend",
+      "github": "",
       "video": "https://youtu.be/BDsHi7dYvxc",
       "videoKey": "BDsHi7dYvxc",
       "codeStatus": "PRIVATE"

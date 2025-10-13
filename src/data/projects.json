@@ -20,7 +20,7 @@
       "description": "Front-end part of a graduation project for my final year. Responsible for entire front-end development. Donation website for patient cases. Users can donate and submit new cases. Upload papers and await admin approval. Integrated payment provider. Designed intuitive user interface. Showcase of HTML, CSS, and JavaScript skills. Functional and visually appealing website. Real-world application.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "http://imbr.surge.sh/",
-      "github": "https://github.com/alihatem360/1m-brother_frontend",
+      "github": "",
       "video": "https://youtu.be/BDsHi7dYvxc",
       "videoKey": "BDsHi7dYvxc",
       "codeStatus": "PRIVATE"
