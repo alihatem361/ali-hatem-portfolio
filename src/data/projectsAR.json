@@ -30,7 +30,7 @@
       "title": "مركز الحومة الثقافي",
       "description": "موقع مركز ثقافي يعرض التراث الغني وتقاليد منطقة الحومة. يتميز الموقع بتصميم حديث مع التركيز على تجربة المستخدم، مما يوفر للزوار سهولة الوصول إلى معلومات حول تاريخ المركز وفعالياته وأنشطته.",
       "technology": ["React", "Tailwind", "Vite", "shadcn-ui"],
-      "demo": "https://alhawmah-cultural-hub.vercel.app/",
+      "demo": "https://www.alhawmah.org/",
       "github": "",
       "video": "",
       "videoKey": "",

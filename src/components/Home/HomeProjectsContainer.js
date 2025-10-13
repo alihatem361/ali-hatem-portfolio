@@ -26,7 +26,7 @@ const HomeProjectsContainer = () => {
       <div className="projects-container ">
         <SwiperSlideCom />
         {/* send the index of the project */}
-        <GProject gproject={projectsDta[2]} />
+        <GProject gproject={projectsDta[1]} />
         <FloatingWhatsAppCom />
         <div className="container">
           <SkillComponent />

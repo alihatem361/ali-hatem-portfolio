@@ -54,18 +54,6 @@ const PojectItem = ({ project }) => {
             placeholderSrc={project.imeg}
             onLoad={() => setImageLoaded(true)}
           />
-          <div className="tech-badges">
-            {project.technology?.slice(0, 3).map((tech, index) => (
-              <span key={index} className="tech-badge">
-                {tech}
-              </span>
-            ))}
-            {project.technology?.length > 3 && (
-              <span className="tech-badge more">
-                +{project.technology.length - 3}
-              </span>
-            )}
-          </div>
         </div>
 
         <div className="card-content">
@@ -81,6 +69,19 @@ const PojectItem = ({ project }) => {
               ? `${project.description.substring(0, 120)}...`
               : project.description}
           </p>
+
+          <div className="tech-badges">
+            {project.technology?.slice(0, 3).map((tech, index) => (
+              <span key={index} className="tech-badge">
+                {tech}
+              </span>
+            ))}
+            {project.technology?.length > 3 && (
+              <span className="tech-badge more">
+                +{project.technology.length - 3}
+              </span>
+            )}
+          </div>
 
           <div className="card-footer">
             <ProjectCardButtons project={project} />

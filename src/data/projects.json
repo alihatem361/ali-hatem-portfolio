@@ -30,7 +30,7 @@
       "title": "alHawmah Cultural Hub",
       "description": "A cultural hub website that showcases the rich heritage and traditions of the Hawmah region. The website features a modern design with a focus on user experience, providing visitors with easy access to information about the hub's history, events, and activities.",
       "technology": ["React", "Tailwind", "Vite", "shadcn-ui"],
-      "demo": "https://alhawmah-cultural-hub.vercel.app/",
+      "demo": "https://www.alhawmah.org/",
       "github": "",
       "video": "",
       "videoKey": "",
