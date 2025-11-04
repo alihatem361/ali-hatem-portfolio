@@ -58,6 +58,16 @@
       "videoKey": "BDsHi7dYvxc",
       "codeStatus": "PRIVATE"
     },
+
+    {
+      "imeg": "images/ebu-certificate.png",
+      "title": "EBU Certificate",
+      "description": "EBU Certificate is an internationally accredited certificate provided by the EBU institution specialized in training and professional development. The certificate provides trainees with the knowledge and practical skills necessary to develop their professional and personal lives.",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "demo": "https://hadaf-training-center.pages.dev/",
+      "codeStatus": "PRIVATE"
+    },
+
     {
       "imeg": "images/shahadat-alhadaf.png",
       "title": "shahadat alhadaf",

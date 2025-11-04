@@ -58,7 +58,14 @@
       "videoKey": "BDsHi7dYvxc",
       "codeStatus": "PRIVATE"
     },
-
+    {
+      "imeg": "images/ebu-certificate.png",
+      "title": "شهادة EBU",
+      "description": "شهادة EBU هي شهادة معتمدة دولياً تُقدم من قبل مؤسسة EBU المتخصصة في التدريب والتطوير المهني. توفر الشهادة للمتدربين المعرفة والمهارات العملية اللازمة لتطوير حياتهم المهنية والشخصية.",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "demo": "https://ebu-certificate.pages.dev/",
+      "codeStatus": "PRIVATE"
+    },
     {
       "imeg": "images/shahadat-alhadaf.png",
       "title": "شهادات الهدف",
