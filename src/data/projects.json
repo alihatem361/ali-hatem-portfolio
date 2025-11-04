@@ -48,6 +48,14 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "imeg": "images/saudi-national-day.png",
+      "title": "Saudi National Day",
+      "description": "A special landing page created for Saudi National Day, showcasing exclusive offers and discounts on products and services. The goal was to attract visitors and increase engagement and sales during the celebration period. The page was designed to be visually appealing, fully responsive, and inspired by the Saudi National Day theme and colors",
+      "technology": ["HTML", "Tailwind CSS", "JavaScript"],
+      "demo": "https://e3mel-business-national-saudi-day.pages.dev/",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "imeg": "images/1MBrothers.png",
       "title": "1M Brothers",
       "description": "Front-end part of a graduation project for my final year. Responsible for entire front-end development. Donation website for patient cases. Users can donate and submit new cases. Upload papers and await admin approval. Integrated payment provider. Designed intuitive user interface. Showcase of HTML, CSS, and JavaScript skills. Functional and visually appealing website. Real-world application.",
