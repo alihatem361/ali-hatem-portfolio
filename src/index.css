@@ -45,24 +45,33 @@ body {
   letter-spacing: 0.5px;
   border-radius: 50px;
   border: 2px solid var(--warning-color);
-  background: linear-gradient(135deg, rgba(255, 193, 7, 0.15) 0%, rgba(255, 152, 0, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 193, 7, 0.15) 0%,
+    rgba(255, 152, 0, 0.1) 100%
+  );
   backdrop-filter: blur(10px);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(255, 193, 7, 0.2),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .button1::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -75,7 +84,7 @@ body {
   color: #1a1a2e;
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 8px 30px rgba(255, 193, 7, 0.4),
-              0 4px 15px rgba(255, 152, 0, 0.3);
+    0 4px 15px rgba(255, 152, 0, 0.3);
   border-color: transparent;
 }
 
@@ -94,7 +103,7 @@ body {
 .button1:focus {
   outline: none !important;
   box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.3),
-              0 8px 30px rgba(255, 193, 7, 0.4);
+    0 8px 30px rgba(255, 193, 7, 0.4);
 }
 
 .project-header {
