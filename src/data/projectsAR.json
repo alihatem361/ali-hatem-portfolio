@@ -28,6 +28,43 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "imeg": "project_images/dream_admin.gif",
+      "title": "Dream Student",
+      "description": "تطبيق Dream Student هو المنصة التعليمية الرقمية الحصرية لطلاب أكاديمية دريم. يعمل التطبيق كبوابة آمنة تربط الطالب بالمركز التعليمي، حيث يتيح للطلاب استعراض الكورسات وإرسال طلبات انضمام يتم مراجعتها والموافقة عليها من قبل إدارة الأكاديمية. بمجرد التفعيل، يحصل الطالب على وصول كامل وغير محدود لجميع دروس الفيديو، المذكرات، والملفات التعليمية الخاصة بمنهجه الدراسي.",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Firebase",
+        "firebase authentication",
+        "firebase firestore",
+        "firebase storage",
+        "firebase core",
+        "bloc",
+        "Hive",
+        "webview",
+        "youtube player flutter",
+        "Vedio player"
+      ],
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "project_images/dream_admin.gif",
+      "title": "Dream Admin",
+      "description": "لوحة التحكم المركزية الخاصة بإدارة أكاديمية دريم. يمنح هذا التطبيق المشرفين صلاحيات كاملة لإدارة المنصة التعليمية، استقبال طلبات الطلاب، وإدارة المحتوى التعليمي. تم بناء التطبيق باستخدام Firebase لضمان إدارة البيانات في الوقت الفعلي (Real-time) وبكفاءة عالية.",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Firebase",
+        "firebase authentication",
+        "firebase firestore",
+        "firebase storage",
+        "firebase core",
+        "bloc",
+        "Hive"
+      ],
+      "codeStatus": "PRIVATE"
+    },
+    {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/travel_report.png?alt=media&token=4db05577-381a-4d51-a45f-1c31700ad08c",
       "title": "Travel Report",
       "description": "نظام تقييم شامل مصمم خصيصًا لبيئات تدريب طاقم الطيران. يتيح التطبيق للمشرفين إرسال نماذج تقييم جاهزة تعتمد على الكفاءة إلى مجموعة من المدربين، حيث يمكن لكل مدرب الاطلاع على الجزء المخصص له فقط وتعبئته، مع إمكانية حفظ البيانات محليًا باستخدام SQLite. بعد إتمام جميع المدربين لأدوارهم، يتمكن المشرف من عرض التقرير الكامل وتصديره، مما يضمن سير عمل تقييم منظم ويدعم العمل دون اتصال بالإنترنت.",
