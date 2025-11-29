@@ -16,16 +16,14 @@
 
 .card {
   margin: 0;
-  background: linear-gradient(
-    145deg,
-    var(--secondary-color),
-    var(--primary-color)
-  );
-  border: none;
+  background: #18181b !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   text-transform: capitalize;
-  border-radius: var(--card-border-radius);
+  border-radius: var(--card-border-radius) !important;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -35,8 +33,9 @@
 
 .card .img-container {
   overflow: hidden;
-  border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+  border-radius: var(--card-border-radius);
   position: relative;
+  margin: 10px;
 }
 
 /* Image overlay on hover */

@@ -5,7 +5,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./swiper.css";
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 import PojectItem from "../../projects/components/projectItem";
 import LoaderCom from "../LoaderCom";
 // import { useSelector, useDispatch } from "react-redux";
@@ -41,9 +41,19 @@ const OurTeamCom = () => {
             stretch: 0,
             depth: 100,
             modifier: 2.5,
+            slideShadows: false,
+          }}
+          autoplay={{
+            delay: 300000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           }}
           pagination={{ el: ".swiper-pagination", clickable: true }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
+          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
           className="swiper_container"
         >
           {projectsDta?.map((item, index) => {
@@ -53,6 +63,10 @@ const OurTeamCom = () => {
               </SwiperSlide>
             );
           })}
+
+          {/* Navigation Arrows */}
+          <div className="swiper-button-prev slider-arrow"></div>
+          <div className="swiper-button-next slider-arrow"></div>
         </Swiper>
       ) : (
         <LoaderCom />
