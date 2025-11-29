@@ -25,7 +25,6 @@ const HomeProjectsContainer = () => {
   return (
     <React.Fragment>
       <div className="projects-container ">
-        <GProject gproject={projectsDta[0]} />
         <FloatingWhatsAppCom />
         <div className="container">
           <SkillComponent />
@@ -44,6 +43,8 @@ const HomeProjectsContainer = () => {
             </Link>
           </div>
         </div>
+        <GProject gproject={projectsDta[0]} />
+
         <LowerCurve />
       </div>
     </React.Fragment>

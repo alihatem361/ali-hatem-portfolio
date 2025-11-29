@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FaRocket, FaGithub, FaGlobe, FaPlay } from "react-icons/fa";
+import { FaRocket, FaGithub, FaPlay, FaDownload } from "react-icons/fa";
+import { SiFlutter, SiDart, SiFirebase } from "react-icons/si";
 import "./style.css";
 
 // Animation variants
@@ -22,6 +23,19 @@ const itemVariants = {
     y: 0,
     transition: { duration: 0.6, ease: "easeOut" },
   },
+};
+
+// Floating animation for tech stack icons
+const floatingVariants = {
+  animate: (custom) => ({
+    y: [0, -15, 0],
+    rotate: [0, custom.rotate, 0],
+    transition: {
+      duration: custom.duration,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  }),
 };
 
 function Gproject({ gproject }) {
@@ -46,21 +60,35 @@ function Gproject({ gproject }) {
 
   const { title, video, description, github, demo, codeStatus } = gproject;
 
-  const renderButton = (link, text, icon) => {
+  const renderButton = (link, text, icon, buttonType = "default") => {
     if (!link) return null;
+
+    const buttonClasses = {
+      github: `gproject_btn gproject_btn_github ${
+        codeStatus === "PRIVATE" ? "disabled" : ""
+      }`,
+      demo: "gproject_btn gproject_btn_demo",
+      video: "gproject_btn gproject_btn_video",
+      default: "gproject_btn",
+    };
 
     return (
       <motion.a
-        className={
-          text === "GitHub" && codeStatus === "PRIVATE" ? "btn disabled" : "btn"
-        }
+        className={buttonClasses[buttonType] || buttonClasses.default}
         href={link}
         target="_blank"
         rel="noreferrer"
-        whileHover={{ scale: 1.05, y: -2 }}
-        whileTap={{ scale: 0.98 }}
+        whileHover={{ scale: 1.08, y: -3 }}
+        whileTap={{ scale: 0.95 }}
       >
-        <span>{text}</span> {icon}
+        {buttonType === "video" ? (
+          <span className="video_play_icon">{icon}</span>
+        ) : (
+          <>
+            {icon}
+            <span>{text}</span>
+          </>
+        )}
       </motion.a>
     );
   };
@@ -74,43 +102,76 @@ function Gproject({ gproject }) {
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
     >
-      {/* Parallax Background */}
-      <motion.div className="gproject_parallax_bg" style={{ y: backgroundY }} />
+      {/* Green Glow Background */}
+      <div className="gproject_glow_bg" />
+
+      {/* Floating Tech Stack Icons */}
+      <div className="floating_tech_icons">
+        <motion.div
+          className="floating_icon flutter_icon"
+          variants={floatingVariants}
+          animate="animate"
+          custom={{ duration: 3, rotate: 5 }}
+        >
+          <SiFlutter />
+        </motion.div>
+        <motion.div
+          className="floating_icon dart_icon"
+          variants={floatingVariants}
+          animate="animate"
+          custom={{ duration: 3.5, rotate: -5 }}
+        >
+          <SiDart />
+        </motion.div>
+        <motion.div
+          className="floating_icon firebase_icon"
+          variants={floatingVariants}
+          animate="animate"
+          custom={{ duration: 4, rotate: 8 }}
+        >
+          <SiFirebase />
+        </motion.div>
+      </div>
 
       <motion.div className="gproject_card" variants={itemVariants}>
-        <motion.h3 variants={itemVariants}>
+        <motion.h3 className="gproject_title" variants={itemVariants}>
           <FaRocket className="rocket-icon" />
-          {title || ""}
+          <span className="gradient_text">{title || ""}</span>
         </motion.h3>
+
         <div className="gproject_card_body">
           {video && (
             <motion.div
-              className="gproject_card_video"
+              className="gproject_phone_mockup"
               variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.02, rotateY: 5 }}
             >
-              <iframe
-                src={`https://www.youtube.com/embed/${getVideoId(
-                  video
-                )}?autoplay=0&mute=1`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="YouTube video player"
-                width="100%"
-                height="315"
-              />
+              {/* Phone Frame */}
+              <div className="phone_frame">
+                <div className="phone_notch"></div>
+                <div className="phone_screen">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${getVideoId(
+                      video
+                    )}?autoplay=1&mute=1&loop=1&playlist=${getVideoId(video)}`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="YouTube video player"
+                  />
+                </div>
+                <div className="phone_home_indicator"></div>
+              </div>
             </motion.div>
           )}
+
           <motion.div className="gproject_card_content" variants={itemVariants}>
             <p>{description || "No description available"}</p>
-            <motion.div
-              className="card-buttons w-100 justify-content-start gap-5"
-              variants={itemVariants}
-            >
-              {renderButton(github, "GitHub", <FaGithub />)}
-              {renderButton(demo, "Demo", <FaGlobe />)}
-              {renderButton(video, "Video", <FaPlay />)}
+
+            <motion.div className="gproject_buttons" variants={itemVariants}>
+              {renderButton(github, "GitHub", <FaGithub />, "github")}
+              {renderButton(demo, "Demo", <FaDownload />, "demo")}
+              {renderButton(video, "", <FaPlay />, "video")}
             </motion.div>
           </motion.div>
         </div>
