@@ -191,6 +191,7 @@
 
 .gproject_card_container .gproject_card_body .gproject_card_content {
   flex: 1;
+  align-items: start;
   max-width: 600px;
   color: #fff;
   font-size: 1.8rem;

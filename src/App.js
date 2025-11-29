@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 // components and pages
 import HomePage from "./pages/HomePage";
 import Projects from "./components/projects";
+import ProjectDetail from "./pages/ProjectDetail";
 import AnimationLoader from "./components/Utilities/AnimationLoader";
 import Nav from "./components/nav";
 
@@ -34,6 +35,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="projects" element={<Projects />} />
+          <Route path="projects/:projectId" element={<ProjectDetail />} />
           <Route path="/" element={<HomePage />} />
         </Routes>
       </Fragment>
