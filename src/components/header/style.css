@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+/* Accent color variables */
+:root {
+  --accent-color: #ffc107;
+  --accent-color-hover: #e6ac00;
+  --accent-glow: rgba(255, 193, 7, 0.4);
+}
+
 .header {
   height: 85vh;
   display: flex;
@@ -29,6 +36,17 @@
   display: flex;
   justify-content: end;
 }
+
+/* 3D Effect for profile image */
+.header .header-img.image-3d-effect {
+  position: relative;
+}
+
+.header .header-img.image-3d-effect img {
+  position: relative;
+  z-index: 2;
+}
+
 .header .header-img {
   width: 65%;
   -webkit-mask-image: url(data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CiAgICAgICAgICAgICAgPHN2ZyBpZD0ic3ctanMtYmxvYi1zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSI+CiAgICAgICAgICAgICAgICAgICAgPGRlZnM+IAogICAgICAgICAgICAgICAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN3LWdyYWRpZW50IiB4MT0iMCIgeDI9IjEiIHkxPSIxIiB5Mj0iMCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3RvcCBpZD0ic3RvcDEiIHN0b3AtY29sb3I9InJnYmEoNjEsIDYwLCA2NiwgMSkiIG9mZnNldD0iMCUiIGRhdGEtZGFya3JlYWRlci1pbmxpbmUtc3RvcGNvbG9yPSIiIHN0eWxlPSItLWRhcmtyZWFkZXItaW5saW5lLXN0b3Bjb2xvcjojYTkzYTA2OyI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN0b3AgaWQ9InN0b3AyIiBzdG9wLWNvbG9yPSJyZ2JhKDYxLCA2MCwgNjYsIDEpIiBvZmZzZXQ9IjEwMCUiIGRhdGEtZGFya3JlYWRlci1pbmxpbmUtc3RvcGNvbG9yPSIiIHN0eWxlPSItLWRhcmtyZWFkZXItaW5saW5lLXN0b3Bjb2xvcjojYjk3NDAzOyI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICAgICAgICAgIDwvZGVmcz4KICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9InJnYmEoNjEsIDYwLCA2NiwgMSkiIGQ9Ik0xOS40LC0zMy44QzI2LjEsLTI5LjYsMzMuMywtMjYuNSwzOC40LC0yMS4xQzQzLjQsLTE1LjYsNDYuMywtNy44LDQ2LjQsMC4xQzQ2LjYsNy45LDQzLjksMTUuOSwzOS4zLDIyQzM0LjYsMjguMiwyOCwzMi41LDIxLjEsMzYuN0MxNC4yLDQwLjksNy4xLDQ1LDAuMSw0NC44Qy02LjksNDQuNiwtMTMuOCw0MC4yLC0xOS4yLDM1LjFDLTI0LjYsMzAuMSwtMjguNiwyNC41LC0zMi41LDE4LjVDLTM2LjQsMTIuNSwtNDAuMiw2LjMsLTQxLjgsLTAuOUMtNDMuNCwtOC4yLC00Mi45LC0xNi4zLC0zOC45LC0yMkMtMzQuOCwtMjcuNywtMjcuMiwtMzAuOSwtMjAuMiwtMzQuOUMtMTMuMSwtMzguOSwtNi42LC00My44LC0wLjEsLTQzLjZDNi4zLC00My40LDEyLjYsLTM4LjEsMTkuNCwtMzMuOFoiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwIDUwKSIgc3Ryb2tlLXdpZHRoPSIwIiBzdHlsZT0idHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZSAwczsiIHN0cm9rZT0idXJsKCNzdy1ncmFkaWVudCkiPjwvcGF0aD4KICAgICAgICAgICAgICA8L3N2Zz4=);
@@ -52,6 +70,13 @@
   font-size: 18px;
   line-height: 30px;
 }
+
+/* Short bio text styling */
+.header .header-text p.bio-text {
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+}
+
 .header .header-text h2 {
   margin: 14px 0px 5px 0;
   font-size: 2.5rem;
@@ -61,6 +86,34 @@
     width: 100%;
   }
 }
+
+/* Primary Accent Button - CV Download */
+.header .header-text .header-buttons .btn-primary-accent {
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--accent-color-hover)
+  );
+  color: #1a1a2e;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.header .header-text .header-buttons .btn-primary-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px var(--accent-glow);
+  background: linear-gradient(
+    135deg,
+    var(--accent-color-hover),
+    var(--accent-color)
+  );
+}
+
 .header .header-text .header-buttons button:first-child,
 .header .header-text .header-buttons button a {
   color: #fff;

@@ -1,24 +1,45 @@
+/* Import modern font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
 .iconbox p {
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   text-align: center;
-  font-family: monospace;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 8px;
+  transition: color 0.3s ease;
 }
+
 .skills-header {
   color: #fff;
   text-align: center;
-  font-family: monospace;
-  text-transform: uppercase;
-  font-size: 50px;
-  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
 }
+
+.skills-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.skills-header p {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: capitalize;
+}
+
 .skills-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 60px 0;
 }
 
 .skills {
@@ -52,13 +73,30 @@
 
 .skill-icon {
   color: #fff;
-  font-size: 100px;
+  font-size: 80px;
   text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover effect - show original color with glow */
+.iconbox:hover .skill-icon {
+  color: var(--skill-color, #ffc107);
+  filter: drop-shadow(0 0 15px var(--skill-color, #ffc107));
+}
+
+.iconbox:hover p {
+  color: var(--skill-color, #ffc107);
 }
 
 @media (max-width: 768px) {
-  .skills-header {
-    font-size: 30px;
+  .skills-header h2 {
+    font-size: 32px;
+  }
+  .skills-header p {
+    font-size: 14px;
   }
   .skill-icon {
     font-size: 50px;
@@ -69,6 +107,13 @@
 }
 
 .iconbox {
-  padding: 10px 20px;
+  padding: 15px 25px;
   flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.iconbox:hover {
+  background: rgba(255, 255, 255, 0.05);
 }

@@ -9,7 +9,6 @@ import GProject from "../Gproject/index";
 import SwiperSlideCom from "../Utilities/SwiperSlide/SwiperSlideCom";
 import FloatingWhatsAppCom from "../WhatsappChat/FloatingWhatsAppCom";
 import SkillComponent from "../Skills/index";
-import UppeCurve from "../Utilities/UppeCurve";
 import LowerCurve from "../Utilities/LowerCurve";
 const HomeProjectsContainer = () => {
   const { t, i18n } = useTranslation();
@@ -26,7 +25,6 @@ const HomeProjectsContainer = () => {
   return (
     <React.Fragment>
       <div className="projects-container ">
-        <UppeCurve />
         <GProject gproject={projectsDta[0]} />
         <FloatingWhatsAppCom />
         <div className="container">

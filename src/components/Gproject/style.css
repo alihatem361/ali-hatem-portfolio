@@ -95,10 +95,37 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.gproject_card h3 svg {
+.gproject_card h3 svg.rocket-icon {
   transition: transform 0.3s ease;
+  margin-right: 10px;
+  color: #ffc107;
 }
 
-.gproject_card:hover h3 svg {
-  transform: rotate(45deg);
+.gproject_card:hover h3 svg.rocket-icon {
+  transform: rotate(45deg) scale(1.1);
+}
+
+/* Parallax Background */
+.gproject_parallax_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+      135deg,
+      transparent 25%,
+      rgba(255, 193, 7, 0.03) 25%
+    ),
+    linear-gradient(225deg, transparent 25%, rgba(255, 193, 7, 0.03) 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 193, 7, 0.03) 75%),
+    linear-gradient(315deg, transparent 75%, rgba(255, 193, 7, 0.03) 75%);
+  background-size: 60px 60px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gproject_card {
+  position: relative;
+  z-index: 1;
 }
