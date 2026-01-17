@@ -20,10 +20,11 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 0 5%;
 }
 
 .header > div {
-  width: 40%;
+  width: 45%;
 }
 
 @media screen and (max-width: 830px) {
@@ -34,7 +35,7 @@
 
 .header-img-contant {
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
 /* 3D Effect for profile image */
@@ -63,23 +64,33 @@
   text-transform: capitalize;
 }
 .header .header-text h4 {
-  font-size: 38px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.9);
 }
 .header .header-text p {
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 17px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 550px;
 }
 
 /* Short bio text styling */
 .header .header-text p.bio-text {
-  max-width: 500px;
-  margin-bottom: 1.5rem;
+  max-width: 550px;
+  margin-bottom: 2rem;
+  text-transform: none;
 }
 
 .header .header-text h2 {
-  margin: 14px 0px 5px 0;
-  font-size: 2.5rem;
+  margin: 10px 0px 20px 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #ffc107 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 @media screen and (max-width: 768px) {
   .header .header-text p {

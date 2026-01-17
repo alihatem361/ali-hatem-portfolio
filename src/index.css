@@ -10,6 +10,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary-color: #0a0a0a;
   --secondary-color: #1a1a1a;
@@ -55,7 +59,8 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(255, 193, 7, 0.2),
+  box-shadow:
+    0 4px 20px rgba(255, 193, 7, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
@@ -83,7 +88,8 @@ body {
   background: linear-gradient(135deg, var(--warning-color) 0%, #ff9800 100%);
   color: #1a1a2e;
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 8px 30px rgba(255, 193, 7, 0.4),
+  box-shadow:
+    0 8px 30px rgba(255, 193, 7, 0.4),
     0 4px 15px rgba(255, 152, 0, 0.3);
   border-color: transparent;
 }
@@ -102,7 +108,8 @@ body {
 
 .button1:focus {
   outline: none !important;
-  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.3),
+  box-shadow:
+    0 0 0 3px rgba(255, 193, 7, 0.3),
     0 8px 30px rgba(255, 193, 7, 0.4);
 }
 

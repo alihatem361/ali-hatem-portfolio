@@ -115,12 +115,16 @@
   animation: slideIn 0.5s ease-out forwards;
 }
 
-.nav__bar ul li:nth-child(1) { animation-delay: 0.1s; }
-.nav__bar ul li:nth-child(2) { animation-delay: 0.2s; }
+.nav__bar ul li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.nav__bar ul li:nth-child(2) {
+  animation-delay: 0.2s;
+}
 
 .nav__bar ul li a {
-  color: #fff;
-  text-decoration: none;
+  color: #ffffff !important;
+  text-decoration: none !important;
   padding: 0.8rem 1.5rem;
   position: relative;
   font-weight: 500;
@@ -132,14 +136,18 @@
 }
 
 .nav__bar ul li a.active,
-.nav__bar ul li a.nav-link {
-  color: #D4AF37 !important;
+.nav__bar ul li a.nav-link.active {
+  color: #ffc107 !important;
   font-weight: 600;
   animation: activeGlow 2s infinite;
 }
 
+.nav__bar ul li a.nav-link {
+  color: #ffffff !important;
+}
+
 .nav__bar ul li a:hover {
-  color: #D4AF37;
+  color: #d4af37;
   transform: translateY(-2px);
   text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
@@ -176,7 +184,7 @@
 }
 
 .dropdown-item:hover {
-  color: #D4AF37 !important;
+  color: #d4af37 !important;
   background: rgba(212, 175, 55, 0.05) !important;
 }
 
@@ -194,7 +202,7 @@
 
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
-  color: #D4AF37 !important;
+  color: #d4af37 !important;
 }
 
 @media (max-width: 768px) {
