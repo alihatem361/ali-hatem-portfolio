@@ -1,7 +1,5 @@
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import React from "react";
-import "./style.css";
 
 function PreviewCvModal() {
   const [show, setShow] = useState(false);
@@ -43,7 +41,8 @@ function PreviewCvModal() {
           {error && <div className="error-message">{error}</div>}
 
           <iframe
-            src="https://drive.google.com/file/d/17OHpoQE-SmeLgNI30T1mA1pjvBS-ATdm/preview"
+            // link to the pdf file
+            src="https://drive.google.com/file/d/1J_WWAkwVSSAyFEs5aU49aXeir8pM-MXT/view?usp=drive_link"
             allow="autoplay"
             width="100%"
             height="100%"
