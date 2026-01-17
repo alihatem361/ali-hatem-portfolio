@@ -13,9 +13,9 @@ import LoaderCom from "../LoaderCom";
 import { useTranslation } from "react-i18next";
 import GetAllData from "../../../data/projects";
 const OurTeamCom = () => {
-  const { getProjects, getSocials, getAboutme } = GetAllData();
+  const { getProjects } = GetAllData();
   const [projectsDta, setProjectsData] = useState([]);
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     getProjects().then((data) => {
@@ -23,6 +23,7 @@ const OurTeamCom = () => {
         setProjectsData(data[0]);
       }, 1000);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n.language]);
 
   return (

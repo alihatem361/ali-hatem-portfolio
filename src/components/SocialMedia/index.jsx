@@ -19,6 +19,7 @@ const SocialMedia = () => {
     getSocials().then((data) => {
       setSocialsData(data[0]);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // كائن يربط اسم وسائل التواصل الاجتماعي مع الأيقونة المناسبة

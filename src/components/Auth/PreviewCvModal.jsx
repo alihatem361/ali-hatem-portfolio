@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import "./style.css";
 
 function PreviewCvModal() {
   const [show, setShow] = useState(false);

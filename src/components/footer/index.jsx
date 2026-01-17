@@ -5,7 +5,7 @@ import GetAllData from "../../data/projects";
 import { useTranslation } from "react-i18next";
 const Footer = () => {
   const { t, i18n } = useTranslation();
-  const { getProjects, getSocials, getAboutme } = GetAllData();
+  const { getSocials, getAboutme } = GetAllData();
   const [aboutmeData, setAboutmeData] = useState([]);
   const [socialsData, setSocialsData] = useState([]);
 
@@ -17,6 +17,7 @@ const Footer = () => {
     getSocials().then((data) => {
       setSocialsData(data);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n.language]);
 
   return (

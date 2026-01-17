@@ -4,14 +4,15 @@ import { useEffect, useState } from "react";
 import GetAllData from "../../data/projects.js";
 import { useTranslation } from "react-i18next";
 const FloatingWhatsAppCom = () => {
-  const { getProjects, getSocials, getAboutme } = GetAllData();
-  const { t, i18n } = useTranslation();
+  const { getAboutme } = GetAllData();
+  const { i18n } = useTranslation();
 
   const [aboutmeData, setAboutmeData] = useState([]);
   useEffect(() => {
     getAboutme().then((data) => {
       setAboutmeData(data[0][0]);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n.language]);
 
   return (
