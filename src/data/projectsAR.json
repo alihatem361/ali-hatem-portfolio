@@ -1,13 +1,13 @@
 {
   "aboutme": [
     {
-      "heaaderimag": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/my_photo%2F4_5766984486784864570.jpg?alt=media&token=ca881978-cac8-4ce0-b62e-7fa22235f313",
+      "heaaderimag": "project_images/user_images/user_image_44.png",
       "name": "عبد الرحمن حاتم رمضان",
       "bio": [
         "مطور تطبيقات Flutter بخبرة تزيد عن سنتين، عملت على تطوير العديد من التطبيقات المتوفرة حاليًا على متجر Google Play، منها تطبيق باص مصر المشابه لتطبيق GoBus. لدي خبرة قوية في تصميم وتنفيذ واجهات المستخدم، إدارة الحالة باستخدام BLoC وProvider، ودمج واجهات برمجية RESTful وFirebase. أعمل بكفاءة ضمن فرق تطوير أو كمطور مستقل، وأسعى دائمًا إلى كتابة كود نظيف، منظم، وقابل للتوسع"
       ],
-      "cv": "https://drive.google.com/file/d/1sJ1OkqCTUl9v-ZjZ0Gk080kvIi29GQ1A/view?usp=sharing",
-      "footer": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/my_photo%2F4_5766984486784864570.jpg?alt=media&token=ca881978-cac8-4ce0-b62e-7fa22235f313",
+      "cv": "https://drive.google.com/file/d/1J_WWAkwVSSAyFEs5aU49aXeir8pM-MXT/view?usp=sharing",
+      "footer": "project_images/user_images/user_image_44.png",
       "title": "مطور تطبيقات الهواتف المحمولة"
     }
   ],
@@ -16,12 +16,7 @@
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2Fimages%2Fdonation_cover.png?alt=media&token=19bc0ff4-86de-4e09-b1e1-43c8d226790a",
       "title": "1M Brothers",
       "description": "تعتبر تطبيق 1M Brother هو تطبيق مصمم للتعامل مع حالات حرجة تتطلب مبالغ كبيرة من المال في وقت قصير. إنه يعتبر منصة لجمع التبرعات للأفراد والمناطق والمراكز الطبية التي تحتاج إلى أجهزة طبية مهمة. يهدف التطبيق إلى توحيد الأفراد الرحيمين الذين يمكنهم المساهمة في هذه القضايا العاجلة، مما يؤثر بشكل كبير على حياة الأشخاص.",
-      "technology": [
-        "flutter",
-        "bloc",
-        ".net",
-        "Api"
-      ],
+      "technology": ["flutter", "bloc", ".net", "Api"],
       "demo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2FAPK%2Fapp-release.apk?alt=media&token=07179037-1ebe-4192-9dfd-ac331f7a44eb",
       "video": "https://youtu.be/WmriaoIy-C8",
       "videoKey": "WmriaoIy-C8",
@@ -68,13 +63,7 @@
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/travel_report.png?alt=media&token=4db05577-381a-4d51-a45f-1c31700ad08c",
       "title": "Travel Report",
       "description": "نظام تقييم شامل مصمم خصيصًا لبيئات تدريب طاقم الطيران. يتيح التطبيق للمشرفين إرسال نماذج تقييم جاهزة تعتمد على الكفاءة إلى مجموعة من المدربين، حيث يمكن لكل مدرب الاطلاع على الجزء المخصص له فقط وتعبئته، مع إمكانية حفظ البيانات محليًا باستخدام SQLite. بعد إتمام جميع المدربين لأدوارهم، يتمكن المشرف من عرض التقرير الكامل وتصديره، مما يضمن سير عمل تقييم منظم ويدعم العمل دون اتصال بالإنترنت.",
-      "technology": [
-        "flutter",
-        ".net",
-        "Dio",
-        "Shared preferences",
-        "Api"
-      ],
+      "technology": ["flutter", ".net", "Dio", "Shared preferences", "Api"],
       "codeStatus": "PRIVATE"
     },
     {
@@ -100,26 +89,14 @@
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzydashoard.png?alt=media&token=03b40ac4-2c49-438a-86f5-665723a0ed6d",
       "title": "لوحة تحكم ترزي",
       "description": "ترزي هو تطبيق مخصص للإداريين يوفر لوحة تحكم شاملة لإدارة كل ما يتعلق بتطبيق ترزي الخاص بالمستخدمين.يمكن من خلاله التحكم في المنتجات، المصممين، الأقمشة، والباقات وجميع التفاصيل الأخرى بسهولة ومرونة. يمنح الإداريين أدوات متقدمة لتنظيم المحتوى وتخصيص التجربة بما يتناسب مع احتياجات المنصة",
-      "technology": [
-        "flutter",
-        "bloc",
-        "Apis",
-        "Dio",
-        "Shared preferences"
-      ],
+      "technology": ["flutter", "bloc", "Apis", "Dio", "Shared preferences"],
       "codeStatus": "PRIVATE"
     },
     {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzy.png?alt=media&token=d9515b5b-e8ad-4bff-8b44-4f9bd6b9c1a1",
       "title": "تطبيق ترزي",
       "description": "ترزي هو تطبيق شامل يقدّم تجربة تسوق متكاملة تشمل الملابس والمنتجات المتنوعة.يتيح للمستخدمين تصفح، شراء، ودفع بكل سهولة وأمان عبر واجهة بسيطة وعصرية.يحتوي على مزايا عديدة تجعل تجربة التسوق أكثر راحة ومرونة.",
-      "technology": [
-        "flutter",
-        "bloc",
-        "Apis",
-        "Dio",
-        "Shared preferences"
-      ],
+      "technology": ["flutter", "bloc", "Apis", "Dio", "Shared preferences"],
       "demo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2F2025-05-14%2015-11-58.mkv?alt=media&token=8f0836a4-5743-4dd7-b5c7-49e67e44a89a",
       "codeStatus": "PRIVATE"
     },
@@ -127,26 +104,14 @@
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/2.basmisr%2Fbusmisr.png?alt=media&token=d7de2bdc-440b-49e6-9630-26afba925aa9",
       "title": "باص مصر",
       "description": "باص مصر هو التطبيق الذكي لحجز تذاكر الرحلات بكل سهولة ومرونة، حيث يتيح للمستخدمين اختيار نقطة الانطلاق والوصول، واستعراض جميع الرحلات المتوفرة من شركة مصر للنقل. يتميّز التطبيق بتجربة حجز سلسة، وتعدد في طرق الدفع، مع إمكانية متابعة حالة الرحلة حتى بعد الوصول، لتوفير راحة وأمان في كل خطوة. باص مصر هو الحل المثالي لتنقلات أسهل ورحلات أكثر راحة واحترافية",
-      "technology": [
-        "flutter",
-        "bloc",
-        "Apis",
-        "Dio",
-        "Shared preferences"
-      ],
+      "technology": ["flutter", "bloc", "Apis", "Dio", "Shared preferences"],
       "codeStatus": "PRIVATE"
     },
     {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/3.smart_crash%2Fcrash_detection.png?alt=media&token=42369525-1a7f-4820-820b-e69e7b8ee82e",
       "title": " نظام ذكي لاكتشاف الحوادث المرورية",
       "description": "نظام متطور يستخدم الذكاء الاصطناعي ورؤية الحاسوب لرصد الحوادث لحظة وقوعها، وتحديد السيارة المتسببة عبر تحليل الصور والفيديو. بمجرد حدوث التصادم، يتم التقاط البيانات تلقائيًا، وتحليلها باستخدام نموذج Python لتحديد المسؤول. تُرسل النتائج إلى تطبيق Flutter يعرض تفاصيل دقيقة مثل موقع الحادث، السرعة، صور وفيديو، مع إشعارات فورية للحوادث القريبة",
-      "technology": [
-        "flutter",
-        "bloc",
-        "Apis",
-        "Dio",
-        "python"
-      ],
+      "technology": ["flutter", "bloc", "Apis", "Dio", "python"],
       "video": "https://youtu.be/MZCNVf4iJUw?si=zir2fG0mm3inR5NU",
       "videoKey": "MZCNVf4iJUw",
       "codeStatus": "PRIVATE"
@@ -171,13 +136,7 @@
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/almawsueat%20aljamieih.png?alt=media&token=663093ca-2059-44f9-a4cc-d65783eaad4f",
       "title": "موسعتي الجامعية",
       "description": "تطبيق موسوعتي الجامعيه وهوه تطبيق يضم كل ما يفيد الطالب الجامعي من شروحات وكتب ومراجع ومحاضرات سواء كانت صوت او فيديو بالاضافه الى نماذج للأمتحانات فيما يخص كل الجامعات و المعاهد الموجوده في اليمن مدعوم بشكل رسمي من وزارة التعليم العالي",
-      "technology": [
-        "Flutter",
-        "Bloc",
-        "Shared preferences",
-        "Apis",
-        "Dio"
-      ],
+      "technology": ["Flutter", "Bloc", "Shared preferences", "Apis", "Dio"],
       "demo": "https://play.google.com/store/apps/details?id=com.univ&pcampaignid=web_share"
     },
     {
@@ -276,13 +235,7 @@
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/e%20commerce%20app.png?alt=media&token=91516ff5-3704-4f32-a859-da47af79b717",
       "title": "تطبيق التسوق الإلكتروني",
       "description": "تعتبر التطبيق التسوق الإلكتروني تطبيقًا مصممًا لتزويد المستخدمين بتجربة ممتعة لمشاهدة الأفلام والمسلسلات. يقدم مجموعة واسعة من الميزات التي تسمح للمستخدمين بالحصول على جميع التفاصيل حول الفيلم أو المسلسل الذي يشاهدونه.",
-      "technology": [
-        "flutter",
-        "bloc",
-        "Api",
-        "Dio",
-        "Paymob SDK"
-      ],
+      "technology": ["flutter", "bloc", "Api", "Dio", "Paymob SDK"],
       "github": "https://github.com/abdulrahmanHatem911/e_commerce_flutter",
       "video": "https://youtu.be/5wP_F5Z8SlQ?si=A6DEtkQrh1_RghVu",
       "videoKey": "5wP_F5Z8SlQ"
@@ -322,11 +275,7 @@
       "imeg": "https://img.youtube.com/vi/fqKIbF8Com4/0.jpg",
       "title": "Onboarding Screens in Flutter",
       "description": "عندما يبدأ التطبيق، سترى شاشة الإعداد. اسحب لليسار أو لليمين للتنقل بين الشاشات المختلفة. توفر كل شاشة معلومات حول التطبيق وميزاته. يمكنك أيضًا النقر على زر \"البدء\" في الشاشة الأخيرة للانتقال إلى الشاشة الرئيسية للتطبيق.",
-      "technology": [
-        "Flutter",
-        "Dart",
-        "ui"
-      ],
+      "technology": ["Flutter", "Dart", "ui"],
       "github": "https://github.com/abdulrahmanHatem911/on_boarding_task",
       "video": "https://youtu.be/fqKIbF8Com4?si=i341mvLhAUN1Dkel",
       "videoKey": "fqKIbF8Com4"
@@ -413,21 +362,14 @@
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Social%20app.png?alt=media&token=354ccec4-e7e8-457f-874b-01fa06f4b305",
       "title": "تطبيق Social",
       "description": "لقد قمت بتطوير تطبيق محاكاة جذاب باستخدام Flutter و Firebase، مصمم خصيصًا لمنصات وسائل التواصل الاجتماعي. من خلال استغلال قوة Flutter واستفادة من قدرات Firebase، يوفر هذا المحاكي تجربة جذابة ومشوقة لعشاق وسائل التواصل الاجتماعي.",
-      "technology": [
-        "Flutter",
-        "Bloc",
-        "Firebase"
-      ],
+      "technology": ["Flutter", "Bloc", "Firebase"],
       "github": "https://github.com/abdulrahmanHatem911/Social-app"
     },
     {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/shop_app.jpg?alt=media&token=297d4862-ced8-4528-b1a8-d08db2c46fee",
       "title": "تطبيق Shop",
       "description": "يعد تطبيق Shop تجربة تسوق ممتعة للمستخدمين، حيث يمكنهم استعراض المنتجات المتاحة وإضافتها إلى عربة التسوق وإجراء عمليات الشراء بأمان. يعتمد التطبيق على تقنيات Flutter و Firebase لتحقيق أقصى أداء وأمان.",
-      "technology": [
-        "Flutter",
-        "Firebase"
-      ],
+      "technology": ["Flutter", "Firebase"],
       "github": "https://github.com/abdulrahmanHatem911/Shop-app"
     },
     {
@@ -448,33 +390,21 @@
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/To%20Do%20%20app.png?alt=media&token=870448b9-f86d-4f90-a06b-670bcd493c89",
       "title": "TODO App",
       "description": "يتيح تطبيق إدارة المهام هذا للمستخدمين تسجيل مهامهم اليومية وتخزينها بسهولة. بفضل خبرتي في برمجة Flutter وDart، إلى جانب الكفاءة في بنية Firebase وBLoC التي تتراوح من 90% إلى 100%، قمت بتنفيذ إدارة الحالة الفعالة وتخزين البيانات المحلية لتحسين تجربة المستخدم. يوفر التطبيق واجهة سهلة الاستخدام ويستخدم الميزات المتقدمة بشكل فعال لتحسين الإنتاجية",
-      "technology": [
-        "flutter",
-        "bloc",
-        "SQLite"
-      ],
+      "technology": ["flutter", "bloc", "SQLite"],
       "github": "https://github.com/abdulrahmanHatem911/TODO-App"
     },
     {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/invitation%20%20app.png?alt=media&token=5ffaa124-3ba4-40b7-ba38-b04bcfbc8138",
       "title": "Dash Invitation",
       "description": "هو تطبيق لإرسال دعوة للأشخاص لحضور حفلة معينة",
-      "technology": [
-        "flutter",
-        "bloc",
-        "SQLite"
-      ],
+      "technology": ["flutter", "bloc", "SQLite"],
       "github": "https://github.com/abdulrahmanHatem911/dash-invitation"
     },
     {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Applications_images.png?alt=media&token=258ea257-2915-4f0c-bc73-72e0176cec5d",
       "title": "BMI Calculator",
       "description": "يقوم التطبيق بحساب مؤشر كتلة الجسم (BMI) للمستخدم بناءً على طوله ووزنه. تم استخدام التقنيات المتقدمة مثل Flutter وDart أثناء عملية التطوير، إلى جانب الخبرة الكبيرة في العمل مع واجهات برمجة التطبيقات (APIs) والهندسة المعمارية النظيفة. مع مستوى مهارة يتراوح من 90% إلى 100% في Flutter وخبرة تتراوح من 90% إلى 95% في Dart وAPIs والبنية النظيفة، يعد التطبيق عبارة عن حاسبة مؤشر كتلة الجسم سهلة الاستخدام وفعالة تساعد المستخدمين على تتبع أهداف اللياقة البدنية الخاصة بهم",
-      "technology": [
-        "flutter",
-        "bloc",
-        "SQLite"
-      ],
+      "technology": ["flutter", "bloc", "SQLite"],
       "github": "https://github.com/abdulrahmanHatem911/bmi-calculator"
     }
   ],
