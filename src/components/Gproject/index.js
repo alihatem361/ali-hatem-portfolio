@@ -46,6 +46,7 @@ function Gproject({ gproject }) {
   });
 
   // Parallax effect for background
+  // eslint-disable-next-line no-unused-vars
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   const getVideoId = (url) => {
@@ -152,7 +153,7 @@ function Gproject({ gproject }) {
                 <div className="phone_screen">
                   <iframe
                     src={`https://www.youtube.com/embed/${getVideoId(
-                      video
+                      video,
                     )}?autoplay=1&mute=1&loop=1&playlist=${getVideoId(video)}`}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

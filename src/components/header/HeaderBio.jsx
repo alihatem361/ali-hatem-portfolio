@@ -31,7 +31,7 @@ const itemVariants = {
 };
 
 const HeaderBio = ({ aboutmeData }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   // Get short bio (first 2 lines only for hook)
   const getShortBio = () => {

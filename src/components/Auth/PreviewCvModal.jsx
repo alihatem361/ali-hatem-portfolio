@@ -1,21 +1,19 @@
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import React from "react";
-import { useTranslation } from "react-i18next";
 import "./style.css";
 
 function PreviewCvModal() {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+
   const handleClose = () => {
     setShow(false);
     setIsLoading(true);
     setError(null);
   };
-  
+
   const handleShow = () => setShow(true);
 
   const handleIframeLoad = () => {
@@ -40,17 +38,9 @@ function PreviewCvModal() {
         </Modal.Header>
 
         <Modal.Body className="login__modal__container">
-          {isLoading && (
-            <div className="loading-spinner">
-              جاري التحميل...
-            </div>
-          )}
-          
-          {error && (
-            <div className="error-message">
-              {error}
-            </div>
-          )}
+          {isLoading && <div className="loading-spinner">جاري التحميل...</div>}
+
+          {error && <div className="error-message">{error}</div>}
 
           <iframe
             src="https://drive.google.com/file/d/17OHpoQE-SmeLgNI30T1mA1pjvBS-ATdm/preview"

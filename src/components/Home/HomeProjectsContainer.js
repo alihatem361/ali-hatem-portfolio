@@ -13,14 +13,15 @@ import LowerCurve from "../Utilities/LowerCurve";
 const HomeProjectsContainer = () => {
   const { t, i18n } = useTranslation();
   const [projectsDta, setProjectsData] = useState([]);
-  const { getProjects, getSocials, getAboutme } = GetAllData();
+  const { getProjects } = GetAllData();
 
   useEffect(() => {
     getProjects().then((data) => {
       // console.log(" : ======", data[0]);
       setProjectsData(data[0].slice(0, 3));
     });
-  }, i18n.language);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [i18n.language]);
 
   return (
     <React.Fragment>
