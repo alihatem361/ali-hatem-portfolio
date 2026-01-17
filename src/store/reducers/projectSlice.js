@@ -5,10 +5,10 @@ export const fetchProjectData = createAsyncThunk(
   async () => {
     // console.log(VITE_BASE_URL);
     const response = await axios.get(
-      `${import.meta.env.VITE_BASE_URL}/project`
+      `${import.meta.env.VITE_BASE_URL}/project`,
     );
     return response.data;
-  }
+  },
 );
 
 const projectSlice = createSlice({

@@ -22,7 +22,7 @@ root.render(
         <SpeedInsights />
       </Provider>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );
 
 AOS.init({

@@ -40,14 +40,14 @@ body {
 }
 
 .btn {
-  font-size: 1.5rem !important;
+  font-size: 1rem !important;
   color: var(--text-color) !important;
 }
 .button1 {
   color: var(--text-color);
   margin: 1rem 0;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
   border-radius: 8px;
   border: 1px solid var(--quaternary-color);
   background-color: rgba(255, 255, 255, 0.1);
@@ -103,7 +103,7 @@ body {
   text-align: center;
   font-family: monospace;
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 32px;
   font-weight: 900;
   animation: goldShimmer 3s linear infinite;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -139,9 +139,9 @@ input[type="password"]:focus {
 
 .btn-close {
   z-index: 1;
-  padding: 1.25rem 1rem;
+  padding: 1rem 0.75rem;
   background-color: #fff !important;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-shadow: 0 1px 0 #fff;
   opacity: 0.5;
 }
@@ -167,14 +167,14 @@ input[type="password"]:focus {
 }
 
 .greeting {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
   color: var(--highlight-color);
 }
 
 .name {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .highlight {
@@ -191,9 +191,9 @@ input[type="password"]:focus {
 }
 
 .bio p {
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
 }
 
 .download-cv {
@@ -301,7 +301,8 @@ input[type="password"]:focus {
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6),
+    box-shadow:
+      0 0 40px rgba(212, 175, 55, 0.6),
       0 0 60px rgba(212, 175, 55, 0.4);
   }
 }

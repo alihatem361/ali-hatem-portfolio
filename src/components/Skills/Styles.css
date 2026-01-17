@@ -27,7 +27,7 @@
   text-align: center;
   font-family: monospace;
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 32px;
   font-weight: 900;
   animation: goldShimmer 3s linear infinite;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -51,10 +51,10 @@
 }
 
 .skills-subtitle {
-  font-size: 18px;
+  font-size: 15px;
   color: var(--text-secondary);
   font-weight: 400;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   font-family: "Cairo", sans-serif;
   text-transform: capitalize;
 }
@@ -157,7 +157,9 @@
 .skill-card:hover,
 .skill-grid-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2),
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
     0 0 60px rgba(212, 175, 55, 0.2);
   background-color: var(--quaternary-color);
   color: var(--primary-color);
@@ -176,7 +178,7 @@
 }
 
 .skill-icon {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: var(--skill-color, var(--text-color));
   transition: all 0.3s ease;
   position: relative;

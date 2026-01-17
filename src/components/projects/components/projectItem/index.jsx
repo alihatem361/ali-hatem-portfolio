@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import "./style.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import ProjectOffcanvas from "../ProjectOffcanvas";
+import ProjectDetailsModal from "../ProjectDetailsModal";
 import { FaAnglesRight, FaEye } from "react-icons/fa6";
 // components
 import ProjectCardButtons from "../ProjectCardButtons";
@@ -21,7 +21,7 @@ const PojectItem = ({ project }) => {
 
   return (
     <Fragment>
-      <ProjectOffcanvas
+      <ProjectDetailsModal
         project={projectData}
         show={show}
         handleClose={handleClose}

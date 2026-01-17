@@ -23,7 +23,6 @@ const Header = () => {
         <HeaderBio aboutmeData={aboutmeData} />
         <HeaderImage aboutmeData={aboutmeData} />
       </div>
-
     </div>
   );
 };
