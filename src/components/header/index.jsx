@@ -1,4 +1,4 @@
-import "./style.css";
+import "../Utilities/style.css";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 // components
