@@ -2,7 +2,7 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 // components
-import GetAllData from "../../data/projects.js";
+import GetAllData from "../../data/projects.jsx";
 import LowerCurve from "../Utilities/LowerCurve";
 import HeaderImage from "./HeaderImage";
 import HeaderBio from "./HeaderBio";

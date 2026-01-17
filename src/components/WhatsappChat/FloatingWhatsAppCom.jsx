@@ -1,7 +1,7 @@
 import React from "react";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { useEffect, useState } from "react";
-import GetAllData from "../../data/projects.js";
+import GetAllData from "../../data/projects.jsx";
 import { useTranslation } from "react-i18next";
 const FloatingWhatsAppCom = () => {
   const { getProjects, getSocials, getAboutme } = GetAllData();

@@ -3,9 +3,9 @@ import axios from "axios";
 export const fetchProjectData = createAsyncThunk(
   "project/fetchProjectData",
   async () => {
-    // console.log(REACT_APP_BASE_URL);
+    // console.log(VITE_BASE_URL);
     const response = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/project`
+      `${import.meta.env.VITE_BASE_URL}/project`
     );
     return response.data;
   }
