@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import "./style.css";
-import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import LnaguageMenu from "./LnaguageMenu";
 const Nav = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   return (
     <div className="nav__container">
       <div className="nav__bar">

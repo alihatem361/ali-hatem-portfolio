@@ -1,25 +1,26 @@
 import ProjectsApi from "./projects.json";
 import ProjectsApiAR from "./projectsAR.json";
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 const GetAllData = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const getProjects = () => {
     return Promise.resolve(
-      i18n.language === "en" ? [ProjectsApi.Projects] : [ProjectsApiAR.Projects]
+      i18n.language === "en"
+        ? [ProjectsApi.Projects]
+        : [ProjectsApiAR.Projects],
     );
   };
 
   const getSocials = () => {
     return Promise.resolve(
-      i18n.language === "en" ? [ProjectsApi.socials] : [ProjectsApiAR.socials]
+      i18n.language === "en" ? [ProjectsApi.socials] : [ProjectsApiAR.socials],
     );
   };
 
   const getAboutme = () => {
     return Promise.resolve(
-      i18n.language === "en" ? [ProjectsApi.aboutme] : [ProjectsApiAR.aboutme]
+      i18n.language === "en" ? [ProjectsApi.aboutme] : [ProjectsApiAR.aboutme],
     );
   };
 

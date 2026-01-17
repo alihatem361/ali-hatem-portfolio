@@ -1,21 +1,26 @@
 import "./style.css";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 // components
 import GetAllData from "../../data/projects.js";
 import LowerCurve from "../Utilities/LowerCurve";
 import HeaderImage from "./HeaderImage";
 import HeaderBio from "./HeaderBio";
-import "./style.css";
+
 const Header = () => {
   const { i18n } = useTranslation();
-  const { getProjects, getSocials, getAboutme } = GetAllData();
+  const { getAboutme } = GetAllData();
   const [aboutmeData, setAboutmeData] = useState([]);
-  useEffect(() => {
+
+  const fetchAboutMe = useCallback(() => {
     getAboutme().then((data) => {
       setAboutmeData(data[0][0]);
     });
-  }, i18n.language);
+  }, [getAboutme]);
+
+  useEffect(() => {
+    fetchAboutMe();
+  }, [i18n.language, fetchAboutMe]);
 
   return (
     <div className="position-relative">
