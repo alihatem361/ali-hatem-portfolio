@@ -25,7 +25,9 @@
   padding: 8px;
   object-fit: cover;
   box-shadow: 0 0 30px rgba(255, 193, 7, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .footer__Sosials__imag img:hover {
@@ -98,8 +100,6 @@
   height: 30px;
   color: white;
 }
-
-
 
 .social-icon {
   color: var(--text-color);

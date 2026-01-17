@@ -29,7 +29,10 @@ const Footer = () => {
               <div className="footer__Sosials">
                 <div className="footer__Sosials__content" data-aos="fade-up">
                   <div className="footer__Sosials__imag">
-                    <img src={aboutmeData.footer} alt="social" />
+                    <img
+                      src={aboutmeData.footer ? `/${aboutmeData.footer}` : ""}
+                      alt="social"
+                    />
                   </div>
                   <h2>{t("footer.footerName")} </h2>
                   <h6>{t("footer.footerTitle")}</h6>
