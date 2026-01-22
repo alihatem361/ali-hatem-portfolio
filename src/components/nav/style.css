@@ -303,13 +303,6 @@
 .nav__bar ul li a.nav-link {
   color: #d4af37 !important;
   font-weight: 600;
-  animation: activeGlow 2s infinite;
-}
-
-.nav__bar ul li a:hover {
-  color: #d4af37;
-  transform: translateY(-2px);
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
 .nav__bar ul li a::after {
@@ -598,7 +591,6 @@
 @media (min-width: 1025px) {
   .nav__bar ul li a:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
   }
 
   .language-toggle:hover {
@@ -629,11 +621,19 @@
   flex-direction: row-reverse;
 }
 
-/* Focus styles for accessibility */
+/* Focus styles for accessibility - only show on keyboard navigation */
 .nav__bar ul li a:focus,
 .nav__mobile-list .nav-item a:focus,
 .language-toggle:focus,
 .nav__mobile-toggle:focus {
+  outline: none;
+}
+
+/* Show focus outline only for keyboard users (accessibility) */
+.nav__bar ul li a:focus-visible,
+.nav__mobile-list .nav-item a:focus-visible,
+.language-toggle:focus-visible,
+.nav__mobile-toggle:focus-visible {
   outline: 2px solid #d4af37;
   outline-offset: 2px;
 }
