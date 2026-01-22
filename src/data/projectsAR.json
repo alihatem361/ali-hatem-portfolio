@@ -15,6 +15,24 @@
 
   "Projects": [
     {
+      "image": "images/novirahealth.png",
+      "title": "نوفيرا هيلث",
+      "description": "موقع تسويق للرعاية الصحية مبني باستخدام React 18 و TypeScript و Vite و Tailwind CSS و shadcn/ui. يتميز بإدارة المحتوى عبر Sanity CMS، ورسوم متحركة باستخدام Framer Motion، ونظام نوافذ منبثقة عام لنماذج الاتصال، وتصميم متجاوب مع متغيرات CSS دلالية. ينفذ hooks مخصصة لجلب البيانات باستخدام استعلامات GROQ ويتبع أفضل الممارسات لتحسين محركات البحث باستخدام react-helmet-async.",
+      "technology": [
+        "ReactJs",
+        "TypeScript",
+        "Tailwind",
+        "Vite",
+        "shadcn-ui",
+        "Sanity"
+      ],
+      "demo": "https://novirahealth.com/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "image": "images/e3melbusiness-org.png",
       "title": "E3melbusiness Org",
       "description": "إعمل بيزنس هي منصة تدريب احترافية بتقدم كورسات وبرامج في مجالات البزنس للأفراد والشركات\nاشتغلت على تطوير الواجهة الأمامية بالكامل للموقع باستخدام HTML و CSS و Tailwind CSS و JavaScript\nركزت على إن التصميم يكون سريع ومتجاوب وجذاب بصريًا عشان يدي تجربة مستخدم سلسة على كل الأجهزة\nاهتميت كمان بسهولة التصفح والأداء العالي",

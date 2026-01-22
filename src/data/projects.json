@@ -15,6 +15,24 @@
 
   "Projects": [
     {
+      "image": "images/novirahealth.png",
+      "title": "NoviraHealth",
+      "description": "Healthcare marketing website built with React 18, TypeScript, Vite, Tailwind CSS, and shadcn/ui. Features content management via Sanity CMS, Framer Motion animations, global modal system for contact forms, and responsive design with semantic CSS variables. Implements custom hooks for data fetching with GROQ queries and follows best practices for SEO with react-helmet-async.",
+      "technology": [
+        "ReactJs",
+        "TypeScript",
+        "Tailwind",
+        "Vite",
+        "shadcn-ui",
+        "Sanity"
+      ],
+      "demo": "https://novirahealth.com/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "image": "images/e3melbusiness-org.png",
       "title": "E3melbusiness Org",
       "description": "Worked on developing the user interfaces for the E3mel Business website using HTML, CSS, Tailwind CSS, and JavaScript Focused on delivering a smooth and fast user experience Implemented responsive design to ensure compatibility across mobile and desktop devices Used Tailwind CSS for efficient styling and clean code structure Enhanced performance and loading speed by minimizing and optimizing code Collaborated with the design team to achieve a pixel-perfect UI implementation",
