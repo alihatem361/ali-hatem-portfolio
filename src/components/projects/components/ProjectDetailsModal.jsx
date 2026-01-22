@@ -78,9 +78,9 @@ const ProjectDetailsModal = ({ show, project, handleClose }) => {
               <div className="hero-background">
                 <div className="hero-gradient-overlay"></div>
                 <div className="hero-pattern"></div>
-                {project.imeg && (
+                {project.image && (
                   <img
-                    src={project.imeg}
+                    src={project.image}
                     alt=""
                     className="hero-bg-image"
                     onLoad={() => setImageLoaded(true)}
@@ -189,11 +189,11 @@ const ProjectDetailsModal = ({ show, project, handleClose }) => {
                       ) : (
                         <div className="image-showcase">
                           <LazyLoadImage
-                            src={project.imeg}
+                            src={project.image}
                             alt={project.title}
                             effect="blur"
                             className="showcase-image"
-                            placeholderSrc={project.imeg}
+                            placeholderSrc={project.image}
                           />
                           <div className="image-shine"></div>
                         </div>

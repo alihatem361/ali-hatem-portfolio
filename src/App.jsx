@@ -19,9 +19,10 @@ function App() {
   const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    // to change the direction of the page
-    document.documentElement.dir = t("direction");
-  }, [t]);
+    // Update document direction based on current language
+    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);

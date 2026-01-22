@@ -894,3 +894,19 @@
     --text-secondary: #cccccc;
   }
 }
+
+/* RTL Support - Flip navigation arrows for Arabic */
+[dir="rtl"] .nav-arrow svg,
+[dir="rtl"] .control-btn.nav-btn svg,
+[dir="rtl"] .custom-prev svg,
+[dir="rtl"] .custom-next svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .custom-navigation {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .control-panel .navigation-controls {
+  flex-direction: row-reverse;
+}

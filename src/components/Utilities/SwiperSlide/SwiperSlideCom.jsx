@@ -8,7 +8,8 @@ import "./swiper.css";
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 import PojectItem from "../../projects/components/projectItem";
 import { useTranslation } from "react-i18next";
-import GetAllData from "../../../data/projects";
+import ProjectsApi from "../../../data/projects.json";
+import ProjectsApiAR from "../../../data/projectsAR.json";
 import {
   FaPlay,
   FaPause,
@@ -19,7 +20,6 @@ import {
 } from "react-icons/fa";
 
 const EnhancedProjectSwiper = () => {
-  const { getProjects } = GetAllData();
   const [projectsData, setProjectsData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
@@ -46,28 +46,34 @@ const EnhancedProjectSwiper = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Fetch projects data
-  const fetchData = useCallback(async () => {
-    try {
-      setIsLoading(true);
-      setError(null);
-      const data = await getProjects();
-
-      // Simulate network delay for smooth loading animation
-      setTimeout(() => {
-        setProjectsData(data[0] || []);
-        setLoadingProgress(100);
-        setTimeout(() => setIsLoading(false), 300);
-      }, 1200);
-    } catch (err) {
-      setError("Failed to load projects. Please try again.");
-      setIsLoading(false);
-    }
-  }, [getProjects]);
-
+  // Fetch projects data when language changes
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        setError(null);
+
+        // Get projects directly based on current language
+        const projects =
+          i18n.language === "en"
+            ? ProjectsApi.Projects
+            : ProjectsApiAR.Projects;
+        const visibleProjects = projects.filter((project) => !project.hidden);
+
+        // Simulate network delay for smooth loading animation
+        setTimeout(() => {
+          setProjectsData(visibleProjects || []);
+          setLoadingProgress(100);
+          setTimeout(() => setIsLoading(false), 300);
+        }, 1200);
+      } catch (err) {
+        setError("Failed to load projects. Please try again.");
+        setIsLoading(false);
+      }
+    };
+
     fetchData();
-  }, [i18n.language, fetchData]);
+  }, [i18n.language]);
 
   const toggleAutoPlay = useCallback(() => {
     if (!swiperInstance || !swiperInstance.autoplay) return;
@@ -106,7 +112,7 @@ const EnhancedProjectSwiper = () => {
           break;
       }
     },
-    [swiperInstance, isLoading, toggleAutoPlay]
+    [swiperInstance, isLoading, toggleAutoPlay],
   );
 
   useEffect(() => {
@@ -139,7 +145,7 @@ const EnhancedProjectSwiper = () => {
         swiper.autoplay.start();
       }
     },
-    [isAutoPlay]
+    [isAutoPlay],
   );
 
   const handlePrevSlide = useCallback(() => {
@@ -228,12 +234,10 @@ const EnhancedProjectSwiper = () => {
       <div className="swiper-header">
         <div className="header-content">
           <h2 className="section-title">
-            {t("Featured Projects")}
+            {t("slider.featuredProjects")}
             <span className="title-highlight">✨</span>
           </h2>
-          <p className="section-subtitle">
-            Discover my latest work and creative solutions
-          </p>
+          <p className="section-subtitle">{t("slider.subtitle")}</p>
           <div className="slide-counter">
             <span className="current-slide">
               {String(currentSlide + 1).padStart(2, "0")}
@@ -254,7 +258,11 @@ const EnhancedProjectSwiper = () => {
               isAutoPlay ? "playing" : "paused"
             }`}
             onClick={toggleAutoPlay}
-            aria-label={isAutoPlay ? "Pause slideshow" : "Play slideshow"}
+            aria-label={
+              isAutoPlay
+                ? t("slider.pauseSlideshow")
+                : t("slider.playSlideshow")
+            }
           >
             {isAutoPlay ? <FaPause /> : <FaPlay />}
           </button>
@@ -263,14 +271,14 @@ const EnhancedProjectSwiper = () => {
             <button
               className="control-btn nav-btn prev"
               onClick={handlePrevSlide}
-              aria-label="Previous slide"
+              aria-label={t("slider.previousSlide")}
             >
               <FaChevronLeft />
             </button>
             <button
               className="control-btn nav-btn next"
               onClick={handleNextSlide}
-              aria-label="Next slide"
+              aria-label={t("slider.nextSlide")}
             >
               <FaChevronRight />
             </button>
@@ -279,10 +287,10 @@ const EnhancedProjectSwiper = () => {
 
         <div className="interaction-hints">
           <span className="hint">
-            <FaKeyboard /> Use arrow keys
+            <FaKeyboard /> {t("slider.useArrowKeys")}
           </span>
           <span className="hint">
-            <FaMousePointer /> Hover to pause
+            <FaMousePointer /> {t("slider.hoverToPause")}
           </span>
         </div>
       </div>
@@ -304,6 +312,7 @@ const EnhancedProjectSwiper = () => {
         onMouseLeave={handleMouseLeave}
       >
         <Swiper
+          key={i18n.language}
           ref={swiperRef}
           effect="coverflow"
           grabCursor={true}

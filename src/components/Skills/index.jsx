@@ -15,7 +15,10 @@ import { DiMongodb } from "react-icons/di";
 import { SiMui } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+
 const SkillsComponent = () => {
+  const { t } = useTranslation();
   const skills = [
     {
       icon: FaReact,
@@ -111,10 +114,8 @@ const SkillsComponent = () => {
   return (
     <div className="skills-container" data-aos="fade-up">
       <div className="skills-header">
-        <h2>
-          <span className="skills-title-accent">My</span> Skills
-        </h2>
-        <p className="skills-subtitle">Technologies I work with</p>
+        <h2>{t("skills.title")}</h2>
+        <p className="skills-subtitle">{t("skills.subtitle")}</p>
         <div className="skills-divider"></div>
       </div>
 

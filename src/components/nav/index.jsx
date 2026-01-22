@@ -32,7 +32,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="nav__container">
+    <div className="nav__container" key={i18n.language}>
       {isMobile ? (
         // Mobile Navigation
         <Fragment>

@@ -22,9 +22,8 @@ const Projects = () => {
   };
 
   useEffect(() => {
-    if (projectsDta.length === 0) {
-      getProjectsFromApi();
-    }
+    // Reload projects when language changes
+    getProjectsFromApi();
   }, [i18n.language]);
 
   const handelFilterClick = (name) => {
@@ -45,8 +44,8 @@ const Projects = () => {
         project.technology.some((r) =>
           filteringItems
             .map((item) => item.toLowerCase())
-            .includes(r.toLowerCase())
-        )
+            .includes(r.toLowerCase()),
+        ),
       );
       setFilteredProjectsData(filteredProjects);
     } else {

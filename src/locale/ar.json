@@ -21,5 +21,22 @@
     "error": "فشل في تحميل السيرة الذاتية. يرجى المحاولة مرة أخرى.",
     "retry": "إعادة المحاولة",
     "close": "إغلاق"
+  },
+  "slider": {
+    "featuredProjects": "المشاريع المميزة",
+    "subtitle": "اكتشف أحدث أعمالي وحلولي الإبداعية",
+    "pauseSlideshow": "إيقاف العرض",
+    "playSlideshow": "تشغيل العرض",
+    "previousSlide": "الشريحة السابقة",
+    "nextSlide": "الشريحة التالية",
+    "useArrowKeys": "استخدم مفاتيح الأسهم",
+    "hoverToPause": "مرر للإيقاف",
+    "viewDetails": "عرض التفاصيل",
+    "previousProject": "المشروع السابق",
+    "nextProject": "المشروع التالي"
+  },
+  "skills": {
+    "title": "مهاراتي",
+    "subtitle": "التقنيات التي أعمل بها"
   }
 }

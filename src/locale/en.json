@@ -21,5 +21,22 @@
     "error": "Failed to load CV. Please try again.",
     "retry": "Retry",
     "close": "Close"
+  },
+  "slider": {
+    "featuredProjects": "Featured Projects",
+    "subtitle": "Discover my latest work and creative solutions",
+    "pauseSlideshow": "Pause slideshow",
+    "playSlideshow": "Play slideshow",
+    "previousSlide": "Previous slide",
+    "nextSlide": "Next slide",
+    "useArrowKeys": "Use arrow keys",
+    "hoverToPause": "Hover to pause",
+    "viewDetails": "View Details",
+    "previousProject": "Previous project",
+    "nextProject": "Next project"
+  },
+  "skills": {
+    "title": "MY SKILLS",
+    "subtitle": "Technologies I Work With"
   }
 }
