@@ -19,6 +19,7 @@ export const handleDownloadCv = (CvLink, CVName) => {
 
 /**
  * Creates a URL-friendly slug from a project title
+ * Supports both English and Arabic characters
  * @param {string} title - The project title
  * @returns {string} - URL-friendly slug
  */
@@ -26,9 +27,9 @@ export const createSlug = (title) => {
   if (!title) return "";
 
   return title
-    .toLowerCase() // Convert to lowercase
+    .toLowerCase() // Convert to lowercase (works for Latin chars)
     .trim() // Remove leading/trailing whitespace
-    .replace(/[^\w\s-]/g, "") // Remove special characters except spaces and hyphens
+    .replace(/[^\p{L}\p{N}\s-]/gu, "") // Remove special chars, keep letters (any language), numbers, spaces, hyphens
     .replace(/\s+/g, "-") // Replace spaces with hyphens
     .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
     .replace(/^-+|-+$/g, ""); // Remove leading/trailing hyphens
