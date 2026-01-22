@@ -4,7 +4,7 @@ const SEO = ({
   title = "Ali Hatem | Senior Frontend Developer (React & Next.js)",
   description = "Ali Hatem is a Senior Frontend Developer from Egypt specializing in React.js, Next.js, and modern web technologies. Explore my portfolio of professional projects and technical expertise.",
   canonicalUrl = "https://ali-hatem-portfolio.vercel.app/",
-  ogImage = "https://ali-hatem-portfolio.vercel.app/images/og-image.png",
+  ogImage = "https://ali-hatem-portfolio.vercel.app/images/og-image.webp",
 }) => {
   // JSON-LD Structured Data for Person
   const structuredData = {
@@ -13,7 +13,7 @@ const SEO = ({
     name: "Ali Hatem",
     jobTitle: "Senior Frontend Developer",
     url: "https://ali-hatem-portfolio.vercel.app/",
-    image: "https://ali-hatem-portfolio.vercel.app/images/og-image.png",
+    image: "https://ali-hatem-portfolio.vercel.app/images/og-image.webp",
     sameAs: [
       "https://github.com/alihatem360",
       "https://www.linkedin.com/in/alihatem360/",
