@@ -1,77 +1,106 @@
-# My Portfolio 🔭
+# Ali Hatem Portfolio 🔭
 
-موقع محفظتي الشخصية، مبني باستخدام ReactJS. يمكنك مشاهدة النسخة المباشرة على https://ali-hatem-ramadan.vercel.app/ ✨
+Personal portfolio website built with React 18 and Vite. Features bilingual support (Arabic RTL / English LTR), project showcases, collections, and contact functionality.
 
-## 🌟 المميزات الرئيسية
+🔗 **Live Demo**: [ali-hatem-ramadan.vercel.app](https://ali-hatem-ramadan.vercel.app/)
 
-- ⚡ تصميم سريع الاستجابة
-- 🎨 واجهة مستخدم عصرية وجذابة
-- 🔍 عرض تفصيلي للمشاريع
-- 📱 متوافق مع جميع الأجهزة
-- 🌐 دعم متعدد اللغات
+## ✨ Features
 
-## 🛠️ التقنيات المستخدمة
+- 🌐 **Bilingual Support** - Full Arabic (RTL) and English (LTR) support
+- 📱 **Responsive Design** - Works seamlessly on all devices
+- 🎨 **Modern UI** - Framer Motion animations, Swiper carousel, AOS scroll effects
+- 📂 **Project Collections** - Group related projects together
+- 🎥 **Video Demos** - YouTube/Loom video integration for projects
+- 📧 **Contact Form** - EmailJS-powered contact functionality
 
-- **React.js** - إطار العمل الرئيسي
-- **React Router** - للتنقل بين الصفحات
-- **React Icons** - لإضافة الأيقونات
-- **Styled Components** - لتنسيق المكونات
-- **React Bootstrap** - لتصميم واجهة المستخدم
-- **Vercel** - لاستضافة الموقع
+## 🛠️ Tech Stack
 
-## 🚀 كيفية البدء
+| Category       | Technologies               |
+| -------------- | -------------------------- |
+| **Framework**  | React 18, Vite             |
+| **Styling**    | Bootstrap 5, CSS Modules   |
+| **Animations** | Framer Motion, AOS, Swiper |
+| **i18n**       | react-i18next              |
+| **State**      | Redux Toolkit              |
+| **Deployment** | Vercel                     |
 
-### المتطلبات الأساسية
+## 🚀 Quick Start
 
-- Node.js (v14 أو أحدث)
-- npm (v6 أو أحدث)
+```bash
+# Install dependencies
+npm install
 
-### خطوات التثبيت
+# Start dev server (localhost:3000)
+npm run dev
 
-1. استنسخ المستودع:
-   ```bash
-   git clone https://github.com/alihatem360/PortfolioReactJs.git
-   ```
+# Build for production
+npm run build
 
-2. انتقل إلى مجلد المشروع:
-   ```bash
-   cd portfolio
-   ```
+# Preview production build
+npm run preview
+```
 
-3. ثبّت الاعتماديات:
-   ```bash
-   npm install
-   ```
+## 📁 Project Structure
 
-4. ابدأ خادم التطوير:
-   ```bash
-   npm start
-   ```
+```
+src/
+├── components/          # UI components
+│   ├── header/          # Hero section
+│   ├── projects/        # Project listing & cards
+│   ├── Utilities/       # Swiper, loaders, etc.
+│   └── ...
+├── data/
+│   ├── projects.json    # English project data
+│   └── projectsAR.json  # Arabic project data
+├── locale/
+│   ├── en.json          # English translations
+│   └── ar.json          # Arabic translations
+├── pages/               # Route pages
+└── helpers/             # Utility functions
+```
 
-5. افتح المتصفح على `http://localhost:3000`
+## 🔧 Adding Projects
 
-## 📱 الاستخدام
+Add to both `src/data/projects.json` and `src/data/projectsAR.json`:
 
-- استكشف المشاريع المختلفة في قسم المشاريع
-- شاهد العروض التوضيحية المباشرة للمشاريع
-- تصفح الشفرة المصدرية على GitHub
-- تواصل معي من خلال نموذج الاتصال
+```json
+{
+  "image": "images/project.png",
+  "title": "Project Name",
+  "description": "...",
+  "technology": ["ReactJs", "Tailwind"],
+  "demo": "https://...",
+  "github": "",
+  "video": "https://youtu.be/...",
+  "videoKey": "abc123",
+  "codeStatus": "PRIVATE",
+  "hidden": false
+}
+```
 
-## 🤝 المساهمة
+- Store images in `/public/images/`
+- Set `hidden: true` to exclude from listings
+- Set `codeStatus: "PRIVATE"` to show lock icon
 
-المساهمات مرحب بها دائماً! إذا وجدت أي مشكلات أو لديك اقتراحات للتحسين:
+## 🌍 Internationalization
 
-1. افتح Issue جديدة
-2. أنشئ Fork للمستودع
-3. أنشئ فرعاً جديداً لميزتك
-4. قم بإجراء تغييراتك
-5. أرسل Pull Request
+- Translations: `src/locale/en.json` & `src/locale/ar.json`
+- **Always update both files** when adding translatable text
+- RTL/LTR handled automatically based on language
 
-## 📝 الترخيص
+## 🤝 Contributing
 
-هذا المشروع مرخص تحت [MIT License](LICENSE)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 📞 تواصل معي
+## 📝 License
 
-- LinkedIn: [صفحتي على LinkedIn](https://www.linkedin.com/in/aliihatem-753025203/)
-- Twitter: [@your_handle](https://twitter.com/AliHate21071474)
+This project is licensed under the [MIT License](LICENSE)
+
+## 📞 Contact
+
+- **LinkedIn**: [Ali Hatem](https://www.linkedin.com/in/aliihatem-753025203/)
+- **Twitter**: [@AliHate21071474](https://twitter.com/AliHate21071474)
