@@ -23,20 +23,30 @@ const SocialMedia = () => {
 
   // كائن يربط اسم وسائل التواصل الاجتماعي مع الأيقونة المناسبة
   const socialIcons = {
-    github: FaGithub,
     linkedin: FaLinkedin,
-    youtube: FaYoutube,
+    github: FaGithub,
     whatsapp: FaWhatsapp,
     email: MdEmail,
     twitter: FaTwitter,
-    facebook: FaFacebook,
+    youtube: FaYoutube,
   };
+
+  // ترتيب العرض المطلوب
+  const displayOrder = [
+    "linkedin",
+    "github",
+    "whatsapp",
+    "email",
+    "twitter",
+    "youtube",
+  ];
 
   return (
     <ul className="list-unstyled">
-      {socialsData.map((social) => {
-        if (social.name in socialIcons) {
-          const Icon = socialIcons[social.name];
+      {displayOrder.map((name) => {
+        const social = socialsData.find((s) => s.name === name);
+        if (social) {
+          const Icon = socialIcons[name];
           return (
             <li key={social.id}>
               <a href={social.link} target="_blank" rel="noreferrer">
