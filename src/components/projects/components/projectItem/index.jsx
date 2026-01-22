@@ -2,11 +2,13 @@ import React, { Fragment, useState } from "react";
 import "./style.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import ProjectDetailsModal from "../ProjectDetailsModal";
-import { FaAnglesRight, FaEye } from "react-icons/fa6";
+import { FaAnglesRight, FaAnglesLeft, FaEye } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 // components
 import ProjectCardButtons from "../ProjectCardButtons";
 
 const PojectItem = ({ project }) => {
+  const { i18n } = useTranslation();
   const [show, setShow] = useState(false);
   const [projectData, setProjectData] = useState({});
   const [isHovered, setIsHovered] = useState(false);
@@ -60,7 +62,11 @@ const PojectItem = ({ project }) => {
           <div className="card-header">
             <h3 className="project-title" onClick={handleViewDetails}>
               {project.title}
-              <FaAnglesRight className="title-icon" />
+              {i18n.language === "ar" ? (
+                <FaAnglesLeft className="title-icon" />
+              ) : (
+                <FaAnglesRight className="title-icon" />
+              )}
             </h3>
           </div>
 
