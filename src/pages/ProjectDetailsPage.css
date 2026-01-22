@@ -1,0 +1,663 @@
+/* ================================================
+   Project Details Page - Compact Hero Design
+   ================================================ */
+
+/* Base Layout */
+.project-details-page {
+  min-height: 100vh;
+  background: var(--primary-color, #0a0a0a);
+}
+
+/* ==========================================
+   HERO SECTION - Above the Fold
+   ========================================== */
+.pdp-hero-section {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+/* Hero Media (Image/Video) */
+.pdp-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.pdp-hero-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.pdp-hero-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block !important;
+}
+
+.pdp-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.pdp-hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.3) 0%,
+    rgba(10, 10, 10, 0.5) 40%,
+    rgba(10, 10, 10, 0.95) 85%,
+    rgba(10, 10, 10, 1) 100%
+  );
+}
+
+.pdp-hero-video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.pdp-hero-video iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+
+/* Hero Content */
+.pdp-hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px);
+}
+
+/* Top Bar - Back & Share */
+.pdp-hero-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.pdp-back-btn,
+.pdp-share-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.pdp-back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pdp-back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-3px);
+}
+
+.pdp-share-btn {
+  background: rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(10px);
+  color: var(--accent-color, #d4af37);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.pdp-share-btn:hover {
+  background: rgba(212, 175, 55, 0.3);
+}
+
+/* Hero Info - Bottom of Hero */
+.pdp-hero-info {
+  margin-top: auto;
+  padding: 2rem 2rem 3rem;
+  max-width: 900px;
+}
+
+.pdp-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.25),
+    rgba(212, 175, 55, 0.1)
+  );
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 50px;
+  color: var(--accent-color, #d4af37);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.pdp-hero-badge svg {
+  font-size: 0.9rem;
+}
+
+.pdp-hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 1rem;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.pdp-hero-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.pdp-tech-tag {
+  padding: 0.4rem 0.9rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.pdp-tech-more {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.3);
+  color: var(--accent-color, #d4af37);
+}
+
+/* Hero Action Buttons */
+.pdp-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pdp-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.pdp-action-primary {
+  background: linear-gradient(135deg, var(--accent-color, #d4af37), #f39c12);
+  color: #000;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+}
+
+.pdp-action-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+  color: #000;
+}
+
+.pdp-action-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pdp-action-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.pdp-action-private {
+  background: rgba(255, 100, 100, 0.15);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 100, 100, 0.3);
+  cursor: default;
+}
+
+/* ==========================================
+   DETAILS SECTION - Below the Fold
+   ========================================== */
+.pdp-details-section {
+  background: var(--primary-color, #0a0a0a);
+  padding: 3rem 0 4rem;
+}
+
+.pdp-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Description Block */
+.pdp-description-block {
+  margin-bottom: 2.5rem;
+}
+
+.pdp-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pdp-section-title::before {
+  content: "";
+  width: 4px;
+  height: 24px;
+  background: var(--accent-color, #d4af37);
+  border-radius: 2px;
+}
+
+.pdp-description-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 800px;
+}
+
+/* Info Cards Row */
+.pdp-info-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.pdp-info-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.pdp-info-card h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 1rem;
+}
+
+/* Tech List */
+.pdp-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pdp-tech-chip {
+  padding: 0.5rem 1rem;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 8px;
+  color: var(--accent-color, #d4af37);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.pdp-tech-chip:hover {
+  background: rgba(212, 175, 55, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Links List */
+.pdp-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pdp-link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.pdp-link-item:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--accent-color, #d4af37);
+  transform: translateX(5px);
+}
+
+.pdp-link-item svg:first-child {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.pdp-link-item span {
+  flex: 1;
+}
+
+.pdp-link-arrow {
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pdp-link-item:hover .pdp-link-arrow {
+  opacity: 1;
+}
+
+.pdp-link-private {
+  color: rgba(255, 100, 100, 0.7);
+  cursor: default;
+}
+
+.pdp-link-private:hover {
+  background: rgba(255, 100, 100, 0.1);
+  color: rgba(255, 100, 100, 0.7);
+  transform: none;
+}
+
+/* Status Card */
+.pdp-status-card .pdp-status-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pdp-status-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.pdp-status-indicator {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+  }
+}
+
+.pdp-status-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.pdp-stat-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent-color, #d4af37);
+}
+
+.pdp-stat-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Footer Nav */
+.pdp-footer-nav {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pdp-all-projects-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.pdp-all-projects-link:hover {
+  color: var(--accent-color, #d4af37);
+}
+
+/* ==========================================
+   LOADING & ERROR STATES
+   ========================================== */
+.pdp-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--primary-color, #0a0a0a);
+}
+
+.pdp-loader {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdp-loader-ring {
+  position: absolute;
+  inset: 0;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--accent-color, #d4af37);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pdp-loader-icon {
+  color: var(--accent-color, #d4af37);
+  font-size: 1.5rem;
+}
+
+.pdp-not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--primary-color, #0a0a0a);
+  padding: 2rem;
+}
+
+.pdp-not-found-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+.pdp-404 {
+  font-size: 6rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--accent-color, #d4af37), #f0c674);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.pdp-not-found-content h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+
+.pdp-not-found-content p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+}
+
+.pdp-back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--accent-color, #d4af37);
+  color: #000;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.pdp-back-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+  color: #000;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 1024px) {
+  .pdp-hero-section {
+    min-height: calc(100vh - 60px);
+    margin-top: 60px;
+  }
+
+  .pdp-hero-info {
+    padding: 1.5rem 1.5rem 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pdp-hero-section {
+    min-height: auto;
+    margin-top: 60px;
+  }
+
+  .pdp-hero-content {
+    min-height: 70vh;
+  }
+
+  .pdp-hero-top-bar {
+    padding: 1rem;
+  }
+
+  .pdp-back-btn span,
+  .pdp-share-btn span {
+    display: none;
+  }
+
+  .pdp-back-btn,
+  .pdp-share-btn {
+    padding: 0.7rem;
+    border-radius: 50%;
+  }
+
+  .pdp-hero-info {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .pdp-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .pdp-hero-actions {
+    flex-direction: column;
+  }
+
+  .pdp-action-btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .pdp-details-container {
+    padding: 0 1rem;
+  }
+
+  .pdp-details-section {
+    padding: 2rem 0 3rem;
+  }
+
+  .pdp-info-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pdp-status-card .pdp-status-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* ==========================================
+   RTL SUPPORT
+   ========================================== */
+[dir="rtl"] .pdp-back-btn:hover {
+  transform: translateX(3px);
+}
+
+[dir="rtl"] .pdp-link-item:hover {
+  transform: translateX(-5px);
+}
+
+[dir="rtl"] .pdp-section-title::before {
+  order: 1;
+}
+
+[dir="rtl"] .pdp-hero-info {
+  text-align: right;
+}
+
+[dir="rtl"] .pdp-hero-tech,
+[dir="rtl"] .pdp-hero-actions {
+  justify-content: flex-start;
+}

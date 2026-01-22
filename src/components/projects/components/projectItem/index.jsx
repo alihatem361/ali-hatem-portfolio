@@ -1,33 +1,21 @@
 import React, { Fragment, useState } from "react";
 import "./style.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import ProjectDetailsModal from "../ProjectDetailsModal";
+import { Link } from "react-router-dom";
 import { FaAnglesRight, FaAnglesLeft, FaEye } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 // components
 import ProjectCardButtons from "../ProjectCardButtons";
+// helpers
+import { createSlug } from "../../../../helpers";
 
 const PojectItem = ({ project }) => {
   const { i18n } = useTranslation();
-  const [show, setShow] = useState(false);
-  const [projectData, setProjectData] = useState({});
   const [isHovered, setIsHovered] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  const handleClose = () => setShow(false);
-
-  const handleViewDetails = () => {
-    setShow(true);
-    setProjectData(project);
-  };
-
   return (
     <Fragment>
-      <ProjectDetailsModal
-        project={projectData}
-        show={show}
-        handleClose={handleClose}
-      />
       <div
         className={`project-card ${isHovered ? "hovered" : ""} ${
           imageLoaded ? "loaded" : ""
@@ -39,14 +27,14 @@ const PojectItem = ({ project }) => {
         <div className="card-image-wrapper">
           <div className="image-overlay">
             <div className="overlay-content">
-              <button
+              <Link
+                to={`/project/${createSlug(project.title)}`}
                 className="view-details-btn"
-                onClick={handleViewDetails}
                 aria-label="View project details"
               >
                 <FaEye />
                 <span>View Details</span>
-              </button>
+              </Link>
             </div>
           </div>
           <LazyLoadImage
@@ -60,14 +48,19 @@ const PojectItem = ({ project }) => {
 
         <div className="card-content">
           <div className="card-header">
-            <h3 className="project-title" onClick={handleViewDetails}>
-              {project.title}
-              {i18n.language === "ar" ? (
-                <FaAnglesLeft className="title-icon" />
-              ) : (
-                <FaAnglesRight className="title-icon" />
-              )}
-            </h3>
+            <Link
+              to={`/project/${createSlug(project.title)}`}
+              className="project-title-link"
+            >
+              <h3 className="project-title">
+                {project.title}
+                {i18n.language === "ar" ? (
+                  <FaAnglesLeft className="title-icon" />
+                ) : (
+                  <FaAnglesRight className="title-icon" />
+                )}
+              </h3>
+            </Link>
           </div>
 
           <p className="project-description">
