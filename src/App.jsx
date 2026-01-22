@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 // components and pages
 import HomePage from "./pages/HomePage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
+import CollectionPage from "./pages/CollectionPage";
 import Projects from "./components/projects";
 import AnimationLoader from "./components/Utilities/AnimationLoader";
 import Nav from "./components/nav";
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path="projects" element={<Projects />} />
           <Route path="project/:slug" element={<ProjectDetailsPage />} />
+          <Route path="collection/:collectionId" element={<CollectionPage />} />
           <Route path="/" element={<HomePage />} />
         </Routes>
       </Fragment>

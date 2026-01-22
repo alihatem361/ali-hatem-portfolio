@@ -39,5 +39,12 @@
   "skills": {
     "title": "مهاراتي",
     "subtitle": "التقنيات التي أعمل بها"
-  }
+  },
+  "Collection": "مجموعة",
+  "Projects": "مشاريع",
+  "Projects in this collection": "مشاريع في هذه المجموعة",
+  "View Collection": "عرض المجموعة",
+  "Browse Collection": "تصفح المجموعة",
+  "View Details": "عرض التفاصيل",
+  "Live Demo": "عرض مباشر"
 }

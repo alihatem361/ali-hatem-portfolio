@@ -19,7 +19,7 @@ const FloatingWhatsAppCom = () => {
       <FloatingWhatsApp
         phoneNumber="+201026159353"
         accountName={aboutmeData.name}
-        avatar={aboutmeData.heaaderimag}
+        avatar={aboutmeData.headerImage}
         chatMessage={
           i18n.language === "en"
             ? "Hello, how can I help you?"

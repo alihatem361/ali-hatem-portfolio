@@ -39,5 +39,12 @@
   "skills": {
     "title": "MY SKILLS",
     "subtitle": "Technologies I Work With"
-  }
+  },
+  "Collection": "Collection",
+  "Projects": "Projects",
+  "Projects in this collection": "Projects in this collection",
+  "View Collection": "View Collection",
+  "Browse Collection": "Browse Collection",
+  "View Details": "View Details",
+  "Live Demo": "Live Demo"
 }

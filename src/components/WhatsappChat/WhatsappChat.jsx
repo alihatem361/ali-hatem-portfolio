@@ -28,10 +28,10 @@ function WhatsappChat() {
     const phoneNumber = "+201026159353";
     const encodedMessage = encodeURIComponent(message);
     const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${encodeURIComponent(
-      phoneNumber
+      phoneNumber,
     )}&text=${encodedMessage}`;
     const whatsappAppUrl = `https://api.whatsapp.com/send?phone=${encodeURIComponent(
-      phoneNumber
+      phoneNumber,
     )}&text=${encodedMessage}`;
 
     // Try to open the WhatsApp app. If it fails, fallback to the web version
@@ -70,15 +70,23 @@ function WhatsappChat() {
               backgroundColor: "#128C7E",
               color: "white",
               borderRadius: "10px 10px 0px 0px",
+              padding: "10px",
             }}
           >
-            <span
-              style={{
-                padding: "10px",
-              }}
-            >
-              <i className="fab fa-whatsapp px-2"></i> WhatsApp
-            </span>
+            <div className="d-flex align-items-center gap-2">
+              <img
+                src="images/header-background2.jpeg"
+                alt="Ali Hatem"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  border: "2px solid white",
+                }}
+              />
+              <span>Ali Hatem</span>
+            </div>
             <span onClick={handleCancel} className="btn btn-sm">
               <i className="fas fa-times"></i>
             </span>

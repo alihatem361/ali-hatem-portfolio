@@ -1,0 +1,631 @@
+/* ================================================
+   Collection Page - Styles
+   ================================================ */
+
+/* Base Layout */
+.collection-page {
+  min-height: 100vh;
+  background: var(--primary-color, #0a0a0a);
+}
+
+/* ==========================================
+   LOADING STATE
+   ========================================== */
+.cp-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color, #0a0a0a);
+}
+
+.cp-loader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cp-loader-ring {
+  position: absolute;
+  inset: 0;
+  border: 3px solid rgba(212, 175, 55, 0.1);
+  border-top-color: var(--accent-color, #d4af37);
+  border-radius: 50%;
+  animation: cpSpin 1s linear infinite;
+}
+
+@keyframes cpSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cp-loader-icon {
+  font-size: 1.8rem;
+  color: var(--accent-color, #d4af37);
+  animation: cpPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes cpPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==========================================
+   NOT FOUND STATE
+   ========================================== */
+.cp-not-found {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--primary-color, #0a0a0a);
+}
+
+.cp-not-found-content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.cp-404 {
+  font-size: 6rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--accent-color), #b8963c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.cp-not-found h1 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.cp-not-found p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+}
+
+.cp-back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--accent-color, #d4af37);
+  color: #000;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cp-back-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.cp-hero-section {
+  position: relative;
+  min-height: 60vh;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Hero Background - Image Grid */
+.cp-hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.cp-hero-images-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.cp-hero-bg-image-wrapper {
+  overflow: hidden;
+}
+
+.cp-hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  filter: blur(2px);
+  transform: scale(1.05);
+}
+
+.cp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.5) 0%,
+    rgba(10, 10, 10, 0.7) 40%,
+    rgba(10, 10, 10, 0.95) 85%,
+    rgba(10, 10, 10, 1) 100%
+  );
+}
+
+/* Hero Content */
+.cp-hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+}
+
+/* Top Bar */
+.cp-hero-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.cp-back-btn,
+.cp-share-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.cp-back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cp-back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-3px);
+}
+
+[dir="rtl"] .cp-back-btn:hover {
+  transform: translateX(3px);
+}
+
+.cp-share-btn {
+  background: rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(10px);
+  color: var(--accent-color, #d4af37);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.cp-share-btn:hover {
+  background: rgba(212, 175, 55, 0.3);
+}
+
+/* Hero Info */
+.cp-hero-info {
+  margin-top: auto;
+  padding: 2rem 2rem 3rem;
+  max-width: 900px;
+}
+
+.cp-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.25),
+    rgba(212, 175, 55, 0.1)
+  );
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 50px;
+  color: var(--accent-color, #d4af37);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cp-hero-badge svg {
+  font-size: 0.9rem;
+}
+
+.cp-hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.cp-hero-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+  max-width: 700px;
+}
+
+.cp-hero-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cp-tech-tag {
+  padding: 0.4rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+}
+
+.cp-tech-more {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.3);
+  color: var(--accent-color, #d4af37);
+}
+
+/* ==========================================
+   PROJECTS SECTION
+   ========================================== */
+.cp-projects-section {
+  padding: 3rem 2rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cp-section-header {
+  margin-bottom: 2rem;
+}
+
+.cp-section-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.cp-section-icon {
+  color: var(--accent-color, #d4af37);
+}
+
+/* Projects Grid */
+.cp-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Project Card */
+.cp-project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cp-project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(212, 175, 55, 0.1);
+}
+
+/* Project Image */
+.cp-project-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.cp-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block !important;
+}
+
+.cp-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cp-project-card:hover .cp-project-image img {
+  transform: scale(1.08);
+}
+
+.cp-project-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cp-project-card:hover .cp-project-image-overlay {
+  opacity: 1;
+}
+
+.cp-view-btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--accent-color, #d4af37);
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  transform: translateY(15px);
+  transition: all 0.3s ease;
+}
+
+.cp-project-card:hover .cp-view-btn {
+  transform: translateY(0);
+}
+
+.cp-view-btn:hover {
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Project Content */
+.cp-project-content {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.cp-project-title-link {
+  text-decoration: none;
+}
+
+.cp-project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.cp-project-title-link:hover .cp-project-title {
+  color: var(--accent-color, #d4af37);
+}
+
+.cp-project-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.cp-project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.cp-mini-tag {
+  padding: 0.25rem 0.7rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Project Actions */
+.cp-project-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cp-demo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  color: var(--accent-color, #d4af37);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cp-demo-btn:hover {
+  background: var(--accent-color, #d4af37);
+  color: #000;
+}
+
+.cp-details-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cp-details-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* ==========================================
+   FOOTER SECTION
+   ========================================== */
+.cp-footer-section {
+  padding: 2rem 2rem 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cp-all-projects-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cp-all-projects-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+  .cp-hero-section {
+    min-height: 50vh;
+    margin-top: 70px;
+  }
+
+  .cp-hero-images-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cp-hero-top-bar {
+    padding: 1rem 1.5rem;
+  }
+
+  .cp-hero-info {
+    padding: 1.5rem 1.5rem 2rem;
+  }
+
+  .cp-hero-title {
+    font-size: 2rem;
+  }
+
+  .cp-hero-description {
+    font-size: 1rem;
+  }
+
+  .cp-projects-section {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .cp-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cp-project-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cp-hero-top-bar {
+    padding: 1rem;
+  }
+
+  .cp-back-btn,
+  .cp-share-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .cp-hero-info {
+    padding: 1rem 1rem 1.5rem;
+  }
+
+  .cp-hero-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .cp-hero-title {
+    font-size: 1.6rem;
+  }
+
+  .cp-hero-description {
+    font-size: 0.9rem;
+  }
+
+  .cp-projects-section {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .cp-section-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .cp-project-content {
+    padding: 1rem;
+  }
+
+  .cp-project-title {
+    font-size: 1.1rem;
+  }
+
+  .cp-project-actions {
+    flex-wrap: wrap;
+  }
+}
+
+/* ==========================================
+   RTL SUPPORT
+   ========================================== */
+[dir="rtl"] .cp-back-home svg,
+[dir="rtl"] .cp-all-projects-link svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .cp-details-btn svg {
+  transform: scaleX(-1);
+}

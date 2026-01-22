@@ -47,6 +47,19 @@
       "videoKey": "",
       "codeStatus": "PRIVATE"
     },
+
+    {
+      "image": "images/el-zakeroon (1).png",
+      "title": "El-Zakeroon",
+      "description": "Discover El-Zakeroon, a free Islamic web application that helps you Track your daily adhkar easily.",
+      "technology": ["NextJs", "Tailwind", "TypeScript"],
+      "demo": "https://el-zakeroon.vercel.app/",
+      "github": "",
+      "video": "https://youtu.be/16rQx06Fl4Q",
+      "videoKey": "16rQx06Fl4Q",
+      "codeStatus": "PRIVATE"
+    },
+
     {
       "image": "images/saudi-national-day.png",
       "title": "Saudi National Day",
@@ -137,17 +150,7 @@
       "videoKey": "",
       "codeStatus": "PRIVATE"
     },
-    {
-      "image": "images/el-zakeroon (1).png",
-      "title": "El-Zakeroon",
-      "description": "Discover El-Zakeroon, a free Islamic web application that helps you Track your daily adhkar easily.",
-      "technology": ["NextJs", "Tailwind", "TypeScript"],
-      "demo": "https://el-zakeroon.vercel.app/",
-      "github": "",
-      "video": "https://youtu.be/16rQx06Fl4Q",
-      "videoKey": "16rQx06Fl4Q",
-      "codeStatus": "PRIVATE"
-    },
+
     {
       "image": "images/finalFawriElmaliiik_cover.png",
       "title": "Fawri Elmaliiik",
@@ -230,6 +233,7 @@
       "demo": "https://alihatem360.github.io/basmatalnarjis/",
       "github": "",
       "codeStatus": "PRIVATE",
+      "hidden": true,
       "loomVideo": "https://www.loom.com/share/c17e174a3721453bbfb77ce2911fa553?sid=cb9b92d1-0401-4cdf-90c1-3be5b8342e5d"
     },
     {
@@ -319,7 +323,8 @@
       "demo": "https://greeting-card-pied.vercel.app/",
       "github": "",
       "video": "https://youtu.be/XDKyLS0QXpg",
-      "videoKey": "XDKyLS0QXpg"
+      "videoKey": "XDKyLS0QXpg",
+      "hidden": true
     },
     {
       "image": "images/Hospital-LandingPage.png",

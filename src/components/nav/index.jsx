@@ -94,7 +94,7 @@ const Nav = () => {
               </li>
             </ul>
           </div>
-          <LnaguageMenu />
+          {/* <LnaguageMenu /> */}
         </Fragment>
       )}
     </div>

@@ -9,6 +9,142 @@ import GetAllData from "../../data/projects";
 import LoaderCom from "../Utilities/LoaderCom";
 import { techSkills } from "../../data/index";
 
+// Project titles to group into collections
+const TEACHERS_COLLECTION_TITLES = [
+  "Mr Mohamed",
+  "Mr Abdullah",
+  "Mr Ahmed",
+  "Alshaatir Academy",
+  "Hadafik Altaelimia",
+];
+const MPS_COLLECTION_TITLES = [
+  "mohammed-al-huwaila",
+  "thamer-al-suwait",
+  "saoud-al-asfour",
+  "abdullah-mutlaq-awad-al-mutairi",
+];
+const E3MEL_LANDING_PAGES_TITLES = [
+  "Saudi National Day",
+  "EBU Certificate",
+  "shahadat alhadaf",
+];
+
+/**
+ * Groups specific projects into collection objects
+ * @param {Array} projects - Original projects array
+ * @param {string} language - Current language (en/ar)
+ * @returns {Array} - Projects array with collections
+ */
+const groupProjectsIntoCollections = (projects, language) => {
+  if (!projects || projects.length === 0) return [];
+
+  const teachersProjects = [];
+  const mpsProjects = [];
+  const e3melLandingProjects = [];
+  const otherProjects = [];
+
+  projects.forEach((project) => {
+    const titleLower = project.title?.toLowerCase() || "";
+
+    if (
+      TEACHERS_COLLECTION_TITLES.some((t) => t.toLowerCase() === titleLower)
+    ) {
+      teachersProjects.push(project);
+    } else if (
+      MPS_COLLECTION_TITLES.some((t) => t.toLowerCase() === titleLower)
+    ) {
+      mpsProjects.push(project);
+    } else if (
+      E3MEL_LANDING_PAGES_TITLES.some((t) => t.toLowerCase() === titleLower)
+    ) {
+      e3melLandingProjects.push(project);
+    } else {
+      otherProjects.push(project);
+    }
+  });
+
+  // Build collections array
+  const collections = [];
+
+  // Create Teachers Collection
+  if (teachersProjects.length > 0) {
+    collections.push({
+      type: "collection",
+      collectionId: "teachers-collection",
+      title: language === "ar" ? "مواقع المعلمين" : "Teachers' Websites",
+      description:
+        language === "ar"
+          ? "مجموعة من المواقع الشخصية للمعلمين تعرض ملفاتهم المهنية وإنجازاتهم"
+          : "A collection of personal websites for teachers showcasing their professional profiles and achievements",
+      image: teachersProjects[0]?.image,
+      technology: [
+        ...new Set(teachersProjects.flatMap((p) => p.technology || [])),
+      ],
+      subProjects: teachersProjects,
+    });
+  }
+
+  // Create MPs/Candidates Collection
+  if (mpsProjects.length > 0) {
+    collections.push({
+      type: "collection",
+      collectionId: "mps-collection",
+      title:
+        language === "ar"
+          ? "مواقع المرشحين والنواب"
+          : "MPs & Candidates Websites",
+      description:
+        language === "ar"
+          ? "مجموعة من المواقع الشخصية للمرشحين والنواب تعرض ملفاتهم ومعلومات التواصل"
+          : "A collection of personal websites for MPs and candidates showcasing their portfolios and contact information",
+      image: mpsProjects[0]?.image,
+      technology: [...new Set(mpsProjects.flatMap((p) => p.technology || []))],
+      subProjects: mpsProjects,
+    });
+  }
+
+  // Create E3melbusiness Landing Pages Collection
+  if (e3melLandingProjects.length > 0) {
+    collections.push({
+      type: "collection",
+      collectionId: "e3mel-landing-collection",
+      title:
+        language === "ar"
+          ? "صفحات E3melbusiness الترويجية"
+          : "E3melbusiness Landing Pages",
+      description:
+        language === "ar"
+          ? "مجموعة من الصفحات الترويجية والشهادات المصممة لمؤسسة E3melbusiness"
+          : "A collection of promotional landing pages and certificates designed for E3melbusiness organization",
+      image: e3melLandingProjects[0]?.image,
+      technology: [
+        ...new Set(e3melLandingProjects.flatMap((p) => p.technology || [])),
+      ],
+      subProjects: e3melLandingProjects,
+    });
+  }
+
+  // Find index of "1M Brothers" project and insert collections after it
+  const result = [];
+  const targetTitle = "1m brothers";
+
+  for (let i = 0; i < otherProjects.length; i++) {
+    result.push(otherProjects[i]);
+
+    // Insert all collections right after 1M Brothers
+    if (otherProjects[i].title?.toLowerCase() === targetTitle) {
+      result.push(...collections);
+    }
+  }
+
+  // If 1M Brothers wasn't found, append collections at the end
+  if (!otherProjects.some((p) => p.title?.toLowerCase() === targetTitle)) {
+    result.push(...collections);
+  }
+
+  return result;
+};
+
 const Projects = () => {
   const { t, i18n } = useTranslation();
   const { getProjects } = GetAllData();
@@ -19,8 +155,13 @@ const Projects = () => {
 
   const getProjectsFromApi = () => {
     getProjects().then((data) => {
-      setProjectsData(data[0]);
-      setFilteredProjectsData(data[0]);
+      const rawProjects = data[0];
+      const groupedProjects = groupProjectsIntoCollections(
+        rawProjects,
+        i18n.language,
+      );
+      setProjectsData(groupedProjects);
+      setFilteredProjectsData(groupedProjects);
     });
   };
 
@@ -119,13 +260,19 @@ const Projects = () => {
         <div className="projects">
           {filteredProjectsData && filteredProjectsData.length > 0 ? (
             filteredProjectsData.map((project, index) => {
-              return <PojectItem project={project} key={index} />;
+              return (
+                <PojectItem
+                  project={project}
+                  key={project.collectionId || index}
+                />
+              );
             })
           ) : (
             <LoaderCom />
           )}
         </div>
       </div>
+
       <Footer />
     </React.Fragment>
   );
