@@ -1,7 +1,7 @@
 {
   "aboutme": [
     {
-      "heaaderimag": "images/header-background2.jpeg",
+      "headerImage": "images/header-background2.jpeg",
       "name": "Ali Hatem",
       "bio": [
         "A software engineer with a strong focus on React and Next.js ⚛️.",
@@ -15,10 +15,10 @@
 
   "Projects": [
     {
-      "imeg": "images/e3melbusiness-org.png",
+      "image": "images/e3melbusiness-org.png",
       "title": "E3melbusiness Org",
       "description": "Worked on developing the user interfaces for the E3mel Business website using HTML, CSS, Tailwind CSS, and JavaScript Focused on delivering a smooth and fast user experience Implemented responsive design to ensure compatibility across mobile and desktop devices Used Tailwind CSS for efficient styling and clean code structure Enhanced performance and loading speed by minimizing and optimizing code Collaborated with the design team to achieve a pixel-perfect UI implementation",
-      "technology": ["HTML", "Tailwind CSS", "JavaScript"],
+      "technology": ["HTML", "Tailwind", "JavaScript"],
       "demo": "https://e3melbusiness.org/",
       "github": "",
       "video": "",
@@ -26,10 +26,10 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/alHawmahCulturalHub.png",
+      "image": "images/alHawmahCulturalHub.png",
       "title": "alHawmah Cultural Hub",
       "description": "A cultural hub website that showcases the rich heritage and traditions of the Hawmah region. The website features a modern design with a focus on user experience, providing visitors with easy access to information about the hub's history, events, and activities.",
-      "technology": ["React", "Tailwind", "Vite", "shadcn-ui"],
+      "technology": ["ReactJs", "Tailwind", "Vite", "shadcn-ui"],
       "demo": "https://www.alhawmah.org/",
       "github": "",
       "video": "",
@@ -37,10 +37,10 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/contiva.png",
+      "image": "images/contiva.png",
       "title": "Contiva",
       "description": "Contiva is a modern and innovative website that provides a platform for users to explore and discover various content. The website features a sleek design, user-friendly interface, and responsive layout, ensuring an optimal viewing experience across all devices.",
-      "technology": ["React", "Tailwind", "Vite", "shadcn-ui"],
+      "technology": ["ReactJs", "Tailwind", "Vite", "shadcn-ui"],
       "demo": "https://contiva-learning.vercel.app/",
       "github": "",
       "video": "",
@@ -48,15 +48,15 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/saudi-national-day.png",
+      "image": "images/saudi-national-day.png",
       "title": "Saudi National Day",
       "description": "A special landing page created for Saudi National Day, showcasing exclusive offers and discounts on products and services. The goal was to attract visitors and increase engagement and sales during the celebration period. The page was designed to be visually appealing, fully responsive, and inspired by the Saudi National Day theme and colors",
-      "technology": ["HTML", "Tailwind CSS", "JavaScript"],
+      "technology": ["HTML", "Tailwind", "JavaScript"],
       "demo": "https://e3mel-business-national-saudi-day.pages.dev/",
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/1MBrothers.png",
+      "image": "images/1MBrothers.png",
       "title": "1M Brothers",
       "description": "Front-end part of a graduation project for my final year. Responsible for entire front-end development. Donation website for patient cases. Users can donate and submit new cases. Upload papers and await admin approval. Integrated payment provider. Designed intuitive user interface. Showcase of HTML, CSS, and JavaScript skills. Functional and visually appealing website. Real-world application.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -68,7 +68,7 @@
     },
 
     {
-      "imeg": "images/ebu-certificate.png",
+      "image": "images/ebu-certificate.png",
       "title": "EBU Certificate",
       "description": "EBU Certificate is an internationally accredited certificate provided by the EBU institution specialized in training and professional development. The certificate provides trainees with the knowledge and practical skills necessary to develop their professional and personal lives.",
       "technology": ["HTML", "CSS", "JavaScript"],
@@ -77,7 +77,7 @@
     },
 
     {
-      "imeg": "images/shahadat-alhadaf.png",
+      "image": "images/shahadat-alhadaf.png",
       "title": "shahadat alhadaf",
       "description": "50+ internationally accredited certificates, 100% supported by the Human Resources Development Fund (HADAF)",
       "technology": ["HTML", "CSS", "JavaScript"],
@@ -85,7 +85,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/alshaatir-academy.png",
+      "image": "images/alshaatir-academy.png",
       "title": "Alshaatir Academy",
       "description": "Al Shater Platform is an innovative educational application that helps students improve their skills and organize their time through interactive lessons, tests, and customized tools. Enjoy a smart and easy learning experience anytime, anywhere!.",
       "technology": ["NextJs", "Tailwind"],
@@ -96,7 +96,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/hadafik-altaelimia.png",
+      "image": "images/hadafik-altaelimia.png",
       "title": "Hadafik Altaelimia",
       "description": "Hadafik Altaelimia is a free educational platform that provides students with the opportunity to learn and develop their skills in various fields. The platform offers a wide range of courses and resources to help students achieve their academic and professional goals.",
       "technology": ["HTML", "CSS", "JavaScript"],
@@ -104,10 +104,10 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/mr-mohamed.png",
+      "image": "images/mr-mohamed.png",
       "title": "Mr Mohamed",
       "description": "A personal website for Mr. Mohamed, showcasing his professional profile, achievements, and contact information, with arabic / English language support , dark / light mode.",
-      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind"],
       "demo": "https://vclasses-msr-mohamed.pages.dev/",
       "github": "",
       "video": "",
@@ -115,10 +115,10 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/mr-abdullah.png",
+      "image": "images/mr-abdullah.png",
       "title": "Mr Abdullah",
       "description": "A personal website for Mr. Abdullah, showcasing his professional profile, achievements, and contact information, with arabic / English language support , dark / light mode.",
-      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind"],
       "demo": "https://vclasses-abdullah-nasr.pages.dev",
       "github": "",
       "video": "",
@@ -127,10 +127,10 @@
     },
 
     {
-      "imeg": "images/mr-ahmed.png",
+      "image": "images/mr-ahmed.png",
       "title": "Mr Ahmed",
       "description": "A personal website for Mr. Ahmed, showcasing his professional profile, achievements, and contact information, with arabic / English language support , dark / light mode.",
-      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind"],
       "demo": "https://vclasses-mr-ahmed.pages.dev/",
       "github": "",
       "video": "",
@@ -138,10 +138,10 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/el-zakeroon (1).png",
+      "image": "images/el-zakeroon (1).png",
       "title": "El-Zakeroon",
       "description": "Discover El-Zakeroon, a free Islamic web application that helps you Track your daily adhkar easily.",
-      "technology": ["NextJs", "TailwindCss", "typescript"],
+      "technology": ["NextJs", "Tailwind", "TypeScript"],
       "demo": "https://el-zakeroon.vercel.app/",
       "github": "",
       "video": "https://youtu.be/16rQx06Fl4Q",
@@ -149,13 +149,13 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/finalFawriElmaliiik_cover.png",
+      "image": "images/finalFawriElmaliiik_cover.png",
       "title": "Fawri Elmaliiik",
       "description": "This project is a comprehensive system for managing customers tailored for express agency offices, developed using modern technologies to ensure high performance and user-friendliness. The system aims to simplify and improve the process of managing customers, allowing for easy and efficient addition, deletion, modification, and search of customers.",
       "technology": [
         "ReactJs",
         "Redux",
-        "material-ui",
+        "MaterialUI",
         "Api",
         "Firebase",
         "NodeJs"
@@ -167,17 +167,17 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/salil.png",
+      "image": "images/salil.png",
       "title": "Salil",
       "description": "\"Saleel\" is an architectural masterpiece that embodies the highest meanings of luxury and comfort. Designed to be more than just a residence, it is an integrated lifestyle that offers its residents an exceptional experience combining the tranquility of nature with the liveliness of the city, while providing all the amenities and services that meet your aspirations.",
-      "technology": ["Html", "Css", "JavaScript", "Tailwind CSS"],
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind"],
       "demo": "https://salil-real-estate-project-page.pages.dev/",
       "github": "",
       "codeStatus": "PRIVATE"
     },
 
     {
-      "imeg": "images/makhabrash.png",
+      "image": "images/makhabrash.png",
       "title": "Makhabrash",
       "description": "(Makhabrash) is a web application that allows users to send messages to anyone anonymously. It is built using React for the frontend and Firebase for backend services.",
       "technology": ["ReactJs", "Tailwind", "Firebase"],
@@ -186,7 +186,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/EcommerceWebsite.webp",
+      "image": "images/EcommerceWebsite.webp",
       "title": "ReactJs Ecommerce",
       "description": "This project is a fully functional e-commerce website built using React.js and Redux. It provides a seamless shopping experience with features like product browsing, cart management, and checkout.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -197,9 +197,9 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/attendance recording.jpg",
+      "image": "images/attendance recording.jpg",
       "title": "Lecture management and attendance recording system",
-      "technology": ["ReactJs", "Material-ui", "Firebase"],
+      "technology": ["ReactJs", "MaterialUI", "Firebase"],
       "demo": "",
       "github": "",
       "video": "https://youtu.be/12NFx9-F-IU",
@@ -207,14 +207,14 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/pdfEcommerce.png",
+      "image": "images/pdfEcommerce.png",
       "title": "Preisliste-ecommerce (Full Stack)",
       "technology": [
         "ReactJs",
-        "material-ui",
-        "nodeJs",
+        "MaterialUI",
+        "NodeJs",
         "expressJs",
-        "firebase"
+        "Firebase"
       ],
       "demo": "",
       "github": "",
@@ -223,7 +223,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/Dr. Mayada Salah.png",
+      "image": "images/Dr. Mayada Salah.png",
       "title": "Dr. Mayada Salah",
       "description": "A personal website for Dr. Mayada Salah, showcasing her professional profile, achievements, and contact information.",
       "technology": ["HTML", "CSS", "JavaScript"],
@@ -233,9 +233,9 @@
       "loomVideo": "https://www.loom.com/share/c17e174a3721453bbfb77ce2911fa553?sid=cb9b92d1-0401-4cdf-90c1-3be5b8342e5d"
     },
     {
-      "imeg": "images/pest-sweepy Dashboard.png",
+      "image": "images/pest-sweepy Dashboard.png",
       "title": "pest-sweepy Dashboard",
-      "technology": ["ReactJs", "Redux", "material-ui", "Api"],
+      "technology": ["ReactJs", "Redux", "MaterialUI", "Api"],
       "demo": "https://nifty-tendency.surge.sh/",
       "github": "",
       "codeStatus": "PRIVATE",
@@ -243,7 +243,7 @@
       "loomVideo": "https://www.loom.com/share/c701533416d94618a1bcdafa8713a405?sid=b71a4010-c8aa-4f27-a617-2a123dbad16a"
     },
     {
-      "imeg": "images/mohammed-al-huwaila.png",
+      "image": "images/mohammed-al-huwaila.png",
       "title": "mohammed-al-huwaila",
       "description": "A personal website for Mohammed Al-Huwaila, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -253,7 +253,7 @@
       "loomVideo": "https://www.loom.com/share/fb99053bff5846338219c06e556ad8a2?sid=3c8e1162-0251-405f-83d7-3082772b7efb"
     },
     {
-      "imeg": "images/thamer-al-suwait.png",
+      "image": "images/thamer-al-suwait.png",
       "title": "thamer-al-suwait",
       "description": "A personal website for Thamer Al-Suwait, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -262,7 +262,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/saoud-al-asfour.png",
+      "image": "images/saoud-al-asfour.png",
       "title": "saoud-al-asfour",
       "description": "A personal website for Saoud Al-Asfour, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -271,7 +271,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/abdullah-mutlaq-awad-al-mutairi.png",
+      "image": "images/abdullah-mutlaq-awad-al-mutairi.png",
       "title": "abdullah-mutlaq-awad-al-mutairi",
       "description": "A personal website for Abdullah Mutlaq Awad Al-Mutairi, designed to showcase his portfolio, skills, and contact information.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -280,7 +280,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/CalorieBot.jpg",
+      "image": "images/CalorieBot.jpg",
       "title": "Calorie Bot",
       "description": "Welcome to Calorie Bot, your go-to Telegram bot for quick and easy access to nutritional information about various foods! 🍏🥦🍕",
       "technology": ["NodeJs", "ExpressJs", "TelegramBotApi", "NutritionixApi"],
@@ -291,9 +291,9 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/LaptopStore Contract.png",
+      "image": "images/LaptopStore Contract.png",
       "title": "LaptopStore Contract",
-      "technology": ["ReactJs", "material-ui", "react-to-print", "PWA"],
+      "technology": ["ReactJs", "MaterialUI", "react-to-print", "PWA"],
       "demo": "https://laptop-store.surge.sh/",
       "github": "",
       "codeStatus": "PRIVATE",
@@ -302,9 +302,9 @@
     },
 
     {
-      "imeg": "images/E-Learning.png",
+      "image": "images/E-Learning.png",
       "title": "E-Learning ReactJS",
-      "technology": ["Tailwind", "React", "Vite"],
+      "technology": ["Tailwind", "ReactJs", "Vite"],
       "demo": "https://e-learningreactjs.pages.dev/",
       "github": "",
       "video": "https://youtu.be/L6EqydzzSr8",
@@ -312,7 +312,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/greeting-card.png",
+      "image": "images/greeting-card.png",
       "title": "greeting-card",
       "description": "A beautiful greeting card template built with React and Tailwind CSS.",
       "technology": ["ReactJs", "Tailwind", "Vite"],
@@ -322,7 +322,7 @@
       "videoKey": "XDKyLS0QXpg"
     },
     {
-      "imeg": "images/Hospital-LandingPage.png",
+      "image": "images/Hospital-LandingPage.png",
       "title": "hospital-landing-page",
       "technology": ["HTML", "CSS", "JavaScript"],
       "demo": "https://hospital-landing-page-sooty.vercel.app/",
@@ -331,22 +331,16 @@
       "hidden": true
     },
     {
-      "imeg": "images/MovieReactJs.webp",
+      "image": "images/MovieReactJs.webp",
       "title": "movieReactJs",
-      "technology": [
-        "ReactJs",
-        "contextApi",
-        "Api",
-        "ReactJs-hook",
-        "Bootstrap"
-      ],
+      "technology": ["ReactJs", "contextApi", "Api", "ReactJs", "Bootstrap"],
       "demo": "https://shoping-cart-redux-vite.pages.dev/",
       "github": "",
       "hidden": true
     },
 
     {
-      "imeg": "images/alhatab.webp",
+      "image": "images/alhatab.webp",
       "title": "alhatab",
       "technology": ["HTML", "CSS"],
       "demo": "https://alihatem360.github.io/alhatab/",
@@ -356,7 +350,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/2-4.webp",
+      "image": "images/2-4.webp",
       "title": "agrica",
       "technology": ["HTML", "Sass", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/agrica/",
@@ -366,7 +360,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/1-1.webp",
+      "image": "images/1-1.webp",
       "title": "Portfolio Website",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Portfolio-Template/",
@@ -374,7 +368,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/1-3.webp",
+      "image": "images/1-3.webp",
       "title": "Js Template",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Js-Template/",
@@ -384,7 +378,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/BookDownloadPage.png",
+      "image": "images/BookDownloadPage.png",
       "title": "BookDownloadPage",
       "technology": ["HTML", "CSS"],
       "demo": "https://alihatem360.github.io/BookDownloadPage/",
@@ -394,7 +388,7 @@
     },
 
     {
-      "imeg": "images/movies-list-redux.webp",
+      "image": "images/movies-list-redux.webp",
       "title": "movies-list-redux",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://movies-list-redux.pages.dev/",
@@ -402,7 +396,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/NFT-Shop.webp",
+      "image": "images/NFT-Shop.webp",
       "title": "NFT-Shop",
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "",
@@ -411,7 +405,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/1-2.webp",
+      "image": "images/1-2.webp",
       "title": "Restaurant Website",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Restaurant-Template/",
@@ -419,7 +413,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/2-1.webp",
+      "image": "images/2-1.webp",
       "title": "UdacityMyReadsProject",
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "https://udacitymyreadsproject.pages.dev/",
@@ -427,7 +421,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/2-2.webp",
+      "image": "images/2-2.webp",
       "title": "SpeakersReactjs",
       "technology": ["ReactJs", "Bootstrap"],
       "demo": "https://speakersreactjs.pages.dev/",
@@ -435,15 +429,15 @@
       "hidden": true
     },
     {
-      "imeg": "images/farooq-task.webp",
+      "image": "images/farooq-task.webp",
       "title": "farooq-task",
-      "technology": ["ReactJs", "reactbootstrap", "Api"],
+      "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "https://farooq-task.pages.dev/",
       "github": "",
       "hidden": true
     },
     {
-      "imeg": "images/2-3.webp",
+      "image": "images/2-3.webp",
       "title": "angularECommerceGradProj",
       "technology": ["angular", "Bootstrap", "Api"],
       "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
@@ -451,7 +445,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/1-5.webp",
+      "image": "images/1-5.webp",
       "title": "IMDb Movies",
       "technology": ["C#", "ASP.NET", "MVC", "Entity Framework", "SQL"],
       "demo": "",

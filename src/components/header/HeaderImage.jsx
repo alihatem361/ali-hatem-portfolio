@@ -9,9 +9,9 @@ const HeaderImage = ({ aboutmeData }) => {
       data-aos-delay="100"
     >
       <div className="header-img hover-effect">
-        {aboutmeData.heaaderimag ? (
+        {aboutmeData.headerImage ? (
           <img
-            src={aboutmeData.heaaderimag}
+            src={aboutmeData.headerImage}
             alt="profile"
             className="profile-image"
           />

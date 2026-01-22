@@ -48,10 +48,10 @@ const PojectItem = ({ project }) => {
             </div>
           </div>
           <LazyLoadImage
-            src={project.imeg}
+            src={project.image}
             alt={project.title}
             className="project-image"
-            placeholderSrc={project.imeg}
+            placeholderSrc={project.image}
             onLoad={() => setImageLoaded(true)}
           />
         </div>

@@ -72,7 +72,7 @@ function Gproject({ gproject }) {
               )}
               <img
                 src={
-                  gproject.imeg ||
+                  gproject.image ||
                   "https://via.placeholder.com/400x250/007bff/ffffff?text=Project+Image"
                 }
                 className="rounded-img"

@@ -9,4 +9,8 @@ export const techSkills = [
   "Tailwind",
   "Vite",
   "Sass",
+  "NextJs",
+  "Firebase",
+  "MaterialUI",
+  "TypeScript",
 ];

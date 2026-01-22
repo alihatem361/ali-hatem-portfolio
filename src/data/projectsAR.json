@@ -1,7 +1,7 @@
 {
   "aboutme": [
     {
-      "heaaderimag": "images/header-background2.jpeg",
+      "headerImage": "images/header-background2.jpeg",
       "name": "علي حاتم",
       "bio": [
         "مهندس برمجيات متخصص في React و Next.js ⚛️.",
@@ -15,10 +15,10 @@
 
   "Projects": [
     {
-      "imeg": "images/e3melbusiness-org.png",
+      "image": "images/e3melbusiness-org.png",
       "title": "E3melbusiness Org",
       "description": "إعمل بيزنس هي منصة تدريب احترافية بتقدم كورسات وبرامج في مجالات البزنس للأفراد والشركات\nاشتغلت على تطوير الواجهة الأمامية بالكامل للموقع باستخدام HTML و CSS و Tailwind CSS و JavaScript\nركزت على إن التصميم يكون سريع ومتجاوب وجذاب بصريًا عشان يدي تجربة مستخدم سلسة على كل الأجهزة\nاهتميت كمان بسهولة التصفح والأداء العالي",
-      "technology": ["HTML", "Tailwind CSS", "JavaScript"],
+      "technology": ["HTML", "Tailwind", "JavaScript"],
       "demo": "https://e3melbusiness.org/",
       "github": "",
       "video": "",
@@ -26,10 +26,10 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/alHawmahCulturalHub.png",
+      "image": "images/alHawmahCulturalHub.png",
       "title": "مركز الحومة الثقافي",
       "description": "موقع مركز ثقافي يعرض التراث الغني وتقاليد منطقة الحومة. يتميز الموقع بتصميم حديث مع التركيز على تجربة المستخدم، مما يوفر للزوار سهولة الوصول إلى معلومات حول تاريخ المركز وفعالياته وأنشطته.",
-      "technology": ["React", "Tailwind", "Vite", "shadcn-ui"],
+      "technology": ["ReactJs", "Tailwind", "Vite", "shadcn-ui"],
       "demo": "https://www.alhawmah.org/",
       "github": "",
       "video": "",
@@ -37,10 +37,10 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/contiva.png",
+      "image": "images/contiva.png",
       "title": "كونتيفا",
       "description": "كونتيفا هو موقع حديث ومبتكر يوفر منصة للمستخدمين لاستكشاف واكتشاف محتوى متنوع. يتميز الموقع بتصميم أنيق وواجهة سهلة الاستخدام وتخطيط متجاوب، مما يضمن تجربة مشاهدة مثلى عبر جميع الأجهزة.",
-      "technology": ["React", "Tailwind", "Vite", "shadcn-ui"],
+      "technology": ["ReactJs", "Tailwind", "Vite", "shadcn-ui"],
       "demo": "https://contiva-learning.vercel.app/",
       "github": "",
       "video": "",
@@ -48,15 +48,15 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/saudi-national-day.png",
+      "image": "images/saudi-national-day.png",
       "title": "اليوم الوطني السعودي",
       "description": "صفحة هبوط خاصة تم إنشاؤها بمناسبة اليوم الوطني السعودي، تعرض عروضًا حصرية وخصومات على المنتجات والخدمات. كان الهدف جذب الزوار وزيادة التفاعل والمبيعات خلال فترة الاحتفال. تم تصميم الصفحة لتكون جذابة بصريًا وسريعة الاستجابة على جميع الأجهزة، مستوحاة من مظهر وألوان اليوم الوطني السعودي",
-      "technology": ["HTML", "Tailwind CSS", "JavaScript"],
+      "technology": ["HTML", "Tailwind", "JavaScript"],
       "demo": "https://e3mel-business-national-saudi-day.pages.dev/",
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/1MBrothers.png",
+      "image": "images/1MBrothers.png",
       "title": "1M الإخوة",
       "description": "الجزء الأمامي من مشروع تخرج للعام الأخير. مسؤول عن تطوير الجزء الأمامي بالكامل. موقع تبرع لحالات المرضى. يمكن للمستخدمين التبرع وتقديم حالات جديدة. تحميل الأوراق وانتظار موافقة المشرف. تكامل موفر الدفع. تصميم واجهة مستخدم بديهية. عرض لمهارات HTML و CSS و JavaScript. موقع وظيفي وجذاب بصريًا. تطبيق عملي في العالم الحقيقي.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -67,7 +67,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/ebu-certificate.png",
+      "image": "images/ebu-certificate.png",
       "title": "شهادة EBU",
       "description": "شهادة EBU هي شهادة معتمدة دولياً تُقدم من قبل مؤسسة EBU المتخصصة في التدريب والتطوير المهني. توفر الشهادة للمتدربين المعرفة والمهارات العملية اللازمة لتطوير حياتهم المهنية والشخصية.",
       "technology": ["HTML", "CSS", "JavaScript"],
@@ -75,7 +75,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/shahadat-alhadaf.png",
+      "image": "images/shahadat-alhadaf.png",
       "title": "شهادات الهدف",
       "description": "أكثر من 50 شهادة معتمدة دولياً، مدعومة 100% من صندوق تنمية الموارد البشرية (هدف)",
       "technology": ["HTML", "CSS", "JavaScript"],
@@ -84,7 +84,7 @@
     },
 
     {
-      "imeg": "images/hadafik-altaelimia.png",
+      "image": "images/hadafik-altaelimia.png",
       "title": "Hadafik Altaelimia",
       "description": "منصة هدفك التعليمية هي منصة تعليمية مجانية توفر للطلاب فرصة التعلم وتطوير مهاراتهم في مجالات متنوعة. تقدم المنصة مجموعة واسعة من الدورات والموارد لمساعدة الطلاب على تحقيق أهدافهم الأكاديمية والمهنية.",
       "technology": ["HTML", "CSS", "JavaScript"],
@@ -92,10 +92,10 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/mr-mohamed.png",
+      "image": "images/mr-mohamed.png",
       "title": "الأستاذ محمد",
       "description": "موقع ويب شخصي للأستاذ محمد، يعرض ملفه الشخصي المهني وإنجازاته ومعلومات التواصل معه، مع دعم اللغتين العربية والإنجليزية والوضع الداكن والفاتح.",
-      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind"],
       "demo": "https://vclasses-msr-mohamed.pages.dev/",
       "github": "",
       "video": "",
@@ -103,10 +103,10 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/mr-abdullah.png",
+      "image": "images/mr-abdullah.png",
       "title": "الأستاذ عبد الله",
       "description": "موقع ويب شخصي للأستاذ عبد الله، يعرض ملفه الشخصي المهني وإنجازاته ومعلومات التواصل معه، مع دعم اللغتين العربية والإنجليزية والوضع الداكن والفاتح.",
-      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind"],
       "demo": "https://vclasses-abdullah-nasr.pages.dev",
       "github": "",
       "video": "",
@@ -115,10 +115,10 @@
     },
 
     {
-      "imeg": "images/mr-ahmed.png",
+      "image": "images/mr-ahmed.png",
       "title": "الأستاذ أحمد",
       "description": "موقع ويب شخصي للأستاذ أحمد، يعرض ملفه الشخصي المهني وإنجازاته ومعلومات التواصل معه، مع دعم اللغتين العربية والإنجليزية والوضع الداكن والفاتح.",
-      "technology": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind"],
       "demo": "https://vclasses-mr-ahmed.pages.dev/",
       "github": "",
       "video": "",
@@ -126,7 +126,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/alshaatir-academy.png",
+      "image": "images/alshaatir-academy.png",
       "title": "منصة الشاطر التعليمية",
       "description": "منصة الشاطر هي تطبيق تعليمي مبتكر يساعد الطلاب على تحسين مهاراتهم وتنظيم وقتهم من خلال دروس تفاعلية، اختبارات، وأدوات مخصصة.",
       "technology": ["NextJs", "Tailwind"],
@@ -138,10 +138,10 @@
     },
 
     {
-      "imeg": "images/el-zakeroon (1).png",
+      "image": "images/el-zakeroon (1).png",
       "title": "الذكرون",
       "description": " الذاكرون - مساعدك الرقمي للأذكار والتسبيح ",
-      "technology": ["NextJs", "TailwindCss", "typescript"],
+      "technology": ["NextJs", "Tailwind", "TypeScript"],
       "demo": "https://el-zakeroon.vercel.app/",
       "github": "",
       "video": "https://youtu.be/16rQx06Fl4Q",
@@ -150,13 +150,13 @@
     },
 
     {
-      "imeg": "images/finalFawriElmaliiik_cover.png",
+      "image": "images/finalFawriElmaliiik_cover.png",
       "title": "فوري الماليك",
       "description": "هذا المشروع هو نظام متكامل لإدارة العملاء مخصص لمكاتب توكيل فوري، تم تطويره باستخدام تقنيات حديثة لضمان الأداء العالي وسهولة الاستخدام. يهدف النظام إلى تبسيط وتحسين عملية إدارة العملاء، مما يسمح بإضافة، حذف، تعديل، والبحث عن العملاء بكفاءة وسهولة.",
       "technology": [
         "ReactJs",
         "Redux",
-        "material-ui",
+        "MaterialUI",
         "Api",
         "Firebase",
         "NodeJs"
@@ -168,17 +168,17 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/salil.png",
+      "image": "images/salil.png",
       "title": "سليل",
       "description": "\"سليل\" هو تحفة معمارية تجسد أرقى معاني الفخامة والراحة. صُمم ليكون أكثر من مجرد سكن، فهو أسلوب حياة متكامل يمنح سكانه تجربة استثنائية تجمع بين هدوء الطبيعة وحيوية المدينة، ويوفر جميع وسائل الراحة والخدمات التي تلبي تطلعاتك.",
-      "technology": ["Html", "Css", "JavaScript", "Tailwind CSS"],
+      "technology": ["HTML", "CSS", "JavaScript", "Tailwind"],
       "demo": "https://salil-real-estate-project-page.pages.dev/",
       "github": "",
       "codeStatus": "PRIVATE"
     },
 
     {
-      "imeg": "images/makhabrash.png",
+      "image": "images/makhabrash.png",
       "title": "Makhabrash",
       "description": "(مخبارش) هو تطبيق ويب يتيح للمستخدمين إرسال رسائل إلى أي شخص بشكل مجهول. تم تصميمه باستخدام React للواجهة الأمامية وFirebase لخدمات الواجهة الخلفية.",
       "technology": ["ReactJs", "Tailwind", "Firebase"],
@@ -187,7 +187,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/EcommerceWebsite.webp",
+      "image": "images/EcommerceWebsite.webp",
       "title": "التجارة الإلكترونية باستخدام ReactJs",
       "description": "مشروع التجارة الإلكترونية هو تطبيق ويب تم إنشاؤه باستخدام React.js وRedux، وهو مصمم لتوفير تجربة تسوق سلسة للمستخدمين. يتيح للمستخدمين تصفح المنتجات، إضافتها إلى عربة التسوق، وإجراء عمليات الدفع بسهولة.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -198,10 +198,10 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/attendance recording.jpg",
+      "image": "images/attendance recording.jpg",
       "title": "إدارة المحاضرات ونظام تسجيل الحضور",
       "description": "نظام إدارة المحاضرات وتسجيل الحضور هو تطبيق ويب مصمم لتسهيل عملية إدارة المحاضرات وتسجيل حضور الطلاب. يتيح للمستخدمين إضافة محاضرات جديدة، تسجيل حضور الطلاب، وعرض قائمة المحاضرات المسجلة.",
-      "technology": ["ReactJs", "Material-ui", "Firebase"],
+      "technology": ["ReactJs", "MaterialUI", "Firebase"],
       "demo": "",
       "github": "",
       "video": "https://youtu.be/12NFx9-F-IU",
@@ -209,14 +209,14 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/pdfEcommerce.png",
+      "image": "images/pdfEcommerce.png",
       "title": "Preisliste-ecommerce (Full Stack)",
       "technology": [
         "ReactJs",
-        "material-ui",
-        "nodeJs",
+        "MaterialUI",
+        "NodeJs",
         "expressJs",
-        "firebase"
+        "Firebase"
       ],
       "demo": "",
       "github": "",
@@ -225,7 +225,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/Dr. Mayada Salah.png",
+      "image": "images/Dr. Mayada Salah.png",
       "title": "د.ميادة صلاح",
       "description": "موقع ويب شخصي للدكتورة ميادة صلاح، طبيبة متخصصة في طب الأطفال. يهدف الموقع إلى تقديم معلومات حول خدماتها الطبية، خبراتها، ومواعيد العمل.",
       "technology": ["HTML", "CSS", "JavaScript"],
@@ -234,16 +234,16 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/pest-sweepy Dashboard.png",
+      "image": "images/pest-sweepy Dashboard.png",
       "title": "pest-sweepy Dashboard",
-      "technology": ["ReactJs", "Redux", "material-ui", "Api"],
+      "technology": ["ReactJs", "Redux", "MaterialUI", "Api"],
       "demo": "https://nifty-tendency.surge.sh/",
       "github": "",
       "codeStatus": "PRIVATE",
       "hidden": true
     },
     {
-      "imeg": "images/mohammed-al-huwaila.png",
+      "image": "images/mohammed-al-huwaila.png",
       "title": "محمد الحويلة",
       "description": "موقع ويب شخصي لمحمد الحويلة، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -252,7 +252,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/thamer-al-suwait.png",
+      "image": "images/thamer-al-suwait.png",
       "title": "ثامر السويط",
       "description": "موقع ويب شخصي لثامر السويط، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -261,7 +261,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/saoud-al-asfour.png",
+      "image": "images/saoud-al-asfour.png",
       "title": "سعود العصفور",
       "description": "موقع ويب شخصي لسعود العصفور، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -270,7 +270,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/abdullah-mutlaq-awad-al-mutairi.png",
+      "image": "images/abdullah-mutlaq-awad-al-mutairi.png",
       "title": "عبد الله مطلق عوض المطيري",
       "description": "موقع ويب شخصي لعبد الله مطلق عوض المطيري، مصمم لعرض سيرته الذاتية ومشاريعه ومهاراته.",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
@@ -279,7 +279,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/CalorieBot.jpg",
+      "image": "images/CalorieBot.jpg",
       "title": "بوت تلجرام لحساب السعرات الحرارية",
       "description": "بوت تلجرام لحساب السعرات الحرارية هو بوت مصمم لمساعدتك في تتبع مدخولك اليومي من السعرات الحرارية. يمكنك ببساطة إرسال اسم الطعام الذي تناولته، وسيقوم البوت بالرد بمعلومات حول السعرات الحرارية والمغذيات الأخرى لهذا الطعام.",
       "technology": ["NodeJs", "ExpressJs", "TelegramBotApi", "NutritionixApi"],
@@ -290,18 +290,18 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "images/LaptopStore Contract.png",
+      "image": "images/LaptopStore Contract.png",
       "title": "فاتورة متجر الكمبيوتر",
-      "technology": ["ReactJs", "material-ui", "react-to-print", "PWA"],
+      "technology": ["ReactJs", "MaterialUI", "react-to-print", "PWA"],
       "demo": "https://laptop-store.surge.sh/",
       "github": "",
       "description": "مشروع مبيعات أجهزة الكمبيوتر المحمول هو تطبيق ويب تم إنشاؤه باستخدام React.js وMaterial-UI، وهو مصمم لتبسيط عملية بيع أجهزة الكمبيوتر المحمولة. تمكن الأفراد البيع من ملء نموذج العقد وطباعة العقد باستخدام Microsoft Print. يعمل هذا المشروع على تبسيط إنشاء عقود بيع أجهزة الكمبيوتر المحمول.💻📝🖨️",
       "hidden": true
     },
     {
-      "imeg": "images/E-Learning.png",
+      "image": "images/E-Learning.png",
       "title": "E-Learning باستخدام ReactJS",
-      "technology": ["Tailwind", "React", "Vite"],
+      "technology": ["Tailwind", "ReactJs", "Vite"],
       "demo": "https://e-learningreactjs.pages.dev/",
       "github": "",
       "video": "https://youtu.be/L6EqydzzSr8",
@@ -309,7 +309,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/greeting-card.png",
+      "image": "images/greeting-card.png",
       "title": "بطاقة التهنئة",
       "description": "تطبيق ويب بسيط لإنشاء بطاقات التهنئة باستخدام React وTailwind CSS.",
       "technology": ["ReactJs", "Tailwind", "Vite"],
@@ -319,7 +319,7 @@
       "videoKey": "XDKyLS0QXpg"
     },
     {
-      "imeg": "images/Hospital-LandingPage.png",
+      "image": "images/Hospital-LandingPage.png",
       "title": "صفحة هبوط المستشفى",
       "technology": ["HTML", "CSS", "JavaScript"],
       "demo": "https://hospital-landing-page-sooty.vercel.app/",
@@ -328,21 +328,15 @@
       "hidden": true
     },
     {
-      "imeg": "images/MovieReactJs.webp",
+      "image": "images/MovieReactJs.webp",
       "title": "تطبيق أفلام باستخدام ReactJs",
-      "technology": [
-        "ReactJs",
-        "contextApi",
-        "Api",
-        "ReactJs-hook",
-        "Bootstrap"
-      ],
+      "technology": ["ReactJs", "contextApi", "Api", "ReactJs", "Bootstrap"],
       "demo": "https://shoping-cart-redux-vite.pages.dev/",
       "github": "",
       "hidden": true
     },
     {
-      "imeg": "images/alhatab.webp",
+      "image": "images/alhatab.webp",
       "title": "الحطاب",
       "technology": ["HTML", "CSS"],
       "demo": "https://alihatem360.github.io/alhatab/",
@@ -352,7 +346,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/2-4.webp",
+      "image": "images/2-4.webp",
       "title": "أجريكا",
       "technology": ["HTML", "Sass", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/agrica/",
@@ -362,7 +356,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/1-1.webp",
+      "image": "images/1-1.webp",
       "title": "موقع السيرة الذاتية",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Portfolio-Template/",
@@ -370,7 +364,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/1-3.webp",
+      "image": "images/1-3.webp",
       "title": "قالب JavaScript",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Js-Template/",
@@ -380,7 +374,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/BookDownloadPage.png",
+      "image": "images/BookDownloadPage.png",
       "title": "صفحة تحميل الكتب",
       "technology": ["HTML", "CSS"],
       "demo": "https://alihatem360.github.io/BookDownloadPage/",
@@ -389,7 +383,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/movies-list-redux.webp",
+      "image": "images/movies-list-redux.webp",
       "title": "قائمة الأفلام باستخدام Redux",
       "technology": ["ReactJs", "Redux", "Bootstrap", "Api"],
       "demo": "https://movies-list-redux.pages.dev/",
@@ -397,7 +391,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/NFT-Shop.webp",
+      "image": "images/NFT-Shop.webp",
       "title": "NFT-Shop",
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "",
@@ -406,7 +400,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/1-2.webp",
+      "image": "images/1-2.webp",
       "title": "موقع المطعم",
       "technology": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "demo": "https://alihatem360.github.io/Restaurant-Template/",
@@ -414,7 +408,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/2-1.webp",
+      "image": "images/2-1.webp",
       "title": "مشروع MyReads من Udacity",
       "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "https://udacitymyreadsproject.pages.dev/",
@@ -422,7 +416,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/2-2.webp",
+      "image": "images/2-2.webp",
       "title": "مكبرات الصوت باستخدام Reactjs",
       "technology": ["ReactJs", "Bootstrap"],
       "demo": "https://speakersreactjs.pages.dev/",
@@ -430,15 +424,15 @@
       "hidden": true
     },
     {
-      "imeg": "images/farooq-task.webp",
+      "image": "images/farooq-task.webp",
       "title": "مهمة فاروق",
-      "technology": ["ReactJs", "reactbootstrap", "Api"],
+      "technology": ["ReactJs", "Bootstrap", "Api"],
       "demo": "https://farooq-task.pages.dev/",
       "github": "",
       "hidden": true
     },
     {
-      "imeg": "images/2-3.webp",
+      "image": "images/2-3.webp",
       "title": "مشروع تجارة إلكترونية باستخدام Angular",
       "technology": ["angular", "Bootstrap", "Api"],
       "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
@@ -446,7 +440,7 @@
       "hidden": true
     },
     {
-      "imeg": "images/1-5.webp",
+      "image": "images/1-5.webp",
       "title": "أفلام IMDb",
       "technology": ["C#", "ASP.NET", "MVC", "Entity Framework", "SQL"],
       "demo": "",
