@@ -21,6 +21,7 @@
     "react-dom": "^18.1.0",
     "react-fast-marquee": "^1.6.0",
     "react-floating-whatsapp": "^5.0.8",
+    "react-helmet-async": "^2.0.5",
     "react-i18next": "^13.1.0",
     "react-icons": "^4.11.0",
     "react-lazy-load-image-component": "^1.5.6",
