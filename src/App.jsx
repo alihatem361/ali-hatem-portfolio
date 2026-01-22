@@ -13,6 +13,7 @@ import CollectionPage from "./pages/CollectionPage";
 import Projects from "./components/projects";
 import AnimationLoader from "./components/Utilities/AnimationLoader";
 import Nav from "./components/nav";
+import SEO from "./components/SEO";
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div className="App">
+      <SEO />
       <Fragment>
         <Nav />
         <Routes>
