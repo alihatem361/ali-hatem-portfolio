@@ -46,6 +46,12 @@
     "title": "MY SKILLS",
     "subtitle": "Technologies I Work With"
   },
+  "experience": {
+    "badge": "Career Journey",
+    "title": "WORK EXPERIENCE",
+    "subtitle": "My Professional Journey & Achievements",
+    "current": "Current Position"
+  },
   "Collection": "Collection",
   "Projects": "Projects",
   "Projects in this collection": "Projects in this collection",

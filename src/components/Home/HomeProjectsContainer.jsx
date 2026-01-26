@@ -9,6 +9,7 @@ import GProject from "../Gproject/index";
 import SwiperSlideCom from "../Utilities/SwiperSlide/SwiperSlideCom";
 import FloatingWhatsAppCom from "../WhatsappChat/FloatingWhatsAppCom";
 import SkillComponent from "../Skills/index";
+import WorkExperience from "../WorkExperience/index";
 const HomeProjectsContainer = () => {
   const { t, i18n } = useTranslation();
   const [projectsDta, setProjectsData] = useState([]);
@@ -30,6 +31,7 @@ const HomeProjectsContainer = () => {
         <FloatingWhatsAppCom />
         <div className="container">
           <SkillComponent />
+          <WorkExperience />
           <div className="text-center ">
             <Link to="/projects" className="btn button1">
               {t("projects.homebutton")}

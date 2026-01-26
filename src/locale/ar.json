@@ -46,6 +46,12 @@
     "title": "مهاراتي",
     "subtitle": "التقنيات التي أعمل بها"
   },
+  "experience": {
+    "badge": "المسيرة المهنية",
+    "title": "الخبرات العملية",
+    "subtitle": "رحلتي المهنية وإنجازاتي",
+    "current": "الوظيفة الحالية"
+  },
   "Collection": "مجموعة",
   "Projects": "مشاريع",
   "Projects in this collection": "مشاريع في هذه المجموعة",
