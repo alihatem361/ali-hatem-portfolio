@@ -52,6 +52,16 @@
     "subtitle": "My Professional Journey & Achievements",
     "current": "Current Position"
   },
+  "certifications": {
+    "badge": "Achievements",
+    "title": "CERTIFICATIONS & AWARDS",
+    "subtitle": "Professional certifications and recognitions",
+    "certificatesLabel": "Certificates",
+    "awardsLabel": "Awards & Achievements",
+    "viewCertificate": "View Certificate",
+    "viewAward": "View Award",
+    "winner": "Winner"
+  },
   "Collection": "Collection",
   "Projects": "Projects",
   "Projects in this collection": "Projects in this collection",

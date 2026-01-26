@@ -10,6 +10,7 @@ import SwiperSlideCom from "../Utilities/SwiperSlide/SwiperSlideCom";
 import FloatingWhatsAppCom from "../WhatsappChat/FloatingWhatsAppCom";
 import SkillComponent from "../Skills/index";
 import WorkExperience from "../WorkExperience/index";
+import Certifications from "../Certifications/index";
 const HomeProjectsContainer = () => {
   const { t, i18n } = useTranslation();
   const [projectsDta, setProjectsData] = useState([]);
@@ -32,6 +33,7 @@ const HomeProjectsContainer = () => {
         <div className="container">
           <SkillComponent />
           <WorkExperience />
+          <Certifications />
           <div className="text-center ">
             <Link to="/projects" className="btn button1">
               {t("projects.homebutton")}

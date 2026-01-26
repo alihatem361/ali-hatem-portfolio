@@ -52,6 +52,16 @@
     "subtitle": "رحلتي المهنية وإنجازاتي",
     "current": "الوظيفة الحالية"
   },
+  "certifications": {
+    "badge": "الإنجازات",
+    "title": "الشهادات والجوائز",
+    "subtitle": "الشهادات المهنية والتقديرات",
+    "certificatesLabel": "الشهادات",
+    "awardsLabel": "الجوائز والإنجازات",
+    "viewCertificate": "عرض الشهادة",
+    "viewAward": "عرض الجائزة",
+    "winner": "فائز"
+  },
   "Collection": "مجموعة",
   "Projects": "مشاريع",
   "Projects in this collection": "مشاريع في هذه المجموعة",
