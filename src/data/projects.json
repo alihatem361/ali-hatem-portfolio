@@ -15,6 +15,17 @@
 
   "Projects": [
     {
+      "image": "images/ebu-website.png",
+      "title": "EBU Website",
+      "description": "Static university website for Entrepreneurship & Business University (EBU) built with HTML, Tailwind CSS (via CDN), and vanilla JavaScript. Features custom Tailwind config with branded color palette (gold/burgundy), responsive mobile-first design with custom navigation dropdowns, mobile drawer menu, and accordion components. No build process required - pure static HTML pages.",
+      "technology": ["HTML", "Tailwind", "JavaScript"],
+      "demo": "https://www.eb.university",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "image": "images/novirahealth.png",
       "title": "NoviraHealth",
       "description": "Healthcare marketing website built with React 18, TypeScript, Vite, Tailwind CSS, and shadcn/ui. Features content management via Sanity CMS, Framer Motion animations, global modal system for contact forms, and responsive design with semantic CSS variables. Implements custom hooks for data fetching with GROQ queries and follows best practices for SEO with react-helmet-async.",
@@ -194,7 +205,8 @@
       "technology": ["HTML", "CSS", "JavaScript", "Tailwind"],
       "demo": "https://salil-real-estate-project-page.pages.dev/",
       "github": "",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "hidden": true
     },
 
     {

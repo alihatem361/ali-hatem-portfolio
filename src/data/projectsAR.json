@@ -15,6 +15,17 @@
 
   "Projects": [
     {
+      "image": "images/ebu-website.png",
+      "title": "موقع جامعة EBU",
+      "description": "موقع جامعة ريادة الأعمال والأعمال (EBU) مبني باستخدام HTML و Tailwind CSS (عبر CDN) و JavaScript. يتميز بإعدادات Tailwind مخصصة مع لوحة ألوان العلامة التجارية (ذهبي/عنابي)، وتصميم متجاوب يبدأ من الهاتف مع قوائم منسدلة مخصصة للتنقل، وقائمة جانبية للهاتف، ومكونات الأكورديون. لا يتطلب عملية بناء - صفحات HTML ثابتة بالكامل.",
+      "technology": ["HTML", "Tailwind", "JavaScript"],
+      "demo": "https://www.eb.university",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "image": "images/novirahealth.png",
       "title": "نوفيرا هيلث",
       "description": "موقع تسويق للرعاية الصحية مبني باستخدام React 18 و TypeScript و Vite و Tailwind CSS و shadcn/ui. يتميز بإدارة المحتوى عبر Sanity CMS، ورسوم متحركة باستخدام Framer Motion، ونظام نوافذ منبثقة عام لنماذج الاتصال، وتصميم متجاوب مع متغيرات CSS دلالية. ينفذ hooks مخصصة لجلب البيانات باستخدام استعلامات GROQ ويتبع أفضل الممارسات لتحسين محركات البحث باستخدام react-helmet-async.",
