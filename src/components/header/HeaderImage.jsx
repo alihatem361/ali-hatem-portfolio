@@ -149,7 +149,7 @@ const HeaderImage = ({ aboutmeData }) => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1, duration: 0.5, type: "spring" }}
       >
-        <span className="exp-number">3+</span>
+        <span className="exp-number">2+</span>
         <span className="exp-text">
           Years
           <br />

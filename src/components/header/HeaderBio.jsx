@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import SocialMedia from "../SocialMedia/index";
-import CV from "../../assets/Ali_Hatem_Ramadan_Resume.pdf";
-import { handleDownloadCv } from "../../helpers/index";
-import PreviewCvModal from "../Auth/PreviewCvModal";
-import { FaFileDownload, FaEnvelope } from "react-icons/fa";
+import PreviewCvModal, { downloadCV } from "../Auth/PreviewCvModal";
+import { FaFileDownload, FaSpinner } from "react-icons/fa";
 
 // Typewriter effect component
 const TypewriterText = ({
@@ -54,6 +52,7 @@ const TypewriterText = ({
 
 const HeaderBio = ({ aboutmeData }) => {
   const { t, i18n } = useTranslation();
+  const [isDownloading, setIsDownloading] = useState(false);
 
   const roles =
     i18n.language === "en"
@@ -69,6 +68,21 @@ const HeaderBio = ({ aboutmeData }) => {
           "مهتم بتجربة المستخدم",
           "حلال مشاكل",
         ];
+
+  // Handle CV download using shared function
+  const handleDownload = async () => {
+    if (isDownloading) return;
+    setIsDownloading(true);
+
+    try {
+      const lang = i18n.language === "ar" ? "ar" : "en";
+      await downloadCV(lang);
+    } catch (error) {
+      console.error("PDF generation failed:", error);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
 
   // Animation variants
   const itemVariants = {
@@ -154,13 +168,27 @@ const HeaderBio = ({ aboutmeData }) => {
       <motion.div className="hero-buttons" variants={itemVariants}>
         <motion.button
           className="btn-primary-gradient"
-          onClick={() => handleDownloadCv(CV, "Ali_Hatem_Ramadan_Resume")}
+          onClick={handleDownload}
+          disabled={isDownloading}
           variants={buttonVariants}
           whileHover="hover"
           whileTap="tap"
         >
-          <span>{i18n.language === "en" ? "Download CV" : "تحميل السيرة"}</span>
-          <FaFileDownload className="btn-icon" />
+          {isDownloading ? (
+            <>
+              <FaSpinner className="btn-icon spin" />
+              <span>
+                {i18n.language === "en" ? "Generating..." : "جاري التحميل..."}
+              </span>
+            </>
+          ) : (
+            <>
+              <span>
+                {i18n.language === "en" ? "Download CV" : "تحميل السيرة"}
+              </span>
+              <FaFileDownload className="btn-icon" />
+            </>
+          )}
         </motion.button>
 
         <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">

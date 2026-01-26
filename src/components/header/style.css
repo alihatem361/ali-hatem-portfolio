@@ -291,6 +291,25 @@
   font-size: 1.1rem;
 }
 
+.btn-primary-gradient .btn-icon.spin {
+  animation: spinIcon 1s linear infinite;
+}
+
+@keyframes spinIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-primary-gradient:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+  transform: none;
+}
+
 /* Preview CV Button Styling Override */
 .hero-buttons .cv__modal__btn {
   display: inline-flex;

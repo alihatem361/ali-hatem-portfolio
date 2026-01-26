@@ -21,7 +21,13 @@
     "loading": "Loading CV...",
     "error": "Failed to load CV. Please try again.",
     "retry": "Retry",
-    "close": "Close"
+    "close": "Close",
+    "subtitle": "Interactive Resume",
+    "print": "Print",
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit Fullscreen",
+    "generating": "Generating...",
+    "autoUpdated": "Auto-Updated"
   },
   "slider": {
     "featuredProjects": "Featured Projects",
