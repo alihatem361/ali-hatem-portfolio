@@ -15,7 +15,7 @@ const SEO = ({
     url: "https://ali-hatem-portfolio.vercel.app/",
     image: "https://ali-hatem-portfolio.vercel.app/images/og-image.webp",
     sameAs: [
-      "https://github.com/alihatem360",
+      "https://github.com/alihatem361",
       "https://www.linkedin.com/in/alihatem360/",
     ],
     address: {
