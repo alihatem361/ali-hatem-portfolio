@@ -136,8 +136,16 @@ const CollectionPage = () => {
     return (
       <div className="cp-not-found">
         <SEO
-          title={isArabic ? "المجموعة غير موجودة | علي حاتم" : "Collection Not Found | Ali Hatem"}
-          description={isArabic ? "عذراً، لم نتمكن من العثور على هذه المجموعة" : "Sorry, we couldn't find the collection you're looking for"}
+          title={
+            isArabic
+              ? "المجموعة غير موجودة | علي حاتم"
+              : "Collection Not Found | Ali Hatem"
+          }
+          description={
+            isArabic
+              ? "عذراً، لم نتمكن من العثور على هذه المجموعة"
+              : "Sorry, we couldn't find the collection you're looking for"
+          }
           noindex={true}
           language={i18n.language}
         />
@@ -167,7 +175,9 @@ const CollectionPage = () => {
       <SEO
         title={`${collection.title} | Ali Hatem Portfolio`}
         description={collection.description}
-        ogImage={collection.image ? `${BASE_URL}/${collection.image}` : undefined}
+        ogImage={
+          collection.image ? `${BASE_URL}/${collection.image}` : undefined
+        }
         ogType="collection"
         keywords={`${collection.title}, ${collection.technology?.join(", ") || ""}, Ali Hatem, Portfolio Collection`}
         language={i18n.language}

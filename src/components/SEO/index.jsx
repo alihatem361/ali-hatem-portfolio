@@ -253,7 +253,10 @@ const SEO = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
-      <meta property="og:locale" content={language === "ar" ? "ar_EG" : "en_US"} />
+      <meta
+        property="og:locale"
+        content={language === "ar" ? "ar_EG" : "en_US"}
+      />
       <meta
         property="og:locale:alternate"
         content={language === "ar" ? "en_US" : "ar_EG"}
@@ -263,7 +266,10 @@ const SEO = ({
       {article && (
         <>
           <meta property="article:author" content="Ali Hatem" />
-          <meta property="article:published_time" content={article.publishedAt} />
+          <meta
+            property="article:published_time"
+            content={article.publishedAt}
+          />
           <meta property="article:modified_time" content={article.modifiedAt} />
           {article.tags?.map((tag, index) => (
             <meta property="article:tag" content={tag} key={index} />

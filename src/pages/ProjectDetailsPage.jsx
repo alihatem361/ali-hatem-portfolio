@@ -86,8 +86,16 @@ const ProjectDetailsPage = () => {
     return (
       <div className="pdp-not-found">
         <SEO
-          title={isArabic ? "المشروع غير موجود | علي حاتم" : "Project Not Found | Ali Hatem"}
-          description={isArabic ? "عذراً، لم نتمكن من العثور على هذا المشروع" : "Sorry, we couldn't find the project you're looking for"}
+          title={
+            isArabic
+              ? "المشروع غير موجود | علي حاتم"
+              : "Project Not Found | Ali Hatem"
+          }
+          description={
+            isArabic
+              ? "عذراً، لم نتمكن من العثور على هذا المشروع"
+              : "Sorry, we couldn't find the project you're looking for"
+          }
           noindex={true}
           language={i18n.language}
         />
