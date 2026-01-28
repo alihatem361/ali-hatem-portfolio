@@ -1,4 +1,39 @@
+# Ali Hatem Portfolio - robots.txt
+# https://ali-hatem-portfolio.vercel.app
+
+# Allow all crawlers
 User-agent: *
 Allow: /
+Allow: /projects
+Allow: /project/*
+Allow: /collection/*
 
+# Disallow non-essential paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /*.json$
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://ali-hatem-portfolio.vercel.app/sitemap.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Allow Google Images
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /*.webp$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$

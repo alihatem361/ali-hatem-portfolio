@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
+import SEO from "../components/SEO";
 import { createSlug } from "../helpers";
 import ProjectsApi from "../data/projects.json";
 import ProjectsApiAR from "../data/projectsAR.json";
@@ -13,6 +14,8 @@ import { IoArrowBack, IoChevronForward, IoChevronBack } from "react-icons/io5";
 import { FaLayerGroup, FaExternalLinkAlt } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
 import { BiCopy, BiCheck } from "react-icons/bi";
+
+const BASE_URL = "https://ali-hatem-portfolio.vercel.app";
 
 // Collection definitions (should match projects/index.jsx)
 const COLLECTIONS_CONFIG = {
@@ -105,7 +108,6 @@ const CollectionPage = () => {
 
     setCollection(collectionData);
     setSubProjects(projectsInCollection);
-    document.title = `${collectionData.title} - Ali Hatem Portfolio`;
     setLoading(false);
   }, [collectionId, i18n.language]);
 
@@ -133,6 +135,12 @@ const CollectionPage = () => {
   if (!collection) {
     return (
       <div className="cp-not-found">
+        <SEO
+          title={isArabic ? "المجموعة غير موجودة | علي حاتم" : "Collection Not Found | Ali Hatem"}
+          description={isArabic ? "عذراً، لم نتمكن من العثور على هذه المجموعة" : "Sorry, we couldn't find the collection you're looking for"}
+          noindex={true}
+          language={i18n.language}
+        />
         <motion.div
           className="cp-not-found-content"
           initial={{ opacity: 0, y: 30 }}
@@ -156,6 +164,14 @@ const CollectionPage = () => {
 
   return (
     <div className="collection-page">
+      <SEO
+        title={`${collection.title} | Ali Hatem Portfolio`}
+        description={collection.description}
+        ogImage={collection.image ? `${BASE_URL}/${collection.image}` : undefined}
+        ogType="collection"
+        keywords={`${collection.title}, ${collection.technology?.join(", ") || ""}, Ali Hatem, Portfolio Collection`}
+        language={i18n.language}
+      />
       {/* Hero Section */}
       <section className="cp-hero-section">
         {/* Hero Background */}

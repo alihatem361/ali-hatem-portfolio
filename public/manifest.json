@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Ali Hatem",
+  "name": "Ali Hatem Portfolio - Senior Frontend Developer",
+  "description": "Senior Frontend Developer specializing in React.js, Next.js, and modern web technologies. Explore 30+ professional projects.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,16 +11,45 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait-primary",
+  "theme_color": "#6366f1",
+  "background_color": "#0f0a1e",
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "en",
+  "dir": "auto",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "Browse all portfolio projects",
+      "url": "/projects",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    }
+  ]
 }

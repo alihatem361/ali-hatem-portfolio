@@ -8,6 +8,7 @@ import Footer from "../footer";
 import GetAllData from "../../data/projects";
 import LoaderCom from "../Utilities/LoaderCom";
 import { techSkills } from "../../data/index";
+import SEO from "../SEO";
 
 // Project titles to group into collections
 const TEACHERS_COLLECTION_TITLES = [
@@ -197,8 +198,28 @@ const Projects = () => {
     }
   };
 
+  const isArabic = i18n.language === "ar";
+
   return (
     <React.Fragment>
+      <SEO
+        title={
+          isArabic
+            ? "المشاريع | علي حاتم - مطور واجهات أمامية"
+            : "Projects | Ali Hatem - Frontend Developer Portfolio"
+        }
+        description={
+          isArabic
+            ? "استكشف مجموعة مشاريعي في تطوير الويب باستخدام React و Next.js و TypeScript وتقنيات الويب الحديثة. أكثر من 30 مشروع احترافي."
+            : "Explore my portfolio of web development projects built with React, Next.js, TypeScript, and modern web technologies. 30+ professional projects showcasing my expertise."
+        }
+        keywords={
+          isArabic
+            ? "مشاريع علي حاتم, React مشاريع, Next.js مشاريع, تطوير الويب, محفظة أعمال"
+            : "Ali Hatem projects, React projects, Next.js projects, web development portfolio, frontend projects"
+        }
+        language={i18n.language}
+      />
       <div className="container pt-2">
         {/* Mobile Filter Toggle */}
         <div className="filter-toggle-mobile d-md-none">

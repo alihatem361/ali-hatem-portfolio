@@ -5,6 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
 import YoutubeVideo from "../components/projects/components/YoutubeVideo";
 import LoomVideo from "../components/projects/components/LoomVideo";
+import SEO from "../components/SEO";
 import { createSlug } from "../helpers";
 import ProjectsApi from "../data/projects.json";
 import ProjectsApiAR from "../data/projectsAR.json";
@@ -26,6 +27,8 @@ import {
 } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
 import { BiCopy, BiCheck } from "react-icons/bi";
+
+const BASE_URL = "https://ali-hatem-portfolio.vercel.app";
 
 const ProjectDetailsPage = () => {
   const { slug } = useParams();
@@ -51,7 +54,6 @@ const ProjectDetailsPage = () => {
 
     if (foundProject) {
       setProject(foundProject);
-      document.title = `${foundProject.title} - Ali Hatem Portfolio`;
     }
 
     setLoading(false);
@@ -83,6 +85,12 @@ const ProjectDetailsPage = () => {
   if (!project) {
     return (
       <div className="pdp-not-found">
+        <SEO
+          title={isArabic ? "المشروع غير موجود | علي حاتم" : "Project Not Found | Ali Hatem"}
+          description={isArabic ? "عذراً، لم نتمكن من العثور على هذا المشروع" : "Sorry, we couldn't find the project you're looking for"}
+          noindex={true}
+          language={i18n.language}
+        />
         <motion.div
           className="pdp-not-found-content"
           initial={{ opacity: 0, y: 30 }}
@@ -106,8 +114,28 @@ const ProjectDetailsPage = () => {
 
   const hasVideo = project.loomVideo || project.videoKey;
 
+  // Generate SEO-friendly project description
+  const seoDescription = project.description
+    ? `${project.title} - ${project.description.substring(0, 150)}${project.description.length > 150 ? "..." : ""}`
+    : `${project.title} - A project by Ali Hatem built with ${project.technology?.slice(0, 3).join(", ") || "modern technologies"}`;
+
   return (
     <div className="project-details-page">
+      <SEO
+        title={`${project.title} | Ali Hatem Portfolio`}
+        description={seoDescription}
+        ogImage={project.image ? `${BASE_URL}/${project.image}` : undefined}
+        ogType="article"
+        project={{
+          title: project.title,
+          description: project.description,
+          image: project.image,
+          technology: project.technology,
+          demo: project.demo,
+        }}
+        keywords={`${project.title}, ${project.technology?.join(", ") || ""}, Ali Hatem, Portfolio Project`}
+        language={i18n.language}
+      />
       {/* Hero Section with Image */}
       <section className="pdp-hero-section">
         {/* Hero Image/Video Background */}
