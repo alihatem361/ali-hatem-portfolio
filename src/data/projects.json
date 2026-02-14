@@ -66,6 +66,26 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "image": "images/mckeon-dashboard.png",
+      "title": "McKeon Dashboard",
+      "description": "Built a comprehensive Arabic RTL property management admin dashboard using static HTML, CSS, and JavaScript. Implemented complete CRUD interfaces with DataTables for listings, integrated ApexCharts for analytics visualization, and utilized FullCalendar for appointment scheduling. Developed with Bootstrap 5, Select2 dropdowns, Flatpickr date pickers, and SweetAlert2 notifications. Features custom gold/green color scheme and Cairo Arabic font.",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "jQuery",
+        "DataTables",
+        "ApexCharts",
+        "FullCalendar"
+      ],
+      "demo": "https://mckeon-dashboard.pages.dev/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "image": "images/roya-training-packages.png",
       "title": "Roya Training Packages",
       "description": "Developed a static Arabic RTL website for Roya Training Packages, a training and educational services company. Implemented the full front-end using pure HTML, CSS, and JavaScript with Bootstrap 5 RTL, Swiper.js carousels, WOW.js animations, and jQuery-based interactions. Focused on reusable section layouts, custom button system, and responsive design across all breakpoints.",

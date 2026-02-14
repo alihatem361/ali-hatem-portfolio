@@ -66,6 +66,26 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "image": "images/mckeon-dashboard.png",
+      "title": "لوحة تحكم ماكيون",
+      "description": "بنيت لوحة تحكم شاملة لإدارة العقارات بالعربية (RTL) باستخدام HTML وCSS وJavaScript الثابت. نفذت واجهات CRUD كاملة مع DataTables للقوائم، ودمجت ApexCharts لتصور التحليلات، واستخدمت FullCalendar لجدولة المواعيد. طورت باستخدام Bootstrap 5، وقوائم Select2 المنسدلة، ومنتقي التواريخ Flatpickr، وإشعارات SweetAlert2. يتميز بنظام ألوان ذهبي/أخضر مخصص وخط القاهرة العربي.",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "jQuery",
+        "DataTables",
+        "ApexCharts",
+        "FullCalendar"
+      ],
+      "demo": "https://mckeon-dashboard.pages.dev/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "image": "images/roya-training-packages.png",
       "title": "رؤية للحقائب التدريبية",
       "description": "طورت موقعًا ثابتًا باللغة العربية (اتجاه RTL) لشركة رؤية للحقائب التدريبية والخدمات التعليمية باستخدام HTML وCSS وJavaScript فقط. اعتمدت على Bootstrap 5 RTL لتخطيطات متجاوبة، وSwiper.js للسلايدر، وWOW.js للحركات عند التمرير، بالإضافة إلى jQuery للتفاعلات الديناميكية. ركزت على توحيد نمط الأزرار، وأقسام المحتوى، وتجربة مستخدم سلسة على جميع الأجهزة.",
