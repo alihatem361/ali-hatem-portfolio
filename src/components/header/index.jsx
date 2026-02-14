@@ -31,7 +31,7 @@ const Header = () => {
   };
 
   return (
-    <section className="hero-section">
+    <section className="hero-section" id="home">
       {/* Animated Background Elements */}
       <div className="hero-background">
         <div className="gradient-orb gradient-orb-1"></div>

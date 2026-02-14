@@ -18,7 +18,11 @@ const WorkExperience = () => {
   const experience = cvData.experience;
 
   return (
-    <div className="experience-container" data-aos="fade-up">
+    <section
+      className="experience-container"
+      id="experience"
+      data-aos="fade-up"
+    >
       {/* Background Decorations */}
       <div className="experience-bg-decoration">
         <div className="decoration-circle circle-1"></div>
@@ -133,10 +137,10 @@ const WorkExperience = () => {
                 <div className="card-glow"></div>
               </div>
             </div>
-          ))}
+          ))}{" "}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

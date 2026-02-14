@@ -21,7 +21,11 @@ const Certifications = () => {
   const awards = cvData.awards;
 
   return (
-    <div className="certifications-container" data-aos="fade-up">
+    <section
+      className="certifications-container"
+      id="certifications"
+      data-aos="fade-up"
+    >
       {/* Background Decorations */}
       <div className="certifications-bg-decoration">
         <div className="decoration-circle circle-1"></div>
@@ -151,7 +155,7 @@ const Certifications = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

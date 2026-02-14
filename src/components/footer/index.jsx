@@ -20,7 +20,7 @@ const Footer = () => {
   }, [i18n.language]);
 
   return (
-    <div className=" text-light footer">
+    <footer className="text-light footer" id="contact">
       <div className="row">
         <div className="col-lg-12 ">
           <div className="footer__Sosials">
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

@@ -112,7 +112,7 @@ const SkillsComponent = () => {
     },
   ];
   return (
-    <div className="skills-container" data-aos="fade-up">
+    <section className="skills-container" id="skills" data-aos="fade-up">
       <div className="skills-header">
         <h2>{t("skills.title")}</h2>
         <p className="skills-subtitle">{t("skills.subtitle")}</p>
@@ -144,7 +144,7 @@ const SkillsComponent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
