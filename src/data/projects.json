@@ -15,17 +15,6 @@
 
   "Projects": [
     {
-      "image": "images/ebu-website.png",
-      "title": "EBU Website",
-      "description": "Built the complete front-end for Entrepreneurship & Business University (EBU) from scratch. Developed custom Tailwind configuration with branded color palette (gold/burgundy), implemented responsive mobile-first layouts, and created reusable navigation dropdowns, mobile drawer menu, and accordion components using vanilla JavaScript. Optimized for performance with zero build process overhead.",
-      "technology": ["HTML", "Tailwind", "JavaScript"],
-      "demo": "https://www.eb.university",
-      "github": "",
-      "video": "",
-      "videoKey": "",
-      "codeStatus": "PRIVATE"
-    },
-    {
       "image": "images/novirahealth.png",
       "title": "NoviraHealth",
       "description": "Led front-end development for a healthcare marketing platform using React 18 and TypeScript. Architected component structure with shadcn/ui, integrated Sanity CMS with custom GROQ queries, and built a global modal system for contact forms. Implemented smooth Framer Motion animations and optimized SEO using react-helmet-async. Delivered a fully responsive, accessible interface.",
@@ -55,6 +44,17 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "image": "images/ebu-website.png",
+      "title": "EBU Website",
+      "description": "Built the complete front-end for Entrepreneurship & Business University (EBU) from scratch. Developed custom Tailwind configuration with branded color palette (gold/burgundy), implemented responsive mobile-first layouts, and created reusable navigation dropdowns, mobile drawer menu, and accordion components using vanilla JavaScript. Optimized for performance with zero build process overhead.",
+      "technology": ["HTML", "Tailwind", "JavaScript"],
+      "demo": "https://www.eb.university",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "image": "images/alHawmahCulturalHub.png",
       "title": "alHawmah Cultural Hub",
       "description": "Developed a modern React-based cultural hub website showcasing regional heritage. Built reusable component library with shadcn/ui, implemented smooth page transitions, and created an intuitive navigation system. Focused on delivering an engaging user experience with optimized performance using Vite.",
@@ -66,11 +66,19 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "image": "images/contiva.png",
-      "title": "Contiva",
-      "description": "Built a modern content discovery platform from the ground up using React and Vite. Designed and implemented a sleek component architecture with shadcn/ui, created responsive layouts for all devices, and optimized the user interface for seamless content exploration and navigation.",
-      "technology": ["ReactJs", "Tailwind", "Vite", "shadcn-ui"],
-      "demo": "https://contiva-learning.vercel.app/",
+      "image": "images/roya-training-packages.png",
+      "title": "Roya Training Packages",
+      "description": "Developed a static Arabic RTL website for Roya Training Packages, a training and educational services company. Implemented the full front-end using pure HTML, CSS, and JavaScript with Bootstrap 5 RTL, Swiper.js carousels, WOW.js animations, and jQuery-based interactions. Focused on reusable section layouts, custom button system, and responsive design across all breakpoints.",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "SwiperJs",
+        "WOW.js",
+        "jQuery"
+      ],
+      "demo": "https://thecoderland.pages.dev/",
       "github": "",
       "video": "",
       "videoKey": "",
@@ -86,6 +94,17 @@
       "github": "",
       "video": "https://youtu.be/16rQx06Fl4Q",
       "videoKey": "16rQx06Fl4Q",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "image": "images/contiva.png",
+      "title": "Contiva",
+      "description": "Built a modern content discovery platform from the ground up using React and Vite. Designed and implemented a sleek component architecture with shadcn/ui, created responsive layouts for all devices, and optimized the user interface for seamless content exploration and navigation.",
+      "technology": ["ReactJs", "Tailwind", "Vite", "shadcn-ui"],
+      "demo": "https://contiva-learning.vercel.app/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
       "codeStatus": "PRIVATE"
     },
 
@@ -477,14 +496,6 @@
       "title": "angularECommerceGradProj",
       "technology": ["angular", "Bootstrap", "Api"],
       "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
-      "github": "",
-      "hidden": true
-    },
-    {
-      "image": "images/1-5.webp",
-      "title": "IMDb Movies",
-      "technology": ["C#", "ASP.NET", "MVC", "Entity Framework", "SQL"],
-      "demo": "",
       "github": "",
       "hidden": true
     }

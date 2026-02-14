@@ -15,17 +15,6 @@
 
   "Projects": [
     {
-      "image": "images/ebu-website.png",
-      "title": "موقع جامعة EBU",
-      "description": "قمت ببناء الواجهة الأمامية الكاملة لجامعة ريادة الأعمال والأعمال (EBU) من الصفر. طورت إعدادات Tailwind مخصصة مع لوحة ألوان العلامة التجارية (ذهبي/عنابي)، ونفذت تصميمات متجاوبة تبدأ من الهاتف، وأنشأت مكونات قابلة لإعادة الاستخدام للقوائم المنسدلة والقائمة الجانبية والأكورديون باستخدام JavaScript.",
-      "technology": ["HTML", "Tailwind", "JavaScript"],
-      "demo": "https://www.eb.university",
-      "github": "",
-      "video": "",
-      "videoKey": "",
-      "codeStatus": "PRIVATE"
-    },
-    {
       "image": "images/novirahealth.png",
       "title": "نوفيرا هيلث",
       "description": "قدت تطوير الواجهة الأمامية لمنصة تسويق الرعاية الصحية باستخدام React 18 وTypeScript. صممت هيكل المكونات مع shadcn/ui، ودمجت Sanity CMS مع استعلامات GROQ مخصصة، وبنيت نظام نوافذ منبثقة عام. نفذت رسوم متحركة سلسة وحسنت SEO باستخدام react-helmet-async.",
@@ -55,6 +44,17 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "image": "images/ebu-website.png",
+      "title": "موقع جامعة EBU",
+      "description": "قمت ببناء الواجهة الأمامية الكاملة لجامعة ريادة الأعمال والأعمال (EBU) من الصفر. طورت إعدادات Tailwind مخصصة مع لوحة ألوان العلامة التجارية (ذهبي/عنابي)، ونفذت تصميمات متجاوبة تبدأ من الهاتف، وأنشأت مكونات قابلة لإعادة الاستخدام للقوائم المنسدلة والقائمة الجانبية والأكورديون باستخدام JavaScript.",
+      "technology": ["HTML", "Tailwind", "JavaScript"],
+      "demo": "https://www.eb.university",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "image": "images/alHawmahCulturalHub.png",
       "title": "مركز الحومة الثقافي",
       "description": "طورت موقع مركز ثقافي حديث باستخدام React لعرض التراث الإقليمي. بنيت مكتبة مكونات قابلة لإعادة الاستخدام مع shadcn/ui، ونفذت انتقالات سلسة بين الصفحات، وأنشأت نظام تنقل بديهي. ركزت على تقديم تجربة مستخدم جذابة مع أداء محسن باستخدام Vite.",
@@ -66,11 +66,19 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "image": "images/contiva.png",
-      "title": "كونتيفا",
-      "description": "بنيت منصة اكتشاف محتوى حديثة من الصفر باستخدام React وVite. صممت ونفذت هيكل مكونات أنيق مع shadcn/ui، وأنشأت تخطيطات متجاوبة لجميع الأجهزة، وحسنت واجهة المستخدم للتصفح والتنقل السلس.",
-      "technology": ["ReactJs", "Tailwind", "Vite", "shadcn-ui"],
-      "demo": "https://contiva-learning.vercel.app/",
+      "image": "images/roya-training-packages.png",
+      "title": "رؤية للحقائب التدريبية",
+      "description": "طورت موقعًا ثابتًا باللغة العربية (اتجاه RTL) لشركة رؤية للحقائب التدريبية والخدمات التعليمية باستخدام HTML وCSS وJavaScript فقط. اعتمدت على Bootstrap 5 RTL لتخطيطات متجاوبة، وSwiper.js للسلايدر، وWOW.js للحركات عند التمرير، بالإضافة إلى jQuery للتفاعلات الديناميكية. ركزت على توحيد نمط الأزرار، وأقسام المحتوى، وتجربة مستخدم سلسة على جميع الأجهزة.",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "SwiperJs",
+        "WOW.js",
+        "jQuery"
+      ],
+      "demo": "https://thecoderland.pages.dev/",
       "github": "",
       "video": "",
       "videoKey": "",
@@ -82,6 +90,17 @@
       "description": "صممت وطورت صفحة هبوط ترويجية لحملة اليوم الوطني السعودي. أنشأت واجهة مستخدم جذابة بصرياً مع لوحة ألوان مستوحاة من المناسبة، ونفذت رسوم متحركة جذابة، وبنيت تخطيطات متجاوبة محسنة للتحويلات. سلمت المشروع في وقت قياسي مع الحفاظ على جودة الكود العالية.",
       "technology": ["HTML", "Tailwind", "JavaScript"],
       "demo": "https://e3mel-business-national-saudi-day.pages.dev/",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "image": "images/contiva.png",
+      "title": "كونتيفا",
+      "description": "بنيت منصة اكتشاف محتوى حديثة من الصفر باستخدام React وVite. صممت ونفذت هيكل مكونات أنيق مع shadcn/ui، وأنشأت تخطيطات متجاوبة لجميع الأجهزة، وحسنت واجهة المستخدم للتصفح والتنقل السلس.",
+      "technology": ["ReactJs", "Tailwind", "Vite", "shadcn-ui"],
+      "demo": "https://contiva-learning.vercel.app/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -465,14 +484,6 @@
       "title": "مشروع تجارة إلكترونية باستخدام Angular",
       "technology": ["angular", "Bootstrap", "Api"],
       "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
-      "github": "",
-      "hidden": true
-    },
-    {
-      "image": "images/1-5.webp",
-      "title": "أفلام IMDb",
-      "technology": ["C#", "ASP.NET", "MVC", "Entity Framework", "SQL"],
-      "demo": "",
       "github": "",
       "hidden": true
     }
