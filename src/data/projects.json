@@ -67,6 +67,7 @@
     },
     {
       "imeg": "project_images/alzahirun_app.gif",
+      "title": "الذاكرون - Al-Zakirun",
       "description": "a wide range of features such as the Holy Qur’an with Tafsir, daily Adhkar, accurate prayer times, Qibla direction, Hijri calendar, and more — all crafted to help users stay spiritually connected and organized throughout their day.",
       "technology": [
         "Flutter",
