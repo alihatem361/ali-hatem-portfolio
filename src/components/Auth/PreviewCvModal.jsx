@@ -41,8 +41,8 @@ function PreviewCvModal() {
           {error && <div className="error-message">{error}</div>}
 
           <iframe
-            // link to the pdf file
-            src="https://drive.google.com/file/d/1J_WWAkwVSSAyFEs5aU49aXeir8pM-MXT/view?usp=drive_link"
+            // link to the CV file on Google Drive (make sure it's set to "Anyone with the link can view")
+            src="https://drive.google.com/file/d/1qoor3ebbhCNQrHP-O6vmKcvFZM3OtSrt/view?usp=sharing"
             allow="autoplay"
             width="100%"
             height="100%"
