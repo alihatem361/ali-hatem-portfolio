@@ -66,41 +66,40 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/travel_report.png?alt=media&token=4db05577-381a-4d51-a45f-1c31700ad08c",
-      "title": "Travel Report",
-      "description": "نظام تقييم شامل مصمم خصيصًا لبيئات تدريب طاقم الطيران. يتيح التطبيق للمشرفين إرسال نماذج تقييم جاهزة تعتمد على الكفاءة إلى مجموعة من المدربين، حيث يمكن لكل مدرب الاطلاع على الجزء المخصص له فقط وتعبئته، مع إمكانية حفظ البيانات محليًا باستخدام SQLite. بعد إتمام جميع المدربين لأدوارهم، يتمكن المشرف من عرض التقرير الكامل وتصديره، مما يضمن سير عمل تقييم منظم ويدعم العمل دون اتصال بالإنترنت.",
+      "imeg": "project_images/alzahirun_app.gif",
+      "title": "الذاكرون - Al-Zakirun",
+      "description": "تطبيق الدكرون هو تطبيق إسلامي شامل يهدف إلى تلبية احتياجات المسلم اليومية من خلال مجموعة من الأدوات والخدمات المفيدة، مثل القرآن الكريم مع التفسير، الأذكار اليومية، مواقيت الصلاة الدقيقة، تحديد اتجاه القبلة، التقويم الهجري، وغيرها من الوظائف التي تسهّل على المسلم أداء عباداته وتنظيم وقته بروحانية وطمأنينة.",
       "technology": [
-        "flutter",
-        ".net",
-        "Dio",
+        "Flutter",
+        "Bloc",
         "Shared preferences",
-        "Api"
-      ],
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/medscan.png?alt=media&token=5e2fc22a-2440-4d81-9c02-ae66946deb3d",
-      "title": "ميد سكان",
-      "description": "تطبيق لإدارة خدمات الأشعة والتحاليل الطبية\\n\\nتطبيق طبي متكامل يتيح للمستخدمين طلب خدمات الأشعة والتحاليل من أقرب المراكز المعتمدة، مع إمكانية متابعة نتائج الفحوصات إلكترونيًا، والتواصل المباشر مع المراكز. كما يوفّر لوحة تحكم خاصة لأصحاب المراكز لإدارة جميع العمليات اليومية بكل سهولة.\\n\\n⭐ الخصائص الرئيسية:\\n\\nللمستخدمين العاديين:\\n- تصفح مراكز الأشعة والتحاليل المعتمدة حسب الموقع.\\n- حجز موعد للخدمة المطلوبة بسهولة.\\n- رفع ملفات أو طلبات مرفقة بالحجز (مثل روشتات أو تقارير سابقة).\\n- استلام النتائج من خلال التطبيق بصيغة PDF أو صور.\\n- إشعارات فورية بحالة الحجز أو توافر النتائج.\\n- تقييم المراكز ومشاركة التجربة.\\n\\nلأصحاب المراكز (الأدمن):\\n- لوحة تحكم متقدمة لإدارة المركز.\\n- إضافة وإدارة أنواع التحاليل أو الأشعة والأسعار.\\n- إدارة الحجوزات واستلام الطلبات الجديدة.\\n- رفع نتائج التحاليل/الأشعة وربطها بالمستخدم.\\n- إدارة طاقم العمل ومواعيدهم.\\n- عرض تقارير وإحصائيات النشاط اليومي.\\n\\nللأدمن العام (إدارة التطبيق):\\n- إدارة كافة المراكز المسجلة.\\n- التحكم في حسابات المستخدمين والأدمنات.\\n- إعدادات عامة للنظام (سياسات – إشعارات – شروط).\\n- متابعة أداء المراكز ومعدلات النشاط.",
-      "technology": [
-        "flutter",
-        "bloc",
-        "firebase authentication",
-        "firebase messaging",
-        "firebase storage",
-        "firebase firestore",
-        "firebase core",
+        "Apis",
         "Dio",
-        "Shared preferences"
+        "Audio_service",
+        "Just_audio",
+        "local notification"
       ],
-      "video": "https://youtu.be/202ZlMsMNW0",
-      "videoKey": "202ZlMsMNW0",
-      "codeStatus": "PRIVATE"
+      "demo": "https://play.google.com/store/apps/details?id=com.solid.abdulrahman.alzakirun",
+      "video": "https://youtu.be/xIuVC3CZd-o?si=uBPbN1jOq7jp6MAw",
+      "videoKey": "xIuVC3CZd-o"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzydashoard.png?alt=media&token=03b40ac4-2c49-438a-86f5-665723a0ed6d",
-      "title": "لوحة تحكم ترزي",
-      "description": "ترزي هو تطبيق مخصص للإداريين يوفر لوحة تحكم شاملة لإدارة كل ما يتعلق بتطبيق ترزي الخاص بالمستخدمين.يمكن من خلاله التحكم في المنتجات، المصممين، الأقمشة، والباقات وجميع التفاصيل الأخرى بسهولة ومرونة. يمنح الإداريين أدوات متقدمة لتنظيم المحتوى وتخصيص التجربة بما يتناسب مع احتياجات المنصة",
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Mawaheb%2Fimages%2FMavaheb_app.png?alt=media&token=8a582c83-5d75-499d-969b-af726c4d19df",
+      "title": "مواهب - Mawaheb",
+      "description": "تطبيق Maweheb هو تطبيق يربط لاعبي كرة القدم الموهوبين بأندية رياضية ومشرفي المواهب. يعتبر التطبيق منصة حيث تقوم الشركات (أندية رياضية ومشرفي المواهب) والأفراد (اللاعبين) بالتسجيل والتواصل مع بعضهم البعض. يمكن للاعبين معرفة آخر المعلومات حول الفرص التجريبية المتاحة وتحميل مقاطع فيديو تظهر فيها مهاراتهم في لعب كرة القدم ليراها مشرفو المواهب. يمكن للشركات استخدام التطبيق لمراجعة اللاعبين المحتملين والترويج للفرص التجريبية المتاحة للاعبين المصريين الطموحين.",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Shared preferences",
+        "Firebase",
+        "مصادقة Firebase"
+      ],
+      "demo": "https://play.google.com/store/apps/details?id=com.mawahebapp.application"
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/2.basmisr%2Fbusmisr.png?alt=media&token=d7de2bdc-440b-49e6-9630-26afba925aa9",
+      "title": "باص مصر",
+      "description": "باص مصر هو التطبيق الذكي لحجز تذاكر الرحلات بكل سهولة ومرونة، حيث يتيح للمستخدمين اختيار نقطة الانطلاق والوصول، واستعراض جميع الرحلات المتوفرة من شركة مصر للنقل. يتميّز التطبيق بتجربة حجز سلسة، وتعدد في طرق الدفع، مع إمكانية متابعة حالة الرحلة حتى بعد الوصول، لتوفير راحة وأمان في كل خطوة. باص مصر هو الحل المثالي لتنقلات أسهل ورحلات أكثر راحة واحترافية",
       "technology": [
         "flutter",
         "bloc",
@@ -125,15 +124,47 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/2.basmisr%2Fbusmisr.png?alt=media&token=d7de2bdc-440b-49e6-9630-26afba925aa9",
-      "title": "باص مصر",
-      "description": "باص مصر هو التطبيق الذكي لحجز تذاكر الرحلات بكل سهولة ومرونة، حيث يتيح للمستخدمين اختيار نقطة الانطلاق والوصول، واستعراض جميع الرحلات المتوفرة من شركة مصر للنقل. يتميّز التطبيق بتجربة حجز سلسة، وتعدد في طرق الدفع، مع إمكانية متابعة حالة الرحلة حتى بعد الوصول، لتوفير راحة وأمان في كل خطوة. باص مصر هو الحل المثالي لتنقلات أسهل ورحلات أكثر راحة واحترافية",
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzydashoard.png?alt=media&token=03b40ac4-2c49-438a-86f5-665723a0ed6d",
+      "title": "لوحة تحكم ترزي",
+      "description": "ترزي هو تطبيق مخصص للإداريين يوفر لوحة تحكم شاملة لإدارة كل ما يتعلق بتطبيق ترزي الخاص بالمستخدمين.يمكن من خلاله التحكم في المنتجات، المصممين، الأقمشة، والباقات وجميع التفاصيل الأخرى بسهولة ومرونة. يمنح الإداريين أدوات متقدمة لتنظيم المحتوى وتخصيص التجربة بما يتناسب مع احتياجات المنصة",
       "technology": [
         "flutter",
         "bloc",
         "Apis",
         "Dio",
         "Shared preferences"
+      ],
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/medscan.png?alt=media&token=5e2fc22a-2440-4d81-9c02-ae66946deb3d",
+      "title": "ميد سكان",
+      "description": "تطبيق لإدارة خدمات الأشعة والتحاليل الطبية\\n\\nتطبيق طبي متكامل يتيح للمستخدمين طلب خدمات الأشعة والتحاليل من أقرب المراكز المعتمدة، مع إمكانية متابعة نتائج الفحوصات إلكترونيًا، والتواصل المباشر مع المراكز. كما يوفّر لوحة تحكم خاصة لأصحاب المراكز لإدارة جميع العمليات اليومية بكل سهولة.\\n\\n⭐ الخصائص الرئيسية:\\n\\nللمستخدمين العاديين:\\n- تصفح مراكز الأشعة والتحاليل المعتمدة حسب الموقع.\\n- حجز موعد للخدمة المطلوبة بسهولة.\\n- رفع ملفات أو طلبات مرفقة بالحجز (مثل روشتات أو تقارير سابقة).\\n- استلام النتائج من خلال التطبيق بصيغة PDF أو صور.\\n- إشعارات فورية بحالة الحجز أو توافر النتائج.\\n- تقييم المراكز ومشاركة التجربة.\\n\\nلأصحاب المراكز (الأدمن):\\n- لوحة تحكم متقدمة لإدارة المركز.\\n- إضافة وإدارة أنواع التحاليل أو الأشعة والأسعار.\\n- إدارة الحجوزات واستلام الطلبات الجديدة.\\n- رفع نتائج التحاليل/الأشعة وربطها بالمستخدم.\\n- إدارة طاقم العمل ومواعيدهم.\\n- عرض تقارير وإحصائيات النشاط اليومي.\\n\\nللأدمن العام (إدارة التطبيق):\\n- إدارة كافة المراكز المسجلة.\\n- التحكم في حسابات المستخدمين والأدمنات.\\n- إعدادات عامة للنظام (سياسات – إشعارات – شروط).\\n- متابعة أداء المراكز ومعدلات النشاط.",
+      "technology": [
+        "flutter",
+        "bloc",
+        "firebase authentication",
+        "firebase messaging",
+        "firebase storage",
+        "firebase firestore",
+        "firebase core",
+        "Dio",
+        "Shared preferences"
+      ],
+      "video": "https://youtu.be/202ZlMsMNW0",
+      "videoKey": "202ZlMsMNW0",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/travel_report.png?alt=media&token=4db05577-381a-4d51-a45f-1c31700ad08c",
+      "title": "Travel Report",
+      "description": "نظام تقييم شامل مصمم خصيصًا لبيئات تدريب طاقم الطيران. يتيح التطبيق للمشرفين إرسال نماذج تقييم جاهزة تعتمد على الكفاءة إلى مجموعة من المدربين، حيث يمكن لكل مدرب الاطلاع على الجزء المخصص له فقط وتعبئته، مع إمكانية حفظ البيانات محليًا باستخدام SQLite. بعد إتمام جميع المدربين لأدوارهم، يتمكن المشرف من عرض التقرير الكامل وتصديره، مما يضمن سير عمل تقييم منظم ويدعم العمل دون اتصال بالإنترنت.",
+      "technology": [
+        "flutter",
+        ".net",
+        "Dio",
+        "Shared preferences",
+        "Api"
       ],
       "codeStatus": "PRIVATE"
     },
@@ -197,19 +228,6 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Mawaheb%2Fimages%2FMavaheb_app.png?alt=media&token=8a582c83-5d75-499d-969b-af726c4d19df",
-      "title": "MAWAHEB",
-      "description": "تطبيق Maweheb هو تطبيق يربط لاعبي كرة القدم الموهوبين بأندية رياضية ومشرفي المواهب. يعتبر التطبيق منصة حيث تقوم الشركات (أندية رياضية ومشرفي المواهب) والأفراد (اللاعبين) بالتسجيل والتواصل مع بعضهم البعض. يمكن للاعبين معرفة آخر المعلومات حول الفرص التجريبية المتاحة وتحميل مقاطع فيديو تظهر فيها مهاراتهم في لعب كرة القدم ليراها مشرفو المواهب. يمكن للشركات استخدام التطبيق لمراجعة اللاعبين المحتملين والترويج للفرص التجريبية المتاحة للاعبين المصريين الطموحين.",
-      "technology": [
-        "Flutter",
-        "Bloc",
-        "Shared preferences",
-        "Firebase",
-        "مصادقة Firebase"
-      ],
-      "demo": "https://play.google.com/store/apps/details?id=com.mawahebapp.application"
-    },
-    {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Souq%2024.png?alt=media&token=1a0272b2-3363-4da8-ab53-ec84e7ade237&_gl=1*x7j4bz*_ga*MjA0ODUzODcwMC4xNjkzMzk3NDUy*_ga_CW55HF8NVT*MTY5OTQzMzU5My45OS4xLjE2OTk0MzM2NzYuNDUuMC4w",
       "title": "SOUQ 24",
       "description": "سوق 24 هو تطبيق متكامل للتجارة الإلكترونية يتيح للمستخدمين تصفح وشراء مجموعة متنوعة من المنتجات من خلال واجهة سهلة الاستخدام وباقات مرنة تناسب جميع الفئات، كما يوفر لوحة تحكم مخصصة للإدارة تمكّن المسؤول من إضافة وتعديل المنتجات، إرسال الإشعارات، وتنظيم الباقات ومحتوى التطبيق بكل احترافية.",
@@ -220,23 +238,6 @@
         "Firebase",
         "مصادقة Firebase"
       ]
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Husary%20(1).png?alt=media&token=12c32b30-9313-46a1-91dd-6d898594abf9&_gl=1*l1osgr*_ga*MjA0ODUzODcwMC4xNjkzMzk3NDUy*_ga_CW55HF8NVT*MTY5ODkwNDg0OC43NC4xLjE2OTg5MDQ5MjkuNjAuMC4w",
-      "title": "تطبيق الذاكرون",
-      "description": "تطبيق الدكرون هو تطبيق إسلامي شامل يهدف إلى تلبية احتياجات المسلم اليومية من خلال مجموعة من الأدوات والخدمات المفيدة، مثل القرآن الكريم مع التفسير، الأذكار اليومية، مواقيت الصلاة الدقيقة، تحديد اتجاه القبلة، التقويم الهجري، وغيرها من الوظائف التي تسهّل على المسلم أداء عباداته وتنظيم وقته بروحانية وطمأنينة.",
-      "technology": [
-        "Flutter",
-        "Bloc",
-        "Shared preferences",
-        "Apis",
-        "Dio",
-        "Audio_service",
-        "Just_audio"
-      ],
-      "demo": "https://play.google.com/store/apps/details?id=com.solid.abdulrahman.alzakirun",
-      "video": "https://youtu.be/xIuVC3CZd-o?si=uBPbN1jOq7jp6MAw",
-      "videoKey": "xIuVC3CZd-o"
     },
     {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Qr%20code%2Fimages%2Fqr%20code%20.png?alt=media&token=be5868fd-5db8-4bab-8e2d-c9ebea14a217",

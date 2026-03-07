@@ -66,41 +66,40 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/gif_travel_report.gif?alt=media&token=358f6047-b034-4021-a73a-de5e4be96162",
-      "title": "Travel Report",
-      "description": "A comprehensive evaluation system tailored for aviation training environments. The app enables administrators to assign predefined competency-based forms to multiple trainers. Each trainer accesses and fills only their assigned section, with the ability to save responses locally using SQLite. Once all trainers complete their parts, the admin can view and export the fully compiled report, ensuring a streamlined, offline-first evaluation workflow.",
+      "imeg": "project_images/alzahirun_app.gif",
+      "description": "a wide range of features such as the Holy Qur’an with Tafsir, daily Adhkar, accurate prayer times, Qibla direction, Hijri calendar, and more — all crafted to help users stay spiritually connected and organized throughout their day.",
       "technology": [
-        "flutter",
-        ".net",
-        "Dio",
+        "Flutter",
+        "Bloc",
         "Shared preferences",
-        "Api"
-      ],
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/medscan.png?alt=media&token=5e2fc22a-2440-4d81-9c02-ae66946deb3d",
-      "title": "MEDSCAN APP",
-      "description": "Medical Imaging & Lab Tests Management App\\n\\nA comprehensive medical platform that allows users to request lab and radiology services from nearby certified centers, track results digitally, and communicate directly with medical providers. The app also offers powerful dashboards for center administrators to manage daily operations efficiently.\\n\\n⭐ Key Features:\\n\\nFor Regular Users:\\n- Browse nearby labs and radiology centers by location.\\n- Easily book appointments for required services.\\n- Upload prescriptions or previous reports with the booking.\\n- Receive results within the app (PDF or images).\\n- Instant notifications about booking status or available results.\\n- Rate centers and share experiences.\\n\\nFor Center Admins:\\n- Advanced dashboard for center management.\\n- Add/manage test types and pricing.\\n- Manage bookings and view new requests.\\n- Upload test results and link them to user profiles.\\n- Manage staff and schedules.\\n- Access performance reports and activity stats.\\n\\nFor Super Admin (App Owner):\\n- Manage all registered labs and centers.\\n- Control user and admin accounts.\\n- Configure general system settings (policies – notifications – terms).\\n- Monitor center performance and user activity.",
-      "technology": [
-        "flutter",
-        "bloc",
-        "firebase authentication",
-        "firebase messaging",
-        "firebase storage",
-        "firebase firestore",
-        "firebase core",
+        "Apis",
         "Dio",
-        "Shared preferences"
+        "Audio_service",
+        "Just_audio",
+        "local notification"
       ],
-      "video": "https://youtu.be/202ZlMsMNW0",
-      "videoKey": "202ZlMsMNW0",
+      "video": "https://youtu.be/xIuVC3CZd-o?si=uBPbN1jOq7jp6MAw",
+      "videoKey": "xIuVC3CZd-o",
+      "demo": "https://play.google.com/store/apps/details?id=com.solid.abdulrahman.alzakirun"
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Mawaheb%2Fimages%2FMavaheb_app.png?alt=media&token=8a582c83-5d75-499d-969b-af726c4d19df",
+      "title": "مواهب - Mawaheb",
+      "description": "Maweheb is an app that connects talented soccer players with sports clubs and talent scouts. The app is a platform where businesses (sports clubs and talent scouts) and individuals (players) sign up and connect with each other. Players can find out the latest info about available trials and opportunities as well as upload videos of them playing football for talent scouts to view. Businesses can use the app to review potential players and promote trials and opportunities available to eager Egyptian footballers",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Shared preferences",
+        "Firebase",
+        "firebase authentication"
+      ],
+      "demo": "https://play.google.com/store/apps/details?id=com.mawahebapp.application",
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzydashoard.png?alt=media&token=03b40ac4-2c49-438a-86f5-665723a0ed6d",
-      "title": "TARZY Dashboard",
-      "description": "Tarzi is an application for administrators that provides a comprehensive control panel to manage everything related to the Tarzi app for users.It allows users to easily and flexibly manage products, designers, fabrics, packages, and all other details.It provides administrators with advanced tools to organize content and customize the experience to suit the platform's needs",
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/2.basmisr%2Fbusmisr.png?alt=media&token=d7de2bdc-440b-49e6-9630-26afba925aa9",
+      "title": "Bus Misr",
+      "description": "Bus Masr is a smart and efficient ticket booking app that allows users to choose their departure and arrival points and explore all available trips from Egypt's leading bus company. With a smooth booking process, multiple payment options, and real-time trip tracking even after arrival, the app ensures a comfortable and secure travel experience. Bus Masr is your perfect companion for easier transportation and more enjoyable journeys",
       "technology": [
         "flutter",
         "bloc",
@@ -125,15 +124,47 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/2.basmisr%2Fbusmisr.png?alt=media&token=d7de2bdc-440b-49e6-9630-26afba925aa9",
-      "title": "Bus Misr",
-      "description": "Bus Masr is a smart and efficient ticket booking app that allows users to choose their departure and arrival points and explore all available trips from Egypt's leading bus company. With a smooth booking process, multiple payment options, and real-time trip tracking even after arrival, the app ensures a comfortable and secure travel experience. Bus Masr is your perfect companion for easier transportation and more enjoyable journeys",
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzydashoard.png?alt=media&token=03b40ac4-2c49-438a-86f5-665723a0ed6d",
+      "title": "TARZY Dashboard",
+      "description": "Tarzi is an application for administrators that provides a comprehensive control panel to manage everything related to the Tarzi app for users.It allows users to easily and flexibly manage products, designers, fabrics, packages, and all other details.It provides administrators with advanced tools to organize content and customize the experience to suit the platform's needs",
       "technology": [
         "flutter",
         "bloc",
         "Apis",
         "Dio",
         "Shared preferences"
+      ],
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/medscan.png?alt=media&token=5e2fc22a-2440-4d81-9c02-ae66946deb3d",
+      "title": "MEDSCAN APP",
+      "description": "Medical Imaging & Lab Tests Management App\\n\\nA comprehensive medical platform that allows users to request lab and radiology services from nearby certified centers, track results digitally, and communicate directly with medical providers. The app also offers powerful dashboards for center administrators to manage daily operations efficiently.\\n\\n⭐ Key Features:\\n\\nFor Regular Users:\\n- Browse nearby labs and radiology centers by location.\\n- Easily book appointments for required services.\\n- Upload prescriptions or previous reports with the booking.\\n- Receive results within the app (PDF or images).\\n- Instant notifications about booking status or available results.\\n- Rate centers and share experiences.\\n\\nFor Center Admins:\\n- Advanced dashboard for center management.\\n- Add/manage test types and pricing.\\n- Manage bookings and view new requests.\\n- Upload test results and link them to user profiles.\\n- Manage staff and schedules.\\n- Access performance reports and activity stats.\\n\\nFor Super Admin (App Owner):\\n- Manage all registered labs and centers.\\n- Control user and admin accounts.\\n- Configure general system settings (policies – notifications – terms).\\n- Monitor center performance and user activity.",
+      "technology": [
+        "flutter",
+        "bloc",
+        "firebase authentication",
+        "firebase messaging",
+        "firebase storage",
+        "firebase firestore",
+        "firebase core",
+        "Dio",
+        "Shared preferences"
+      ],
+      "video": "https://youtu.be/202ZlMsMNW0",
+      "videoKey": "202ZlMsMNW0",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/gif_travel_report.gif?alt=media&token=358f6047-b034-4021-a73a-de5e4be96162",
+      "title": "Travel Report",
+      "description": "A comprehensive evaluation system tailored for aviation training environments. The app enables administrators to assign predefined competency-based forms to multiple trainers. Each trainer accesses and fills only their assigned section, with the ability to save responses locally using SQLite. Once all trainers complete their parts, the admin can view and export the fully compiled report, ensuring a streamlined, offline-first evaluation workflow.",
+      "technology": [
+        "flutter",
+        ".net",
+        "Dio",
+        "Shared preferences",
+        "Api"
       ],
       "codeStatus": "PRIVATE"
     },
@@ -196,20 +227,6 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Mawaheb%2Fimages%2FMavaheb_app.png?alt=media&token=8a582c83-5d75-499d-969b-af726c4d19df",
-      "title": "MAWAHEB",
-      "description": "Maweheb is an app that connects talented soccer players with sports clubs and talent scouts. The app is a platform where businesses (sports clubs and talent scouts) and individuals (players) sign up and connect with each other. Players can find out the latest info about available trials and opportunities as well as upload videos of them playing football for talent scouts to view. Businesses can use the app to review potential players and promote trials and opportunities available to eager Egyptian footballers",
-      "technology": [
-        "Flutter",
-        "Bloc",
-        "Shared preferences",
-        "Firebase",
-        "firebase authentication"
-      ],
-      "demo": "https://play.google.com/store/apps/details?id=com.mawahebapp.application",
-      "codeStatus": "PRIVATE"
-    },
-    {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Souq%2024.png?alt=media&token=1a0272b2-3363-4da8-ab53-ec84e7ade237&_gl=1*x7j4bz*_ga*MjA0ODUzODcwMC4xNjkzMzk3NDUy*_ga_CW55HF8NVT*MTY5OTQzMzU5My45OS4xLjE2OTk0MzM2NzYuNDUuMC4w",
       "title": "SOUQ 24",
       "description": "Souq 24 is a comprehensive e-commerce application that allows users to browse and purchase a wide range of products through a user-friendly interface and flexible subscription plans, while providing an advanced admin panel that enables full control over product management, notifications, and package settings with high efficiency and professionalism",
@@ -221,23 +238,6 @@
         "firebase authentication",
         "firebase storage"
       ]
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Husary%20(1).png?alt=media&token=12c32b30-9313-46a1-91dd-6d898594abf9&_gl=1*l1osgr*_ga*MjA0ODUzODcwMC4xNjkzMzk3NDUy*_ga_CW55HF8NVT*MTY5ODkwNDg0OC43NC4xLjE2OTg5MDQ5MjkuNjAuMC4w",
-      "title": "Al-Zakirun",
-      "description": "a wide range of features such as the Holy Qur’an with Tafsir, daily Adhkar, accurate prayer times, Qibla direction, Hijri calendar, and more — all crafted to help users stay spiritually connected and organized throughout their day.",
-      "technology": [
-        "Flutter",
-        "Bloc",
-        "Shared preferences",
-        "Apis",
-        "Dio",
-        "Audio_service",
-        "Just_audio"
-      ],
-      "video": "https://youtu.be/xIuVC3CZd-o?si=uBPbN1jOq7jp6MAw",
-      "videoKey": "xIuVC3CZd-o",
-      "demo": "https://play.google.com/store/apps/details?id=com.solid.abdulrahman.alzakirun"
     },
     {
       "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Qr%20code%2Fimages%2Fqr%20code%20.png?alt=media&token=be5868fd-5db8-4bab-8e2d-c9ebea14a217",
