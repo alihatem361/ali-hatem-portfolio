@@ -13,7 +13,7 @@
   ],
   "Projects": [
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2Fimages%2Fdonation_cover.png?alt=media&token=19bc0ff4-86de-4e09-b1e1-43c8d226790a",
+      "imeg": "project_images/2.png",
       "title": "1M Brothers",
       "description": "1M Brother is an application designed to address critical cases that require large sums of money in a short time. It serves as a platform to collect donations for individuals, areas, and medical centers in need of important medical devices. The application aims to unite compassionate individuals who can contribute to these urgent causes, making a significant impact on people's lives.",
       "technology": [
@@ -84,7 +84,7 @@
       "demo": "https://play.google.com/store/apps/details?id=com.solid.abdulrahman.alzakirun"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Mawaheb%2Fimages%2FMavaheb_app.png?alt=media&token=8a582c83-5d75-499d-969b-af726c4d19df",
+      "imeg": "project_images/mawaheb-app.png",
       "title": "مواهب - Mawaheb",
       "description": "Maweheb is an app that connects talented soccer players with sports clubs and talent scouts. The app is a platform where businesses (sports clubs and talent scouts) and individuals (players) sign up and connect with each other. Players can find out the latest info about available trials and opportunities as well as upload videos of them playing football for talent scouts to view. Businesses can use the app to review potential players and promote trials and opportunities available to eager Egyptian footballers",
       "technology": [
@@ -98,7 +98,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/2.basmisr%2Fbusmisr.png?alt=media&token=d7de2bdc-440b-49e6-9630-26afba925aa9",
+      "imeg": "project_images/busmisr.png",
       "title": "Bus Misr",
       "description": "Bus Masr is a smart and efficient ticket booking app that allows users to choose their departure and arrival points and explore all available trips from Egypt's leading bus company. With a smooth booking process, multiple payment options, and real-time trip tracking even after arrival, the app ensures a comfortable and secure travel experience. Bus Masr is your perfect companion for easier transportation and more enjoyable journeys",
       "technology": [
@@ -111,7 +111,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzy.png?alt=media&token=d9515b5b-e8ad-4bff-8b44-4f9bd6b9c1a1",
+      "imeg": "project_images/tarzy.png",
       "title": "TARZY APP",
       "description": "Tarzy is a comprehensive app that offers a complete shopping experience, including clothing and various products.It allows users to browse, shop, and pay easily and securely through a simple and modern interface. It includes numerous features that make the shopping experience more convenient and flexible",
       "technology": [
@@ -125,7 +125,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzydashoard.png?alt=media&token=03b40ac4-2c49-438a-86f5-665723a0ed6d",
+      "imeg": "project_images/tarzydashoard.png",
       "title": "TARZY Dashboard",
       "description": "Tarzi is an application for administrators that provides a comprehensive control panel to manage everything related to the Tarzi app for users.It allows users to easily and flexibly manage products, designers, fabrics, packages, and all other details.It provides administrators with advanced tools to organize content and customize the experience to suit the platform's needs",
       "technology": [
@@ -138,7 +138,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/medscan.png?alt=media&token=5e2fc22a-2440-4d81-9c02-ae66946deb3d",
+      "imeg": "project_images/medscan.png",
       "title": "MEDSCAN APP",
       "description": "Medical Imaging & Lab Tests Management App\\n\\nA comprehensive medical platform that allows users to request lab and radiology services from nearby certified centers, track results digitally, and communicate directly with medical providers. The app also offers powerful dashboards for center administrators to manage daily operations efficiently.\\n\\n⭐ Key Features:\\n\\nFor Regular Users:\\n- Browse nearby labs and radiology centers by location.\\n- Easily book appointments for required services.\\n- Upload prescriptions or previous reports with the booking.\\n- Receive results within the app (PDF or images).\\n- Instant notifications about booking status or available results.\\n- Rate centers and share experiences.\\n\\nFor Center Admins:\\n- Advanced dashboard for center management.\\n- Add/manage test types and pricing.\\n- Manage bookings and view new requests.\\n- Upload test results and link them to user profiles.\\n- Manage staff and schedules.\\n- Access performance reports and activity stats.\\n\\nFor Super Admin (App Owner):\\n- Manage all registered labs and centers.\\n- Control user and admin accounts.\\n- Configure general system settings (policies – notifications – terms).\\n- Monitor center performance and user activity.",
       "technology": [
@@ -157,7 +157,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/gif_travel_report.gif?alt=media&token=358f6047-b034-4021-a73a-de5e4be96162",
+      "imeg": "project_images/travel_report.png",
       "title": "Travel Report",
       "description": "A comprehensive evaluation system tailored for aviation training environments. The app enables administrators to assign predefined competency-based forms to multiple trainers. Each trainer accesses and fills only their assigned section, with the ability to save responses locally using SQLite. Once all trainers complete their parts, the admin can view and export the fully compiled report, ensuring a streamlined, offline-first evaluation workflow.",
       "technology": [
@@ -170,7 +170,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/3.smart_crash%2Fcrash_detection.png?alt=media&token=42369525-1a7f-4820-820b-e69e7b8ee82e",
+      "imeg": "project_images/crash_detection.png",
       "title": "Smart Crash Detection System",
       "description": "An advanced AI-powered system that detects traffic accidents in real time and identifies the responsible vehicle using computer vision and image/video analysis. When a collision occurs, the system automatically captures data, processes it through a Python model, and sends it to a Flutter mobile app displaying crash details, speed at impact, map location, and instant notifications for nearby incidents",
       "technology": [
@@ -201,7 +201,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/almawsueat%20aljamieih.png?alt=media&token=663093ca-2059-44f9-a4cc-d65783eaad4f",
+      "imeg": "project_images/almawsueat_aljamieih.png",
       "title": "Mawsueati Aljamieih",
       "description": "My University Encyclopedia application is an application that includes everything that is useful to the university student, including explanations, books, references, and lectures, whether audio or video, in addition to exam models for all universities and institutes. Located in Yemen Officially supported by the Ministry of Higher Education",
       "technology": [
@@ -215,7 +215,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Palestine.png?alt=media&token=c30b7ecf-34e7-49a3-816e-482706151514",
+      "imeg": "project_images/Palestine.png",
       "title": "Palestine",
       "description": "Palestine Now is a Palestinian application designed to document and follow up on the latest events and developments in Palestine in real time, through a modern and user-friendly interface that provides users with direct, reliable access to news and updates. The app features an onboarding experience that highlights the most prominent historical, religious, and cultural landmarks across Palestinian cities and villages, enhancing awareness of Palestinian identity and deepening the connection with the land and its history. It is built to serve as a comprehensive platform that combines media coverage with cultural education for everyone interested in the Palestinian cause, both locally and globally",
       "technology": [
@@ -228,7 +228,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Souq%2024.png?alt=media&token=1a0272b2-3363-4da8-ab53-ec84e7ade237&_gl=1*x7j4bz*_ga*MjA0ODUzODcwMC4xNjkzMzk3NDUy*_ga_CW55HF8NVT*MTY5OTQzMzU5My45OS4xLjE2OTk0MzM2NzYuNDUuMC4w",
+      "imeg": "project_images/souq_24.png",
       "title": "SOUQ 24",
       "description": "Souq 24 is a comprehensive e-commerce application that allows users to browse and purchase a wide range of products through a user-friendly interface and flexible subscription plans, while providing an advanced admin panel that enables full control over product management, notifications, and package settings with high efficiency and professionalism",
       "technology": [
@@ -241,7 +241,7 @@
       ]
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Qr%20code%2Fimages%2Fqr%20code%20.png?alt=media&token=be5868fd-5db8-4bab-8e2d-c9ebea14a217",
+      "imeg": "project_images/qr_code.png",
       "title": "Qr Code Flutter App",
       "description": "QR Code Generator and Storage is a versatile and user-friendly mobile application designed to generate QR codes and provide a convenient housing solution for managing and storing QR codes. Developed using Flutter and Dart, this application leverages various technologies such as BloC architecture, shared preferences, and SQLite database to deliver a seamless experience for users.",
       "technology": [
@@ -256,7 +256,7 @@
       "videoKey": "1TnyM-Tt8RA"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/flutter_payment%2Fimages%2Fpayment%20app.png?alt=media&token=6c309565-4d04-4491-835c-2c77ef9a570b",
+      "imeg": "project_images/payment_app.png",
       "title": "Flutter Payment App",
       "description": "I have worked on this application in order to create payment processes using the paymob portal. You can view the code and learn how to deal with the different transaction",
       "technology": [
@@ -276,7 +276,7 @@
       "videoKey": "Mr9Twzps7Is"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/e%20commerce%20app.png?alt=media&token=91516ff5-3704-4f32-a859-da47af79b717",
+      "imeg": "project_images/e_commerce_app.png",
       "title": "E commerce app",
       "description": "E-commerce is an application designed to provide users with an enjoyable experience of watching movies and series. It offers a plethora of features that allow users to get all the details of the movie or series they are watching.",
       "technology": [
@@ -291,7 +291,7 @@
       "videoKey": "5wP_F5Z8SlQ"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Movie%2Fimages%2Fmovie%20app.png?alt=media&token=269d034a-8344-472d-acf9-3ec204fab16b",
+      "imeg": "project_images/movie_app.png",
       "title": "Movie app",
       "description": "Movies is an application designed to provide users with an enjoyable experience of watching movies and series. It offers a plethora of features that allow users to get all the details of the movie or series they are watching.",
       "technology": [
@@ -308,7 +308,7 @@
       "videoKey": "glC6gbfso8Q"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/la%20vie%20Oranang.png?alt=media&token=186f26ef-19de-4a11-927c-e2895e9e955c",
+      "imeg": "project_images/La_vie.png",
       "title": "Orange Digital Center LaVie",
       "description": "La Vie is a cross-platform mobile application built using Flutter, a mobile development framework that uses the Dart programming language. The app is designed to help users take care of their plants, buy new ones, and connect with other plant enthusiasts.",
       "technology": [
@@ -350,7 +350,7 @@
       "github": "https://github.com/abdulrahmanHatem911/flutter-chat-gpt-text"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/News%20app.png?alt=media&token=df4d9187-2457-4d89-9756-ef37aaecb4ae",
+      "imeg": "project_images/La_vie.png",
       "title": "News app",
       "description": "This is a News App that allows users to access a variety of news articles from different categories, such as business, sports, science, and more. It provides an easy-to-use interface to view the latest headlines and search for news articles based on specific keywords. The app is built using Flutter and utilizes various libraries like Dio, Intl, WebView, and others to provide a seamless news reading experience.",
       "technology": [
@@ -366,7 +366,7 @@
       "videoKey": "69Ai5XB1Vd4"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Maktabty.png?alt=media&token=01825c2b-7c97-4b72-b6ae-f17e261ccf4c",
+      "imeg": "project_images/Maktabty.png",
       "title": "Maktabty",
       "description": "The app enables users to browse and purchase books through APIs from popular platforms. It utilizes BLoC architecture and Shared Preferences for efficient state management. This comprehensive solution enhances the user experience and improves proficiency in these technologies (70-95%).",
       "technology": [
@@ -378,7 +378,7 @@
       "github": "https://github.com/abdulrahmanHatem911/Maktapty_Books_App"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/HOMERO%2Fimages%2Fhomero%20app.png?alt=media&token=8ee7e3e6-3d7b-4fc9-a0af-4f3bf9846c3f",
+      "imeg": "project_images/homero_app.png",
       "title": "Homero app",
       "description": "HOMERO is a Flutter app that provides various services to users, such as house cleaning and equipment maintenance. This README file provides an overview of the project and its features",
       "technology": [
@@ -393,7 +393,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Monitoring%2Fimages%2FMonitoring%20app.png?alt=media&token=2ca16249-9bd9-424f-92e7-8d7df6912e89",
+      "imeg": "project_images/Monitoring_app.png",
       "title": "Monitoring",
       "description": "Monitoring is an integrated system that allows school principals to supervise teachers, students, and activities in the school. Parents can also register in the application, see their children's data, and register their children in available schools and activities. The application also includes supervisors who manage schools and perform other tasks",
       "technology": [
@@ -411,7 +411,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Social%20app.png?alt=media&token=354ccec4-e7e8-457f-874b-01fa06f4b305",
+      "imeg": "project_images/social_app.png",
       "title": "Soical app",
       "description": "I have developed a captivating emulator application using Flutter and Firebase, specifically designed for social media platforms. By harnessing the power of Flutter and leveraging the capabilities of Firebase, this emulator provides a compelling and immersive experience for social media enthusiasts.",
       "technology": [

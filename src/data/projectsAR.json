@@ -13,7 +13,7 @@
   ],
   "Projects": [
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2Fimages%2Fdonation_cover.png?alt=media&token=19bc0ff4-86de-4e09-b1e1-43c8d226790a",
+      "imeg": "project_images/2.png",
       "title": "1M Brothers",
       "description": "تعتبر تطبيق 1M Brother هو تطبيق مصمم للتعامل مع حالات حرجة تتطلب مبالغ كبيرة من المال في وقت قصير. إنه يعتبر منصة لجمع التبرعات للأفراد والمناطق والمراكز الطبية التي تحتاج إلى أجهزة طبية مهمة. يهدف التطبيق إلى توحيد الأفراد الرحيمين الذين يمكنهم المساهمة في هذه القضايا العاجلة، مما يؤثر بشكل كبير على حياة الأشخاص.",
       "technology": [
@@ -84,7 +84,7 @@
       "videoKey": "xIuVC3CZd-o"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Mawaheb%2Fimages%2FMavaheb_app.png?alt=media&token=8a582c83-5d75-499d-969b-af726c4d19df",
+      "imeg": "project_images/mawaheb-app.png",
       "title": "مواهب - Mawaheb",
       "description": "تطبيق Maweheb هو تطبيق يربط لاعبي كرة القدم الموهوبين بأندية رياضية ومشرفي المواهب. يعتبر التطبيق منصة حيث تقوم الشركات (أندية رياضية ومشرفي المواهب) والأفراد (اللاعبين) بالتسجيل والتواصل مع بعضهم البعض. يمكن للاعبين معرفة آخر المعلومات حول الفرص التجريبية المتاحة وتحميل مقاطع فيديو تظهر فيها مهاراتهم في لعب كرة القدم ليراها مشرفو المواهب. يمكن للشركات استخدام التطبيق لمراجعة اللاعبين المحتملين والترويج للفرص التجريبية المتاحة للاعبين المصريين الطموحين.",
       "technology": [
@@ -97,7 +97,7 @@
       "demo": "https://play.google.com/store/apps/details?id=com.mawahebapp.application"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/2.basmisr%2Fbusmisr.png?alt=media&token=d7de2bdc-440b-49e6-9630-26afba925aa9",
+      "imeg": "project_images/busmisr.png",
       "title": "باص مصر",
       "description": "باص مصر هو التطبيق الذكي لحجز تذاكر الرحلات بكل سهولة ومرونة، حيث يتيح للمستخدمين اختيار نقطة الانطلاق والوصول، واستعراض جميع الرحلات المتوفرة من شركة مصر للنقل. يتميّز التطبيق بتجربة حجز سلسة، وتعدد في طرق الدفع، مع إمكانية متابعة حالة الرحلة حتى بعد الوصول، لتوفير راحة وأمان في كل خطوة. باص مصر هو الحل المثالي لتنقلات أسهل ورحلات أكثر راحة واحترافية",
       "technology": [
@@ -110,7 +110,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzy.png?alt=media&token=d9515b5b-e8ad-4bff-8b44-4f9bd6b9c1a1",
+      "imeg": "project_images/tarzy.png",
       "title": "تطبيق ترزي",
       "description": "ترزي هو تطبيق شامل يقدّم تجربة تسوق متكاملة تشمل الملابس والمنتجات المتنوعة.يتيح للمستخدمين تصفح، شراء، ودفع بكل سهولة وأمان عبر واجهة بسيطة وعصرية.يحتوي على مزايا عديدة تجعل تجربة التسوق أكثر راحة ومرونة.",
       "technology": [
@@ -124,7 +124,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzydashoard.png?alt=media&token=03b40ac4-2c49-438a-86f5-665723a0ed6d",
+      "imeg": "project_images/tarzydashoard.png",
       "title": "لوحة تحكم ترزي",
       "description": "ترزي هو تطبيق مخصص للإداريين يوفر لوحة تحكم شاملة لإدارة كل ما يتعلق بتطبيق ترزي الخاص بالمستخدمين.يمكن من خلاله التحكم في المنتجات، المصممين، الأقمشة، والباقات وجميع التفاصيل الأخرى بسهولة ومرونة. يمنح الإداريين أدوات متقدمة لتنظيم المحتوى وتخصيص التجربة بما يتناسب مع احتياجات المنصة",
       "technology": [
@@ -137,7 +137,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/medscan.png?alt=media&token=5e2fc22a-2440-4d81-9c02-ae66946deb3d",
+      "imeg": "project_images/medscan.png",
       "title": "ميد سكان",
       "description": "تطبيق لإدارة خدمات الأشعة والتحاليل الطبية\\n\\nتطبيق طبي متكامل يتيح للمستخدمين طلب خدمات الأشعة والتحاليل من أقرب المراكز المعتمدة، مع إمكانية متابعة نتائج الفحوصات إلكترونيًا، والتواصل المباشر مع المراكز. كما يوفّر لوحة تحكم خاصة لأصحاب المراكز لإدارة جميع العمليات اليومية بكل سهولة.\\n\\n⭐ الخصائص الرئيسية:\\n\\nللمستخدمين العاديين:\\n- تصفح مراكز الأشعة والتحاليل المعتمدة حسب الموقع.\\n- حجز موعد للخدمة المطلوبة بسهولة.\\n- رفع ملفات أو طلبات مرفقة بالحجز (مثل روشتات أو تقارير سابقة).\\n- استلام النتائج من خلال التطبيق بصيغة PDF أو صور.\\n- إشعارات فورية بحالة الحجز أو توافر النتائج.\\n- تقييم المراكز ومشاركة التجربة.\\n\\nلأصحاب المراكز (الأدمن):\\n- لوحة تحكم متقدمة لإدارة المركز.\\n- إضافة وإدارة أنواع التحاليل أو الأشعة والأسعار.\\n- إدارة الحجوزات واستلام الطلبات الجديدة.\\n- رفع نتائج التحاليل/الأشعة وربطها بالمستخدم.\\n- إدارة طاقم العمل ومواعيدهم.\\n- عرض تقارير وإحصائيات النشاط اليومي.\\n\\nللأدمن العام (إدارة التطبيق):\\n- إدارة كافة المراكز المسجلة.\\n- التحكم في حسابات المستخدمين والأدمنات.\\n- إعدادات عامة للنظام (سياسات – إشعارات – شروط).\\n- متابعة أداء المراكز ومعدلات النشاط.",
       "technology": [
@@ -156,7 +156,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/travel_report.png?alt=media&token=4db05577-381a-4d51-a45f-1c31700ad08c",
+      "imeg": "project_images/travel_report.png",
       "title": "Travel Report",
       "description": "نظام تقييم شامل مصمم خصيصًا لبيئات تدريب طاقم الطيران. يتيح التطبيق للمشرفين إرسال نماذج تقييم جاهزة تعتمد على الكفاءة إلى مجموعة من المدربين، حيث يمكن لكل مدرب الاطلاع على الجزء المخصص له فقط وتعبئته، مع إمكانية حفظ البيانات محليًا باستخدام SQLite. بعد إتمام جميع المدربين لأدوارهم، يتمكن المشرف من عرض التقرير الكامل وتصديره، مما يضمن سير عمل تقييم منظم ويدعم العمل دون اتصال بالإنترنت.",
       "technology": [
@@ -169,7 +169,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/3.smart_crash%2Fcrash_detection.png?alt=media&token=42369525-1a7f-4820-820b-e69e7b8ee82e",
+      "imeg": "project_images/crash_detection.png",
       "title": " نظام ذكي لاكتشاف الحوادث المرورية",
       "description": "نظام متطور يستخدم الذكاء الاصطناعي ورؤية الحاسوب لرصد الحوادث لحظة وقوعها، وتحديد السيارة المتسببة عبر تحليل الصور والفيديو. بمجرد حدوث التصادم، يتم التقاط البيانات تلقائيًا، وتحليلها باستخدام نموذج Python لتحديد المسؤول. تُرسل النتائج إلى تطبيق Flutter يعرض تفاصيل دقيقة مثل موقع الحادث، السرعة، صور وفيديو، مع إشعارات فورية للحوادث القريبة",
       "technology": [
@@ -200,7 +200,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/almawsueat%20aljamieih.png?alt=media&token=663093ca-2059-44f9-a4cc-d65783eaad4f",
+      "imeg": "project_images/almawsueat_aljamieih.png",
       "title": "موسعتي الجامعية",
       "description": "تطبيق موسوعتي الجامعيه وهوه تطبيق يضم كل ما يفيد الطالب الجامعي من شروحات وكتب ومراجع ومحاضرات سواء كانت صوت او فيديو بالاضافه الى نماذج للأمتحانات فيما يخص كل الجامعات و المعاهد الموجوده في اليمن مدعوم بشكل رسمي من وزارة التعليم العالي",
       "technology": [
@@ -213,7 +213,7 @@
       "demo": "https://play.google.com/store/apps/details?id=com.univ&pcampaignid=web_share"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Palestine.png?alt=media&token=c30b7ecf-34e7-49a3-816e-482706151514",
+      "imeg": "project_images/Palestine.png",
       "title": "تطبيق فلسطين",
       "description": "فلسطين الآن هو تطبيق فلسطيني يهدف إلى توثيق ومتابعة آخر الأحداث والتطورات في فلسطين لحظة بلحظة، من خلال واجهة حديثة وسهلة الاستخدام تتيح للمستخدمين الوصول إلى الأخبار والمستجدات بشكل مباشر وموثوق. يتميز التطبيق بشاشة تمهيدية (Onboarding) تسلط الضوء على أبرز المعالم التاريخية والدينية والثقافية في مدن وقرى فلسطين، مما يعزز الوعي بالهوية الفلسطينية ويربط المستخدم بجذور الأرض والتاريخ. صُمم التطبيق ليكون مصدرًا متكاملاً يجمع بين التوثيق الإعلامي والتعريف بالمعالم، ويخدم جميع المهتمين بالشأن الفلسطيني داخل وخارج الوطن",
       "technology": [
@@ -228,7 +228,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Souq%2024.png?alt=media&token=1a0272b2-3363-4da8-ab53-ec84e7ade237&_gl=1*x7j4bz*_ga*MjA0ODUzODcwMC4xNjkzMzk3NDUy*_ga_CW55HF8NVT*MTY5OTQzMzU5My45OS4xLjE2OTk0MzM2NzYuNDUuMC4w",
+      "imeg": "project_images/souq_24.png",
       "title": "SOUQ 24",
       "description": "سوق 24 هو تطبيق متكامل للتجارة الإلكترونية يتيح للمستخدمين تصفح وشراء مجموعة متنوعة من المنتجات من خلال واجهة سهلة الاستخدام وباقات مرنة تناسب جميع الفئات، كما يوفر لوحة تحكم مخصصة للإدارة تمكّن المسؤول من إضافة وتعديل المنتجات، إرسال الإشعارات، وتنظيم الباقات ومحتوى التطبيق بكل احترافية.",
       "technology": [
@@ -240,7 +240,7 @@
       ]
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Qr%20code%2Fimages%2Fqr%20code%20.png?alt=media&token=be5868fd-5db8-4bab-8e2d-c9ebea14a217",
+      "imeg": "project_images/qr_code.png",
       "title": "تطبيق Qr Code Flutter",
       "description": "مولد ومستودع رموز الاستجابة السريعة (QR Code) هو تطبيق محمول متعدد الاستخدامات وسهل الاستخدام مصمم لإنشاء رموز الاستجابة السريعة وتوفير حلاً مريحًا لإدارة وتخزين رموز الاستجابة السريعة. تم تطوير التطبيق باستخدام Flutter و Dart، ويستفيد هذا التطبيق من تقنيات متعددة مثل بنية BloC وتفضيلات المشاركة وقاعدة بيانات SQLite لتقديم تجربة سلسة للمستخدمين.",
       "technology": [
@@ -255,7 +255,7 @@
       "videoKey": "1TnyM-Tt8RA"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/flutter_payment%2Fimages%2Fpayment%20app.png?alt=media&token=6c309565-4d04-4491-835c-2c77ef9a570b",
+      "imeg": "project_images/payment_app.png",
       "title": "تطبيق الدفع بواسطة Flutter",
       "description": "عملت على هذا التطبيق لإنشاء عمليات الدفع باستخدام بوابة paymob. يمكنك عرض الشيفرة ومعرفة كيفية التعامل مع مختلف العمليات.",
       "technology": [
@@ -275,7 +275,7 @@
       "videoKey": "Mr9Twzps7Is"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/e%20commerce%20app.png?alt=media&token=91516ff5-3704-4f32-a859-da47af79b717",
+      "imeg": "project_images/e_commerce_app.png",
       "title": "تطبيق التسوق الإلكتروني",
       "description": "تعتبر التطبيق التسوق الإلكتروني تطبيقًا مصممًا لتزويد المستخدمين بتجربة ممتعة لمشاهدة الأفلام والمسلسلات. يقدم مجموعة واسعة من الميزات التي تسمح للمستخدمين بالحصول على جميع التفاصيل حول الفيلم أو المسلسل الذي يشاهدونه.",
       "technology": [
@@ -290,7 +290,7 @@
       "videoKey": "5wP_F5Z8SlQ"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Movie%2Fimages%2Fmovie%20app.png?alt=media&token=269d034a-8344-472d-acf9-3ec204fab16b",
+      "imeg": "project_images/movie_app.png",
       "title": "تطبيق الأفلام",
       "description": "تطبيق الأفلام هو تطبيق مصمم لتوفير تجربة ممتعة للمستخدمين أثناء مشاهدة الأفلام والمسلسلات. يقدم مجموعة واسعة من الميزات التي تتيح للمستخدمين الحصول على جميع التفاصيل حول الفيلم أو المسلسل الذي يشاهدونه.",
       "technology": [
@@ -307,7 +307,7 @@
       "videoKey": "glC6gbfso8Q"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/la%20vie%20Oranang.png?alt=media&token=186f26ef-19de-4a11-927c-e2895e9e955c",
+      "imeg": "project_images/La_vie.png",
       "title": "Orange Digital Center LaVie",
       "description": "تطبيق La Vie هو تطبيق محمول متعدد المنصات تم بناؤه باستخدام Flutter، وهو إطار تطوير محمول يستخدم لغة برمجة Dart. يهدف التطبيق إلى مساعدة المستخدمين في العناية بنباتاتهم وشراء نباتات جديدة والتواصل مع عشاق النباتات الآخرين.",
       "technology": [
@@ -349,7 +349,7 @@
       "github": "https://github.com/abdulrahmanHatem911/flutter-chat-gpt-text"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/News%20app.png?alt=media&token=df4d9187-2457-4d89-9756-ef37aaecb4ae",
+      "imeg": "project_images/La_vie.png",
       "title": "News app",
       "description": "هذا تطبيق أخبار يتيح للمستخدمين الوصول إلى مجموعة متنوعة من المقالات الإخبارية من فئات مختلفة، مثل الأعمال والرياضة والعلوم والمزيد. فهو يوفر واجهة سهلة الاستخدام لعرض أحدث العناوين والبحث عن المقالات الإخبارية بناءً على كلمات رئيسية محددة. تم إنشاء التطبيق باستخدام Flutter ويستخدم مكتبات متنوعة مثل Dio وIntl وWebView وغيرها لتوفير تجربة قراءة أخبار سلسة.",
       "technology": [
@@ -365,7 +365,7 @@
       "videoKey": "69Ai5XB1Vd4"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Maktabty.png?alt=media&token=01825c2b-7c97-4b72-b6ae-f17e261ccf4c",
+      "imeg": "project_images/Maktabty.png",
       "title": "Maktabty",
       "description": "يمكن للمستخدمين تصفح وشراء الكتب من خلال التطبيق باستخدام واجهات برمجة التطبيقات (API) من منصات شهيرة. يستخدم التطبيق بنية BloC وتفضيلات المشاركة لإدارة الحالة بشكل فعال. يعزز هذا الحل الشامل تجربة المستخدم ويزيد من فعالية استخدام هذه التقنيات (من 70 إلى 95٪).",
       "technology": [
@@ -379,7 +379,7 @@
       "github": "https://github.com/abdulrahmanHatem911/Maktapty_Books_App"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/HOMERO%2Fimages%2Fhomero%20app.png?alt=media&token=8ee7e3e6-3d7b-4fc9-a0af-4f3bf9846c3f",
+      "imeg": "project_images/homero_app.png",
       "title": "تطبيق Homero",
       "description": "HOMERO هو تطبيق Flutter يقدم خدمات متنوعة للمستخدمين، مثل تنظيف المنزل وصيانة المعدات. يوفر ملف README هذا نظرة عامة على المشروع وميزاته",
       "technology": [
@@ -394,7 +394,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Monitoring%2Fimages%2FMonitoring%20app.png?alt=media&token=2ca16249-9bd9-424f-92e7-8d7df6912e89",
+      "imeg": "project_images/Monitoring_app.png",
       "title": "تطبيق Monitoring",
       "description": "تطبيق Monitoring هو نظام متكامل يتيح لمديري المدارس مراقبة الأساتذة والطلاب والأنشطة في المدرسة. يمكن لأولياء الأمور أيضًا التسجيل في التطبيق ورؤية بيانات أطفالهم وتسجيل أطفالهم في المدارس والأنشطة المتاحة. يتضمن التطبيق أيضًا مشرفين يديرون المدارس ويقومون بمهام أخرى.",
       "technology": [
@@ -412,7 +412,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Social%20app.png?alt=media&token=354ccec4-e7e8-457f-874b-01fa06f4b305",
+      "imeg": "project_images/social_app.png",
       "title": "تطبيق Social",
       "description": "لقد قمت بتطوير تطبيق محاكاة جذاب باستخدام Flutter و Firebase، مصمم خصيصًا لمنصات وسائل التواصل الاجتماعي. من خلال استغلال قوة Flutter واستفادة من قدرات Firebase، يوفر هذا المحاكي تجربة جذابة ومشوقة لعشاق وسائل التواصل الاجتماعي.",
       "technology": [
