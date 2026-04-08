@@ -215,19 +215,6 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "project_images/Palestine.png",
-      "title": "Palestine",
-      "description": "Palestine Now is a Palestinian application designed to document and follow up on the latest events and developments in Palestine in real time, through a modern and user-friendly interface that provides users with direct, reliable access to news and updates. The app features an onboarding experience that highlights the most prominent historical, religious, and cultural landmarks across Palestinian cities and villages, enhancing awareness of Palestinian identity and deepening the connection with the land and its history. It is built to serve as a comprehensive platform that combines media coverage with cultural education for everyone interested in the Palestinian cause, both locally and globally",
-      "technology": [
-        "Flutter",
-        "Bloc",
-        "Shared preferences",
-        "Firebase",
-        "firebase authentication"
-      ],
-      "codeStatus": "PRIVATE"
-    },
-    {
       "imeg": "project_images/souq_24.png",
       "title": "SOUQ 24",
       "description": "Souq 24 is a comprehensive e-commerce application that allows users to browse and purchase a wide range of products through a user-friendly interface and flexible subscription plans, while providing an advanced admin panel that enables full control over product management, notifications, and package settings with high efficiency and professionalism",
@@ -322,19 +309,6 @@
       "github": "https://github.com/abdulrahmanHatem911/Orange-Digital-Center-LaVie"
     },
     {
-      "imeg": "https://img.youtube.com/vi/fqKIbF8Com4/0.jpg",
-      "title": "Onboarding Screens in Flutter",
-      "description": "When the app starts, you'll see the onboarding screen. Swipe left or right to navigate between the different screens. Each screen provides information about the app and its features. You can also tap the \"Get Started\" button on the last screen to move on to the main screen of the app.",
-      "technology": [
-        "Flutter",
-        "Dart",
-        "ui"
-      ],
-      "github": "https://github.com/abdulrahmanHatem911/on_boarding_task",
-      "video": "https://youtu.be/fqKIbF8Com4?si=i341mvLhAUN1Dkel",
-      "videoKey": "fqKIbF8Com4"
-    },
-    {
       "imeg": "https://raw.githubusercontent.com/abdulrahmanHatem911/flutter-chat-gpt-text/main/assets/image/images.jpg",
       "title": "Chat GPT Flutter",
       "description": "Chat GPT Flutter is an innovative mobile application that seamlessly integrates Flutter with the APIs of Chat GPT. This powerful application allows users to engage in natural language conversations with Chat GPT, providing a smooth and intuitive chat experience. Leverage the capabilities of Chat GPT to enhance your app's communication and interaction",
@@ -422,19 +396,7 @@
       "github": "https://github.com/abdulrahmanHatem911/Social-app"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/shop_app.jpg?alt=media&token=297d4862-ced8-4528-b1a8-d08db2c46fee",
-      "title": "Shop App",
-      "description": "The app enables users to browse and purchase books through APIs from popular platforms. It utilizes BLoC architecture and Shared Preferences for efficient state management. This comprehensive solution enhances the user experience and improves proficiency in these technologies (70-95%).",
-      "technology": [
-        "flutter",
-        "bloc",
-        "Api",
-        "Dio"
-      ],
-      "github": "https://github.com/abdulrahmanHatem911/shop-app"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/MultiKart.png?alt=media&token=62eb4afc-22d6-45a0-93fc-4222fef51b14",
+      "imeg": "project_images/1.png",
       "title": "Multikart Shopping app",
       "description": "This application displays various products, including clothing items. The implementation of APIs and other advanced technologies, such as Flutter and BLoC architecture, has resulted in an improved user experience. My proficiency in utilizing these technologies ranges from 90% to 100%. Overall, the app showcases my ability to seamlessly integrate advanced features into a user-friendly design",
       "technology": [
@@ -448,7 +410,7 @@
       "github": "https://github.com/abdulrahmanHatem911/MutliKart"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/To%20Do%20%20app.png?alt=media&token=870448b9-f86d-4f90-a06b-670bcd493c89",
+      "imeg": "project_images/to_do_app.png",
       "title": "TODO App",
       "description": "This task management app allows users to easily record and store their daily tasks. With my expertise in Flutter and Dart programming, along with proficiency in Firebase and BLoC architecture ranging from 90% to 100%, I implemented efficient state management and local data storage to enhance user experience. The app provides a user-friendly interface and effectively utilizes advanced features to improve productivity",
       "technology": [
@@ -457,28 +419,6 @@
         "SQLite"
       ],
       "github": "https://github.com/abdulrahmanHatem911/TODO-App"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/invitation%20%20app.png?alt=media&token=5ffaa124-3ba4-40b7-ba38-b04bcfbc8138",
-      "title": "Dash Invitation",
-      "description": "It is an application to send an invitation to people to attend a specific party",
-      "technology": [
-        "flutter",
-        "bloc",
-        "SQLite"
-      ],
-      "github": "https://github.com/abdulrahmanHatem911/dash-invitation"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Applications_images.png?alt=media&token=258ea257-2915-4f0c-bc73-72e0176cec5d",
-      "title": "BMI Calculator",
-      "description": "The app calculates the user's body mass index (BMI) based on their height and weight. Advanced technologies like Flutter and Dart were utilized during the development process, along with significant experience in working with APIs and clean architecture. With a skill level ranging from 90% to 100% in Flutter and expertise ranging from 90% to 95% in Dart, APIs, and clean architecture, the app is a user-friendly and efficient BMI calculator that helps users track their fitness goals",
-      "technology": [
-        "flutter",
-        "bloc",
-        "SQLite"
-      ],
-      "github": "https://github.com/abdulrahmanHatem911/bmi-calculator"
     }
   ],
   "socials": [

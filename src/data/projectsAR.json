@@ -213,21 +213,6 @@
       "demo": "https://play.google.com/store/apps/details?id=com.univ&pcampaignid=web_share"
     },
     {
-      "imeg": "project_images/Palestine.png",
-      "title": "تطبيق فلسطين",
-      "description": "فلسطين الآن هو تطبيق فلسطيني يهدف إلى توثيق ومتابعة آخر الأحداث والتطورات في فلسطين لحظة بلحظة، من خلال واجهة حديثة وسهلة الاستخدام تتيح للمستخدمين الوصول إلى الأخبار والمستجدات بشكل مباشر وموثوق. يتميز التطبيق بشاشة تمهيدية (Onboarding) تسلط الضوء على أبرز المعالم التاريخية والدينية والثقافية في مدن وقرى فلسطين، مما يعزز الوعي بالهوية الفلسطينية ويربط المستخدم بجذور الأرض والتاريخ. صُمم التطبيق ليكون مصدرًا متكاملاً يجمع بين التوثيق الإعلامي والتعريف بالمعالم، ويخدم جميع المهتمين بالشأن الفلسطيني داخل وخارج الوطن",
-      "technology": [
-        "Flutter",
-        "Bloc",
-        "Shared preferences",
-        "Firebase",
-        "firebase authentication",
-        "firebase messaging",
-        "firebase storage"
-      ],
-      "codeStatus": "PRIVATE"
-    },
-    {
       "imeg": "project_images/souq_24.png",
       "title": "SOUQ 24",
       "description": "سوق 24 هو تطبيق متكامل للتجارة الإلكترونية يتيح للمستخدمين تصفح وشراء مجموعة متنوعة من المنتجات من خلال واجهة سهلة الاستخدام وباقات مرنة تناسب جميع الفئات، كما يوفر لوحة تحكم مخصصة للإدارة تمكّن المسؤول من إضافة وتعديل المنتجات، إرسال الإشعارات، وتنظيم الباقات ومحتوى التطبيق بكل احترافية.",
@@ -321,19 +306,6 @@
       "github": "https://github.com/abdulrahmanHatem911/Orange-Digital-Center-LaVie"
     },
     {
-      "imeg": "https://img.youtube.com/vi/fqKIbF8Com4/0.jpg",
-      "title": "Onboarding Screens in Flutter",
-      "description": "عندما يبدأ التطبيق، سترى شاشة الإعداد. اسحب لليسار أو لليمين للتنقل بين الشاشات المختلفة. توفر كل شاشة معلومات حول التطبيق وميزاته. يمكنك أيضًا النقر على زر \"البدء\" في الشاشة الأخيرة للانتقال إلى الشاشة الرئيسية للتطبيق.",
-      "technology": [
-        "Flutter",
-        "Dart",
-        "ui"
-      ],
-      "github": "https://github.com/abdulrahmanHatem911/on_boarding_task",
-      "video": "https://youtu.be/fqKIbF8Com4?si=i341mvLhAUN1Dkel",
-      "videoKey": "fqKIbF8Com4"
-    },
-    {
       "imeg": "https://raw.githubusercontent.com/abdulrahmanHatem911/flutter-chat-gpt-text/main/assets/image/images.jpg",
       "title": "Chat GPT Flutter",
       "description": "Chat GPT Flutter هو تطبيق مبتكر للهاتف المحمول يدمج Flutter بسلاسة مع واجهات برمجة التطبيقات الخاصة بـ Chat GPT. يتيح هذا التطبيق القوي للمستخدمين المشاركة في محادثات باللغة الطبيعية مع Chat GPT، مما يوفر تجربة دردشة سلسة وبديهية. استفد من إمكانيات Chat GPT لتحسين التواصل والتفاعل في تطبيقك",
@@ -423,19 +395,9 @@
       "github": "https://github.com/abdulrahmanHatem911/Social-app"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/shop_app.jpg?alt=media&token=297d4862-ced8-4528-b1a8-d08db2c46fee",
-      "title": "تطبيق Shop",
-      "description": "يعد تطبيق Shop تجربة تسوق ممتعة للمستخدمين، حيث يمكنهم استعراض المنتجات المتاحة وإضافتها إلى عربة التسوق وإجراء عمليات الشراء بأمان. يعتمد التطبيق على تقنيات Flutter و Firebase لتحقيق أقصى أداء وأمان.",
-      "technology": [
-        "Flutter",
-        "Firebase"
-      ],
-      "github": "https://github.com/abdulrahmanHatem911/Shop-app"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/MultiKart.png?alt=media&token=62eb4afc-22d6-45a0-93fc-4222fef51b14",
+      "imeg": "project_images/1.png",
       "title": "Multikart Shopping app",
-      "description": "يعرض هذا التطبيق منتجات مختلفة، بما في ذلك الملابس. أدى تنفيذ واجهات برمجة التطبيقات والتقنيات المتقدمة الأخرى، مثل بنية Flutter وBLoC، إلى تحسين تجربة المستخدم. تتراوح كفاءتي في استخدام هذه التقنيات من 90% إلى 100%. بشكل عام، يعرض التطبيق قدرتي على دمج الميزات المتقدمة بسلاسة في تصميم سهل الاستخدام",
+      "description": "This application displays various products, including clothing items. The implementation of APIs and other advanced technologies, such as Flutter and BLoC architecture, has resulted in an improved user experience. My proficiency in utilizing these technologies ranges from 90% to 100%. Overall, the app showcases my ability to seamlessly integrate advanced features into a user-friendly design",
       "technology": [
         "flutter",
         "bloc",
@@ -447,7 +409,7 @@
       "github": "https://github.com/abdulrahmanHatem911/MutliKart"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/To%20Do%20%20app.png?alt=media&token=870448b9-f86d-4f90-a06b-670bcd493c89",
+      "imeg": "project_images/to_do_app.png",
       "title": "TODO App",
       "description": "يتيح تطبيق إدارة المهام هذا للمستخدمين تسجيل مهامهم اليومية وتخزينها بسهولة. بفضل خبرتي في برمجة Flutter وDart، إلى جانب الكفاءة في بنية Firebase وBLoC التي تتراوح من 90% إلى 100%، قمت بتنفيذ إدارة الحالة الفعالة وتخزين البيانات المحلية لتحسين تجربة المستخدم. يوفر التطبيق واجهة سهلة الاستخدام ويستخدم الميزات المتقدمة بشكل فعال لتحسين الإنتاجية",
       "technology": [
@@ -456,28 +418,6 @@
         "SQLite"
       ],
       "github": "https://github.com/abdulrahmanHatem911/TODO-App"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/invitation%20%20app.png?alt=media&token=5ffaa124-3ba4-40b7-ba38-b04bcfbc8138",
-      "title": "Dash Invitation",
-      "description": "هو تطبيق لإرسال دعوة للأشخاص لحضور حفلة معينة",
-      "technology": [
-        "flutter",
-        "bloc",
-        "SQLite"
-      ],
-      "github": "https://github.com/abdulrahmanHatem911/dash-invitation"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Applications_images.png?alt=media&token=258ea257-2915-4f0c-bc73-72e0176cec5d",
-      "title": "BMI Calculator",
-      "description": "يقوم التطبيق بحساب مؤشر كتلة الجسم (BMI) للمستخدم بناءً على طوله ووزنه. تم استخدام التقنيات المتقدمة مثل Flutter وDart أثناء عملية التطوير، إلى جانب الخبرة الكبيرة في العمل مع واجهات برمجة التطبيقات (APIs) والهندسة المعمارية النظيفة. مع مستوى مهارة يتراوح من 90% إلى 100% في Flutter وخبرة تتراوح من 90% إلى 95% في Dart وAPIs والبنية النظيفة، يعد التطبيق عبارة عن حاسبة مؤشر كتلة الجسم سهلة الاستخدام وفعالة تساعد المستخدمين على تتبع أهداف اللياقة البدنية الخاصة بهم",
-      "technology": [
-        "flutter",
-        "bloc",
-        "SQLite"
-      ],
-      "github": "https://github.com/abdulrahmanHatem911/bmi-calculator"
     }
   ],
   "socials": [
