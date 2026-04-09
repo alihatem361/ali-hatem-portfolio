@@ -28,6 +28,22 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "imeg": "project_images/green_turbo.gif",
+      "title": "Green Turbo",
+      "description": "An intelligent mobile solution designed to monitor, control, and optimize fuel consumption, enabling users to reduce waste, enhance efficiency, and achieve measurable cost savings",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Dart",
+        "Laravel",
+        "Api",
+        "Dio",
+        "Shared preferences"
+      ],
+      "codeStatus": "PRIVATE",
+      "demo": "https://play.google.com/store/apps/details?id=com.solid.jaded.jaded_app"
+    },
+    {
       "imeg": "project_images/dream_admin.gif",
       "title": "Dream Student",
       "description": "Dream Student is a secure educational portal designed exclusively for enrolled students at Dream Academy. It features a robust verification system where students request course access, and administrators approve them based on real-world enrollment. The app provides a seamless learning experience, offering unlimited access to video lessons, lecture notes, and study materials for approved courses.",
@@ -121,7 +137,6 @@
         "Dio",
         "Shared preferences"
       ],
-      "demo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2F2025-05-14%2015-11-58.mkv?alt=media&token=8f0836a4-5743-4dd7-b5c7-49e67e44a89a",
       "codeStatus": "PRIVATE"
     },
     {
@@ -185,7 +200,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Fawry%2Ffawry_app.png?alt=media&token=efdecb99-4ed1-4fc0-a064-ae3f73d1c32d",
+      "imeg": "project_images/finalFawriElmaliiik_cover-old.png",
       "title": "Fawry Owner",
       "description": "Fawry Owner is a comprehensive admin application that offers a powerful dashboard for monitoring all users and managing their financial activities. It enables tracking of payments, monitoring cash flow (in and out), and identifying remaining balances and due amounts with precision — delivering smart, organized financial control for admins.",
       "technology": [
@@ -211,7 +226,6 @@
         "Apis",
         "Dio"
       ],
-      "demo": "https://play.google.com/store/apps/details?id=com.univ&pcampaignid=web_share",
       "codeStatus": "PRIVATE"
     },
     {
@@ -238,7 +252,6 @@
         "SQLite",
         "QR Generator & Scanner"
       ],
-      "demo": "https://play.google.com/store/apps/details?id=com.abdulrahmanHatem.qr.code.scanner",
       "video": "https://youtu.be/1TnyM-Tt8RA",
       "videoKey": "1TnyM-Tt8RA"
     },
@@ -289,7 +302,6 @@
         "moview apis",
         "Shared preferences"
       ],
-      "demo": "https://e-learningreactjs.pages.dev/",
       "github": "https://github.com/abdulrahmanHatem911/movie-app.git",
       "video": "https://youtu.be/glC6gbfso8Q",
       "videoKey": "glC6gbfso8Q"
@@ -324,7 +336,7 @@
       "github": "https://github.com/abdulrahmanHatem911/flutter-chat-gpt-text"
     },
     {
-      "imeg": "project_images/La_vie.png",
+      "imeg": "project_images/news_app.png",
       "title": "News app",
       "description": "This is a News App that allows users to access a variety of news articles from different categories, such as business, sports, science, and more. It provides an easy-to-use interface to view the latest headlines and search for news articles based on specific keywords. The app is built using Flutter and utilizes various libraries like Dio, Intl, WebView, and others to provide a seamless news reading experience.",
       "technology": [
