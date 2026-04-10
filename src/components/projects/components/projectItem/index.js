@@ -1,11 +1,10 @@
-import React from "react";
+import { BiGlobe } from "react-icons/bi";
+import { FaDownload, FaYoutube } from "react-icons/fa";
+import { FaAnglesRight, FaGithub, FaGooglePlay } from "react-icons/fa6";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import { FaAnglesRight, FaGooglePlay, FaGithub } from "react-icons/fa6";
-import { BiGlobe } from "react-icons/bi";
-import { FaYoutube, FaDownload } from "react-icons/fa";
 
 const PojectItem = ({ project }) => {
   const navigate = useNavigate();
@@ -73,7 +72,7 @@ const PojectItem = ({ project }) => {
   const buttonInfo = getButtonInfo();
 
   // Generate project URL slug
-  const projectSlug = project.title.toLowerCase().replace(/\s+/g, "-");
+  const projectSlug = (project.title || "").toLowerCase().replace(/\s+/g, "-");
 
   const handleProjectClick = () => {
     navigate(`/projects/${projectSlug}`);

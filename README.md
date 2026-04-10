@@ -29,21 +29,25 @@
 ### خطوات التثبيت
 
 1. استنسخ المستودع:
+
    ```bash
    git clone https://github.com/alihatem360/PortfolioReactJs.git
    ```
 
 2. انتقل إلى مجلد المشروع:
+
    ```bash
    cd portfolio
    ```
 
 3. ثبّت الاعتماديات:
+
    ```bash
    npm install
    ```
 
 4. ابدأ خادم التطوير:
+
    ```bash
    npm start
    ```
@@ -75,3 +79,5 @@
 
 - LinkedIn: [صفحتي على LinkedIn](https://www.linkedin.com/in/aliihatem-753025203/)
 - Twitter: [@your_handle](https://twitter.com/AliHate21071474)
+
+// "demo": "https://drive.google.com/drive/folders/1iymvVFLjBBwrUDzdcYkmYaZm-psKeYH0?usp=sharing",

@@ -1,6 +1,6 @@
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaFileDownload } from "react-icons/fa";
-import { motion } from "framer-motion";
 import CV from "../../assets/abdulrahman_mobileDeveloper13.pdf";
 import { handleDownloadCv } from "../../helpers/index.js";
 import PreviewCvModal from "../Auth/PreviewCvModal";
@@ -70,7 +70,7 @@ const HeaderBio = ({ aboutmeData }) => {
         >
           <button
             className="btn btn-primary-accent"
-            onClick={() => handleDownloadCv(CV, "Ali_Hatem_Ramadan_Resume")}
+            onClick={() => handleDownloadCv(CV, "Abdulrahman_Hatem_Resume")}
           >
             CV{" "}
             <FaFileDownload

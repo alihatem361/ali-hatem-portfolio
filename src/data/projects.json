@@ -6,21 +6,42 @@
       "bio": [
         "Flutter Mobile Developer with 2+ years of experience, I’ve worked on several published apps currently available on Google Play, including Bus Maisr – a project similar to GoBus. I specialize in building responsive UIs, using state management solutions like BLoC and Provider, and integrating RESTful APIs and Firebase. I’m detail-oriented, collaborative, and always committed to writing clean, scalable, and maintainable code."
       ],
-      "cv": "https://drive.google.com/file/d/1J_WWAkwVSSAyFEs5aU49aXeir8pM-MXT/view?usp=sharing",
+      "cv": "https://drive.google.com/file/d/1qoor3ebbhCNQrHP-O6vmKcvFZM3OtSrt/view?usp=sharing",
       "footer": "project_images/user_images/image_user_42.jpg",
       "title": "Abdulrahman Hatem Ramadan|Mobile Developer"
     }
   ],
   "Projects": [
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2Fimages%2Fdonation_cover.png?alt=media&token=19bc0ff4-86de-4e09-b1e1-43c8d226790a",
+      "imeg": "project_images/2.png",
       "title": "1M Brothers",
       "description": "1M Brother is an application designed to address critical cases that require large sums of money in a short time. It serves as a platform to collect donations for individuals, areas, and medical centers in need of important medical devices. The application aims to unite compassionate individuals who can contribute to these urgent causes, making a significant impact on people's lives.",
-      "technology": ["flutter", "bloc", ".net", "Api"],
+      "technology": [
+        "flutter",
+        "bloc",
+        ".net",
+        "Api"
+      ],
       "demo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2FAPK%2Fapp-release.apk?alt=media&token=07179037-1ebe-4192-9dfd-ac331f7a44eb",
       "video": "https://youtu.be/WmriaoIy-C8",
       "videoKey": "WmriaoIy-C8",
       "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "project_images/green_turbo.gif",
+      "title": "Green Turbo",
+      "description": "An intelligent mobile solution designed to monitor, control, and optimize fuel consumption, enabling users to reduce waste, enhance efficiency, and achieve measurable cost savings",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Dart",
+        "Laravel",
+        "Api",
+        "Dio",
+        "Shared preferences"
+      ],
+      "codeStatus": "PRIVATE",
+      "demo": "https://play.google.com/store/apps/details?id=com.solid.jaded.jaded_app"
     },
     {
       "imeg": "project_images/dream_admin.gif",
@@ -40,7 +61,8 @@
         "youtube player flutter",
         "Vedio player"
       ],
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "demo": "https://play.google.com/store/apps/details?id=com.dreamacademy.dreamstudent.app&pcampaignid=web_share"
     },
     {
       "imeg": "project_images/dream_admin.gif",
@@ -60,14 +82,78 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/gif_travel_report.gif?alt=media&token=358f6047-b034-4021-a73a-de5e4be96162",
-      "title": "Travel Report",
-      "description": "A comprehensive evaluation system tailored for aviation training environments. The app enables administrators to assign predefined competency-based forms to multiple trainers. Each trainer accesses and fills only their assigned section, with the ability to save responses locally using SQLite. Once all trainers complete their parts, the admin can view and export the fully compiled report, ensuring a streamlined, offline-first evaluation workflow.",
-      "technology": ["flutter", ".net", "Dio", "Shared preferences", "Api"],
+      "imeg": "project_images/alzakirun_app_2.gif",
+      "title": "الذاكرون - Al-Zakirun",
+      "description": "a wide range of features such as the Holy Qur’an with Tafsir, daily Adhkar, accurate prayer times, Qibla direction, Hijri calendar, and more — all crafted to help users stay spiritually connected and organized throughout their day.",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Shared preferences",
+        "Apis",
+        "Dio",
+        "Audio_service",
+        "Just_audio",
+        "local notification"
+      ],
+      "video": "https://youtu.be/xIuVC3CZd-o?si=uBPbN1jOq7jp6MAw",
+      "videoKey": "xIuVC3CZd-o",
+      "demo": "https://play.google.com/store/apps/details?id=com.solid.abdulrahman.alzakirun"
+    },
+    {
+      "imeg": "project_images/mawaheb-app.png",
+      "title": "مواهب - Mawaheb",
+      "description": "Maweheb is an app that connects talented soccer players with sports clubs and talent scouts. The app is a platform where businesses (sports clubs and talent scouts) and individuals (players) sign up and connect with each other. Players can find out the latest info about available trials and opportunities as well as upload videos of them playing football for talent scouts to view. Businesses can use the app to review potential players and promote trials and opportunities available to eager Egyptian footballers",
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Shared preferences",
+        "Firebase",
+        "firebase authentication"
+      ],
+      "demo": "https://play.google.com/store/apps/details?id=com.mawahebapp.application",
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/medscan.png?alt=media&token=5e2fc22a-2440-4d81-9c02-ae66946deb3d",
+      "imeg": "project_images/busmisr.png",
+      "title": "Bus Misr",
+      "description": "Bus Masr is a smart and efficient ticket booking app that allows users to choose their departure and arrival points and explore all available trips from Egypt's leading bus company. With a smooth booking process, multiple payment options, and real-time trip tracking even after arrival, the app ensures a comfortable and secure travel experience. Bus Masr is your perfect companion for easier transportation and more enjoyable journeys",
+      "technology": [
+        "flutter",
+        "bloc",
+        "Apis",
+        "Dio",
+        "Shared preferences"
+      ],
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "project_images/tarzy.png",
+      "title": "TARZY APP",
+      "description": "Tarzy is a comprehensive app that offers a complete shopping experience, including clothing and various products.It allows users to browse, shop, and pay easily and securely through a simple and modern interface. It includes numerous features that make the shopping experience more convenient and flexible",
+      "technology": [
+        "flutter",
+        "bloc",
+        "Apis",
+        "Dio",
+        "Shared preferences"
+      ],
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "project_images/tarzydashoard.png",
+      "title": "TARZY Dashboard",
+      "description": "Tarzi is an application for administrators that provides a comprehensive control panel to manage everything related to the Tarzi app for users.It allows users to easily and flexibly manage products, designers, fabrics, packages, and all other details.It provides administrators with advanced tools to organize content and customize the experience to suit the platform's needs",
+      "technology": [
+        "flutter",
+        "bloc",
+        "Apis",
+        "Dio",
+        "Shared preferences"
+      ],
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "project_images/medscan.png",
       "title": "MEDSCAN APP",
       "description": "Medical Imaging & Lab Tests Management App\\n\\nA comprehensive medical platform that allows users to request lab and radiology services from nearby certified centers, track results digitally, and communicate directly with medical providers. The app also offers powerful dashboards for center administrators to manage daily operations efficiently.\\n\\n⭐ Key Features:\\n\\nFor Regular Users:\\n- Browse nearby labs and radiology centers by location.\\n- Easily book appointments for required services.\\n- Upload prescriptions or previous reports with the booking.\\n- Receive results within the app (PDF or images).\\n- Instant notifications about booking status or available results.\\n- Rate centers and share experiences.\\n\\nFor Center Admins:\\n- Advanced dashboard for center management.\\n- Add/manage test types and pricing.\\n- Manage bookings and view new requests.\\n- Upload test results and link them to user profiles.\\n- Manage staff and schedules.\\n- Access performance reports and activity stats.\\n\\nFor Super Admin (App Owner):\\n- Manage all registered labs and centers.\\n- Control user and admin accounts.\\n- Configure general system settings (policies – notifications – terms).\\n- Monitor center performance and user activity.",
       "technology": [
@@ -86,38 +172,35 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzydashoard.png?alt=media&token=03b40ac4-2c49-438a-86f5-665723a0ed6d",
-      "title": "TARZY Dashboard",
-      "description": "Tarzi is an application for administrators that provides a comprehensive control panel to manage everything related to the Tarzi app for users.It allows users to easily and flexibly manage products, designers, fabrics, packages, and all other details.It provides administrators with advanced tools to organize content and customize the experience to suit the platform's needs",
-      "technology": ["flutter", "bloc", "Apis", "Dio", "Shared preferences"],
+      "imeg": "project_images/travel_report.png",
+      "title": "Travel Report",
+      "description": "A comprehensive evaluation system tailored for aviation training environments. The app enables administrators to assign predefined competency-based forms to multiple trainers. Each trainer accesses and fills only their assigned section, with the ability to save responses locally using SQLite. Once all trainers complete their parts, the admin can view and export the fully compiled report, ensuring a streamlined, offline-first evaluation workflow.",
+      "technology": [
+        "flutter",
+        ".net",
+        "Dio",
+        "Shared preferences",
+        "Api"
+      ],
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2Ftarzy.png?alt=media&token=d9515b5b-e8ad-4bff-8b44-4f9bd6b9c1a1",
-      "title": "TARZY APP",
-      "description": "Tarzy is a comprehensive app that offers a complete shopping experience, including clothing and various products.It allows users to browse, shop, and pay easily and securely through a simple and modern interface. It includes numerous features that make the shopping experience more convenient and flexible",
-      "technology": ["flutter", "bloc", "Apis", "Dio", "Shared preferences"],
-      "demo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/1.tarzy%2F2025-05-14%2015-11-58.mkv?alt=media&token=8f0836a4-5743-4dd7-b5c7-49e67e44a89a",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/2.basmisr%2Fbusmisr.png?alt=media&token=d7de2bdc-440b-49e6-9630-26afba925aa9",
-      "title": "Bus Misr",
-      "description": "Bus Masr is a smart and efficient ticket booking app that allows users to choose their departure and arrival points and explore all available trips from Egypt's leading bus company. With a smooth booking process, multiple payment options, and real-time trip tracking even after arrival, the app ensures a comfortable and secure travel experience. Bus Masr is your perfect companion for easier transportation and more enjoyable journeys",
-      "technology": ["flutter", "bloc", "Apis", "Dio", "Shared preferences"],
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/3.smart_crash%2Fcrash_detection.png?alt=media&token=42369525-1a7f-4820-820b-e69e7b8ee82e",
+      "imeg": "project_images/crash_detection.png",
       "title": "Smart Crash Detection System",
       "description": "An advanced AI-powered system that detects traffic accidents in real time and identifies the responsible vehicle using computer vision and image/video analysis. When a collision occurs, the system automatically captures data, processes it through a Python model, and sends it to a Flutter mobile app displaying crash details, speed at impact, map location, and instant notifications for nearby incidents",
-      "technology": ["flutter", "bloc", "Apis", "Dio", "python"],
+      "technology": [
+        "flutter",
+        "bloc",
+        "Apis",
+        "Dio",
+        "python"
+      ],
       "video": "https://youtu.be/MZCNVf4iJUw?si=zir2fG0mm3inR5NU",
       "videoKey": "MZCNVf4iJUw",
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Fawry%2Ffawry_app.png?alt=media&token=efdecb99-4ed1-4fc0-a064-ae3f73d1c32d",
+      "imeg": "project_images/finalFawriElmaliiik_cover-old.png",
       "title": "Fawry Owner",
       "description": "Fawry Owner is a comprehensive admin application that offers a powerful dashboard for monitoring all users and managing their financial activities. It enables tracking of payments, monitoring cash flow (in and out), and identifying remaining balances and due amounts with precision — delivering smart, organized financial control for admins.",
       "technology": [
@@ -133,42 +216,20 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/almawsueat%20aljamieih.png?alt=media&token=663093ca-2059-44f9-a4cc-d65783eaad4f",
+      "imeg": "project_images/almawsueat_aljamieih.png",
       "title": "Mawsueati Aljamieih",
       "description": "My University Encyclopedia application is an application that includes everything that is useful to the university student, including explanations, books, references, and lectures, whether audio or video, in addition to exam models for all universities and institutes. Located in Yemen Officially supported by the Ministry of Higher Education",
-      "technology": ["Flutter", "Bloc", "Shared preferences", "Apis", "Dio"],
-      "demo": "https://play.google.com/store/apps/details?id=com.univ&pcampaignid=web_share",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Palestine.png?alt=media&token=c30b7ecf-34e7-49a3-816e-482706151514",
-      "title": "Palestine",
-      "description": "Palestine Now is a Palestinian application designed to document and follow up on the latest events and developments in Palestine in real time, through a modern and user-friendly interface that provides users with direct, reliable access to news and updates. The app features an onboarding experience that highlights the most prominent historical, religious, and cultural landmarks across Palestinian cities and villages, enhancing awareness of Palestinian identity and deepening the connection with the land and its history. It is built to serve as a comprehensive platform that combines media coverage with cultural education for everyone interested in the Palestinian cause, both locally and globally",
       "technology": [
         "Flutter",
         "Bloc",
         "Shared preferences",
-        "Firebase",
-        "firebase authentication"
+        "Apis",
+        "Dio"
       ],
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Mawaheb%2Fimages%2FMavaheb_app.png?alt=media&token=8a582c83-5d75-499d-969b-af726c4d19df",
-      "title": "MAWAHEB",
-      "description": "Maweheb is an app that connects talented soccer players with sports clubs and talent scouts. The app is a platform where businesses (sports clubs and talent scouts) and individuals (players) sign up and connect with each other. Players can find out the latest info about available trials and opportunities as well as upload videos of them playing football for talent scouts to view. Businesses can use the app to review potential players and promote trials and opportunities available to eager Egyptian footballers",
-      "technology": [
-        "Flutter",
-        "Bloc",
-        "Shared preferences",
-        "Firebase",
-        "firebase authentication"
-      ],
-      "demo": "https://play.google.com/store/apps/details?id=com.abdulrahman.mawaheb.application",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Souq%2024.png?alt=media&token=1a0272b2-3363-4da8-ab53-ec84e7ade237&_gl=1*x7j4bz*_ga*MjA0ODUzODcwMC4xNjkzMzk3NDUy*_ga_CW55HF8NVT*MTY5OTQzMzU5My45OS4xLjE2OTk0MzM2NzYuNDUuMC4w",
+      "imeg": "project_images/souq_24.png",
       "title": "SOUQ 24",
       "description": "Souq 24 is a comprehensive e-commerce application that allows users to browse and purchase a wide range of products through a user-friendly interface and flexible subscription plans, while providing an advanced admin panel that enables full control over product management, notifications, and package settings with high efficiency and professionalism",
       "technology": [
@@ -181,24 +242,7 @@
       ]
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Husary%20(1).png?alt=media&token=12c32b30-9313-46a1-91dd-6d898594abf9&_gl=1*l1osgr*_ga*MjA0ODUzODcwMC4xNjkzMzk3NDUy*_ga_CW55HF8NVT*MTY5ODkwNDg0OC43NC4xLjE2OTg5MDQ5MjkuNjAuMC4w",
-      "title": "Al Dhaakirun",
-      "description": "a wide range of features such as the Holy Qur’an with Tafsir, daily Adhkar, accurate prayer times, Qibla direction, Hijri calendar, and more — all crafted to help users stay spiritually connected and organized throughout their day.",
-      "technology": [
-        "Flutter",
-        "Bloc",
-        "Shared preferences",
-        "Apis",
-        "Dio",
-        "Audio_service",
-        "Just_audio"
-      ],
-      "demo": "https://drive.google.com/drive/folders/1iymvVFLjBBwrUDzdcYkmYaZm-psKeYH0?usp=sharing",
-      "video": "https://youtu.be/xIuVC3CZd-o?si=uBPbN1jOq7jp6MAw",
-      "videoKey": "xIuVC3CZd-o"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Qr%20code%2Fimages%2Fqr%20code%20.png?alt=media&token=be5868fd-5db8-4bab-8e2d-c9ebea14a217",
+      "imeg": "project_images/qr_code.png",
       "title": "Qr Code Flutter App",
       "description": "QR Code Generator and Storage is a versatile and user-friendly mobile application designed to generate QR codes and provide a convenient housing solution for managing and storing QR codes. Developed using Flutter and Dart, this application leverages various technologies such as BloC architecture, shared preferences, and SQLite database to deliver a seamless experience for users.",
       "technology": [
@@ -208,12 +252,11 @@
         "SQLite",
         "QR Generator & Scanner"
       ],
-      "demo": "https://play.google.com/store/apps/details?id=com.abdulrahmanHatem.qr.code.scanner",
       "video": "https://youtu.be/1TnyM-Tt8RA",
       "videoKey": "1TnyM-Tt8RA"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/flutter_payment%2Fimages%2Fpayment%20app.png?alt=media&token=6c309565-4d04-4491-835c-2c77ef9a570b",
+      "imeg": "project_images/payment_app.png",
       "title": "Flutter Payment App",
       "description": "I have worked on this application in order to create payment processes using the paymob portal. You can view the code and learn how to deal with the different transaction",
       "technology": [
@@ -233,16 +276,22 @@
       "videoKey": "Mr9Twzps7Is"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/e%20commerce%20app.png?alt=media&token=91516ff5-3704-4f32-a859-da47af79b717",
+      "imeg": "project_images/e_commerce_app.png",
       "title": "E commerce app",
       "description": "E-commerce is an application designed to provide users with an enjoyable experience of watching movies and series. It offers a plethora of features that allow users to get all the details of the movie or series they are watching.",
-      "technology": ["flutter", "bloc", "Api", "Dio", "Paymob SDK"],
+      "technology": [
+        "flutter",
+        "bloc",
+        "Api",
+        "Dio",
+        "Paymob SDK"
+      ],
       "github": "https://github.com/abdulrahmanHatem911/e_commerce_flutter",
       "video": "https://youtu.be/5wP_F5Z8SlQ?si=A6DEtkQrh1_RghVu",
       "videoKey": "5wP_F5Z8SlQ"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Movie%2Fimages%2Fmovie%20app.png?alt=media&token=269d034a-8344-472d-acf9-3ec204fab16b",
+      "imeg": "project_images/movie_app.png",
       "title": "Movie app",
       "description": "Movies is an application designed to provide users with an enjoyable experience of watching movies and series. It offers a plethora of features that allow users to get all the details of the movie or series they are watching.",
       "technology": [
@@ -253,13 +302,12 @@
         "moview apis",
         "Shared preferences"
       ],
-      "demo": "https://e-learningreactjs.pages.dev/",
       "github": "https://github.com/abdulrahmanHatem911/movie-app.git",
       "video": "https://youtu.be/glC6gbfso8Q",
       "videoKey": "glC6gbfso8Q"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/la%20vie%20Oranang.png?alt=media&token=186f26ef-19de-4a11-927c-e2895e9e955c",
+      "imeg": "project_images/La_vie.png",
       "title": "Orange Digital Center LaVie",
       "description": "La Vie is a cross-platform mobile application built using Flutter, a mobile development framework that uses the Dart programming language. The app is designed to help users take care of their plants, buy new ones, and connect with other plant enthusiasts.",
       "technology": [
@@ -271,15 +319,6 @@
         "Shared preferences"
       ],
       "github": "https://github.com/abdulrahmanHatem911/Orange-Digital-Center-LaVie"
-    },
-    {
-      "imeg": "https://img.youtube.com/vi/fqKIbF8Com4/0.jpg",
-      "title": "Onboarding Screens in Flutter",
-      "description": "When the app starts, you'll see the onboarding screen. Swipe left or right to navigate between the different screens. Each screen provides information about the app and its features. You can also tap the \"Get Started\" button on the last screen to move on to the main screen of the app.",
-      "technology": ["Flutter", "Dart", "ui"],
-      "github": "https://github.com/abdulrahmanHatem911/on_boarding_task",
-      "video": "https://youtu.be/fqKIbF8Com4?si=i341mvLhAUN1Dkel",
-      "videoKey": "fqKIbF8Com4"
     },
     {
       "imeg": "https://raw.githubusercontent.com/abdulrahmanHatem911/flutter-chat-gpt-text/main/assets/image/images.jpg",
@@ -297,7 +336,7 @@
       "github": "https://github.com/abdulrahmanHatem911/flutter-chat-gpt-text"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/News%20app.png?alt=media&token=df4d9187-2457-4d89-9756-ef37aaecb4ae",
+      "imeg": "project_images/news_app.png",
       "title": "News app",
       "description": "This is a News App that allows users to access a variety of news articles from different categories, such as business, sports, science, and more. It provides an easy-to-use interface to view the latest headlines and search for news articles based on specific keywords. The app is built using Flutter and utilizes various libraries like Dio, Intl, WebView, and others to provide a seamless news reading experience.",
       "technology": [
@@ -313,14 +352,19 @@
       "videoKey": "69Ai5XB1Vd4"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Maktabty.png?alt=media&token=01825c2b-7c97-4b72-b6ae-f17e261ccf4c",
+      "imeg": "project_images/Maktabty.png",
       "title": "Maktabty",
       "description": "The app enables users to browse and purchase books through APIs from popular platforms. It utilizes BLoC architecture and Shared Preferences for efficient state management. This comprehensive solution enhances the user experience and improves proficiency in these technologies (70-95%).",
-      "technology": ["flutter", "bloc", "Api", "Dio"],
+      "technology": [
+        "flutter",
+        "bloc",
+        "Api",
+        "Dio"
+      ],
       "github": "https://github.com/abdulrahmanHatem911/Maktapty_Books_App"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/HOMERO%2Fimages%2Fhomero%20app.png?alt=media&token=8ee7e3e6-3d7b-4fc9-a0af-4f3bf9846c3f",
+      "imeg": "project_images/homero_app.png",
       "title": "Homero app",
       "description": "HOMERO is a Flutter app that provides various services to users, such as house cleaning and equipment maintenance. This README file provides an overview of the project and its features",
       "technology": [
@@ -335,7 +379,7 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Monitoring%2Fimages%2FMonitoring%20app.png?alt=media&token=2ca16249-9bd9-424f-92e7-8d7df6912e89",
+      "imeg": "project_images/Monitoring_app.png",
       "title": "Monitoring",
       "description": "Monitoring is an integrated system that allows school principals to supervise teachers, students, and activities in the school. Parents can also register in the application, see their children's data, and register their children in available schools and activities. The application also includes supervisors who manage schools and perform other tasks",
       "technology": [
@@ -353,21 +397,18 @@
       "codeStatus": "PRIVATE"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Social%20app.png?alt=media&token=354ccec4-e7e8-457f-874b-01fa06f4b305",
+      "imeg": "project_images/social_app.png",
       "title": "Soical app",
       "description": "I have developed a captivating emulator application using Flutter and Firebase, specifically designed for social media platforms. By harnessing the power of Flutter and leveraging the capabilities of Firebase, this emulator provides a compelling and immersive experience for social media enthusiasts.",
-      "technology": ["Flutter", "Bloc", "Firebase"],
+      "technology": [
+        "Flutter",
+        "Bloc",
+        "Firebase"
+      ],
       "github": "https://github.com/abdulrahmanHatem911/Social-app"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/shop_app.jpg?alt=media&token=297d4862-ced8-4528-b1a8-d08db2c46fee",
-      "title": "Shop App",
-      "description": "The app enables users to browse and purchase books through APIs from popular platforms. It utilizes BLoC architecture and Shared Preferences for efficient state management. This comprehensive solution enhances the user experience and improves proficiency in these technologies (70-95%).",
-      "technology": ["flutter", "bloc", "Api", "Dio"],
-      "github": "https://github.com/abdulrahmanHatem911/shop-app"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/MultiKart.png?alt=media&token=62eb4afc-22d6-45a0-93fc-4222fef51b14",
+      "imeg": "project_images/1.png",
       "title": "Multikart Shopping app",
       "description": "This application displays various products, including clothing items. The implementation of APIs and other advanced technologies, such as Flutter and BLoC architecture, has resulted in an improved user experience. My proficiency in utilizing these technologies ranges from 90% to 100%. Overall, the app showcases my ability to seamlessly integrate advanced features into a user-friendly design",
       "technology": [
@@ -381,25 +422,15 @@
       "github": "https://github.com/abdulrahmanHatem911/MutliKart"
     },
     {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/To%20Do%20%20app.png?alt=media&token=870448b9-f86d-4f90-a06b-670bcd493c89",
+      "imeg": "project_images/to_do_app.png",
       "title": "TODO App",
       "description": "This task management app allows users to easily record and store their daily tasks. With my expertise in Flutter and Dart programming, along with proficiency in Firebase and BLoC architecture ranging from 90% to 100%, I implemented efficient state management and local data storage to enhance user experience. The app provides a user-friendly interface and effectively utilizes advanced features to improve productivity",
-      "technology": ["flutter", "bloc", "SQLite"],
+      "technology": [
+        "flutter",
+        "bloc",
+        "SQLite"
+      ],
       "github": "https://github.com/abdulrahmanHatem911/TODO-App"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/invitation%20%20app.png?alt=media&token=5ffaa124-3ba4-40b7-ba38-b04bcfbc8138",
-      "title": "Dash Invitation",
-      "description": "It is an application to send an invitation to people to attend a specific party",
-      "technology": ["flutter", "bloc", "SQLite"],
-      "github": "https://github.com/abdulrahmanHatem911/dash-invitation"
-    },
-    {
-      "imeg": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Applications_images.png?alt=media&token=258ea257-2915-4f0c-bc73-72e0176cec5d",
-      "title": "BMI Calculator",
-      "description": "The app calculates the user's body mass index (BMI) based on their height and weight. Advanced technologies like Flutter and Dart were utilized during the development process, along with significant experience in working with APIs and clean architecture. With a skill level ranging from 90% to 100% in Flutter and expertise ranging from 90% to 95% in Dart, APIs, and clean architecture, the app is a user-friendly and efficient BMI calculator that helps users track their fitness goals",
-      "technology": ["flutter", "bloc", "SQLite"],
-      "github": "https://github.com/abdulrahmanHatem911/bmi-calculator"
     }
   ],
   "socials": [
