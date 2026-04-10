@@ -1,14 +1,19 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+
 export const fetchProjectData = createAsyncThunk(
   "project/fetchProjectData",
   async () => {
-    // console.log(REACT_APP_BASE_URL);
-    const response = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/project`
-    );
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL || process.env.REACT_APP_BASE_URL;
+
+    if (!baseUrl) {
+      return [];
+    }
+
+    const response = await axios.get(`${baseUrl}/project`);
     return response.data;
-  }
+  },
 );
 
 const projectSlice = createSlice({

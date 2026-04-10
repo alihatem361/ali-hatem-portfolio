@@ -1,5 +1,7 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
 import { FaRocket, FaGithub, FaPlay, FaDownload } from "react-icons/fa";
 import { SiFlutter, SiDart, SiFirebase } from "react-icons/si";
 import "./style.css";
@@ -39,16 +41,6 @@ const floatingVariants = {
 };
 
 function Gproject({ gproject }) {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
-  // Parallax effect for background
-  // eslint-disable-next-line no-unused-vars
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-
   const getVideoId = (url) => {
     const regExp =
       /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
@@ -96,7 +88,6 @@ function Gproject({ gproject }) {
 
   return (
     <motion.div
-      ref={containerRef}
       className="gproject_card_container"
       initial="hidden"
       whileInView="visible"

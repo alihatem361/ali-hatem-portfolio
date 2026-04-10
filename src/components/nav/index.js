@@ -1,5 +1,7 @@
+"use client";
+
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import LnaguageMenu from "./LnaguageMenu";
 import "./style.css";
 const Nav = () => {
@@ -9,12 +11,12 @@ const Nav = () => {
       <div className="nav__bar">
         <ul className="nav">
           <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to="/">
+            <Link className="nav-link active" aria-current="page" href="/">
               {i18n.language === "ar" ? "الرئيسية" : "Home"}
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="projects">
+            <Link className="nav-link" href="/projects">
               {i18n.language === "ar" ? "المشاريع" : "Projects"}
             </Link>
           </li>

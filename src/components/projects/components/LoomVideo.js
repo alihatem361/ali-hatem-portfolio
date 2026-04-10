@@ -11,10 +11,8 @@ const LoomVideo = ({ videoUrl }) => {
       >
         <iframe
           src={embedUrl}
-          frameborder="0"
-          webkitallowfullscreen
-          mozallowfullscreen
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
           style={{
             position: "absolute",
             top: "0",

@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import SocialMedia from "../SocialMedia/index";
 import "./style.css";
@@ -29,10 +31,9 @@ const Footer = () => {
               <div className="footer__Sosials">
                 <div className="footer__Sosials__content" data-aos="fade-up">
                   <div className="footer__Sosials__imag">
-                    <img
-                      src={aboutmeData.footer ? `/${aboutmeData.footer}` : ""}
-                      alt="social"
-                    />
+                    {aboutmeData.footer ? (
+                      <img src={`/${aboutmeData.footer}`} alt="social" />
+                    ) : null}
                   </div>
                   <h2>{t("footer.footerName")} </h2>
                   <h6>{t("footer.footerTitle")}</h6>
@@ -53,7 +54,7 @@ const Footer = () => {
       >
         <path
           fill="var(--tertiary-color)"
-          fill-opacity="1"
+          fillOpacity="1"
           d="M0,32L288,192L576,128L864,288L1152,64L1440,192L1440,0L1152,0L864,0L576,0L288,0L0,0Z"
         ></path>
       </svg>

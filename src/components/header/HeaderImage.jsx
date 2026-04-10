@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import LoaderCom from "../Utilities/LoaderCom";
+import { resolvePublicAssetPath } from "../../helpers";
 
 // Floating animation for profile image
 const floatingAnimation = {
@@ -32,7 +33,7 @@ const HeaderImage = ({ aboutmeData }) => {
       <div className="header-img hover-effect image-3d-effect">
         {aboutmeData.heaaderimag ? (
           <img
-            src={aboutmeData.heaaderimag}
+            src={resolvePublicAssetPath(aboutmeData.heaaderimag)}
             alt="profile"
             className="profile-image"
           />

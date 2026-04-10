@@ -1,10 +1,13 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaFileDownload } from "react-icons/fa";
-import CV from "../../assets/abdulrahman_mobileDeveloper13.pdf";
 import { handleDownloadCv } from "../../helpers/index.js";
 import PreviewCvModal from "../Auth/PreviewCvModal";
 import SocialMedia from "../SocialMedia/index";
+
+const CV_FILE_PATH = "/abdulrahman_mobileDeveloper13.pdf";
 
 // Animation variants for staggered fade-in
 const containerVariants = {
@@ -70,7 +73,9 @@ const HeaderBio = ({ aboutmeData }) => {
         >
           <button
             className="btn btn-primary-accent"
-            onClick={() => handleDownloadCv(CV, "Abdulrahman_Hatem_Resume")}
+            onClick={() =>
+              handleDownloadCv(CV_FILE_PATH, "Abdulrahman_Hatem_Resume")
+            }
           >
             CV{" "}
             <FaFileDownload

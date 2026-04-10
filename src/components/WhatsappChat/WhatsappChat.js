@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,10 +30,10 @@ function WhatsappChat() {
     const phoneNumber = "+201026159353";
     const encodedMessage = encodeURIComponent(message);
     const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${encodeURIComponent(
-      phoneNumber
+      phoneNumber,
     )}&text=${encodedMessage}`;
     const whatsappAppUrl = `https://api.whatsapp.com/send?phone=${encodeURIComponent(
-      phoneNumber
+      phoneNumber,
     )}&text=${encodedMessage}`;
 
     // Try to open the WhatsApp app. If it fails, fallback to the web version

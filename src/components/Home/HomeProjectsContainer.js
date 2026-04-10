@@ -1,7 +1,9 @@
+"use client";
+
 import React from "react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import GetAllData from "../../data/projects";
 
 // components
@@ -31,10 +33,10 @@ const HomeProjectsContainer = () => {
           <SkillComponent />
           <SwiperSlideCom />
           <div className="text-center ">
-            <Link to="/projects" className="btn button1">
+            <Link href="/projects" className="btn button1">
               {t("projects.homebutton")}
               <i
-                class="fa-solid fa-arrow-right"
+                className="fa-solid fa-arrow-right"
                 style={{
                   transform:
                     i18n.language === "ar" ? "rotate(180deg)" : "rotate(0deg)",

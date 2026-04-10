@@ -1,13 +1,16 @@
+"use client";
+
 import { BiGlobe } from "react-icons/bi";
 import { FaDownload, FaYoutube } from "react-icons/fa";
 import { FaAnglesRight, FaGithub, FaGooglePlay } from "react-icons/fa6";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
+import { createSlug, resolvePublicAssetPath } from "../../../../helpers";
 import "./style.css";
 
 const PojectItem = ({ project }) => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   // Truncate description to ~100 characters
   const truncateText = (text, maxLength = 100) => {
@@ -72,21 +75,21 @@ const PojectItem = ({ project }) => {
   const buttonInfo = getButtonInfo();
 
   // Generate project URL slug
-  const projectSlug = (project.title || "").toLowerCase().replace(/\s+/g, "-");
+  const projectSlug = createSlug(project.title || "");
 
   const handleProjectClick = () => {
-    navigate(`/projects/${projectSlug}`);
+    router.push(`/projects/${projectSlug}`);
   };
 
   return (
     <div className="card" data-aos="fade-up">
       <div className="img-container">
         <LazyLoadImage
-          src={project.imeg}
+          src={resolvePublicAssetPath(project.imeg)}
           alt={project.title}
           effect="blur"
           className="card-img-top"
-          placeholderSrc={project.imeg}
+          placeholderSrc={resolvePublicAssetPath(project.imeg)}
           onClick={handleProjectClick}
           style={{ cursor: "pointer" }}
         />

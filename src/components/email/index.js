@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -18,15 +20,19 @@ const ContactUs = () => {
       <div
         className="modal fade  "
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal">
-                <i class="fa-regular fa-circle-xmark"></i>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+              >
+                <i className="fa-regular fa-circle-xmark"></i>
               </button>
             </div>
             <div className="modal-body">

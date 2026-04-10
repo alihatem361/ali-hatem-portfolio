@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -19,29 +21,30 @@ import {
 import { BiGlobe } from "react-icons/bi";
 import GetAllData from "../data/projects";
 import Footer from "../components/footer";
+import { createSlug, resolvePublicAssetPath } from "../helpers";
 import "./ProjectDetail.css";
 
-const ProjectDetail = () => {
-  const { projectId } = useParams();
-  const navigate = useNavigate();
+const ProjectDetail = ({ projectId }) => {
+  const router = useRouter();
   const { i18n } = useTranslation();
   const { getProjects } = GetAllData();
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
   const [copied, setCopied] = useState(false);
+  const normalizedProjectId = decodeURIComponent(projectId || "");
 
   const isRTL = i18n.language === "ar";
 
   useEffect(() => {
     getProjects().then((data) => {
       const foundProject = data[0].find(
-        (p) => p.title.toLowerCase().replace(/\s+/g, "-") === projectId
+        (p) => createSlug(p.title || "") === normalizedProjectId,
       );
       setProject(foundProject);
       setLoading(false);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [projectId, i18n.language]);
+  }, [normalizedProjectId, i18n.language]);
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -63,7 +66,7 @@ const ProjectDetail = () => {
     if (project?.videoKey) return project.videoKey;
     if (project?.video) {
       const match = project.video.match(
-        /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&\n?#]+)/
+        /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([^&\n?#]+)/,
       );
       return match ? match[1] : null;
     }
@@ -95,7 +98,7 @@ const ProjectDetail = () => {
     return (
       <div className="project-not-found">
         <h2>Project Not Found</h2>
-        <button onClick={() => navigate("/projects")} className="back-btn">
+        <button onClick={() => router.push("/projects")} className="back-btn">
           {isRTL ? <FaArrowRight /> : <FaArrowLeft />}
           <span>{isRTL ? "الرجوع" : "Go Back"}</span>
         </button>
@@ -117,18 +120,14 @@ const ProjectDetail = () => {
         !line.startsWith("-") &&
         !line.startsWith("•") &&
         !line.startsWith("⭐") &&
-        line.trim()
+        line.trim(),
     );
     return introLines.slice(0, 3).join(" ").trim();
   };
 
   // Get the correct image URL (handle both local paths and full URLs)
   const getImageUrl = (imagePath) => {
-    if (!imagePath) return "";
-    // If it's already a full URL, return it
-    if (imagePath.startsWith("http")) return imagePath;
-    // If it's a local path, prepend the public folder path
-    return `${process.env.PUBLIC_URL}/${imagePath}`;
+    return resolvePublicAssetPath(imagePath);
   };
 
   return (
@@ -144,7 +143,7 @@ const ProjectDetail = () => {
         />
         <button
           className="back-button"
-          onClick={() => navigate(-1)}
+          onClick={() => router.back()}
           aria-label="Go back"
         >
           {isRTL ? <FaArrowRight /> : <FaArrowLeft />}
@@ -202,8 +201,8 @@ const ProjectDetail = () => {
                         ? "عمل خاص"
                         : "Client Work"
                       : isRTL
-                      ? "مفتوح المصدر"
-                      : "Open Source"}
+                        ? "مفتوح المصدر"
+                        : "Open Source"}
                   </span>
                 </div>
               </div>

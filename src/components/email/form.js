@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -14,7 +16,7 @@ const Form = () => {
         "service_u0q5t7d",
         "template_5j7fjt3",
         form.current,
-        "9V0wWIVFgnEvsQUl9"
+        "9V0wWIVFgnEvsQUl9",
       )
       .then(
         (result) => {
@@ -22,7 +24,7 @@ const Form = () => {
         },
         (error) => {
           // console.log(error.text);
-        }
+        },
       );
 
     e.target.reset();

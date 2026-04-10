@@ -1,3 +1,5 @@
+"use client";
+
 import ProjectsApi from "./projects.json";
 import ProjectsApiAR from "./projectsAR.json";
 import { useTranslation } from "react-i18next";

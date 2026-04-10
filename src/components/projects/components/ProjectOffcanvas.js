@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useTranslation } from "react-i18next";
@@ -8,6 +10,7 @@ import { IoRocket } from "react-icons/io5";
 import { FaLock } from "react-icons/fa";
 import YoutubeVideo from "./YoutubeVideo";
 import LoomVideo from "./LoomVideo";
+import { resolvePublicAssetPath } from "../../../helpers";
 const ProjectOffcanvas = ({ show, project, handleClose }) => {
   const { t, i18n } = useTranslation();
   const placement = i18n.language === "en" ? "start" : "end";
@@ -39,11 +42,13 @@ const ProjectOffcanvas = ({ show, project, handleClose }) => {
             <YoutubeVideo project={project} />
             {project.videoKey || project.loomVideo ? null : (
               <LazyLoadImage
-                src={project.imeg ? project.imeg : ""}
+                src={resolvePublicAssetPath(project.imeg ? project.imeg : "")}
                 alt={project.title ? project.title : ""}
                 effect="blur"
                 className="card-img-top w-100"
-                placeholderSrc={project.imeg ? project.imeg : ""}
+                placeholderSrc={resolvePublicAssetPath(
+                  project.imeg ? project.imeg : "",
+                )}
                 style={{ maxHeight: "500px", objectFit: "cover" }}
               />
             )}
@@ -78,7 +83,8 @@ const ProjectOffcanvas = ({ show, project, handleClose }) => {
                 <FaLock className="ms-2" />
               </span>
             ) : null}
-          </div>{" "}          <div className="card-text d-flex justify-content-start flex-wrap gap-3 mt-4">
+          </div>{" "}
+          <div className="card-text d-flex justify-content-start flex-wrap gap-3 mt-4">
             {project.technology &&
               project.technology.map((tech, index) => {
                 return (
@@ -94,7 +100,7 @@ const ProjectOffcanvas = ({ show, project, handleClose }) => {
                         backgroundColor: "var(--tertiary-color)",
                         transition: "all 0.3s ease",
                         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
-                        border: "1px solid rgba(255, 255, 255, 0.05)"
+                        border: "1px solid rgba(255, 255, 255, 0.05)",
                       }}
                     >
                       # {tech}
@@ -108,7 +114,8 @@ const ProjectOffcanvas = ({ show, project, handleClose }) => {
             style={{ fontSize: "1.8rem" }}
           >
             description <IoRocket className="text-warning" />
-          </h3>          <p
+          </h3>{" "}
+          <p
             className="card-text"
             style={{
               color: "white",
