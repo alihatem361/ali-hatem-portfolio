@@ -42,7 +42,7 @@ function PreviewCvModal() {
 
           <iframe
             // link to the CV file on Google Drive (make sure it's set to "Anyone with the link can view")
-            src="https://drive.google.com/file/d/1qoor3ebbhCNQrHP-O6vmKcvFZM3OtSrt/view?usp=sharing"
+            src="https://drive.google.com/file/d/1pjjiaOeNDabXiFUnSWRSBcOc6uYvZyQr/view?usp=sharing"
             allow="autoplay"
             width="100%"
             height="100%"

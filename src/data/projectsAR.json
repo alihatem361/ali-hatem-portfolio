@@ -6,25 +6,26 @@
       "bio": [
         "مطور تطبيقات Flutter بخبرة تزيد عن سنتين، عملت على تطوير العديد من التطبيقات المتوفرة حاليًا على متجر Google Play، منها تطبيق باص مصر المشابه لتطبيق GoBus. لدي خبرة قوية في تصميم وتنفيذ واجهات المستخدم، إدارة الحالة باستخدام BLoC وProvider، ودمج واجهات برمجية RESTful وFirebase. أعمل بكفاءة ضمن فرق تطوير أو كمطور مستقل، وأسعى دائمًا إلى كتابة كود نظيف، منظم، وقابل للتوسع"
       ],
-      "cv": "https://drive.google.com/file/d/1qoor3ebbhCNQrHP-O6vmKcvFZM3OtSrt/view?usp=sharing",
+      "cv": "https://drive.google.com/file/d/1pjjiaOeNDabXiFUnSWRSBcOc6uYvZyQr/view?usp=sharing",
       "footer": "project_images/user_images/image_user_42.jpg",
       "title": "مطور تطبيقات الهواتف المحمولة"
     }
   ],
   "Projects": [
     {
-      "imeg": "project_images/2.png",
-      "title": "1M Brothers",
-      "description": "تعتبر تطبيق 1M Brother هو تطبيق مصمم للتعامل مع حالات حرجة تتطلب مبالغ كبيرة من المال في وقت قصير. إنه يعتبر منصة لجمع التبرعات للأفراد والمناطق والمراكز الطبية التي تحتاج إلى أجهزة طبية مهمة. يهدف التطبيق إلى توحيد الأفراد الرحيمين الذين يمكنهم المساهمة في هذه القضايا العاجلة، مما يؤثر بشكل كبير على حياة الأشخاص.",
+      "imeg": "project_images/projeyes.png",
+      "title": "بروجيز (منصة إدارة المشاريع)",
+      "description": "تعد منصة Projeyes حلاً هندسياً متكاملاً لإدارة المشاريع بمستوى المؤسسات، تم تطويرها باستخدام تقنية Flutter لمركزة وتنظيم سير عمل الفرق البرمجية والهندسية. يهدف المشروع إلى القضاء على تشتت البيانات المعتاد في إدارة المهام عبر تقديم تجربة شاملة لمراقبة أداء الفريق، التتبع المالي، والتواصل الآمن في مكان واحد.",
       "technology": [
         "flutter",
         "bloc",
-        ".net",
-        "Api"
+        "Api",
+        "RESTFul APIs",
+        "wobSocket",
+        "Dio",
+        "Shared preferences"
       ],
-      "demo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2FAPK%2Fapp-release.apk?alt=media&token=07179037-1ebe-4192-9dfd-ac331f7a44eb",
-      "video": "https://youtu.be/WmriaoIy-C8",
-      "videoKey": "WmriaoIy-C8",
+      "demo": "https://play.google.com/store/apps/details?id=solid.projeyes.app",
       "codeStatus": "PRIVATE"
     },
     {
@@ -149,6 +150,21 @@
         "Dio",
         "Shared preferences"
       ],
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "project_images/2.png",
+      "title": "1M Brothers",
+      "description": "تعتبر تطبيق 1M Brother هو تطبيق مصمم للتعامل مع حالات حرجة تتطلب مبالغ كبيرة من المال في وقت قصير. إنه يعتبر منصة لجمع التبرعات للأفراد والمناطق والمراكز الطبية التي تحتاج إلى أجهزة طبية مهمة. يهدف التطبيق إلى توحيد الأفراد الرحيمين الذين يمكنهم المساهمة في هذه القضايا العاجلة، مما يؤثر بشكل كبير على حياة الأشخاص.",
+      "technology": [
+        "flutter",
+        "bloc",
+        ".net",
+        "Api"
+      ],
+      "demo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2FAPK%2Fapp-release.apk?alt=media&token=07179037-1ebe-4192-9dfd-ac331f7a44eb",
+      "video": "https://youtu.be/WmriaoIy-C8",
+      "videoKey": "WmriaoIy-C8",
       "codeStatus": "PRIVATE"
     },
     {

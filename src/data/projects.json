@@ -6,25 +6,26 @@
       "bio": [
         "Flutter Mobile Developer with 2+ years of experience, I’ve worked on several published apps currently available on Google Play, including Bus Maisr – a project similar to GoBus. I specialize in building responsive UIs, using state management solutions like BLoC and Provider, and integrating RESTful APIs and Firebase. I’m detail-oriented, collaborative, and always committed to writing clean, scalable, and maintainable code."
       ],
-      "cv": "https://drive.google.com/file/d/1qoor3ebbhCNQrHP-O6vmKcvFZM3OtSrt/view?usp=sharing",
+      "cv": "https://drive.google.com/file/d/1pjjiaOeNDabXiFUnSWRSBcOc6uYvZyQr/view?usp=sharingg",
       "footer": "project_images/user_images/image_user_42.jpg",
       "title": "Abdulrahman Hatem Ramadan|Mobile Developer"
     }
   ],
   "Projects": [
     {
-      "imeg": "project_images/2.png",
-      "title": "1M Brothers",
-      "description": "1M Brother is an application designed to address critical cases that require large sums of money in a short time. It serves as a platform to collect donations for individuals, areas, and medical centers in need of important medical devices. The application aims to unite compassionate individuals who can contribute to these urgent causes, making a significant impact on people's lives.",
+      "imeg": "project_images/projeyes.png",
+      "title": "Projeyes (Project Management Platform)",
+      "description": "Projeyes is a comprehensive, enterprise-grade project management solution engineered with Flutter, designed to centralize and streamline team workflows. It eliminates the fragmentation commonly found in task management by offering an all-in-one experience for monitoring team performance, financial tracking, and secure communication. Key features I engineered include an interactive multi-currency dashboard, integrated time-tracking, and robust Role-Based Access Control (RBAC). Delivered with a full Arabic interface and real-time synchronization, Projeyes ensures absolute clarity and efficiency in project execution.",
       "technology": [
         "flutter",
         "bloc",
-        ".net",
-        "Api"
+        "Api",
+        "RESTFul APIs",
+        "wobSocket",
+        "Dio",
+        "Shared preferences"
       ],
-      "demo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2FAPK%2Fapp-release.apk?alt=media&token=07179037-1ebe-4192-9dfd-ac331f7a44eb",
-      "video": "https://youtu.be/WmriaoIy-C8",
-      "videoKey": "WmriaoIy-C8",
+      "demo": "https://play.google.com/store/apps/details?id=solid.projeyes.app",
       "codeStatus": "PRIVATE"
     },
     {
@@ -150,6 +151,20 @@
         "Dio",
         "Shared preferences"
       ],
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "imeg": "project_images/2.png",
+      "title": "1M Brothers",
+      "description": "1M Brother is an application designed to address critical cases that require large sums of money in a short time. It serves as a platform to collect donations for individuals, areas, and medical centers in need of important medical devices. The application aims to unite compassionate individuals who can contribute to these urgent causes, making a significant impact on people's lives.",
+      "technology": [
+        "flutter",
+        "bloc",
+        ".net",
+        "Api"
+      ],
+      "video": "https://youtu.be/WmriaoIy-C8",
+      "videoKey": "WmriaoIy-C8",
       "codeStatus": "PRIVATE"
     },
     {
