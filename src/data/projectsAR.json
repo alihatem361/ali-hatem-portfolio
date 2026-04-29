@@ -17,7 +17,7 @@
     {
       "image": "images/gz-school.png",
       "title": "مدرسة GZ",
-      "description": "طورت موقعًا تسويقيًا و تعريفيًا لمدرسة GZ باستخدام Next.js (App Router) مع استوديو Sanity مدمج. استخدمت كائنات محتوى متعددة اللغات، وثيم Tailwind v4 بنمط نيون داكن، ورسوم Framer Motion. أضفت hooks ببيانات احتياطية ليعمل الموقع بدون Sanity، مع سكربتات للبذر والصيانة.",
+      "description": "طورت موقعًا تسويقيًا وتعريفيًا لمدرسة GZ باستخدام Next.js (App Router) مع استوديو Sanity مدمج. استخدمت كائنات محتوى متعددة اللغات، وثيم Tailwind v4 بنمط نيون داكن، ورسوم Framer Motion. أضفت hooks ببيانات احتياطية ليعمل الموقع بدون Sanity، مع سكربتات للبذر والصيانة.",
       "technology": [
         "NextJs",
         "TypeScript",
