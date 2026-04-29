@@ -26,3 +26,6 @@ yarn-error.log*
 
 # ignore GitHub configuration files
 .github/*
+
+# .next
+.next
