@@ -15,6 +15,22 @@
 
   "Projects": [
     {
+      "image": "images/gz-school.png",
+      "title": "مدرسة GZ",
+      "description": "طورت موقعًا تسويقيًا وتعريفيًا لمدرسة GZ باستخدام Next.js (App Router) مع استوديو Sanity مدمج. استخدمت كائنات محتوى متعددة اللغات، وثيم Tailwind v4 بنمط نيون داكن، ورسوم Framer Motion. أضفت hooks ببيانات احتياطية ليعمل الموقع بدون Sanity، مع سكربتات للبذر والصيانة.",
+      "technology": [
+        "NextJs",
+        "TypeScript",
+        "Tailwind",
+        "Sanity",
+        "FramerMotion"
+      ],
+      "demo": "https://www.genzschool.net",
+      "github": "https://github.com/alihatem361/gz-school",
+      "video": "",
+      "videoKey": ""
+    },
+    {
       "image": "images/novirahealth.png",
       "title": "نوفيرا هيلث",
       "description": "قدت تطوير الواجهة الأمامية لمنصة تسويق الرعاية الصحية باستخدام React 18 وTypeScript. صممت هيكل المكونات مع shadcn/ui، ودمجت Sanity CMS مع استعلامات GROQ مخصصة، وبنيت نظام نوافذ منبثقة عام. نفذت رسوم متحركة سلسة وحسنت SEO باستخدام react-helmet-async.",

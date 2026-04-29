@@ -15,6 +15,22 @@
 
   "Projects": [
     {
+      "image": "images/gz-school.png",
+      "title": "GZ School",
+      "description": "Built a Next.js App Router marketing site with an embedded Sanity Studio, localized content objects, Tailwind v4 neon theme, and Framer Motion animations. Added fallback data hooks so pages render without Sanity, plus scripts for seeding and maintenance.",
+      "technology": [
+        "NextJs",
+        "TypeScript",
+        "Tailwind",
+        "Sanity",
+        "FramerMotion"
+      ],
+      "demo": "https://www.genzschool.net",
+      "github": "https://github.com/alihatem361/gz-school",
+      "video": "",
+      "videoKey": ""
+    },
+    {
       "image": "images/novirahealth.png",
       "title": "NoviraHealth",
       "description": "Led front-end development for a healthcare marketing platform using React 18 and TypeScript. Architected component structure with shadcn/ui, integrated Sanity CMS with custom GROQ queries, and built a global modal system for contact forms. Implemented smooth Framer Motion animations and optimized SEO using react-helmet-async. Delivered a fully responsive, accessible interface.",
