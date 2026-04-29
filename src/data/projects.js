@@ -3,14 +3,26 @@
 import ProjectsApi from "./projects.json";
 import ProjectsApiAR from "./projectsAR.json";
 import { useTranslation } from "react-i18next";
+
 const GetAllData = () => {
   const { i18n } = useTranslation();
+
+  const normalizeProjects = (projects = []) => {
+    return projects.map((project) => ({
+      ...project,
+      startDate: project.startDate || "",
+      endDate: project.endDate || "",
+      companyName: project.companyName || "",
+      android: project.android || "",
+      ios: project.ios || "",
+    }));
+  };
 
   const getProjects = () => {
     return Promise.resolve(
       i18n.language === "en"
-        ? [ProjectsApi.Projects]
-        : [ProjectsApiAR.Projects],
+        ? [normalizeProjects(ProjectsApi.Projects)]
+        : [normalizeProjects(ProjectsApiAR.Projects)],
     );
   };
 

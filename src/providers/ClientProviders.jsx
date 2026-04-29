@@ -3,6 +3,7 @@
 import { useEffect, useLayoutEffect } from "react";
 import { Provider } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { usePathname } from "next/navigation";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import AOS from "aos";
 import store from "../store";
@@ -10,6 +11,7 @@ import "../i18n";
 
 function RuntimeEffects() {
   const { i18n } = useTranslation();
+  const pathname = usePathname();
 
   useLayoutEffect(() => {
     const savedLanguage = window.localStorage.getItem("i18nextLng");
@@ -31,6 +33,10 @@ function RuntimeEffects() {
     document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
 
   return null;
 }

@@ -17,6 +17,8 @@ import {
   FaCalendarAlt,
   FaFolder,
   FaCheckCircle,
+  FaBuilding,
+  FaApple,
 } from "react-icons/fa";
 import { BiGlobe } from "react-icons/bi";
 import GetAllData from "../data/projects";
@@ -77,7 +79,7 @@ const ProjectDetail = ({ projectId }) => {
   const parseFeatures = (description) => {
     if (!description) return [];
     const features = [];
-    const lines = description.split("\\n").filter((line) => line.trim());
+    const lines = description.split(/\n|\\n/).filter((line) => line.trim());
     lines.forEach((line) => {
       if (line.startsWith("-") || line.startsWith("•")) {
         features.push(line.replace(/^[-•]\s*/, "").trim());
@@ -110,11 +112,24 @@ const ProjectDetail = ({ projectId }) => {
   const features = parseFeatures(project.description);
   const isGooglePlayLink = project.demo?.includes("play.google.com");
   const isApkDownload = project.demo?.includes(".apk");
+  const demoIsStoreLink = isGooglePlayLink || isApkDownload;
+
+  const androidLink = project.android || (demoIsStoreLink ? project.demo : "");
+  const iosLink = project.ios || "";
+  const normalDemoLink = !demoIsStoreLink ? project.demo : "";
+  const hasBothStoreLinks = Boolean(androidLink && iosLink);
+
+  const androidIsApk = androidLink?.includes(".apk");
+  const androidLabel = androidIsApk
+    ? isRTL
+      ? "تحميل APK"
+      : "Download APK"
+    : "Google Play";
 
   // Get clean description (first paragraph without bullet points)
   const getCleanDescription = () => {
     if (!project.description) return "";
-    const lines = project.description.split("\\n");
+    const lines = project.description.split(/\n|\\n/);
     const introLines = lines.filter(
       (line) =>
         !line.startsWith("-") &&
@@ -130,33 +145,65 @@ const ProjectDetail = ({ projectId }) => {
     return resolvePublicAssetPath(imagePath);
   };
 
+  const metadataItems = [
+    {
+      key: "company",
+      icon: FaBuilding,
+      label: isRTL ? "الشركة" : "Company",
+      value: project.companyName || (isRTL ? "غير محدد" : "Not specified"),
+    },
+    {
+      key: "startDate",
+      icon: FaCalendarAlt,
+      label: isRTL ? "تاريخ البدء" : "Start Date",
+      value: project.startDate || (isRTL ? "غير محدد" : "Not specified"),
+    },
+    {
+      key: "endDate",
+      icon: FaCalendarAlt,
+      label: isRTL ? "تاريخ الانتهاء" : "End Date",
+      value: project.endDate || (isRTL ? "غير محدد" : "Not specified"),
+    },
+    {
+      key: "type",
+      icon: FaFolder,
+      label: isRTL ? "النوع" : "Type",
+      value:
+        project.codeStatus === "PRIVATE"
+          ? isRTL
+            ? "عمل خاص"
+            : "Client Work"
+          : isRTL
+            ? "مفتوح المصدر"
+            : "Open Source",
+    },
+  ];
+
   return (
     <div className="project-detail-page">
-      {/* ===== SECTION 1: CINEMATIC HERO ===== */}
+      {/* ===== SECTION 1: FULL WIDTH MEDIA HEADER ===== */}
       <section className="hero-section">
-        <div className="hero-overlay"></div>
-        <img
-          src={getImageUrl(project.imeg)}
-          alt={project.title}
-          className="hero-image"
-          loading="eager"
-        />
-        <button
-          className="back-button"
-          onClick={() => router.back()}
-          aria-label="Go back"
-        >
-          {isRTL ? <FaArrowRight /> : <FaArrowLeft />}
-        </button>
-        <div className="hero-content">
-          <h1 className="hero-title" data-aos="fade-right">
-            {project.title}
-          </h1>
-          <div
-            className="tech-badges"
-            data-aos="fade-right"
-            data-aos-delay="100"
+        <div className="hero-media">
+          <img
+            src={getImageUrl(project.imeg)}
+            alt={project.title}
+            className="hero-image"
+            loading="eager"
+          />
+          <button
+            className="back-button"
+            onClick={() => router.back()}
+            aria-label="Go back"
           >
+            {isRTL ? <FaArrowRight /> : <FaArrowLeft />}
+          </button>
+        </div>
+      </section>
+
+      <section className="project-heading-section">
+        <div className="project-heading-container" data-aos="fade-up">
+          <h1 className="hero-title">{project.title}</h1>
+          <div className="tech-badges" data-aos="fade-up" data-aos-delay="100">
             {project.technology?.slice(0, 5).map((tech, index) => (
               <span key={index} className="tech-badge">
                 {tech}
@@ -169,43 +216,27 @@ const ProjectDetail = ({ projectId }) => {
             )}
           </div>
         </div>
-        <div className="scroll-indicator">
-          <div className="scroll-arrow"></div>
-        </div>
       </section>
 
-      {/* ===== SECTION 2: STORY/BLOG LAYOUT ===== */}
+      {/* ===== SECTION 2: DETAILS LAYOUT ===== */}
       <section className="story-section">
         <div className="story-container">
           {/* Sticky Sidebar */}
           <aside className="story-sidebar">
             <div className="sidebar-content">
-              <div className="sidebar-item">
-                <FaCalendarAlt className="sidebar-icon" />
-                <div>
-                  <span className="sidebar-label">
-                    {isRTL ? "التاريخ" : "Date"}
-                  </span>
-                  <span className="sidebar-value">2024</span>
-                </div>
-              </div>
-              <div className="sidebar-item">
-                <FaFolder className="sidebar-icon" />
-                <div>
-                  <span className="sidebar-label">
-                    {isRTL ? "النوع" : "Type"}
-                  </span>
-                  <span className="sidebar-value">
-                    {project.codeStatus === "PRIVATE"
-                      ? isRTL
-                        ? "عمل خاص"
-                        : "Client Work"
-                      : isRTL
-                        ? "مفتوح المصدر"
-                        : "Open Source"}
-                  </span>
-                </div>
-              </div>
+              {metadataItems.map((item) => {
+                const Icon = item.icon;
+
+                return (
+                  <div className="sidebar-item" key={item.key}>
+                    <Icon className="sidebar-icon" />
+                    <div>
+                      <span className="sidebar-label">{item.label}</span>
+                      <span className="sidebar-value">{item.value}</span>
+                    </div>
+                  </div>
+                );
+              })}
 
               <div className="share-section">
                 <span className="share-label">
@@ -344,29 +375,45 @@ const ProjectDetail = ({ projectId }) => {
               : "Try the app now or contact me for your next project"}
           </p>
           <div className="cta-buttons">
-            {project.demo && (
+            {(androidLink || iosLink) && (
+              <div
+                className={`store-buttons-grid ${
+                  hasBothStoreLinks ? "dual" : "single"
+                }`}
+              >
+                {androidLink && (
+                  <a
+                    href={androidLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="cta-btn primary store-btn"
+                  >
+                    {androidIsApk ? <FaDownload /> : <FaGooglePlay />}
+                    <span>{androidLabel}</span>
+                  </a>
+                )}
+                {iosLink && (
+                  <a
+                    href={iosLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="cta-btn primary store-btn"
+                  >
+                    <FaApple />
+                    <span>App Store</span>
+                  </a>
+                )}
+              </div>
+            )}
+            {normalDemoLink && (
               <a
-                href={project.demo}
+                href={normalDemoLink}
                 target="_blank"
                 rel="noreferrer"
                 className="cta-btn primary"
               >
-                {isGooglePlayLink ? (
-                  <>
-                    <FaGooglePlay />
-                    <span>Google Play</span>
-                  </>
-                ) : isApkDownload ? (
-                  <>
-                    <FaDownload />
-                    <span>Download APK</span>
-                  </>
-                ) : (
-                  <>
-                    <BiGlobe />
-                    <span>Live Demo</span>
-                  </>
-                )}
+                <BiGlobe />
+                <span>{isRTL ? "عرض المشروع" : "Live Demo"}</span>
               </a>
             )}
             {project.github && project.codeStatus !== "PRIVATE" && (

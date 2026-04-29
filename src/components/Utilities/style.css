@@ -98,51 +98,63 @@
   }
 }
 
-/* Primary Accent Button - CV Download */
-.header .header-text .header-buttons .btn-primary-accent {
-  background: linear-gradient(
-    135deg,
-    var(--accent-color),
-    var(--accent-color-hover)
-  );
-  color: #1a1a2e;
-  border: none;
-  font-size: 1.2rem;
+/* Hero CV actions */
+.header .header-text .header-buttons {
+  flex-wrap: wrap;
+}
+
+.header .header-text .header-buttons .cv-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 52px;
+  border-radius: 14px;
+  padding: 0.75rem 1.35rem;
+  font-size: 1rem !important;
   font-weight: 700;
-  padding: 12px 28px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px var(--accent-glow);
+  letter-spacing: 0.2px;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+  text-transform: none;
 }
 
-.header .header-text .header-buttons .btn-primary-accent:hover {
+.header .header-text .header-buttons .cv-download-btn {
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  color: #111 !important;
+  box-shadow: 0 10px 24px rgba(255, 193, 7, 0.35);
+}
+
+.header .header-text .header-buttons .cv-download-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px var(--accent-glow);
-  background: linear-gradient(
-    135deg,
-    var(--accent-color-hover),
-    var(--accent-color)
-  );
+  box-shadow: 0 14px 26px rgba(255, 193, 7, 0.45);
+  color: #111 !important;
 }
 
-.header .header-text .header-buttons button:first-child,
-.header .header-text .header-buttons button a {
-  color: #fff;
-  border: 1px #fff solid;
-  font-size: 2.2rem;
+.header .header-text .header-buttons .cv-download-btn:focus,
+.header .header-text .header-buttons .cv-preview-btn:focus {
   outline: none;
-  font-weight: 600;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.25);
 }
-.header .header-text .header-buttons button:first-child:hover,
-.header .header-text .header-buttons button a:hover {
-  color: #453c67;
-  background-color: #fff;
-  outline: none !important;
+
+.header .header-text .header-buttons .cv-preview-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff !important;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
-.header .header-text .header-buttons button:first-child:focus,
-.header .header-text .header-buttons button a:focus {
-  border: 1px #fff solid !important;
-  outline: none !important;
+
+.header .header-text .header-buttons .cv-preview-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 193, 7, 0.6);
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+.cv-btn-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
 @media screen and (max-width: 830px) {
@@ -151,8 +163,10 @@
     justify-content: center !important;
     align-items: center;
   }
-  .header .header-text .header-buttons button:first-child {
-    margin: 0 10px 0 0;
+
+  .header .header-text .header-buttons .cv-action-btn {
+    width: 100%;
+    max-width: 320px;
   }
 }
 .header .header-text .list-unstyled {

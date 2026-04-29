@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
+import { FaRegEye } from "react-icons/fa";
+import "./style.css";
 
-function PreviewCvModal() {
+function PreviewCvModal({ label = "Preview CV" }) {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -27,9 +29,12 @@ function PreviewCvModal() {
 
   return (
     <div className="login__modal">
-      <button className="login__modal__btn" onClick={handleShow}>
-        <span>Preview CV</span>
-        <i className="fas fa-eye"></i>
+      <button
+        className="login__modal__btn cv-action-btn cv-preview-btn"
+        onClick={handleShow}
+      >
+        <FaRegEye className="cv-btn-icon" />
+        <span>{label}</span>
       </button>
 
       <Modal show={show} onHide={handleClose} centered size="lg">

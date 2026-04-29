@@ -25,7 +25,12 @@
       "demo": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2FAPK%2Fapp-release.apk?alt=media&token=07179037-1ebe-4192-9dfd-ac331f7a44eb",
       "video": "https://youtu.be/WmriaoIy-C8",
       "videoKey": "WmriaoIy-C8",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "https://firebasestorage.googleapis.com/v0/b/my-portfolio-30ddb.appspot.com/o/Donation%2FAPK%2Fapp-release.apk?alt=media&token=07179037-1ebe-4192-9dfd-ac331f7a44eb",
+      "ios": ""
     },
     {
       "imeg": "project_images/green_turbo.gif",
@@ -41,7 +46,12 @@
         "Shared preferences"
       ],
       "codeStatus": "PRIVATE",
-      "demo": "https://play.google.com/store/apps/details?id=com.solid.jaded.jaded_app"
+      "demo": "https://play.google.com/store/apps/details?id=com.solid.jaded.jaded_app",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "https://play.google.com/store/apps/details?id=com.solid.jaded.jaded_app",
+      "ios": ""
     },
     {
       "imeg": "project_images/dream_admin.gif",
@@ -62,7 +72,12 @@
         "Vedio player"
       ],
       "codeStatus": "PRIVATE",
-      "demo": "https://play.google.com/store/apps/details?id=com.dreamacademy.dreamstudent.app&pcampaignid=web_share"
+      "demo": "https://play.google.com/store/apps/details?id=com.dreamacademy.dreamstudent.app&pcampaignid=web_share",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "https://play.google.com/store/apps/details?id=com.dreamacademy.dreamstudent.app&pcampaignid=web_share",
+      "ios": ""
     },
     {
       "imeg": "project_images/dream_admin.gif",
@@ -79,7 +94,12 @@
         "bloc",
         "Hive"
       ],
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/alzakirun_app_2.gif",
@@ -97,7 +117,12 @@
       ],
       "video": "https://youtu.be/xIuVC3CZd-o?si=uBPbN1jOq7jp6MAw",
       "videoKey": "xIuVC3CZd-o",
-      "demo": "https://play.google.com/store/apps/details?id=com.solid.abdulrahman.alzakirun"
+      "demo": "https://play.google.com/store/apps/details?id=com.solid.abdulrahman.alzakirun",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "https://play.google.com/store/apps/details?id=com.solid.abdulrahman.alzakirun",
+      "ios": ""
     },
     {
       "imeg": "project_images/mawaheb-app.png",
@@ -111,7 +136,12 @@
         "firebase authentication"
       ],
       "demo": "https://play.google.com/store/apps/details?id=com.mawahebapp.application",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "https://play.google.com/store/apps/details?id=com.mawahebapp.application",
+      "ios": ""
     },
     {
       "imeg": "project_images/busmisr.png",
@@ -124,7 +154,12 @@
         "Dio",
         "Shared preferences"
       ],
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/tarzy.png",
@@ -137,7 +172,12 @@
         "Dio",
         "Shared preferences"
       ],
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/tarzydashoard.png",
@@ -150,7 +190,12 @@
         "Dio",
         "Shared preferences"
       ],
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/medscan.png",
@@ -169,7 +214,12 @@
       ],
       "video": "https://youtu.be/202ZlMsMNW0",
       "videoKey": "202ZlMsMNW0",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/travel_report.png",
@@ -182,7 +232,12 @@
         "Shared preferences",
         "Api"
       ],
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/crash_detection.png",
@@ -197,7 +252,12 @@
       ],
       "video": "https://youtu.be/MZCNVf4iJUw?si=zir2fG0mm3inR5NU",
       "videoKey": "MZCNVf4iJUw",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/finalFawriElmaliiik_cover-old.png",
@@ -213,7 +273,12 @@
       "demo": "https://youtu.be/2U5NHRLQE_k?si=O798XXw_zaPU4NQ7",
       "video": "https://youtu.be/2U5NHRLQE_k?si=O798XXw_zaPU4NQ7",
       "videoKey": "2U5NHRLQE_k",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/almawsueat_aljamieih.png",
@@ -226,7 +291,12 @@
         "Apis",
         "Dio"
       ],
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/souq_24.png",
@@ -239,7 +309,12 @@
         "Firebase",
         "firebase authentication",
         "firebase storage"
-      ]
+      ],
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/qr_code.png",
@@ -253,7 +328,12 @@
         "QR Generator & Scanner"
       ],
       "video": "https://youtu.be/1TnyM-Tt8RA",
-      "videoKey": "1TnyM-Tt8RA"
+      "videoKey": "1TnyM-Tt8RA",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/payment_app.png",
@@ -273,7 +353,12 @@
       "demo": "https://youtube.com/playlist?list=PL41hvuiq3bcnlfsKcQ7vwf4pjModyV0F8",
       "github": "https://github.com/abdulrahmanHatem911/Flutter_Payment_App",
       "video": "https://youtube.com/playlist?list=PL41hvuiq3bcnlfsKcQ7vwf4pjModyV0F8",
-      "videoKey": "Mr9Twzps7Is"
+      "videoKey": "Mr9Twzps7Is",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/e_commerce_app.png",
@@ -288,7 +373,12 @@
       ],
       "github": "https://github.com/abdulrahmanHatem911/e_commerce_flutter",
       "video": "https://youtu.be/5wP_F5Z8SlQ?si=A6DEtkQrh1_RghVu",
-      "videoKey": "5wP_F5Z8SlQ"
+      "videoKey": "5wP_F5Z8SlQ",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/movie_app.png",
@@ -304,7 +394,12 @@
       ],
       "github": "https://github.com/abdulrahmanHatem911/movie-app.git",
       "video": "https://youtu.be/glC6gbfso8Q",
-      "videoKey": "glC6gbfso8Q"
+      "videoKey": "glC6gbfso8Q",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/La_vie.png",
@@ -318,7 +413,12 @@
         "Dio",
         "Shared preferences"
       ],
-      "github": "https://github.com/abdulrahmanHatem911/Orange-Digital-Center-LaVie"
+      "github": "https://github.com/abdulrahmanHatem911/Orange-Digital-Center-LaVie",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "https://raw.githubusercontent.com/abdulrahmanHatem911/flutter-chat-gpt-text/main/assets/image/images.jpg",
@@ -333,7 +433,12 @@
         "Api",
         "Dio"
       ],
-      "github": "https://github.com/abdulrahmanHatem911/flutter-chat-gpt-text"
+      "github": "https://github.com/abdulrahmanHatem911/flutter-chat-gpt-text",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/news_app.png",
@@ -349,7 +454,12 @@
       ],
       "github": "https://github.com/abdulrahmanHatem911/news_app",
       "video": "https://youtu.be/69Ai5XB1Vd4?si=BnfgONl62JHU42IN",
-      "videoKey": "69Ai5XB1Vd4"
+      "videoKey": "69Ai5XB1Vd4",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/Maktabty.png",
@@ -361,7 +471,12 @@
         "Api",
         "Dio"
       ],
-      "github": "https://github.com/abdulrahmanHatem911/Maktapty_Books_App"
+      "github": "https://github.com/abdulrahmanHatem911/Maktapty_Books_App",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/homero_app.png",
@@ -376,7 +491,12 @@
         "Google Geocoding",
         "firebase authentication"
       ],
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/Monitoring_app.png",
@@ -394,7 +514,12 @@
       ],
       "video": "https://youtu.be/Pl07Z-1_W2M",
       "videoKey": "Pl07Z-1_W2M",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/social_app.png",
@@ -405,7 +530,12 @@
         "Bloc",
         "Firebase"
       ],
-      "github": "https://github.com/abdulrahmanHatem911/Social-app"
+      "github": "https://github.com/abdulrahmanHatem911/Social-app",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/1.png",
@@ -419,7 +549,12 @@
         "ui",
         "Shared preferences"
       ],
-      "github": "https://github.com/abdulrahmanHatem911/MutliKart"
+      "github": "https://github.com/abdulrahmanHatem911/MutliKart",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     },
     {
       "imeg": "project_images/to_do_app.png",
@@ -430,7 +565,12 @@
         "bloc",
         "SQLite"
       ],
-      "github": "https://github.com/abdulrahmanHatem911/TODO-App"
+      "github": "https://github.com/abdulrahmanHatem911/TODO-App",
+      "startDate": "",
+      "endDate": "",
+      "companyName": "",
+      "android": "",
+      "ios": ""
     }
   ],
   "socials": [

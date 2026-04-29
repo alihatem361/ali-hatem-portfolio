@@ -38,6 +38,10 @@
   margin: 10px;
 }
 
+.card .project-image-link {
+  display: block;
+}
+
 /* Image overlay on hover */
 .card .img-container::after {
   content: "";
@@ -49,6 +53,7 @@
   background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
   opacity: 0;
   transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
 .card:hover .img-container::after {
@@ -59,7 +64,8 @@
   width: 100%;
   height: 220px;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  transition:
+    transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     filter 0.4s ease;
   filter: brightness(1);
 }
@@ -93,7 +99,17 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card .card-title .project-title-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card:hover .card-title {
@@ -158,7 +174,8 @@
   background-color: rgba(255, 255, 255, 0.1);
   color: #e0e0e0;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: all 0.3s ease,
+  transition:
+    all 0.3s ease,
     transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 

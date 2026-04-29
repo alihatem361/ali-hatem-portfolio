@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { FaFileDownload } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
 import { handleDownloadCv } from "../../helpers/index.js";
 import PreviewCvModal from "../Auth/PreviewCvModal";
 import SocialMedia from "../SocialMedia/index";
@@ -35,6 +35,7 @@ const itemVariants = {
 
 const HeaderBio = ({ aboutmeData }) => {
   const { i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
 
   // Get short bio (first 2 lines only for hook)
   const getShortBio = () => {
@@ -72,17 +73,17 @@ const HeaderBio = ({ aboutmeData }) => {
           className="header-buttons d-flex justify-content-start gap-3"
         >
           <button
-            className="btn btn-primary-accent"
+            className="btn cv-action-btn cv-download-btn"
             onClick={() =>
               handleDownloadCv(CV_FILE_PATH, "Abdulrahman_Hatem_Resume")
             }
           >
-            CV{" "}
-            <FaFileDownload
-              style={{ fontSize: "1.5rem", marginBottom: "0.2rem" }}
-            />
+            <FaDownload className="cv-btn-icon" />
+            <span>{isArabic ? "تحميل السيرة الذاتية" : "Download CV"}</span>
           </button>
-          <PreviewCvModal />
+          <PreviewCvModal
+            label={isArabic ? "معاينة السيرة الذاتية" : "Preview CV"}
+          />
         </motion.div>
       </div>
 

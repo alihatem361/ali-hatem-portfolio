@@ -5,13 +5,11 @@ import { FaDownload, FaYoutube } from "react-icons/fa";
 import { FaAnglesRight, FaGithub, FaGooglePlay } from "react-icons/fa6";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { createSlug, resolvePublicAssetPath } from "../../../../helpers";
 import "./style.css";
 
 const PojectItem = ({ project }) => {
-  const router = useRouter();
-
   // Truncate description to ~100 characters
   const truncateText = (text, maxLength = 100) => {
     if (!text) return "";
@@ -76,31 +74,30 @@ const PojectItem = ({ project }) => {
 
   // Generate project URL slug
   const projectSlug = createSlug(project.title || "");
-
-  const handleProjectClick = () => {
-    router.push(`/projects/${projectSlug}`);
-  };
+  const projectDetailsHref = `/projects/${projectSlug}`;
 
   return (
     <div className="card" data-aos="fade-up">
-      <div className="img-container">
-        <LazyLoadImage
-          src={resolvePublicAssetPath(project.imeg)}
-          alt={project.title}
-          effect="blur"
-          className="card-img-top"
-          placeholderSrc={resolvePublicAssetPath(project.imeg)}
-          onClick={handleProjectClick}
-          style={{ cursor: "pointer" }}
-        />
-      </div>
+      <Link
+        href={projectDetailsHref}
+        className="project-image-link"
+        aria-label={`Open ${project.title || "project"} details`}
+      >
+        <div className="img-container">
+          <LazyLoadImage
+            src={resolvePublicAssetPath(project.imeg)}
+            alt={project.title}
+            effect="blur"
+            className="card-img-top"
+            placeholderSrc={resolvePublicAssetPath(project.imeg)}
+          />
+        </div>
+      </Link>
       <div className="card-body">
-        <h5
-          className="card-title"
-          onClick={handleProjectClick}
-          style={{ cursor: "pointer" }}
-        >
-          {project.title} <FaAnglesRight className="title-arrow" />
+        <h5 className="card-title">
+          <Link href={projectDetailsHref} className="project-title-link">
+            {project.title} <FaAnglesRight className="title-arrow" />
+          </Link>
         </h5>
 
         <p className="card-description">{truncateText(project.description)}</p>
