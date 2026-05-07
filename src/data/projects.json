@@ -32,6 +32,28 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "image": "images/cruisara-tours.png",
+      "title": "Cruisara Tours",
+      "description": "Built a multilingual tourism booking platform using Next.js and Tailwind CSS with FSD architecture. Developed a dynamic booking system with real-time availability, pricing logic, and automated offers. Integrated Sanity CMS with Gemini AI for automatic translation into 6 languages, alongside PayPal payments and automated email workflows via Resend.",
+      "technology": [
+        "NextJs",
+        "ReactJs",
+        "Tailwind",
+        "Zustand",
+        "Sanity",
+        "PayPal API",
+        "Gemini AI",
+        "Resend",
+        "Cloudflare",
+        "Vercel"
+      ],
+      "demo": "https://cruisara.com/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "image": "images/novirahealth.png",
       "title": "NoviraHealth",
       "description": "Led front-end development for a healthcare marketing platform using React 18 and TypeScript. Architected component structure with shadcn/ui, integrated Sanity CMS with custom GROQ queries, and built a global modal system for contact forms. Implemented smooth Framer Motion animations and optimized SEO using react-helmet-async. Delivered a fully responsive, accessible interface.",

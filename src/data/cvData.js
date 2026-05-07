@@ -91,6 +91,13 @@ export const cvDataEN = {
       linkType: "live",
     },
     {
+      title: "Cruisara Tours",
+      description:
+        "Built a multilingual tourism booking platform using Next.js and Tailwind CSS with FSD architecture. Developed a dynamic booking system with real-time availability, pricing logic, and automated offers. Integrated Sanity CMS with Gemini AI for automatic translation into 6 languages, alongside PayPal payments and automated email workflows via Resend.",
+      link: "https://cruisara.com/",
+      linkType: "live",
+    },
+    {
       title: "Entrepreneurship & Business University (EBU)",
       description:
         "Built static university website with HTML, Tailwind CSS (CDN), and vanilla JavaScript, implementing responsive design across all pages, custom navigation components, and optimized performance for fast user experience.",
@@ -274,6 +281,13 @@ export const cvDataAR = {
       description:
         "بناء موقع تسويق للرعاية الصحية باستخدام React 18 و TypeScript و Vite، مع دمج Sanity CMS لإدارة المحتوى، وتنفيذ رسوم Framer Motion، وتحسين SEO باستخدام react-helmet-async.",
       link: "https://www.novirahealth.com/",
+      linkType: "live",
+    },
+    {
+      title: "Cruisara Tours",
+      description:
+        "قمت ببناء منصة حجز سياحي متعددة اللغات باستخدام Next.js و Tailwind CSS مع معمارية FSD. طورت نظام حجز ديناميكي يوفر توافرًا لحظيًا، ومنطق تسعير، وعروضًا تلقائية. دمجت Sanity CMS مع Gemini AI للترجمة التلقائية إلى 6 لغات، بالإضافة إلى مدفوعات PayPal وسير عمل بريد إلكتروني آلي عبر Resend.",
+      link: "https://cruisara.com/",
       linkType: "live",
     },
     {

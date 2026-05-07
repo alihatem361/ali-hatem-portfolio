@@ -31,6 +31,28 @@
       "videoKey": ""
     },
     {
+      "image": "images/cruisara-tours.png",
+      "title": "Cruisara Tours",
+      "description": "قمت ببناء منصة حجز سياحي متعددة اللغات باستخدام Next.js و Tailwind CSS مع معمارية FSD. طورت نظام حجز ديناميكي يوفر توافرًا لحظيًا، ومنطق تسعير، وعروضًا تلقائية. دمجت Sanity CMS مع Gemini AI للترجمة التلقائية إلى 6 لغات، بالإضافة إلى مدفوعات PayPal وسير عمل بريد إلكتروني آلي عبر Resend.",
+      "technology": [
+        "NextJs",
+        "ReactJs",
+        "Tailwind",
+        "Zustand",
+        "Sanity",
+        "PayPal API",
+        "Gemini AI",
+        "Resend",
+        "Cloudflare",
+        "Vercel"
+      ],
+      "demo": "https://cruisara.com/",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "image": "images/novirahealth.png",
       "title": "نوفيرا هيلث",
       "description": "قدت تطوير الواجهة الأمامية لمنصة تسويق الرعاية الصحية باستخدام React 18 وTypeScript. صممت هيكل المكونات مع shadcn/ui، ودمجت Sanity CMS مع استعلامات GROQ مخصصة، وبنيت نظام نوافذ منبثقة عام. نفذت رسوم متحركة سلسة وحسنت SEO باستخدام react-helmet-async.",
