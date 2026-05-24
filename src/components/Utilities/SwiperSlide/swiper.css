@@ -75,9 +75,9 @@ body {
   height: auto;
   position: relative;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  opacity: 0.4;
-  transform: scale(0.85);
-  filter: blur(2px);
+  opacity: 0.55;
+  transform: scale(0.87);
+  filter: blur(0px);
 }
 
 /* Active slide - full opacity with glow effect */
@@ -89,16 +89,16 @@ body {
 
 .swiper-slide-prev,
 .swiper-slide-next {
-  opacity: 0.6;
-  transform: scale(0.9);
+  opacity: 0.72;
+  transform: scale(0.92);
   filter: blur(0);
 }
 
 .swiper-slide-active .card {
   box-shadow:
-    0 0 40px rgba(255, 193, 7, 0.15),
-    0 10px 40px rgba(0, 0, 0, 0.4);
-  border-radius: 10px !important;
+    0 0 50px rgba(255, 193, 7, 0.22),
+    0 12px 50px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 193, 7, 0.2) !important;
 }
 
 @media (max-width: 500px) {

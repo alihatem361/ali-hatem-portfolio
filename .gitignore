@@ -28,3 +28,6 @@ yarn-error.log*
 
 # ignore GitHub configuration files
 .github/*
+
+#ignore local test playwrite mcp 
+/.playwright-mcp
