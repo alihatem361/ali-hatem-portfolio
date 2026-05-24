@@ -35,6 +35,11 @@ function RuntimeEffects() {
   }, [i18n.language]);
 
   useEffect(() => {
+    if (!i18n.language) return;
+    document.cookie = `i18nextLng=${i18n.language}; path=/; max-age=31536000; samesite=lax`;
+  }, [i18n.language]);
+
+  useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [pathname]);
 
