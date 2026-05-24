@@ -14,7 +14,6 @@
 }
 
 html {
-  font-size: 62.5%;
   /* scroll-behavior: smooth; */
 }
 
@@ -35,7 +34,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
+  border-radius: 10px;
   background: #797979;
   transition: all 0.5s ease-in-out;
 }
@@ -67,12 +66,12 @@ body {
 .swiper_container {
   direction: ltr !important;
   /* height: 52rem; */
-  padding: 2rem 0 0 0 !important;
+  padding: 20px 0 0 0 !important;
   position: relative;
 }
 
 .swiper-slide {
-  width: 42rem;
+  width: 420px;
   height: auto;
   position: relative;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -107,7 +106,7 @@ body {
     /* height: 51rem; */
   }
   .swiper-slide {
-    width: 32rem !important;
+    width: 320px !important;
     height: auto !important;
   }
   .swiper-slide img {
@@ -153,7 +152,7 @@ body {
 
 .slider-controler {
   position: relative;
-  bottom: 2rem;
+  bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,8 +193,8 @@ body {
 
 .slider-controler .slider-arrow {
   background: var(--white);
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   left: 42%;
   transform: translateX(-42%);
@@ -203,7 +202,7 @@ body {
 }
 
 .slider-controler .slider-arrow i {
-  font-size: 2rem;
+  font-size: 20px;
   color: #6a59ff;
 }
 
@@ -213,8 +212,8 @@ body {
 
 .swiper-pagination {
   position: relative;
-  width: 15rem !important;
-  bottom: 1rem;
+  width: 150px !important;
+  bottom: 10px;
 }
 
 .swiper-pagination .swiper-pagination-bullet {

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./style.css";
 // components
@@ -17,13 +17,20 @@ const Projects = () => {
   const [projectsDta, setProjectsData] = useState([]);
   const [filteredProjectsData, setFilteredProjectsData] = useState([]);
 
-  const getProjectsFromApi = useCallback(() => {
+  // Load (or reload) projects only when the language changes
+  useEffect(() => {
     getProjects().then((data) => {
       setProjectsData(data[0]);
       setFilteredProjectsData(data[0]);
     });
-  }, [getProjects]);
-  const filterItems = useCallback(() => {
+    // getProjects is intentionally omitted – it reads i18n.language which
+    // is already in the dep array, so we don't need the unstable fn ref.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [i18n.language]);
+
+  // Apply / clear filters whenever the selection or the base data changes
+  useEffect(() => {
+    if (projectsDta.length === 0) return;
     if (filteringItems.length > 0) {
       const filteredProjects = projectsDta.filter((project) =>
         project.technology.some((r) =>
@@ -34,15 +41,9 @@ const Projects = () => {
       );
       setFilteredProjectsData(filteredProjects);
     } else {
-      getProjectsFromApi();
+      setFilteredProjectsData(projectsDta);
     }
-  }, [filteringItems, projectsDta, getProjectsFromApi]);
-
-  useEffect(() => {
-    if (projectsDta.length === 0) {
-      getProjectsFromApi();
-    }
-  }, [i18n.language, projectsDta.length, getProjectsFromApi]);
+  }, [filteringItems, projectsDta]);
 
   const handelFilterClick = (name) => {
     if (filteringItems.includes(name)) {
@@ -51,10 +52,6 @@ const Projects = () => {
       setFilteringItems([name]);
     }
   };
-
-  useEffect(() => {
-    filterItems();
-  }, [filteringItems, filterItems]);
 
   return (
     <React.Fragment>

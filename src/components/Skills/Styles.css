@@ -20,7 +20,7 @@
 }
 
 .skills-header h2 {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 700;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -109,6 +109,25 @@
   }
   .iconbox p {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-header h2 {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  .skills-header p {
+    font-size: 13px;
+  }
+  .skill-icon {
+    font-size: 38px;
+  }
+  .iconbox p {
+    font-size: 11px;
+  }
+  .iconbox {
+    padding: 10px 16px;
   }
 }
 

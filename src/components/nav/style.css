@@ -95,7 +95,7 @@
 }
 
 .nav__bar * {
-  font-size: 1.5rem !important;
+  font-size: 1rem !important;
   letter-spacing: 0.3px;
 }
 
@@ -127,21 +127,35 @@
 .nav__bar ul li a {
   color: #ffffff !important;
   text-decoration: none !important;
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   position: relative;
   font-weight: 500;
-  transition: all 0.3s ease;
-  font-size: 1.5rem !important;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  font-size: 0.95rem !important;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: block;
+  border-radius: 8px;
 }
 
 .nav__bar ul li a.active,
 .nav__bar ul li a.nav-link.active {
   color: #ffc107 !important;
-  font-weight: 600;
-  animation: activeGlow 2s infinite;
+  font-weight: 700;
+  background: rgba(255, 193, 7, 0.12);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 193, 7, 0.25),
+    0 2px 20px rgba(255, 193, 7, 0.15);
+  animation: none;
+}
+
+.nav__bar ul li a.active::after,
+.nav__bar ul li a.nav-link.active::after {
+  transform: translateX(-50%) scaleX(1) !important;
 }
 
 .nav__bar ul li a.nav-link {
@@ -149,13 +163,29 @@
 }
 
 .nav__bar ul li a:hover {
-  color: #d4af37;
+  color: #ffc107 !important;
+  background: rgba(255, 193, 7, 0.07);
   transform: translateY(-2px);
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  text-shadow: none;
 }
 
+.nav__bar ul li a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Animated gold underline */
 .nav__bar ul li a::after {
-  display: none;
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 75%;
+  height: 2px;
+  background: linear-gradient(90deg, #ffc107, #ff9800);
+  border-radius: 2px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .nav__bar ul li a::before {
@@ -177,12 +207,12 @@
 
 .dropdown-item {
   color: #fff !important;
-  padding: 1rem 2rem !important;
-  margin: 0.3rem 0 !important;
+  padding: 0.65rem 1.25rem !important;
+  margin: 0.2rem 0 !important;
   border-radius: 8px !important;
   background: transparent !important;
   border: none !important;
-  font-size: 1.5rem !important;
+  font-size: 0.9rem !important;
   text-align: center !important;
   cursor: pointer !important;
 }
@@ -196,9 +226,9 @@
   background: transparent !important;
   border: none !important;
   color: #fff !important;
-  padding: 1rem 2.5rem !important;
+  padding: 0.6rem 1.2rem !important;
   font-weight: 500 !important;
-  font-size: 1.5rem !important;
+  font-size: 0.9rem !important;
   display: flex !important;
   align-items: center !important;
   gap: 0.8rem !important;
@@ -212,29 +242,62 @@
 @media (max-width: 768px) {
   .nav__container {
     flex-direction: column;
-    gap: 1.2rem;
-    padding: 1.2rem;
+    gap: 0.9rem;
+    padding: 1rem;
+  }
+
+  .nav__bar * {
+    font-size: 1rem !important;
   }
 
   .nav__bar ul {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 0.75rem;
   }
 
   .nav__bar ul li a {
-    padding: 1rem 2rem;
-    font-size: 1.5rem !important;
+    padding: 0.65rem 1.25rem;
+    font-size: 1rem !important;
     width: 100%;
     text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  .dropdown-toggle {
+    padding: 0.65rem 1.25rem !important;
+    font-size: 1rem !important;
+  }
+
+  .dropdown-item {
+    padding: 0.75rem 1.25rem !important;
+    font-size: 1rem !important;
   }
 
   .dropdown-menu {
     width: 100% !important;
     margin-top: 0.5rem !important;
   }
+}
+
+@media (max-width: 480px) {
+  .nav__bar * {
+    font-size: 0.9rem !important;
+  }
+
+  .nav__bar ul li a {
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.3px;
+  }
+
+  .dropdown-toggle {
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1rem !important;
+  }
 
   .dropdown-item {
-    padding: 1.2rem 2rem !important;
+    font-size: 0.9rem !important;
+    padding: 0.6rem 1rem !important;
   }
 }
