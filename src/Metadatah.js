@@ -5,9 +5,9 @@ const Metadatah = () => {
   return (
     <React.Fragment>
       <MetaData
-        pageTitle="ali hatem ramadan"
+        pageTitle="Abdulrahman Hatem | Flutter Mobile App Developer"
         url="https://ali-hatem-ramadan.vercel.app/"
-        description="يحتوي موقع الويب الخاص بالمحفظة هذا على معلومات عني ومهاراتي ومشاريعي كمطور للواجهة الأمامية."
+        description="Portfolio of Abdulrahman Hatem, a Flutter mobile application developer. Explore apps, case studies, and contact."
         previewImage="favicon.ico"
       />
     </React.Fragment>
