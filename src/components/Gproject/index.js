@@ -51,7 +51,16 @@ function Gproject({ gproject }) {
 
   if (!gproject) return null;
 
-  const { title, video, description, github, demo, codeStatus } = gproject;
+  const {
+    title,
+    video,
+    description,
+    github,
+    demo,
+    codeStatus,
+    imeg,
+    technology,
+  } = gproject;
 
   const renderButton = (link, text, icon, buttonType = "default") => {
     if (!link) return null;
@@ -132,7 +141,7 @@ function Gproject({ gproject }) {
         </motion.h3>
 
         <div className="gproject_card_body">
-          {video && (
+          {(video || imeg) && (
             <motion.div
               className="gproject_phone_mockup"
               variants={itemVariants}
@@ -142,15 +151,23 @@ function Gproject({ gproject }) {
               <div className="phone_frame">
                 <div className="phone_notch"></div>
                 <div className="phone_screen">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${getVideoId(
-                      video,
-                    )}?autoplay=1&mute=1&loop=1&playlist=${getVideoId(video)}`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    title="YouTube video player"
-                  />
+                  {video ? (
+                    <iframe
+                      src={`https://www.youtube.com/embed/${getVideoId(
+                        video,
+                      )}?autoplay=1&mute=1&loop=1&playlist=${getVideoId(video)}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title="YouTube video player"
+                    />
+                  ) : (
+                    <img
+                      src={`/${imeg}`}
+                      alt={title}
+                      className="phone_screenshot"
+                    />
+                  )}
                 </div>
                 <div className="phone_home_indicator"></div>
               </div>
@@ -158,11 +175,31 @@ function Gproject({ gproject }) {
           )}
 
           <motion.div className="gproject_card_content" variants={itemVariants}>
-            <p>{description || "No description available"}</p>
+            <p className="gproject_description">
+              {description || "No description available"}
+            </p>
+
+            {technology && technology.length > 0 && (
+              <motion.div
+                className="gproject_tech_tags"
+                variants={itemVariants}
+              >
+                {technology.slice(0, 6).map((tech, i) => (
+                  <span key={i} className="gproject_tech_tag">
+                    {tech}
+                  </span>
+                ))}
+              </motion.div>
+            )}
 
             <motion.div className="gproject_buttons" variants={itemVariants}>
               {renderButton(github, "GitHub", <FaGithub />, "github")}
-              {renderButton(demo, "Demo", <FaDownload />, "demo")}
+              {renderButton(
+                demo,
+                "View on Google Play",
+                <FaDownload />,
+                "demo",
+              )}
               {renderButton(video, "", <FaPlay />, "video")}
             </motion.div>
           </motion.div>
