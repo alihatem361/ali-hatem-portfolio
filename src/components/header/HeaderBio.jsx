@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { FaDownload } from "react-icons/fa";
+import { FaFileDownload } from "react-icons/fa";
+import CV from "../../assets/abdulrahman_hatem_mobile_developer_01.pdf";
 import { handleDownloadCv } from "../../helpers/index.js";
 import PreviewCvModal from "../Auth/PreviewCvModal";
 import SocialMedia from "../SocialMedia/index";
@@ -57,7 +58,7 @@ const HeaderBio = ({ aboutmeData }) => {
           {i18n.language === "en" ? "Hi👋" : "مرحبا 👋"}
         </motion.h4>
         <motion.h2 variants={itemVariants}>
-          {i18n.language === "en" ? "I'm" : "أنا"} {aboutmeData.name} 👨‍💻
+          {i18n.language === "en" ? "I'm" : "أنا"} {aboutmeData.name}
         </motion.h2>
         <motion.p variants={itemVariants} className="bio-text">
           {getShortBio().map((item, index) => (
