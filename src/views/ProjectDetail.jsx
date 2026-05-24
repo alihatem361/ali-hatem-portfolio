@@ -40,7 +40,7 @@ const ProjectDetail = ({ projectId }) => {
   useEffect(() => {
     getProjects().then((data) => {
       const foundProject = data[0].find(
-        (p) => createSlug(p.title || "") === normalizedProjectId,
+        (p) => createSlug(p.titleEn || p.title || "") === normalizedProjectId,
       );
       setProject(foundProject);
       setLoading(false);
@@ -333,14 +333,14 @@ const ProjectDetail = ({ projectId }) => {
       )}
 
       {/* ===== SECTION 4: MOBILE MOCKUPS GALLERY ===== */}
-      {project.images && project.images.length > 0 && (
+      {project.screenshots?.length > 0 && (
         <section className="gallery-section">
           <div className="gallery-container">
             <h2 className="section-title" data-aos="fade-up">
               {isRTL ? "معرض الشاشات" : "Screen Gallery"}
             </h2>
             <div className="mockups-grid">
-              {project.images.map((image, index) => (
+              {project.screenshots.map((screenshot, index) => (
                 <div
                   key={index}
                   className="phone-mockup"
@@ -350,8 +350,8 @@ const ProjectDetail = ({ projectId }) => {
                   <div className="phone-frame">
                     <div className="phone-notch"></div>
                     <LazyLoadImage
-                      src={image}
-                      alt={`Screen ${index + 1}`}
+                      src={screenshot.url}
+                      alt={screenshot.alt || `Screen ${index + 1}`}
                       effect="blur"
                       className="mockup-image"
                     />

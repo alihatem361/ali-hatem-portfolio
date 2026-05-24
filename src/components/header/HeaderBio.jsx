@@ -45,10 +45,10 @@ const HeaderBio = ({ aboutmeData }) => {
   };
 
   const getShortBio = () => {
-    if (aboutmeData?.bio && aboutmeData.bio.length > 0) {
-      return aboutmeData.bio.slice(0, 2);
-    }
-    return [];
+    if (!aboutmeData?.bio) return [];
+    if (Array.isArray(aboutmeData.bio)) return aboutmeData.bio.slice(0, 2);
+    // Sanity returns a plain string — split on newlines, keep first 2 non-empty lines
+    return aboutmeData.bio.split(/\n+/).filter(Boolean).slice(0, 2);
   };
 
   return (
@@ -105,7 +105,10 @@ const HeaderBio = ({ aboutmeData }) => {
           <button
             className="btn cv-action-btn cv-download-btn"
             onClick={() =>
-              handleDownloadCv(CV_FILE_PATH, "Abdulrahman_Hatem_Resume")
+              handleDownloadCv(
+                aboutmeData?.cv || CV_FILE_PATH,
+                "Abdulrahman_Hatem_Resume",
+              )
             }
           >
             <FaFileDownload className="cv-btn-icon" />
@@ -113,6 +116,7 @@ const HeaderBio = ({ aboutmeData }) => {
           </button>
           <PreviewCvModal
             label={isArabic ? "معاينة السيرة الذاتية" : "Preview CV"}
+            cvUrl={aboutmeData?.cv || CV_FILE_PATH}
           />
         </motion.div>
       </div>

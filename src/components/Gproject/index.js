@@ -163,7 +163,7 @@ function Gproject({ gproject }) {
                     />
                   ) : (
                     <img
-                      src={`/${imeg}`}
+                      src={imeg?.startsWith("http") ? imeg : `/${imeg}`}
                       alt={title}
                       className="phone_screenshot"
                     />

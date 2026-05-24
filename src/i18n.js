@@ -22,6 +22,11 @@ i18n.use(initReactI18next).init({
   resources,
   fallbackLng: "en",
   lng: "en",
+  detection: {
+    order: ["localStorage"],
+    caches: ["localStorage"],
+    lookupLocalStorage: "i18nextLng",
+  },
   interpolation: {
     escapeValue: false,
   },

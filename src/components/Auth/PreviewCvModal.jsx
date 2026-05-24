@@ -5,7 +5,30 @@ import Modal from "react-bootstrap/Modal";
 import { FaRegEye } from "react-icons/fa";
 import "./style.css";
 
-function PreviewCvModal({ label = "Preview CV" }) {
+/**
+ * Converts any PDF URL into an embeddable src.
+ * - Sanity CDN / direct PDF links → Google Docs Viewer (reliable cross-browser)
+ * - Google Drive share links     → /preview format
+ * - Everything else               → passed through as-is
+ */
+function toEmbedSrc(url) {
+  if (!url) return "";
+
+  // Google Drive share URL → replace with /preview
+  const driveMatch = url.match(
+    /https:\/\/drive\.google\.com\/file\/d\/([^/]+)/,
+  );
+  if (driveMatch) {
+    return `https://drive.google.com/file/d/${driveMatch[1]}/preview`;
+  }
+
+  // Everything else (Sanity CDN, local paths, etc.) → Google Docs viewer
+  return `https://docs.google.com/viewer?url=${encodeURIComponent(
+    url.startsWith("/") ? window.location.origin + url : url,
+  )}&embedded=true`;
+}
+
+function PreviewCvModal({ label = "Preview CV", cvUrl = "" }) {
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,10 +41,7 @@ function PreviewCvModal({ label = "Preview CV" }) {
 
   const handleShow = () => setShow(true);
 
-  const handleIframeLoad = () => {
-    setIsLoading(false);
-  };
-
+  const handleIframeLoad = () => setIsLoading(false);
   const handleIframeError = () => {
     setError("عفواً، حصل مشكلة في تحميل ال CV. برجاء المحاولة تاني");
     setIsLoading(false);
@@ -44,20 +64,20 @@ function PreviewCvModal({ label = "Preview CV" }) {
 
         <Modal.Body className="login__modal__container">
           {isLoading && <div className="loading-spinner">جاري التحميل...</div>}
-
           {error && <div className="error-message">{error}</div>}
 
-          <iframe
-            // link to the CV file on Google Drive (make sure it's set to "Anyone with the link can view")
-            src="https://drive.google.com/file/d/1pjjiaOeNDabXiFUnSWRSBcOc6uYvZyQr/view?usp=sharing"
-            allow="autoplay"
-            width="100%"
-            height="100%"
-            allowFullScreen
-            title="pdf cv"
-            onLoad={handleIframeLoad}
-            onError={handleIframeError}
-          />
+          {show && (
+            <iframe
+              src={toEmbedSrc(cvUrl)}
+              allow="autoplay"
+              width="100%"
+              height="100%"
+              allowFullScreen
+              title="pdf cv"
+              onLoad={handleIframeLoad}
+              onError={handleIframeError}
+            />
+          )}
         </Modal.Body>
       </Modal>
     </div>

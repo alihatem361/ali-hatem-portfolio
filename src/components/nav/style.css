@@ -239,6 +239,55 @@
   color: #d4af37 !important;
 }
 
+/* Language pill toggle button */
+.lang-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 193, 7, 0.25);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  white-space: nowrap;
+}
+
+.lang-toggle-btn:hover {
+  background: rgba(255, 193, 7, 0.1);
+  border-color: rgba(255, 193, 7, 0.55);
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.2);
+}
+
+.lang-toggle-icon {
+  color: #ffc107;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.lang-opt {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 0.2s ease;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+}
+
+.lang-opt--active {
+  color: #ffc107;
+}
+
+.lang-toggle-sep {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
 @media (max-width: 768px) {
   .nav__container {
     flex-direction: column;

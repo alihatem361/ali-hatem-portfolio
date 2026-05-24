@@ -2,45 +2,34 @@
 
 import React from "react";
 import { FaEarthAfrica } from "react-icons/fa6";
-import Dropdown from "react-bootstrap/Dropdown";
 import { useTranslation } from "react-i18next";
 
 function LnaguageMenu() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
+  const isAr = i18n.language === "ar";
 
-  const handleLanguageChange = (language) => {
-    i18n.changeLanguage(language);
-    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-    document.documentElement.lang = language;
-    window.localStorage.setItem("i18nextLng", language);
+  const toggleLanguage = () => {
+    const next = isAr ? "en" : "ar";
+    i18n.changeLanguage(next);
+    document.documentElement.dir = next === "ar" ? "rtl" : "ltr";
+    document.documentElement.lang = next;
+    window.localStorage.setItem("i18nextLng", next);
   };
 
   return (
-    <Dropdown>
-      <Dropdown.Toggle id="dropdown-basic">
-        {i18n.language === "en" ? "English" : "العربية"}
-        <FaEarthAfrica
-          style={{
-            fontSize: "1.5rem",
-            marginBottom: "0.2rem",
-            marginLeft: "0.5rem",
-            marginRight: "0.5rem",
-          }}
-        />
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-        {i18n.language === "en" ? (
-          <Dropdown.Item onClick={() => handleLanguageChange("ar")}>
-            {t("language.arabic")}
-          </Dropdown.Item>
-        ) : (
-          <Dropdown.Item onClick={() => handleLanguageChange("en")}>
-            {t("language.english")}
-          </Dropdown.Item>
-        )}
-      </Dropdown.Menu>
-    </Dropdown>
+    <button
+      className="lang-toggle-btn"
+      onClick={toggleLanguage}
+      aria-label="Toggle language"
+      title={isAr ? "Switch to English" : "التبديل إلى العربية"}
+    >
+      <FaEarthAfrica className="lang-toggle-icon" />
+      <span className={!isAr ? "lang-opt lang-opt--active" : "lang-opt"}>
+        EN
+      </span>
+      <span className="lang-toggle-sep">|</span>
+      <span className={isAr ? "lang-opt lang-opt--active" : "lang-opt"}>ع</span>
+    </button>
   );
 }
 

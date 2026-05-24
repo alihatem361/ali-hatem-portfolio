@@ -72,8 +72,9 @@ const PojectItem = ({ project }) => {
 
   const buttonInfo = getButtonInfo();
 
-  // Generate project URL slug
-  const projectSlug = createSlug(project.title || "");
+  // Generate project URL slug — always use English title so the URL is
+  // language-agnostic and doesn't change when the user switches language.
+  const projectSlug = createSlug(project.titleEn || project.title || "");
   const projectDetailsHref = `/projects/${projectSlug}`;
 
   return (
