@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
-const BASE_URL = "https://ali-hatem-portfolio.vercel.app";
+const BASE_URL = "https://alihatem.me";
 
 const SEO = ({
   title = "Ali Hatem | Senior Frontend Developer - React & Next.js Expert",
@@ -92,15 +92,7 @@ const SEO = ({
       "@id": `${BASE_URL}/#person`,
     },
     description: description,
-    inLanguage: ["en", "ar"],
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${BASE_URL}/projects?search={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
+    inLanguage: ["en"],
   };
 
   // JSON-LD for WebPage
@@ -118,7 +110,6 @@ const SEO = ({
       "@id": `${BASE_URL}/#person`,
     },
     inLanguage: language,
-    dateModified: new Date().toISOString(),
   };
 
   // JSON-LD for Project/Portfolio Item
