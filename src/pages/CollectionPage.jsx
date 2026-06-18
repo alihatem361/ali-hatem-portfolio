@@ -17,6 +17,8 @@ import { BiCopy, BiCheck } from "react-icons/bi";
 
 const BASE_URL = "https://www.alihatem.me"; // Replace with your actual base URL
 
+const canonicalUrl = `${BASE_URL}${window.location.pathname}`;
+
 // Collection definitions (should match projects/index.jsx)
 const COLLECTIONS_CONFIG = {
   "teachers-collection": {
@@ -181,6 +183,7 @@ const CollectionPage = () => {
         ogType="collection"
         keywords={`${collection.title}, ${collection.technology?.join(", ") || ""}, Ali Hatem, Portfolio Collection`}
         language={i18n.language}
+        canonicalUrl={canonicalUrl}
       />
       {/* Hero Section */}
       <section className="cp-hero-section">

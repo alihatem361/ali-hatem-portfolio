@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
-const BASE_URL = "https://alihatem.me";
+const BASE_URL = "https://www.alihatem.me/";
 
 const SEO = ({
   title = "Ali Hatem | Senior Frontend Developer - React & Next.js Expert",
