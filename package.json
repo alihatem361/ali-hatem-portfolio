@@ -39,7 +39,8 @@
     "dev": "vite",
     "prebuild": "node scripts/generate-sitemap.js",
     "build": "vite build",
-    "postbuild": "react-snap",
+    "postbuild": "node scripts/run-react-snap.js",
+    "prerender": "react-snap",
     "preview": "vite preview"
   },
   "reactSnap": {
