@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
-const BASE_URL = "https://www.alihatem.me/";
+const BASE_URL = "https://www.alihatem.me";
 
 const SEO = ({
   title = "Ali Hatem | Senior Frontend Developer - React & Next.js Expert",
@@ -16,7 +16,13 @@ const SEO = ({
   language = "en",
 }) => {
   const location = useLocation();
-  const url = canonicalUrl || `${BASE_URL}${location.pathname}`;
+  const withLeadingSlash = (path = "/") =>
+    path.startsWith("/") ? path : `/${path}`;
+  const toAbsoluteUrl = (path = "/") => `${BASE_URL}${withLeadingSlash(path)}`;
+
+  const normalizedPath = withLeadingSlash(location.pathname || "/");
+  const url = canonicalUrl || toAbsoluteUrl(normalizedPath);
+  const arabicUrl = `${BASE_URL}/ar${normalizedPath === "/" ? "" : normalizedPath}`;
 
   // JSON-LD Structured Data for Person
   const personStructuredData = {

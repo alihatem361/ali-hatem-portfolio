@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { hydrateRoot, createRoot } from "react-dom/client"; // استيراد الوظائف
 import App from "./App.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
@@ -12,9 +12,16 @@ import { HelmetProvider } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const rootElement = document.getElementById("root");
-const root = ReactDOM.createRoot(rootElement);
-root.render(
+// تهيئة AOS
+AOS.init({
+  duration: 1000,
+  once: true,
+  offset: 100,
+});
+
+const container = document.getElementById("root");
+
+const app = (
   <StrictMode>
     <HelmetProvider>
       <BrowserRouter>
@@ -23,11 +30,15 @@ root.render(
         </Provider>
       </BrowserRouter>
     </HelmetProvider>
-  </StrictMode>,
+  </StrictMode>
 );
 
-AOS.init({
-  duration: 1000,
-  once: true,
-  offset: 100,
-});
+// المنطق الصحيح لتشغيل التطبيق (Hydration vs Render)
+const hasPrerenderedMarkup =
+  container && container.innerHTML && container.innerHTML.trim().length > 0;
+
+if (hasPrerenderedMarkup) {
+  hydrateRoot(container, app);
+} else {
+  createRoot(container).render(app);
+}
