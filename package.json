@@ -37,6 +37,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-sitemap.js",
     "build": "vite build",
     "postbuild": "react-snap",
     "preview": "vite preview"
