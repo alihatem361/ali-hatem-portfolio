@@ -47,7 +47,8 @@ const buildMetaDescription = (value, fallbackDescription) => {
 export async function generateMetadata({ params }) {
   const locale = await getRequestLocale();
   const fallback = getLocaleFallback(locale);
-  const slug = decodeURIComponent(params?.projectId || "");
+  const resolvedParams = await params;
+  const slug = decodeURIComponent(resolvedParams?.projectId || "");
   const baseMetadata = {
     title: fallback.title,
     description: fallback.description,
@@ -125,8 +126,9 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default function ProjectDetailPage({ params }) {
-  const { projectId } = params;
+export default async function ProjectDetailPage({ params }) {
+  const resolvedParams = await params;
+  const projectId = resolvedParams?.projectId || "";
 
   return <ProjectDetail projectId={decodeURIComponent(projectId)} />;
 }

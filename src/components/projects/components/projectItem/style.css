@@ -31,6 +31,15 @@
   position: relative;
 }
 
+.project-card {
+  cursor: pointer;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--warning-color);
+  outline-offset: 4px;
+}
+
 .card::before {
   content: "";
   position: absolute;
@@ -250,6 +259,55 @@
   box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
 }
 
+/* Action Buttons */
+.card-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: auto;
+}
+
+.card-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 193, 7, 0.45);
+  background: rgba(255, 193, 7, 0.08);
+  color: var(--warning-color);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+  min-height: 40px;
+}
+
+.card-action-button .action-icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.card-action-button:hover {
+  background: var(--warning-color);
+  color: #1a1a1a;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.35);
+}
+
+.card-action-button:hover .action-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+[dir="rtl"] .card-action-button {
+  flex-direction: row-reverse;
+}
+
 /* Demo Button */
 .demo-button {
   display: flex;
@@ -353,6 +411,15 @@
 
   .card .card-body {
     padding: 15px;
+  }
+
+  .card-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .card-action-button {
+    padding: 10px 16px;
+    font-size: 14px;
   }
 
   .demo-button {
