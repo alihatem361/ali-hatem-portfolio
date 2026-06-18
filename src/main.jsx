@@ -34,8 +34,7 @@ const app = (
 );
 
 // المنطق الصحيح لتشغيل التطبيق (Hydration vs Render)
-const hasPrerenderedMarkup =
-  container && container.innerHTML && container.innerHTML.trim().length > 0;
+const hasPrerenderedMarkup = Boolean(container && container.hasChildNodes());
 
 if (hasPrerenderedMarkup) {
   hydrateRoot(container, app);

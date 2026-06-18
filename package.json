@@ -45,6 +45,7 @@
   },
   "reactSnap": {
     "source": "build",
+    "waitFor": 8000,
     "include": [
       "/",
       "/projects",
