@@ -10,7 +10,7 @@ export const cvDataEN = {
     phone: "+20 1026159353",
     whatsapp: "https://wa.me/201026159353?text=Hello",
     linkedin: "https://www.linkedin.com/in/aliihatem-753025203/",
-    portfolio: "https://ali-hatem-portfolio.vercel.app/",
+    portfolio: "https://www.alihatem.me/",
     github: "https://github.com/alihatem361",
   },
   objective:
@@ -203,7 +203,7 @@ export const cvDataAR = {
     phone: "+20 1026159353",
     whatsapp: "https://wa.me/201026159353?text=Hello",
     linkedin: "https://www.linkedin.com/in/aliihatem-753025203/",
-    portfolio: "https://ali-hatem-portfolio.vercel.app/",
+    portfolio: "https://www.alihatem.me/",
     github: "https://github.com/alihatem361",
   },
   objective:

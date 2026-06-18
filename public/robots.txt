@@ -18,7 +18,7 @@ Disallow: /*.json$
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://ali-hatem-portfolio.vercel.app/sitemap.xml
+Sitemap: https://www.alihatem.me/sitemap.xml
 
 # Google specific
 User-agent: Googlebot
