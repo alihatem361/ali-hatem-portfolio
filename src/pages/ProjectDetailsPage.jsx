@@ -28,7 +28,7 @@ import {
 import { HiSparkles } from "react-icons/hi2";
 import { BiCopy, BiCheck } from "react-icons/bi";
 
-const BASE_URL = "https://ali-hatem-portfolio.vercel.app";
+const BASE_URL = "https://www.alihatem.me"; // Replace with your actual base URL
 
 const ProjectDetailsPage = () => {
   const { slug } = useParams();

@@ -1,5 +1,5 @@
 # Ali Hatem Portfolio - robots.txt
-# https://ali-hatem-portfolio.vercel.app
+# https://www.alihatem.me/robots.txt
 
 # Allow all crawlers
 User-agent: *

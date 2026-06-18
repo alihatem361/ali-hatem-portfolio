@@ -2,7 +2,7 @@
 
 Personal portfolio website built with React 18 and Vite. Features bilingual support (Arabic RTL / English LTR), project showcases, collections, and contact functionality.
 
-🔗 **Live Demo**: [ali-hatem-ramadan.vercel.app](https://ali-hatem-ramadan.vercel.app/)
+🔗 **Live Demo**: [www.alihatem.me](https://www.alihatem.me/)
 
 ## ✨ Features
 

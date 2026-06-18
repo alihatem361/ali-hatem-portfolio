@@ -8,7 +8,6 @@ import { Provider } from "react-redux";
 import store from "./store/index";
 import { BrowserRouter } from "react-router-dom";
 import { StrictMode } from "react";
-import { SpeedInsights } from "@vercel/speed-insights/react";
 import { HelmetProvider } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -21,7 +20,6 @@ root.render(
       <BrowserRouter>
         <Provider store={store}>
           <App />
-          <SpeedInsights />
         </Provider>
       </BrowserRouter>
     </HelmetProvider>
