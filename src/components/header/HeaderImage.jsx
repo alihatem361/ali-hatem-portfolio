@@ -143,7 +143,7 @@ const HeaderImage = ({ aboutmeData }) => {
       </motion.div>
 
       {/* Experience Badge */}
-      <motion.div
+      {/* <motion.div
         className="experience-badge"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -155,7 +155,7 @@ const HeaderImage = ({ aboutmeData }) => {
           <br />
           Experience
         </span>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };
