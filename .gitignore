@@ -29,3 +29,6 @@ yarn-error.log*
 
 # .next
 .next
+
+# .playwright-mcp
+.playwright-mcp/*
