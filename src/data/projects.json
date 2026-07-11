@@ -15,23 +15,6 @@
 
   "Projects": [
     {
-      "image": "images/gz-school.png",
-      "title": "GZ School",
-      "description": "Built a Next.js App Router marketing site with an embedded Sanity Studio, localized content objects, Tailwind v4 neon theme, and Framer Motion animations. Added fallback data hooks so pages render without Sanity, plus scripts for seeding and maintenance.",
-      "technology": [
-        "NextJs",
-        "TypeScript",
-        "Tailwind",
-        "Sanity",
-        "FramerMotion"
-      ],
-      "demo": "https://www.genzschool.net",
-      "github": "https://github.com/alihatem361/gz-school",
-      "video": "",
-      "videoKey": "",
-      "codeStatus": "PRIVATE"
-    },
-    {
       "image": "images/cruisara-tours.png",
       "title": "Cruisara Tours",
       "description": "Built a multilingual tourism booking platform using Next.js and Tailwind CSS with FSD architecture. Developed a dynamic booking system with real-time availability, pricing logic, and automated offers. Integrated Sanity CMS with Gemini AI for automatic translation into 6 languages, alongside PayPal payments and automated email workflows via Resend.",
@@ -49,6 +32,103 @@
       ],
       "demo": "https://cruisara.com/",
       "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "type": "mobile",
+      "image": "images/Masaakin-Al-Mawil/dashboard-home.jpg",
+      "title": "Masaakin Al-Mawil",
+      "tagline": "Real estate, reimagined for your pocket.",
+      "description": "A comprehensive real estate mobile application featuring secure user authentication, integrated payment processing, maintenance request management, push notifications, and a robust REST API integration built for tenants and property managers alike.",
+      "technology": [
+        "Ionic React",
+        "React",
+        "TypeScript",
+        "Capacitor",
+        "Zustand"
+      ],
+      "demo": "https://real-estate-app-1ic.pages.dev",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE",
+      "platform": ["iOS", "Android"],
+      "gallery": [
+        "images/Masaakin-Al-Mawil/home-search.jpg",
+        "images/Masaakin-Al-Mawil/dashboard-home.jpg",
+        "images/Masaakin-Al-Mawil/my-units.jpg",
+        "images/Masaakin-Al-Mawil/property-booking.jpg",
+        "images/Masaakin-Al-Mawil/maintenance-request-form.jpg",
+        "images/Masaakin-Al-Mawil/maintenance-requests-list.jpg",
+        "images/Masaakin-Al-Mawil/notifications.jpg",
+        "images/Masaakin-Al-Mawil/profile-account.jpg"
+      ],
+      "features": [
+        {
+          "key": "auth",
+          "icon": "shield",
+          "title": "Secure Authentication",
+          "description": "Verified tenant accounts with rich profile management and role-based access control.",
+          "image": "images/Masaakin-Al-Mawil/profile-account.jpg"
+        },
+        {
+          "key": "payments",
+          "icon": "card",
+          "title": "Seamless Payments",
+          "description": "Book units and pay rent online through fast, secure, integrated payment processing.",
+          "image": "images/Masaakin-Al-Mawil/property-booking.jpg"
+        },
+        {
+          "key": "maintenance",
+          "icon": "wrench",
+          "title": "Maintenance Requests",
+          "description": "Submit and track maintenance tickets in real time, from request to resolution.",
+          "image": "images/Masaakin-Al-Mawil/maintenance-request-form.jpg"
+        },
+        {
+          "key": "notifications",
+          "icon": "bell",
+          "title": "Push Notifications",
+          "description": "Real-time alerts keep tenants informed on bookings, contracts, and maintenance status.",
+          "image": "images/Masaakin-Al-Mawil/notifications.jpg"
+        }
+      ]
+    },
+    {
+      "image": "images/masaakin-al-mawil-dashboard.png",
+      "title": "Masaakin Al Mawil Dashboard",
+      "description": "Developed an RTL property management dashboard with authentication, role-based access, maintenance and financial modules, and reusable admin components.",
+      "technology": [
+        "ReactJs",
+        "TypeScript",
+        "Ant Design",
+        "React Query",
+        "Axios",
+        "Recharts",
+        "FramerMotion",
+        "Vite"
+      ],
+      "demo": "https://masaakin-al-mawil-dashboard.vercel.app",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "image": "images/gz-school.png",
+      "title": "GZ School",
+      "description": "Built a Next.js App Router marketing site with an embedded Sanity Studio, localized content objects, Tailwind v4 neon theme, and Framer Motion animations. Added fallback data hooks so pages render without Sanity, plus scripts for seeding and maintenance.",
+      "technology": [
+        "NextJs",
+        "TypeScript",
+        "Tailwind",
+        "Sanity",
+        "FramerMotion"
+      ],
+      "demo": "https://www.genzschool.net",
+      "github": "https://github.com/alihatem361/gz-school",
       "video": "",
       "videoKey": "",
       "codeStatus": "PRIVATE"
@@ -137,7 +217,7 @@
         "WOW.js",
         "jQuery"
       ],
-      "demo": "https://thecoderland.pages.dev/",
+      "demo": "https://beta.roaya-tp.com/",
       "github": "",
       "video": "",
       "videoKey": "",
@@ -274,7 +354,8 @@
       "github": "",
       "video": "https://youtu.be/Zw9_UgIOrGg",
       "videoKey": "Zw9_UgIOrGg",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "hidden": true
     },
     {
       "image": "images/salil.png",
@@ -316,7 +397,8 @@
       "github": "",
       "video": "https://youtu.be/12NFx9-F-IU",
       "videoKey": "12NFx9-F-IU",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "hidden": true
     },
     {
       "image": "images/pdfEcommerce.png",
@@ -401,7 +483,8 @@
       "github": "",
       "video": "https://youtu.be/XDYKVguRDUU",
       "videoKey": "XDYKVguRDUU",
-      "codeStatus": "PRIVATE"
+      "codeStatus": "PRIVATE",
+      "hidden": true
     },
     {
       "image": "images/LaptopStore Contract.png",

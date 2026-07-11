@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import YoutubeVideo from "../components/projects/components/YoutubeVideo";
 import LoomVideo from "../components/projects/components/LoomVideo";
 import SEO from "../components/SEO";
-import { createSlug } from "../helpers";
+import MobileProjectDetails from "./MobileProjectDetails";
+import { createSlug, getImagePath } from "../helpers";
 import ProjectsApi from "../data/projects.json";
 import ProjectsApiAR from "../data/projectsAR.json";
 import "./ProjectDetailsPage.css";
@@ -37,12 +38,6 @@ const ProjectDetailsPage = () => {
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
   const [copied, setCopied] = useState(false);
-
-  // Helper function to get proper image path
-  const getImagePath = (imagePath) => {
-    if (!imagePath) return "";
-    return imagePath.startsWith("/") ? imagePath : `/${imagePath}`;
-  };
 
   useEffect(() => {
     const allProjects =
@@ -127,23 +122,36 @@ const ProjectDetailsPage = () => {
     ? `${project.title} - ${project.description.substring(0, 150)}${project.description.length > 150 ? "..." : ""}`
     : `${project.title} - A project by Ali Hatem built with ${project.technology?.slice(0, 3).join(", ") || "modern technologies"}`;
 
+  const seoElement = (
+    <SEO
+      title={`${project.title} | Ali Hatem Portfolio`}
+      description={seoDescription}
+      ogImage={project.image ? `${BASE_URL}/${project.image}` : undefined}
+      ogType="article"
+      project={{
+        title: project.title,
+        description: project.description,
+        image: project.image,
+        technology: project.technology,
+        demo: project.demo,
+      }}
+      keywords={`${project.title}, ${project.technology?.join(", ") || ""}, Ali Hatem, Portfolio Project`}
+      language={i18n.language}
+    />
+  );
+
+  if (project.type === "mobile") {
+    return (
+      <>
+        {seoElement}
+        <MobileProjectDetails project={project} isArabic={isArabic} />
+      </>
+    );
+  }
+
   return (
     <div className="project-details-page">
-      <SEO
-        title={`${project.title} | Ali Hatem Portfolio`}
-        description={seoDescription}
-        ogImage={project.image ? `${BASE_URL}/${project.image}` : undefined}
-        ogType="article"
-        project={{
-          title: project.title,
-          description: project.description,
-          image: project.image,
-          technology: project.technology,
-          demo: project.demo,
-        }}
-        keywords={`${project.title}, ${project.technology?.join(", ") || ""}, Ali Hatem, Portfolio Project`}
-        language={i18n.language}
-      />
+      {seoElement}
       {/* Hero Section with Image */}
       <section className="pdp-hero-section">
         {/* Hero Image/Video Background */}

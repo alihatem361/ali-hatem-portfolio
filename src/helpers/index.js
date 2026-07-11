@@ -34,3 +34,13 @@ export const createSlug = (title) => {
     .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
     .replace(/^-+|-+$/g, ""); // Remove leading/trailing hyphens
 };
+
+/**
+ * Normalizes a project image path to an absolute path
+ * @param {string} imagePath - relative or absolute image path
+ * @returns {string} - path prefixed with "/"
+ */
+export const getImagePath = (imagePath) => {
+  if (!imagePath) return "";
+  return imagePath.startsWith("/") ? imagePath : `/${imagePath}`;
+};

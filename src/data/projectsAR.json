@@ -544,6 +544,80 @@
       "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
       "github": "",
       "hidden": true
+    },
+    {
+      "type": "mobile",
+      "image": "images/Masaakin-Al-Mawil/dashboard-home.jpg",
+      "title": "مساكن المؤيل",
+      "tagline": "عقارات بين يديك، بتجربة أذكى.",
+      "description": "تطبيق عقاري متكامل يوفر تسجيل دخول آمن، معالجة دفع إلكتروني متكاملة، إدارة طلبات الصيانة، إشعارات فورية، وربط قوي مع واجهات REST API لخدمة المستأجرين ومدراء العقارات على حد سواء.",
+      "technology": ["Ionic React", "React", "TypeScript", "Capacitor", "Zustand"],
+      "demo": "https://real-estate-app-1ic.pages.dev",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE",
+      "platform": ["iOS", "Android"],
+      "gallery": [
+        "images/Masaakin-Al-Mawil/home-search.jpg",
+        "images/Masaakin-Al-Mawil/dashboard-home.jpg",
+        "images/Masaakin-Al-Mawil/my-units.jpg",
+        "images/Masaakin-Al-Mawil/property-booking.jpg",
+        "images/Masaakin-Al-Mawil/maintenance-request-form.jpg",
+        "images/Masaakin-Al-Mawil/maintenance-requests-list.jpg",
+        "images/Masaakin-Al-Mawil/notifications.jpg",
+        "images/Masaakin-Al-Mawil/profile-account.jpg"
+      ],
+      "features": [
+        {
+          "key": "auth",
+          "icon": "shield",
+          "title": "تسجيل دخول آمن",
+          "description": "حسابات مستأجرين موثقة مع إدارة كاملة للملف الشخصي وصلاحيات وصول محددة.",
+          "image": "images/Masaakin-Al-Mawil/profile-account.jpg"
+        },
+        {
+          "key": "payments",
+          "icon": "card",
+          "title": "دفع إلكتروني سلس",
+          "description": "احجز الوحدات وادفع الإيجار أونلاين عبر بوابة دفع سريعة وآمنة.",
+          "image": "images/Masaakin-Al-Mawil/property-booking.jpg"
+        },
+        {
+          "key": "maintenance",
+          "icon": "wrench",
+          "title": "طلبات الصيانة",
+          "description": "أرسل وتابع طلبات الصيانة لحظياً، من الطلب وحتى الحل.",
+          "image": "images/Masaakin-Al-Mawil/maintenance-request-form.jpg"
+        },
+        {
+          "key": "notifications",
+          "icon": "bell",
+          "title": "إشعارات فورية",
+          "description": "تنبيهات لحظية تبقي المستأجر على اطلاع بحالة الحجوزات والعقود والصيانة.",
+          "image": "images/Masaakin-Al-Mawil/notifications.jpg"
+        }
+      ]
+    },
+    {
+      "image": "images/masaakin-al-mawil-dashboard.png",
+      "title": "لوحة تحكم مساكن المؤيل",
+      "description": "طورت لوحة تحكم لإدارة العقارات بالعربية (RTL) تتضمن تسجيل دخول آمن، صلاحيات وصول حسب الدور، وحدات للصيانة والشؤون المالية، ومكونات إدارية قابلة لإعادة الاستخدام.",
+      "technology": [
+        "ReactJs",
+        "TypeScript",
+        "Ant Design",
+        "React Query",
+        "Axios",
+        "Recharts",
+        "FramerMotion",
+        "Vite"
+      ],
+      "demo": "https://masaakin-al-mawil-dashboard.vercel.app",
+      "github": "",
+      "video": "",
+      "videoKey": "",
+      "codeStatus": "PRIVATE"
     }
   ],
 
