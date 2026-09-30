@@ -1,11 +1,74 @@
 /**
- * Maps Sanity documents onto the field names the React components already read.
+ * The single definition of how Sanity documents become app content.
  *
- * Keeping this in one place means the build-time fetch and the offline
- * generator cannot drift apart, and the app layer never has to learn Sanity's
- * field names.
+ * Both consumers share this file:
+ *   - scripts/fetch-sanity-content.js (build time, writes content.json)
+ *   - src/data/devLiveContent.js      (development only, live refresh)
+ *
+ * Because they use the same query AND the same mapping, the development
+ * and production content shapes cannot drift apart.
+ *
+ * This module must stay free of Node built-ins — it is bundled for the
+ * browser in development.
  */
-import { youtubeIdFromUrl } from "./sanity-shared.js";
+
+/**
+ * Published content, in the order the CMS sets.
+ *
+ * Kept here rather than in the fetch script so the dev provider cannot
+ * query a different projection.
+ */
+export const CONTENT_QUERY = /* groq */ `{
+  "projects": *[_type == "project" && defined(slug.current)] | order(order asc, title.en asc) {
+    "slug": slug.current,
+    title,
+    description,
+    technology,
+    "image": mainImage.asset->url,
+    demo,
+    github,
+    codeStatus,
+    videoUrl,
+    loomVideo,
+    isVisible,
+    order,
+    projectType,
+    collectionId,
+    tagline,
+    platform,
+    "gallery": gallery[].asset->url,
+    "features": features[]{
+      key,
+      icon,
+      title,
+      description,
+      "image": image.asset->url
+    }
+  },
+  "socials": *[_type == "social" && isVisible != false] | order(order asc) {
+    "id": _id,
+    platform,
+    name,
+    url
+  },
+  "siteSettings": *[_type == "siteSettings"][0] {
+    name,
+    bio,
+    roles,
+    "headerImage": headerImage.asset->url,
+    "footerImage": footerImage.asset->url,
+    cvUrl
+  }
+}`;
+
+/** Extracts the 11-character YouTube id from any common URL shape. */
+export const youtubeIdFromUrl = (url) => {
+  if (!url) return undefined;
+  const match = String(url).match(
+    /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/,
+  );
+  return match && match[2]?.length === 11 ? match[2] : undefined;
+};
 
 /** Drops undefined/null/empty values so the generated file stays readable. */
 export const compact = (object) =>

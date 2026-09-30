@@ -1,7 +1,8 @@
-import content from "./content.json";
+import { getContent } from "./contentStore";
 
 /**
- * Reads the generated content file produced from Sanity.
+ * Reads content through src/data/contentStore.js, which serves the generated
+ * content.json in production and live Sanity content in development.
  *
  * Content is authored once per project, with `title` and `description` carrying
  * both languages. That removes the whole class of drift the two hand-edited
@@ -52,7 +53,7 @@ const localiseProject = (project, language) => {
  * Every project, in the order set in the CMS, including hidden ones.
  */
 export const getProjectsForLanguage = (language) =>
-  content.projects.map((project) => localiseProject(project, language));
+  getContent().projects.map((project) => localiseProject(project, language));
 
 /**
  * Visible projects only, in the order set in the CMS.
@@ -65,7 +66,7 @@ export const getVisibleProjectsForLanguage = (language) =>
  * the translated accessible name.
  */
 export const getSocialsForLanguage = (language) =>
-  content.socials.map((social) => ({
+  getContent().socials.map((social) => ({
     ...social,
     label: pickLocale(social.label, language),
   }));
@@ -75,7 +76,7 @@ export const getSocialsForLanguage = (language) =>
  * it as `data[0][0]`.
  */
 export const getAboutmeForLanguage = (language) => {
-  const { name, bio, roles, ...rest } = content.aboutme;
+  const { name, bio, roles, ...rest } = getContent().aboutme;
 
   return [
     {

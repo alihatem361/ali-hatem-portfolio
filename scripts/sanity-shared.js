@@ -84,15 +84,6 @@ export const collectionIdForTitle = (title) => {
   return undefined;
 };
 
-/** Extracts the 11-character YouTube id from any common URL shape. */
-export const youtubeIdFromUrl = (url) => {
-  if (!url) return undefined;
-  const match = String(url).match(
-    /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/,
-  );
-  return match && match[2]?.length === 11 ? match[2] : undefined;
-};
-
 /** Normalises an image reference from the legacy JSON to a repo-relative path. */
 export const normaliseImagePath = (imagePath) =>
   (imagePath || "").trim().replace(/^\/+/, "");

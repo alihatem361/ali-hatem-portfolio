@@ -7,7 +7,7 @@ import PojectItem from "./components/projectItem";
 import Footer from "../footer";
 import GetAllData from "../../data/projects";
 import LoaderCom from "../Utilities/LoaderCom";
-import { techSkills } from "../../data/index";
+import { getTechSkills } from "../../data/index";
 import SEO from "../SEO";
 
 // Project titles to group into collections
@@ -259,7 +259,7 @@ const Projects = () => {
         {/* Filter Pills - Desktop always visible, Mobile collapsible */}
         <div className={`filter-wrapper ${isFilterOpen ? "open" : ""}`}>
           <div className="filter-pills">
-            {techSkills.map((skill, index) => (
+            {getTechSkills().map((skill, index) => (
               <button
                 className={`filter-pill ${filteringItems.includes(skill) ? "active" : ""}`}
                 key={index}

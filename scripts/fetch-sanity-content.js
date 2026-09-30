@@ -14,55 +14,16 @@ import { writeFile, readFile } from "node:fs/promises";
 import path from "node:path";
 import { createClient } from "@sanity/client";
 import { rootDir, readSanityEnv } from "./sanity-shared.js";
-import { buildContentFile, toLegacyProject } from "./content-shape.js";
+import {
+  CONTENT_QUERY,
+  buildContentFile,
+  toLegacyProject,
+} from "../src/data/contentShape.js";
 
 const datasetOverride = process.argv
   .slice(2)
   .find((a) => a.startsWith("--dataset="))
   ?.split("=")[1];
-
-const CONTENT_QUERY = /* groq */ `{
-  "projects": *[_type == "project" && defined(slug.current)] | order(order asc, title.en asc) {
-    "slug": slug.current,
-    title,
-    description,
-    technology,
-    "image": mainImage.asset->url,
-    demo,
-    github,
-    codeStatus,
-    videoUrl,
-    loomVideo,
-    isVisible,
-    order,
-    projectType,
-    collectionId,
-    tagline,
-    platform,
-    "gallery": gallery[].asset->url,
-    "features": features[]{
-      key,
-      icon,
-      title,
-      description,
-      "image": image.asset->url
-    }
-  },
-  "socials": *[_type == "social" && isVisible != false] | order(order asc) {
-    "id": _id,
-    platform,
-    name,
-    url
-  },
-  "siteSettings": *[_type == "siteSettings"][0] {
-    name,
-    bio,
-    roles,
-    "headerImage": headerImage.asset->url,
-    "footerImage": footerImage.asset->url,
-    cvUrl
-  }
-}`;
 
 /**
  * Rewrites the prerender route list from live content. It was 56 hand-kept

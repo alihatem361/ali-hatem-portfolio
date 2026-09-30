@@ -1,4 +1,9 @@
-import { useEffect, useState, Fragment } from "react";
+import {
+  useEffect,
+  useState,
+  useSyncExternalStore,
+  Fragment,
+} from "react";
 import { Routes, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -13,8 +18,24 @@ import CollectionPage from "./pages/CollectionPage";
 import Projects from "./components/projects";
 import AnimationLoader from "./components/Utilities/AnimationLoader";
 import Nav from "./components/nav";
+import { subscribe, getVersion } from "./data/contentStore";
 
 function App() {
+  /**
+   * Bumps whenever development live content arrives. In production nothing
+   * ever calls setContent, so this stays 0 and the key below never changes.
+   */
+  const contentVersion = useSyncExternalStore(subscribe, getVersion, getVersion);
+
+  // Development only: start the live Sanity subscription. The dynamic import
+  // keeps @sanity/client out of the production bundle entirely.
+  useEffect(() => {
+    if (!import.meta.env.DEV) return;
+    import("./data/devLiveContent")
+      .then((m) => m.startLiveContent())
+      .catch(() => {});
+  }, []);
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -41,7 +62,7 @@ function App() {
         </a>
         <Nav />
         <main id="main-content">
-          <Routes>
+          <Routes key={contentVersion}>
             <Route path="projects" element={<Projects />} />
             <Route path="project/:slug" element={<ProjectDetailsPage />} />
             <Route
