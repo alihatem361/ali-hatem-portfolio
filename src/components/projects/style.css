@@ -11,184 +11,303 @@
   border-bottom: 0px solid #e5e5e5 !important;
 }
 
-/* ========== NEW FILTER DESIGN ========== */
-
-/* Mobile Filter Toggle Button */
-.filter-toggle-mobile {
-  margin-bottom: 0.5rem;
+/* ==========================================================
+   PROJECTS LAYOUT — compact technology sidebar
+   Logical properties throughout (inset-inline, border-inline,
+   text-align: start) so the sidebar mirrors correctly in RTL
+   without a single dir-specific override.
+   ========================================================== */
+.projects-layout {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: var(--space-lg, 24px);
+  align-items: start;
+  margin-top: var(--space-md, 16px);
 }
 
-.filter-toggle-btn {
+.projects-main {
+  min-width: 0;
+}
+
+/* ---------- Sidebar shell ---------- */
+.tech-filter {
+  position: sticky;
+  top: 90px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  padding: 14px;
+  border-radius: var(--radius-md, 12px);
+  background: var(--surface-1, rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.tech-filter__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   gap: 8px;
-  padding: 8px 14px;
-  background: rgba(30, 30, 30, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  width: 100%;
-  justify-content: center;
+  padding-bottom: 10px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
 }
 
-.filter-toggle-btn:hover {
-  background: rgba(40, 40, 40, 0.95);
-  border-color: var(--warning-color);
+.tech-filter__title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary, #a0a0a0);
 }
 
-.filter-toggle-btn.has-filter {
-  border-color: var(--warning-color);
-  background: rgba(212, 175, 55, 0.1);
-}
-
-.filter-toggle-btn .filter-count {
-  background: var(--warning-color);
-  color: #000;
-  padding: 1px 6px;
-  border-radius: 10px;
+.tech-filter__reset {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent-color, #d4af37);
   font-size: 0.7rem;
   font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
-.filter-toggle-btn .chevron {
-  transition: transform 0.2s ease;
-  margin-left: auto;
+.tech-filter__reset:hover {
+  opacity: 0.75;
+  text-decoration: underline;
 }
 
-.filter-toggle-btn .chevron.open {
-  transform: rotate(180deg);
+/* ---------- The list ---------- */
+.tech-filter__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  /* Capped so 30+ technologies never push the cards down the page. */
+  max-height: min(58vh, 520px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 55, 0.35) transparent;
+  margin-inline: -4px;
+  padding-inline: 4px;
 }
 
-/* Filter Wrapper */
-.filter-wrapper {
-  position: sticky;
-  top: 8px;
-  z-index: 100;
-  margin-bottom: 0.75rem;
+.tech-filter__list::-webkit-scrollbar {
+  width: 4px;
 }
 
-/* Filter Pills Container */
-.filter-pills {
+.tech-filter__list::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.35);
+  border-radius: 2px;
+}
+
+.tech-filter__list::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+/* ---------- Items ---------- */
+.tech-filter__item {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 10px;
-  background: rgba(26, 26, 26, 0.95);
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.filter-pills::-webkit-scrollbar {
-  display: none;
-}
-
-/* Individual Filter Pill */
-.filter-pill {
-  padding: 4px 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 9px;
+  border: none;
+  border-radius: 7px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.75rem;
+  color: var(--text-secondary, #a0a0a0);
+  font-size: 0.78rem;
   font-weight: 500;
+  text-align: start;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.tech-filter__item:hover {
+  background: var(--surface-2, rgba(255, 255, 255, 0.05));
+  color: var(--text-color, #fff);
+}
+
+.tech-filter__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.tech-filter__count {
+  flex-shrink: 0;
+  min-width: 20px;
+  padding: 1px 5px;
+  border-radius: 9px;
+  background: var(--surface-2, rgba(255, 255, 255, 0.05));
+  color: var(--text-secondary, #a0a0a0);
+  font-size: 0.65rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+/* Active state — gold accent, with a marker bar that reads in both
+   directions because it uses the inline-start edge. */
+.tech-filter__item.is-active {
+  position: relative;
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--accent-color, #d4af37);
+  font-weight: 700;
+}
+
+.tech-filter__item.is-active::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block: 5px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--accent-color, #d4af37);
+}
+
+.tech-filter__item.is-active .tech-filter__count {
+  background: var(--accent-color, #d4af37);
+  color: var(--primary-color, #0a0a0a);
+}
+
+.tech-filter__item:focus-visible {
+  outline: 2px solid var(--accent-color, #d4af37);
+  outline-offset: 2px;
+}
+
+/* ---------- Mobile toggle (hidden on desktop) ---------- */
+.tech-filter__toggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm, 8px);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.1));
+  background: var(--surface-2, rgba(255, 255, 255, 0.05));
+  color: var(--text-color, #fff);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.tech-filter__toggle:hover {
+  border-color: var(--border-accent, rgba(212, 175, 55, 0.3));
+}
+
+.tech-filter__toggle:focus-visible {
+  outline: 2px solid var(--accent-color, #d4af37);
+  outline-offset: 2px;
+}
+
+.tech-filter__toggle svg:first-child {
+  color: var(--accent-color, #d4af37);
   flex-shrink: 0;
 }
 
-.filter-pill:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.25);
-  color: #fff;
+.tech-filter__toggle-label {
+  flex: 1;
+  text-align: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.filter-pill.active {
-  background: var(--warning-color);
-  border-color: var(--warning-color);
-  color: #000;
-  font-weight: 600;
+.tech-filter__chevron {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
-.filter-pill.clear-pill {
-  background: transparent;
-  border-color: rgba(255, 100, 100, 0.4);
-  color: rgba(255, 100, 100, 0.9);
-  padding: 4px 10px;
-  font-weight: 600;
+.tech-filter__chevron.is-open {
+  transform: rotate(180deg);
 }
 
-.filter-pill.clear-pill:hover {
-  background: rgba(255, 100, 100, 0.15);
-  border-color: rgba(255, 100, 100, 0.6);
-}
-
+/* The grid already carries the cards' own padding. */
 .projects {
   gap: 25px;
 }
 
-/* Mobile Styles */
-@media (max-width: 767.98px) {
-  .filter-wrapper {
+/* ==========================================================
+   RESPONSIVE — sidebar becomes a collapsible panel
+   ========================================================== */
+@media (max-width: 991.98px) {
+  .projects-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-sm, 12px);
+  }
+
+  .tech-filter {
+    position: static;
+    padding: 10px;
+  }
+
+  /* The heading row is redundant once the toggle shows the state. */
+  .tech-filter__head {
+    display: none;
+  }
+
+  .tech-filter__toggle {
+    display: flex;
+  }
+
+  .tech-filter__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+    gap: 4px;
     max-height: 0;
     overflow: hidden;
-    margin-bottom: 0;
+    opacity: 0;
+    margin-top: 0;
     transition:
-      max-height 0.25s ease,
-      margin-bottom 0.25s ease;
+      max-height 0.28s ease,
+      opacity 0.2s ease,
+      margin-top 0.28s ease;
   }
 
-  .filter-wrapper.open {
-    max-height: 200px;
-    margin-bottom: 0.5rem;
+  .tech-filter__list.is-open {
+    max-height: 246px;
+    overflow-y: auto;
+    opacity: 1;
+    margin-top: 10px;
   }
 
-  .filter-pills {
-    flex-wrap: wrap;
-    padding: 6px 8px;
+  .tech-filter__item {
+    padding: 7px 9px;
   }
 
-  .filter-pill {
-    padding: 3px 10px;
-    font-size: 0.7rem;
-  }
-}
-
-/* Desktop - Always show filters, hide toggle */
-@media (min-width: 768px) {
-  .filter-toggle-mobile {
-    display: none !important;
-  }
-
-  .filter-wrapper {
-    max-height: none !important;
-    overflow: visible;
-  }
-
-  .filter-pills {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .filter-pill {
-    padding: 5px 14px;
-    font-size: 0.8rem;
-  }
-
-  .filter-pill:hover {
-    transform: translateY(-1px);
+  /* A left marker bar reads oddly in a grid of chips. */
+  .tech-filter__item.is-active::before {
+    display: none;
   }
 }
 
-/* ========== END FILTER DESIGN ========== */
+@media (max-width: 480px) {
+  .tech-filter__list {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+
+  .tech-filter__item {
+    font-size: 0.74rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-filter__list,
+  .tech-filter__item,
+  .tech-filter__chevron,
+  .tech-filter__count {
+    transition: none;
+  }
+}
 
 .custom-offcanvas {
   border-radius: 20px 0 0 20px;

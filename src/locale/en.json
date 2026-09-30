@@ -7,7 +7,10 @@
   "direction": "ltr",
   "projects": {
     "backbutoon": "Back to home",
-    "homebutton": " View All Projects"
+    "homebutton": " View All Projects",
+    "pageTitle": "Projects",
+    "allFilter": "All",
+    "filterBy": "Filter by technology"
   },
   "language": {
     "arabic": "Arabic",

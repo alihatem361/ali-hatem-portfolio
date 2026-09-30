@@ -1,6 +1,6 @@
 {
   "_comment": "GENERATED FILE — do not edit. Produced by scripts/fetch-sanity-content.js. Edit content in Sanity Studio.",
-  "generatedAt": "2026-09-30T09:05:40.092Z",
+  "generatedAt": "2026-09-30T12:12:18.044Z",
   "projects": [
     {
       "slug": "cruisara-tours",
@@ -142,6 +142,27 @@
       "codeStatus": "PRIVATE"
     },
     {
+      "slug": "winwin-platform",
+      "title": {
+        "en": "WinWin Platform",
+        "ar": "منصة WinWin"
+      },
+      "description": {
+        "en": "Static responsive UI templates for the WinWin trading education platform\n\nThe project is the frontend presentation layer only and was designed to be handed over to a PHP developer for backend integration",
+        "ar": "واجهات مستخدم ثابتة ومتجاوبة لمنصة WinWin التعليمية المتخصصة في التداول\n\nالمشروع يمثل طبقة الواجهة الأمامية فقط وتم تصميمه ليتم تسليمه لمطور PHP لربط المحتوى والنماذج بالـ Backend"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/16bab70d1448c012ea644324ba6997187ee1ca9d-1894x952.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JS",
+        "RTL"
+      ],
+      "demo": "https://win-win-platform.vercel.app/",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
       "slug": "gz-school",
       "title": {
         "en": "GZ School",
@@ -161,6 +182,28 @@
       ],
       "demo": "https://www.genzschool.net",
       "github": "https://github.com/alihatem361/gz-school",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "manar-platform",
+      "title": {
+        "en": "Manar Platform",
+        "ar": "منصة منار الجنوب"
+      },
+      "description": {
+        "en": "A modern Arabic RTL educational platform for Manar Al-Janoub College, designed to provide a clear and responsive digital experience for educational programs, professional diplomas, fellowships, certificates, courses, media content, registration, and communication.",
+        "ar": "منصة تعليمية عربية حديثة لكلية منار الجنوب، مصممة لتقديم تجربة رقمية واضحة ومتجاوبة للبرامج التعليمية والدبلومات المهنية والزمالات والشهادات والدورات والمحتوى الإعلامي والتسجيل والتواصل."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/9f1a0cc7505091e5bc45650517ef9f32752cfb21-1891x944.png",
+      "technology": [
+        "HTML5",
+        "Tailwind CSS",
+        "JavaScript",
+        "Responsive Design",
+        "RTL"
+      ],
+      "demo": "https://e3melbusiness-manar-platform.alihatem7201738.workers.dev/",
+      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -1122,11 +1165,11 @@
   ],
   "technologies": [
     "Tailwind",
-    "ReactJs",
     "HTML",
     "JavaScript",
-    "Bootstrap",
+    "ReactJs",
     "CSS",
+    "Bootstrap",
     "Api",
     "Redux",
     "TypeScript",
@@ -1136,6 +1179,7 @@
     "shadcn-ui",
     "FramerMotion",
     "jQuery",
+    "RTL",
     "Zustand",
     "Ant Design",
     "ApexCharts",
@@ -1146,13 +1190,17 @@
     "Firebase",
     "FullCalendar",
     "Gemini AI",
+    "HTML5",
     "Ionic React",
+    "JS",
     "PayPal API",
     "React",
     "React Query",
     "Recharts",
     "Resend",
+    "Responsive Design",
     "SwiperJs",
+    "Tailwind CSS",
     "Vercel",
     "WOW.js"
   ],
@@ -1219,8 +1267,8 @@
     },
     "bio": [
       {
-        "en": "A software engineer with a strong focus on React and Next.js ⚛️.",
-        "ar": "مهندس برمجيات متخصص في React و Next.js ⚛️."
+        "en": "Frontend Developer focused on React and Next.js, building modern, scalable, and high-performance web applications with clean architecture and exceptional user experiences.",
+        "ar": "مطور واجهات أمامية متخصص في React وNext.js، أعمل على بناء تطبيقات ويب عصرية وقابلة للتوسع وعالية الأداء، مع التركيز على بنية برمجية منظمة وتجربة مستخدم متميزة."
       },
       {
         "en": "Passionate about creating visually stunning user interfaces using HTML, CSS, and JavaScript 💻.",

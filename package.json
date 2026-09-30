@@ -84,6 +84,7 @@
       "/project/laptopstore-contract",
       "/project/lecture-management-and-attendance-recording-system",
       "/project/makhabrash",
+      "/project/manar-platform",
       "/project/masaakin-al-mawil",
       "/project/masaakin-al-mawil-dashboard",
       "/project/mckeon-dashboard",
@@ -107,7 +108,8 @@
       "/project/shahadat-alhadaf",
       "/project/speakersreactjs",
       "/project/thamer-al-suwait",
-      "/project/udacitymyreadsproject"
+      "/project/udacitymyreadsproject",
+      "/project/winwin-platform"
     ],
     "inlineCss": false,
     "puppeteerArgs": [
