@@ -8,8 +8,7 @@ import "./swiper.css";
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 import PojectItem from "../../projects/components/projectItem";
 import { useTranslation } from "react-i18next";
-import ProjectsApi from "../../../data/projects.json";
-import ProjectsApiAR from "../../../data/projectsAR.json";
+import { getVisibleProjectsForLanguage } from "../../../data/mergeProjects";
 import {
   FaPlay,
   FaPause,
@@ -53,12 +52,7 @@ const EnhancedProjectSwiper = () => {
         setIsLoading(true);
         setError(null);
 
-        // Get projects directly based on current language
-        const projects =
-          i18n.language === "en"
-            ? ProjectsApi.Projects
-            : ProjectsApiAR.Projects;
-        const visibleProjects = projects.filter((project) => !project.hidden);
+        const visibleProjects = getVisibleProjectsForLanguage(i18n.language);
 
         // Simulate network delay for smooth loading animation
         setTimeout(() => {

@@ -22,32 +22,32 @@
   z-index: 0;
 }
 
-.decoration-circle {
+.gproject-bg-decoration .decoration-circle {
   position: absolute;
   border-radius: 50%;
   filter: blur(100px);
   opacity: 0.3;
 }
 
-.circle-1 {
+.gproject-bg-decoration .circle-1 {
   width: 400px;
   height: 400px;
   background: linear-gradient(135deg, #d4af37 0%, #f7dc6f 100%);
   top: -100px;
   left: -150px;
-  animation: floatCircle 15s ease-in-out infinite;
+  animation: gpFloatCircle 15s ease-in-out infinite;
 }
 
-.circle-2 {
+.gproject-bg-decoration .circle-2 {
   width: 300px;
   height: 300px;
   background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
   bottom: -50px;
   right: -100px;
-  animation: floatCircle 20s ease-in-out infinite reverse;
+  animation: gpFloatCircle 20s ease-in-out infinite reverse;
 }
 
-@keyframes floatCircle {
+@keyframes gpFloatCircle {
   0%,
   100% {
     transform: translate(0, 0) scale(1);
@@ -155,10 +155,10 @@
 .sparkle-icon {
   color: var(--accent-color, #d4af37);
   font-size: 1rem;
-  animation: sparkle 2s ease-in-out infinite;
+  animation: gpSparkle 2s ease-in-out infinite;
 }
 
-@keyframes sparkle {
+@keyframes gpSparkle {
   0%,
   100% {
     transform: scale(1) rotate(0deg);
@@ -628,12 +628,12 @@
     justify-content: center;
   }
 
-  .circle-1 {
+  .gproject-bg-decoration .circle-1 {
     width: 250px;
     height: 250px;
   }
 
-  .circle-2 {
+  .gproject-bg-decoration .circle-2 {
     width: 200px;
     height: 200px;
   }
@@ -671,9 +671,9 @@
    REDUCED MOTION SUPPORT
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
-  .decoration-circle,
-  .sparkle-icon,
-  .image-glow,
+  .gproject-bg-decoration .decoration-circle,
+  .gproject-section .sparkle-icon,
+  .gproject-section .image-glow,
   .loader-ring div {
     animation: none;
   }

@@ -7,9 +7,14 @@ import YoutubeVideo from "../components/projects/components/YoutubeVideo";
 import LoomVideo from "../components/projects/components/LoomVideo";
 import SEO from "../components/SEO";
 import MobileProjectDetails from "./MobileProjectDetails";
-import { createSlug, getImagePath } from "../helpers";
-import ProjectsApi from "../data/projects.json";
-import ProjectsApiAR from "../data/projectsAR.json";
+import {
+  createSlug,
+  getProjectSlug,
+  getImagePath,
+  getAbsoluteImageUrl,
+  SITE_URL,
+} from "../helpers";
+import { getProjectsForLanguage } from "../data/mergeProjects";
 import "./ProjectDetailsPage.css";
 
 // Icons
@@ -29,7 +34,7 @@ import {
 import { HiSparkles } from "react-icons/hi2";
 import { BiCopy, BiCheck } from "react-icons/bi";
 
-const BASE_URL = "https://www.alihatem.me"; // Replace with your actual base URL
+const BASE_URL = SITE_URL;
 
 const ProjectDetailsPage = () => {
   const { slug } = useParams();
@@ -40,12 +45,14 @@ const ProjectDetailsPage = () => {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    const allProjects =
-      i18n.language === "en" ? ProjectsApi.Projects : ProjectsApiAR.Projects;
+    const allProjects = getProjectsForLanguage(i18n.language);
 
-    const foundProject = allProjects.find(
-      (proj) => createSlug(proj.title) === slug,
-    );
+    // Match the canonical slug first. The title-derived fallback keeps any
+    // previously shared Arabic URL working, since those were built from the
+    // translated title before projects carried an explicit slug.
+    const foundProject =
+      allProjects.find((proj) => getProjectSlug(proj) === slug) ||
+      allProjects.find((proj) => createSlug(proj.title) === slug);
 
     if (foundProject) {
       setProject(foundProject);
@@ -126,7 +133,7 @@ const ProjectDetailsPage = () => {
     <SEO
       title={`${project.title} | Ali Hatem Portfolio`}
       description={seoDescription}
-      ogImage={project.image ? `${BASE_URL}/${project.image}` : undefined}
+      ogImage={getAbsoluteImageUrl(project.image)}
       ogType="article"
       project={{
         title: project.title,

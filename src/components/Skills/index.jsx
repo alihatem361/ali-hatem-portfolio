@@ -111,10 +111,35 @@ const SkillsComponent = () => {
       category: "Tools",
     },
   ];
+  // The track is rendered twice so the marquee can loop seamlessly. Only the
+  // first pass is exposed to assistive tech; the clone is decorative.
+  const renderCard = (skill, index, isClone) => (
+    <div
+      className="skill-card"
+      key={`${isClone ? "clone" : "skill"}-${index}`}
+      style={{ "--skill-color": skill.color }}
+    >
+      <div className="skill-icon-wrapper">
+        <skill.icon className="skill-icon" aria-hidden="true" />
+        <div className="skill-glow"></div>
+      </div>
+      <div className="skill-info">
+        <h3 className="skill-name">{skill.name}</h3>
+        <span className="skill-category">{skill.category}</span>
+      </div>
+      <div className="skill-hover-effect"></div>
+    </div>
+  );
+
   return (
-    <section className="skills-container" id="skills" data-aos="fade-up">
+    <section
+      className="skills-container"
+      id="skills"
+      aria-labelledby="skills-title"
+      data-aos="fade-up"
+    >
       <div className="skills-header">
-        <h2>{t("skills.title")}</h2>
+        <h2 id="skills-title">{t("skills.title")}</h2>
         <p className="skills-subtitle">{t("skills.subtitle")}</p>
         <div className="skills-divider"></div>
       </div>
@@ -122,25 +147,10 @@ const SkillsComponent = () => {
       <div className="skills-content">
         <div className="skills-carousel">
           <div className="skills-track">
-            {[...skills, ...skills].map((skill, index) => {
-              return (
-                <div
-                  className="skill-card"
-                  key={index}
-                  style={{ "--skill-color": skill.color }}
-                >
-                  <div className="skill-icon-wrapper">
-                    <skill.icon className="skill-icon" />
-                    <div className="skill-glow"></div>
-                  </div>
-                  <div className="skill-info">
-                    <h3 className="skill-name">{skill.name}</h3>
-                    <span className="skill-category">{skill.category}</span>
-                  </div>
-                  <div className="skill-hover-effect"></div>
-                </div>
-              );
-            })}
+            {skills.map((skill, index) => renderCard(skill, index, false))}
+            <div className="skills-track-clone" aria-hidden="true">
+              {skills.map((skill, index) => renderCard(skill, index, true))}
+            </div>
           </div>
         </div>
       </div>

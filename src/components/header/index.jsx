@@ -18,6 +18,13 @@ const Header = () => {
     });
   }, [i18n.language]);
 
+  const scrollToNextSection = () => {
+    const next = document.getElementById("skills");
+    if (!next) return;
+    const top = next.getBoundingClientRect().top + window.pageYOffset - 90;
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+
   // Container animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -31,12 +38,12 @@ const Header = () => {
   };
 
   return (
-    <section className="hero-section" id="home">
+    <section className="hero-section" id="home" aria-label="Introduction">
       {/* Animated Background Elements */}
       <div className="hero-background">
-        <div className="gradient-orb gradient-orb-1"></div>
-        <div className="gradient-orb gradient-orb-2"></div>
-        <div className="gradient-orb gradient-orb-3"></div>
+        <div className="hero-orb hero-orb-1"></div>
+        <div className="hero-orb hero-orb-2"></div>
+        <div className="hero-orb hero-orb-3"></div>
         <div className="grid-overlay"></div>
       </div>
 
@@ -50,9 +57,16 @@ const Header = () => {
         <HeaderImage aboutmeData={aboutmeData} />
       </motion.div>
 
-      {/* Scroll Indicator */}
-      <motion.div
+      {/* Scroll Indicator — actionable, not just decorative */}
+      <motion.button
+        type="button"
         className="scroll-indicator"
+        onClick={scrollToNextSection}
+        aria-label={
+          i18n.language === "ar"
+            ? "التمرير إلى قسم المهارات"
+            : "Scroll to skills section"
+        }
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2, duration: 0.8 }}
@@ -64,7 +78,7 @@ const Header = () => {
           <span></span>
           <span></span>
         </div>
-      </motion.div>
+      </motion.button>
     </section>
   );
 };

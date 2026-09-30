@@ -185,11 +185,12 @@ const Projects = () => {
 
   const filterItems = () => {
     if (filteringItems.length > 0) {
+      const selected = filteringItems.map((item) => item.toLowerCase());
       const filteredProjects = projectsDta.filter((project) =>
-        project.technology.some((r) =>
-          filteringItems
-            .map((item) => item.toLowerCase())
-            .includes(r.toLowerCase()),
+        // Optional chaining: a project without technologies used to throw here
+        // and take the whole listing down.
+        (project.technology || []).some((tech) =>
+          selected.includes(String(tech).toLowerCase()),
         ),
       );
       setFilteredProjectsData(filteredProjects);

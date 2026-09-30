@@ -24,6 +24,7 @@ const Certifications = () => {
     <section
       className="certifications-container"
       id="certifications"
+      aria-labelledby="certifications-title"
       data-aos="fade-up"
     >
       {/* Background Decorations */}
@@ -39,7 +40,7 @@ const Certifications = () => {
           <FaCertificate className="badge-icon" />
           <span>{t("certifications.badge")}</span>
         </div>
-        <h2>{t("certifications.title")}</h2>
+        <h2 id="certifications-title">{t("certifications.title")}</h2>
         <p className="certifications-subtitle">
           {t("certifications.subtitle")}
         </p>

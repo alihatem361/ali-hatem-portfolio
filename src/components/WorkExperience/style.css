@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 20px;
+  padding: var(--section-padding-y) var(--section-padding-x);
   background-color: var(--primary-color);
   position: relative;
   overflow: hidden;
@@ -33,7 +33,7 @@
     rgba(212, 175, 55, 0.1) 0%,
     transparent 70%
   );
-  animation: floatCircle 8s ease-in-out infinite;
+  animation: expFloatCircle 8s ease-in-out infinite;
 }
 
 .experience-bg-decoration .circle-1 {
@@ -61,7 +61,7 @@
   animation-delay: 4s;
 }
 
-@keyframes floatCircle {
+@keyframes expFloatCircle {
   0%,
   100% {
     transform: scale(1) translateY(0);
@@ -79,69 +79,14 @@
   z-index: 2;
 }
 
-.experience-header .header-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  padding: 8px 20px;
-  border-radius: 50px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: var(--accent-color);
-  font-family: "Cairo", sans-serif;
-}
 
 .experience-header .badge-icon {
   font-size: 16px;
 }
 
-.experience-header h2 {
-  background: var(--gold-gradient);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  font-family: monospace;
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 900;
-  animation: goldShimmer 3s linear infinite;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  margin: 0 0 16px 0;
-}
 
-@keyframes goldShimmer {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
-.experience-subtitle {
-  font-size: 15px;
-  color: var(--text-secondary);
-  font-weight: 400;
-  margin-bottom: 20px;
-  font-family: "Cairo", sans-serif;
-  text-transform: capitalize;
-}
 
-.experience-divider {
-  width: 80px;
-  height: 4px;
-  background: var(--gold-gradient);
-  margin: 0 auto;
-  border-radius: 2px;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-}
 
 /* Content */
 .experience-content {
@@ -279,15 +224,15 @@
   color: white;
   margin-bottom: 15px;
   font-family: "Cairo", sans-serif;
-  animation: pulse 2s infinite;
+  animation: expBadgePulse 2s infinite;
 }
 
 .current-badge .sparkle-icon {
   font-size: 14px;
-  animation: sparkle 1.5s infinite;
+  animation: expSparkle 1.5s infinite;
 }
 
-@keyframes pulse {
+@keyframes expBadgePulse {
   0%,
   100% {
     box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
@@ -297,7 +242,7 @@
   }
 }
 
-@keyframes sparkle {
+@keyframes expSparkle {
   0%,
   100% {
     transform: scale(1) rotate(0deg);
@@ -471,10 +416,6 @@
     padding: 60px 15px;
   }
 
-  .experience-header h2 {
-    font-size: 26px;
-  }
-
   .timeline-item {
     flex-direction: column;
     gap: 15px;
@@ -531,13 +472,7 @@
 }
 
 @media (max-width: 480px) {
-  .experience-header h2 {
-    font-size: 22px;
-  }
 
-  .experience-subtitle {
-    font-size: 14px;
-  }
 
   .job-card {
     padding: 15px;

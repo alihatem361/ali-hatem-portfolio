@@ -1,0 +1,24 @@
+{
+  "name": "ali-hatem-portfolio-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sanity Studio for the Ali Hatem portfolio",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "@sanity/icons": "^5.2.1",
+    "@sanity/vision": "^6.9.2",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "^6.9.2",
+    "styled-components": "^6.1.15"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

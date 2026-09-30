@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -30,9 +30,6 @@ const HomePage = () => {
         language={i18n.language}
       />
       <Header />
-      <div className="background-effects">
-        <div className="gradient-orb orb-3"></div>
-      </div>
       <HomeProjectsContainer />
       <Footer />
     </React.Fragment>

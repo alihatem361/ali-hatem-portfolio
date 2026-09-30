@@ -1,36 +1,26 @@
-import ProjectsApi from "./projects.json";
-import ProjectsApiAR from "./projectsAR.json";
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import {
+  getProjectsForLanguage,
+  getVisibleProjectsForLanguage,
+  getSocialsForLanguage,
+  getAboutmeForLanguage,
+} from "./mergeProjects";
+
 const GetAllData = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
-  const getProjects = () => {
-    const projects =
-      i18n.language === "en" ? ProjectsApi.Projects : ProjectsApiAR.Projects;
-    // Filter out hidden projects
-    const visibleProjects = projects.filter((project) => !project.hidden);
-    return Promise.resolve([visibleProjects]);
-  };
+  const getProjects = () =>
+    Promise.resolve([getVisibleProjectsForLanguage(i18n.language)]);
 
-  const getAllProjects = () => {
-    // This function returns all projects including hidden ones
-    return Promise.resolve(
-      i18n.language === "en" ? [ProjectsApi.Projects] : [ProjectsApiAR.Projects]
-    );
-  };
+  // Includes hidden projects.
+  const getAllProjects = () =>
+    Promise.resolve([getProjectsForLanguage(i18n.language)]);
 
-  const getSocials = () => {
-    return Promise.resolve(
-      i18n.language === "en" ? [ProjectsApi.socials] : [ProjectsApiAR.socials]
-    );
-  };
+  const getSocials = () =>
+    Promise.resolve([getSocialsForLanguage(i18n.language)]);
 
-  const getAboutme = () => {
-    return Promise.resolve(
-      i18n.language === "en" ? [ProjectsApi.aboutme] : [ProjectsApiAR.aboutme]
-    );
-  };
+  const getAboutme = () =>
+    Promise.resolve([getAboutmeForLanguage(i18n.language)]);
 
   return { getProjects, getAllProjects, getSocials, getAboutme };
 };

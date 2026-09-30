@@ -34,13 +34,23 @@ function App() {
   return (
     <div className="App">
       <Fragment>
+        <a className="skip-to-content" href="#main-content">
+          {i18n.language === "ar"
+            ? "تخطي إلى المحتوى"
+            : "Skip to main content"}
+        </a>
         <Nav />
-        <Routes>
-          <Route path="projects" element={<Projects />} />
-          <Route path="project/:slug" element={<ProjectDetailsPage />} />
-          <Route path="collection/:collectionId" element={<CollectionPage />} />
-          <Route path="/" element={<HomePage />} />
-        </Routes>
+        <main id="main-content">
+          <Routes>
+            <Route path="projects" element={<Projects />} />
+            <Route path="project/:slug" element={<ProjectDetailsPage />} />
+            <Route
+              path="collection/:collectionId"
+              element={<CollectionPage />}
+            />
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </main>
       </Fragment>
     </div>
   );

@@ -21,6 +21,7 @@ const WorkExperience = () => {
     <section
       className="experience-container"
       id="experience"
+      aria-labelledby="experience-title"
       data-aos="fade-up"
     >
       {/* Background Decorations */}
@@ -36,7 +37,7 @@ const WorkExperience = () => {
           <FaBriefcase className="badge-icon" />
           <span>{t("experience.badge")}</span>
         </div>
-        <h2>{t("experience.title")}</h2>
+        <h2 id="experience-title">{t("experience.title")}</h2>
         <p className="experience-subtitle">{t("experience.subtitle")}</p>
         <div className="experience-divider"></div>
       </div>

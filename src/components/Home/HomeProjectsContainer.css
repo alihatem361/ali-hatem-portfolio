@@ -1,0 +1,42 @@
+/* ============================================
+   HOME — "SEE ALL PROJECTS" CALL TO ACTION
+   The link used to sit flush against the
+   certifications grid with no breathing room,
+   which made it read as part of that section
+   rather than as the next step.
+   ============================================ */
+.projects-cta {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-2xl) 0 var(--space-3xl);
+}
+
+.projects-cta .button1 {
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  border-color: var(--border-accent);
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.projects-cta .button1:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--primary-color);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Only `translate` is transitioned. `transform` carries the RTL flip, which
+   must apply instantly rather than animating as a spin on language switch. */
+.projects-cta__arrow {
+  font-size: 0.9em;
+  transition: translate 0.3s ease;
+}
+
+/* Nudge the arrow in the reading direction on hover. */
+.projects-cta .button1:hover .projects-cta__arrow {
+  translate: 4px 0;
+}
+
+[dir="rtl"] .projects-cta .button1:hover .projects-cta__arrow {
+  translate: -4px 0;
+}

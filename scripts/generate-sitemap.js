@@ -1,35 +1,18 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { createSlug } from "../src/helpers/index.js";
 
 const BASE_URL = "https://www.alihatem.me";
 const STATIC_ROUTES = [
   { path: "/", changefreq: "weekly", priority: "1.0", includeAlternates: true },
   { path: "/projects", changefreq: "weekly", priority: "0.9" },
-  {
-    path: "/collection/teachers-collection",
-    changefreq: "monthly",
-    priority: "0.8",
-  },
-  {
-    path: "/collection/mps-collection",
-    changefreq: "monthly",
-    priority: "0.8",
-  },
-  {
-    path: "/collection/e3mel-landing-collection",
-    changefreq: "monthly",
-    priority: "0.8",
-  },
 ];
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, "..");
 
-const projectsEnPath = path.join(rootDir, "src", "data", "projects.json");
-const projectsArPath = path.join(rootDir, "src", "data", "projectsAR.json");
+const contentPath = path.join(rootDir, "src", "data", "content.json");
 const outputPath = path.join(rootDir, "public", "sitemap.xml");
 
 const toIsoDateStartOfDayUTC = () => {
@@ -47,23 +30,24 @@ const xmlEscape = (value) =>
 
 const toAbsoluteUrl = (routePath) => `${BASE_URL}${routePath}`;
 
-const parseProjects = async (filePath) => {
-  const raw = await readFile(filePath, "utf8");
-  const json = JSON.parse(raw);
-  return Array.isArray(json?.Projects) ? json.Projects : [];
+const loadContent = async () => {
+  const raw = await readFile(contentPath, "utf8");
+  return JSON.parse(raw);
 };
 
+/**
+ * One URL per visible project, using its canonical slug. Previously this
+ * slugged the titles of both language files, which emitted a second, Arabic
+ * URL for every project that the router could not actually serve, plus URLs
+ * for hidden projects.
+ */
 const extractProjectRoutes = (projects) => {
   const uniqueRoutes = new Set();
 
   for (const project of projects) {
-    const title = project?.title;
-    if (!title) continue;
-
-    const slug = createSlug(title);
-    if (!slug) continue;
-
-    uniqueRoutes.add(`/project/${slug}`);
+    if (project?.hidden) continue;
+    if (!project?.slug) continue;
+    uniqueRoutes.add(`/project/${project.slug}`);
   }
 
   return Array.from(uniqueRoutes)
@@ -72,6 +56,21 @@ const extractProjectRoutes = (projects) => {
       path: routePath,
       changefreq: "monthly",
       priority: "0.7",
+    }));
+};
+
+/** Collections are derived from the projects that belong to them. */
+const extractCollectionRoutes = (projects) => {
+  const ids = new Set(
+    projects.filter((p) => !p.hidden && p.collectionId).map((p) => p.collectionId),
+  );
+
+  return Array.from(ids)
+    .sort()
+    .map((id) => ({
+      path: `/collection/${id}`,
+      changefreq: "monthly",
+      priority: "0.8",
     }));
 };
 
@@ -106,16 +105,20 @@ const generateSitemapXml = (routes) => {
 };
 
 const run = async () => {
-  const [projectsEn, projectsAr] = await Promise.all([
-    parseProjects(projectsEnPath),
-    parseProjects(projectsArPath),
-  ]);
+  const content = await loadContent();
+  const projects = Array.isArray(content?.projects) ? content.projects : [];
 
-  const allProjects = [...projectsEn, ...projectsAr];
-  const projectRoutes = extractProjectRoutes(allProjects);
+  if (!projects.length) {
+    throw new Error(
+      "content.json contains no projects — refusing to write an empty sitemap.",
+    );
+  }
 
-  // Static routes first, then all discovered project routes.
-  const allRoutes = [...STATIC_ROUTES, ...projectRoutes];
+  const allRoutes = [
+    ...STATIC_ROUTES,
+    ...extractCollectionRoutes(projects),
+    ...extractProjectRoutes(projects),
+  ];
 
   const sitemapXml = generateSitemapXml(allRoutes);
   await writeFile(outputPath, sitemapXml, "utf8");

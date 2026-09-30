@@ -3,14 +3,16 @@
    ============================================ */
 
 /* Hero Section Container */
+/* The sticky header occupies space at the top of the flow, so the hero only
+   needs to fill what is left of the viewport. */
 .hero-section {
-  min-height: 100vh;
+  min-height: calc(100vh - 90px);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 80px 5% 40px;
+  padding: 40px 5%;
 }
 
 /* ============================================
@@ -26,7 +28,7 @@
   overflow: hidden;
 }
 
-.gradient-orb {
+.hero-orb {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
@@ -34,7 +36,7 @@
   animation: orbFloat 20s ease-in-out infinite;
 }
 
-.gradient-orb-1 {
+.hero-orb-1 {
   width: 600px;
   height: 600px;
   background: linear-gradient(135deg, #d4af37 0%, #f7dc6f 50%, #d4af37 100%);
@@ -43,7 +45,7 @@
   animation-delay: 0s;
 }
 
-.gradient-orb-2 {
+.hero-orb-2 {
   width: 400px;
   height: 400px;
   background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
@@ -52,7 +54,7 @@
   animation-delay: -5s;
 }
 
-.gradient-orb-3 {
+.hero-orb-3 {
   width: 300px;
   height: 300px;
   background: linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%);
@@ -192,10 +194,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: shimmer 3s linear infinite;
+  animation: heroShimmer 3s linear infinite;
 }
 
-@keyframes shimmer {
+@keyframes heroShimmer {
   0% {
     background-position: 0% center;
   }
@@ -401,7 +403,7 @@
 }
 
 /* Glow Effect */
-.image-glow {
+.hero-image-container .image-glow {
   position: absolute;
   width: 450px;
   height: 450px;
@@ -453,7 +455,7 @@
 }
 
 /* Image Wrapper */
-.image-wrapper {
+.hero-image-container .image-wrapper {
   position: relative;
   z-index: 1;
 }
@@ -610,6 +612,20 @@
   align-items: center;
   gap: 8px;
   z-index: 10;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.scroll-indicator:hover {
+  background: var(--surface-2);
+}
+
+.scroll-indicator:hover .mouse {
+  border-color: var(--accent-color);
 }
 
 .mouse {
@@ -723,7 +739,7 @@
     height: 400px;
   }
 
-  .image-glow {
+  .hero-image-container .image-glow {
     width: 380px;
     height: 380px;
   }
@@ -744,7 +760,7 @@
 
 @media screen and (max-width: 900px) {
   .hero-section {
-    padding: 100px 5% 60px;
+    padding: 40px 5% 60px;
     min-height: auto;
   }
 
@@ -787,7 +803,7 @@
 
 @media screen and (max-width: 600px) {
   .hero-section {
-    padding: 90px 4% 40px;
+    padding: 32px 4% 40px;
   }
 
   .hero-name {
@@ -828,7 +844,7 @@
     height: 420px;
   }
 
-  .image-glow {
+  .hero-image-container .image-glow {
     width: 320px;
     height: 320px;
   }
@@ -877,17 +893,17 @@
     );
   }
 
-  .gradient-orb-1 {
+  .hero-orb-1 {
     width: 300px;
     height: 300px;
   }
 
-  .gradient-orb-2 {
+  .hero-orb-2 {
     width: 200px;
     height: 200px;
   }
 
-  .gradient-orb-3 {
+  .hero-orb-3 {
     width: 150px;
     height: 150px;
   }
@@ -897,7 +913,7 @@
    REDUCED MOTION SUPPORT
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
-  .gradient-orb,
+  .hero-orb,
   .decorative-ring,
   .blob-background svg,
   .floating-icon,

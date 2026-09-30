@@ -113,7 +113,7 @@
   border-top: 3px solid var(--primary);
   border-right: 3px solid var(--primary-light);
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: swiperSpin 1s linear infinite;
 }
 
 .loader-pulse {
@@ -125,10 +125,10 @@
   height: 40px;
   background: var(--gradient-primary);
   border-radius: 50%;
-  animation: pulse 1.5s ease-in-out infinite;
+  animation: swiperPulse 1.5s ease-in-out infinite;
 }
 
-@keyframes spin {
+@keyframes swiperSpin {
   0% {
     transform: rotate(0deg);
   }
@@ -137,7 +137,7 @@
   }
 }
 
-@keyframes pulse {
+@keyframes swiperPulse {
   0%,
   100% {
     transform: translate(-50%, -50%) scale(0.8);
@@ -192,10 +192,10 @@
   width: 20px;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5));
-  animation: shimmer 1.5s infinite;
+  animation: swiperShimmer 1.5s infinite;
 }
 
-@keyframes shimmer {
+@keyframes swiperShimmer {
   0% {
     transform: translateX(-100%);
   }
@@ -613,7 +613,7 @@
   }
 }
 
-/* Background Effects */
+/* Background Effects — purely decorative, so it must never intercept clicks. */
 .background-effects {
   position: absolute;
   top: 0;
@@ -622,13 +622,14 @@
   height: 100%;
   overflow: hidden;
   z-index: -1;
+  pointer-events: none;
 }
 
 .gradient-orb {
   position: absolute;
   border-radius: 50%;
   filter: blur(100px);
-  animation: float 20s infinite ease-in-out;
+  animation: swiperFloat 20s infinite ease-in-out;
   opacity: 0.7;
 }
 
@@ -659,7 +660,7 @@
   animation-delay: -14s;
 }
 
-@keyframes float {
+@keyframes swiperFloat {
   0%,
   100% {
     transform: translateY(0) translateX(0) rotate(0deg);
@@ -678,26 +679,26 @@
   height: 100%;
 }
 
-.particle {
+.floating-particles .particle {
   position: absolute;
   width: 4px;
   height: 4px;
   background: var(--primary);
   border-radius: 50%;
-  animation: particleFloat var(--duration) infinite linear;
+  animation: swiperParticleFloat var(--duration) infinite linear;
   animation-delay: var(--delay);
   opacity: 0.6;
 }
 
-.particle:nth-child(odd) {
+.floating-particles .particle:nth-child(odd) {
   background: var(--primary-light);
 }
 
-.particle:nth-child(3n) {
+.floating-particles .particle:nth-child(3n) {
   background: #d4af37;
 }
 
-@keyframes particleFloat {
+@keyframes swiperParticleFloat {
   0% {
     transform: translateY(100vh) translateX(0) scale(0);
     opacity: 0;

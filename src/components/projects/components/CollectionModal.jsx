@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { FaLayerGroup, FaExternalLinkAlt } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
-import { createSlug } from "../../../helpers";
+import { getProjectSlug } from "../../../helpers";
 import "./CollectionModal.css";
 
 const CollectionModal = ({ show, collection, handleClose }) => {
@@ -105,7 +105,7 @@ const CollectionModal = ({ show, collection, handleClose }) => {
                     />
                     <div className="collection-project-overlay">
                       <Link
-                        to={`/project/${createSlug(project.title)}`}
+                        to={`/project/${getProjectSlug(project)}`}
                         className="view-project-btn"
                         onClick={handleClose}
                       >

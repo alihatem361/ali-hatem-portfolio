@@ -4,9 +4,13 @@ import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
-import { createSlug } from "../helpers";
-import ProjectsApi from "../data/projects.json";
-import ProjectsApiAR from "../data/projectsAR.json";
+import {
+  getProjectSlug,
+  getImagePath,
+  getAbsoluteImageUrl,
+  SITE_URL,
+} from "../helpers";
+import { getProjectsForLanguage } from "../data/mergeProjects";
 import "./CollectionPage.css";
 
 // Icons
@@ -15,7 +19,7 @@ import { FaLayerGroup, FaExternalLinkAlt } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
 import { BiCopy, BiCheck } from "react-icons/bi";
 
-const BASE_URL = "https://www.alihatem.me"; // Replace with your actual base URL
+const BASE_URL = SITE_URL;
 
 const canonicalUrl = `${BASE_URL}${window.location.pathname}`;
 
@@ -72,12 +76,6 @@ const CollectionPage = () => {
 
   const isArabic = i18n.language === "ar";
 
-  // Helper function to get proper image path
-  const getImagePath = (imagePath) => {
-    if (!imagePath) return "";
-    return imagePath.startsWith("/") ? imagePath : `/${imagePath}`;
-  };
-
   useEffect(() => {
     const config = COLLECTIONS_CONFIG[collectionId];
 
@@ -86,8 +84,7 @@ const CollectionPage = () => {
       return;
     }
 
-    const allProjects =
-      i18n.language === "en" ? ProjectsApi.Projects : ProjectsApiAR.Projects;
+    const allProjects = getProjectsForLanguage(i18n.language);
 
     // Find projects that belong to this collection
     const projectsInCollection = allProjects.filter((proj) =>
@@ -178,7 +175,7 @@ const CollectionPage = () => {
         title={`${collection.title} | Ali Hatem Portfolio`}
         description={collection.description}
         ogImage={
-          collection.image ? `${BASE_URL}/${collection.image}` : undefined
+          getAbsoluteImageUrl(collection.image)
         }
         ogType="collection"
         keywords={`${collection.title}, ${collection.technology?.join(", ") || ""}, Ali Hatem, Portfolio Collection`}
@@ -307,7 +304,7 @@ const CollectionPage = () => {
                 />
                 <div className="cp-project-image-overlay">
                   <Link
-                    to={`/project/${createSlug(project.title)}`}
+                    to={`/project/${getProjectSlug(project)}`}
                     className="cp-view-btn"
                   >
                     {isArabic ? "عرض التفاصيل" : "View Details"}
@@ -317,7 +314,7 @@ const CollectionPage = () => {
 
               <div className="cp-project-content">
                 <Link
-                  to={`/project/${createSlug(project.title)}`}
+                  to={`/project/${getProjectSlug(project)}`}
                   className="cp-project-title-link"
                 >
                   <h3 className="cp-project-title">{project.title}</h3>
@@ -350,7 +347,7 @@ const CollectionPage = () => {
                     </a>
                   )}
                   <Link
-                    to={`/project/${createSlug(project.title)}`}
+                    to={`/project/${getProjectSlug(project)}`}
                     className="cp-details-btn"
                   >
                     {isArabic ? "التفاصيل" : "Details"}

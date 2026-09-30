@@ -151,10 +151,10 @@
 
 .badge-icon {
   font-size: 1rem;
-  animation: sparkle 2s ease-in-out infinite;
+  animation: pdmSparkle 2s ease-in-out infinite;
 }
 
-@keyframes sparkle {
+@keyframes pdmSparkle {
   0%,
   100% {
     opacity: 1;
@@ -515,10 +515,10 @@
   height: 8px;
   background: #4ade80;
   border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
+  animation: pdmPulse 2s ease-in-out infinite;
 }
 
-@keyframes pulse {
+@keyframes pdmPulse {
   0%,
   100% {
     opacity: 1;

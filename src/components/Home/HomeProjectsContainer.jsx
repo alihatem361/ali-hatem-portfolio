@@ -2,7 +2,9 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 import GetAllData from "../../data/projects";
+import "./HomeProjectsContainer.css";
 
 // components
 import GProject from "../Gproject/index";
@@ -34,17 +36,17 @@ const HomeProjectsContainer = () => {
           <SkillComponent />
           <WorkExperience />
           <Certifications />
-          <div className="text-center ">
+          <div className="projects-cta">
             <Link to="/projects" className="btn button1">
-              {t("projects.homebutton")}
-              <i
-                class="fa-solid fa-arrow-right"
+              <span>{t("projects.homebutton")}</span>
+              <FaArrowRight
+                aria-hidden="true"
+                className="projects-cta__arrow"
                 style={{
                   transform:
                     i18n.language === "ar" ? "rotate(180deg)" : "rotate(0deg)",
-                  padding: "0 5px",
                 }}
-              ></i>
+              />
             </Link>
           </div>
         </div>

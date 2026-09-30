@@ -1,17 +1,15 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay } from "swiper";
+import { Navigation, Autoplay, Keyboard } from "swiper";
 import { getImagePath } from "../helpers";
 import "./MobileProjectDetails.css";
 
 import {
-  IoArrowBack,
   IoChevronForward,
   IoChevronBack,
   IoLogoApple,
@@ -23,6 +21,10 @@ import {
   IoNotificationsOutline,
   IoChevronForwardCircleOutline,
   IoChevronBackCircleOutline,
+  IoExpandOutline,
+  IoClose,
+  IoPlay,
+  IoPause,
 } from "react-icons/io5";
 import { FaLock } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
@@ -45,27 +47,19 @@ const FEATURE_ICON_MAP = {
   bell: IoNotificationsOutline,
 };
 
-// Drives the gallery's depth effect off each slide's actual rendered
-// position (not Swiper's internal translate/slidesGrid bookkeeping,
-// which lags the real DOM by a full slide-step in this setup, nor
-// the swiper-slide-active/prev/next classes, which land on the
-// wrong slide for this centeredSlides + non-zero initialSlide
-// configuration).
-const applyDepthStyles = (swiperInstance) => {
-  const containerRect = swiperInstance.el.getBoundingClientRect();
-  const centerX = containerRect.left + containerRect.width / 2;
-  const step = swiperInstance.slidesSizesGrid[0] || containerRect.width || 1;
-  swiperInstance.slides.forEach((slideEl) => {
-    const phone = slideEl.querySelector(".mpd-phone");
-    if (!phone) return;
-    const r = slideEl.getBoundingClientRect();
-    const distPx = r.left + r.width / 2 - centerX;
-    const dist = Math.min(Math.abs(distPx) / step, 2);
-    const scale = Math.max(1 - dist * 0.22, 0.56);
-    const opacity = Math.max(1 - dist * 0.55, 0.25);
-    phone.style.transform = `scale(${scale}) rotate(var(--mpd-tilt))`;
-    phone.style.opacity = opacity;
-  });
+/** Tracks the user's reduced-motion preference, reacting to changes. */
+const usePrefersReducedMotion = () => {
+  const [prefers, setPrefers] = useState(false);
+
+  useEffect(() => {
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setPrefers(query.matches);
+    const onChange = (event) => setPrefers(event.matches);
+    query.addEventListener("change", onChange);
+    return () => query.removeEventListener("change", onChange);
+  }, []);
+
+  return prefers;
 };
 
 const PhoneMockup = ({ src, alt, size = "md", tilt = 0, className = "" }) => (
@@ -90,7 +84,8 @@ const PhoneMockup = ({ src, alt, size = "md", tilt = 0, className = "" }) => (
 
 const MobileProjectDetails = ({ project, isArabic }) => {
   const navigate = useNavigate();
-  const [copied, setCopied] = React.useState(false);
+  const [copied, setCopied] = useState(false);
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -103,15 +98,106 @@ const MobileProjectDetails = ({ project, isArabic }) => {
   const features = project.features || [];
   const heroPhones = gallery.slice(0, 3);
 
-  // Swiper's native `loop` only appends slides on forward autoplay
-  // ticks (never prepends), so the left-side buffer drains after a
-  // few cycles and everything piles up on one side. Instead we
-  // render several repeats of the gallery and silently rewind to
-  // the middle set whenever we drift too close to either edge,
-  // which gives a genuinely symmetric, endless carousel.
-  const GALLERY_REPEATS = 5;
-  const middleSetStart = Math.floor(GALLERY_REPEATS / 2) * gallery.length;
-  const extendedGallery = Array.from({ length: GALLERY_REPEATS }, () => gallery).flat();
+  const [swiper, setSwiper] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(!prefersReducedMotion);
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const lightboxRef = useRef(null);
+  const lastFocusedRef = useRef(null);
+
+  const shotLabel = (index) =>
+    isArabic
+      ? `لقطة ${index + 1} من ${gallery.length}`
+      : `Screenshot ${index + 1} of ${gallery.length}`;
+
+  const goToSlide = (index) => {
+    if (!swiper || swiper.destroyed) return;
+    // slideToLoop maps a real index onto the duplicated slide set when
+    // looping; it falls back to slideTo behaviour when loop is off.
+    swiper.slideToLoop(index);
+  };
+
+  const toggleAutoplay = () => {
+    if (!swiper?.autoplay) return;
+    if (isPlaying) {
+      swiper.autoplay.stop();
+      setIsPlaying(false);
+    } else {
+      swiper.autoplay.start();
+      setIsPlaying(true);
+    }
+  };
+
+  // --- Lightbox -------------------------------------------------------
+  const openLightbox = (index) => {
+    lastFocusedRef.current = document.activeElement;
+    setLightboxIndex(index);
+    swiper?.autoplay?.stop();
+    setIsPlaying(false);
+  };
+
+  const closeLightbox = useCallback(() => {
+    setLightboxIndex(null);
+    // Return focus to the thumbnail the user came from.
+    lastFocusedRef.current?.focus?.();
+  }, []);
+
+  const stepLightbox = useCallback(
+    (delta) =>
+      setLightboxIndex((current) =>
+        current === null
+          ? current
+          : (current + delta + gallery.length) % gallery.length,
+      ),
+    [gallery.length],
+  );
+
+  const isLightboxOpen = lightboxIndex !== null;
+
+  // Keyboard control and scroll lock while the viewer is open.
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeLightbox();
+        return;
+      }
+      if (event.key === "ArrowRight") stepLightbox(isArabic ? -1 : 1);
+      if (event.key === "ArrowLeft") stepLightbox(isArabic ? 1 : -1);
+      if (event.key === "Tab") {
+        // Simple focus trap: the dialog's own controls are the only stops.
+        const focusables = lightboxRef.current?.querySelectorAll("button");
+        if (!focusables?.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", onKeyDown);
+    // Move focus into the dialog so keys reach it immediately.
+    requestAnimationFrame(() => lightboxRef.current?.focus());
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [isLightboxOpen, closeLightbox, stepLightbox, isArabic]);
+
+  // Keep the carousel in step with the viewer when it closes.
+  useEffect(() => {
+    if (lightboxIndex !== null) goToSlide(lightboxIndex);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lightboxIndex]);
 
   return (
     <div className="mobile-project-details">
@@ -347,80 +433,169 @@ const MobileProjectDetails = ({ project, isArabic }) => {
           {isArabic ? "جولة داخل التطبيق" : "Inside The App"}
         </motion.h2>
 
+        <p className="mpd-gallery-hint">
+          {isArabic
+            ? "اضغط على أي لقطة لعرضها بالحجم الكامل"
+            : "Tap any screenshot to view it full size"}
+        </p>
+
         <div className="mpd-gallery-swiper-wrap">
-          <div className="mpd-gallery-viewport">
-            <Swiper
-              key={isArabic ? "ar" : "en"}
-              dir={isArabic ? "rtl" : "ltr"}
-              grabCursor={true}
-              centeredSlides={true}
-              loop={false}
-              initialSlide={middleSetStart}
-              slidesPerView={1}
-              spaceBetween={24}
-              speed={700}
-              autoplay={{
-                delay: 2600,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              pagination={{
-                el: ".mpd-gallery-pagination",
-                type: "fraction",
-                formatFractionCurrent: (n) => ((n - 1) % gallery.length) + 1,
-                formatFractionTotal: () => gallery.length,
-              }}
-              navigation={{
-                prevEl: ".mpd-gallery-prev",
-                nextEl: ".mpd-gallery-next",
-              }}
-              modules={[Pagination, Navigation, Autoplay]}
-              className="mpd-gallery-swiper"
-              onSwiper={(swiperInstance) => {
-                requestAnimationFrame(() => {
-                  if (swiperInstance.destroyed) return;
-                  swiperInstance.slideTo(middleSetStart, 0, false);
-                  applyDepthStyles(swiperInstance);
-                });
-              }}
-              onProgress={applyDepthStyles}
-              onSetTranslate={applyDepthStyles}
-              onSlideChangeTransitionEnd={(swiperInstance) => {
-                // Recycle back into the middle repetition once we
-                // drift into an outer block, so the carousel can
-                // keep scrolling forever without ever hitting a
-                // real array boundary.
-                const idx = swiperInstance.activeIndex;
-                if (
-                  idx < gallery.length ||
-                  idx >= extendedGallery.length - gallery.length
-                ) {
-                  const target = middleSetStart + (idx % gallery.length);
-                  swiperInstance.slideTo(target, 0, false);
-                }
-              }}
-            >
-              {extendedGallery.map((src, index) => (
-                <SwiperSlide key={index} className="mpd-gallery-slide">
+          {/* Fractional slidesPerView with centeredSlides keeps the active
+              screenshot genuinely centred and the neighbours peeking evenly on
+              both sides. Depth is a plain CSS scale on the active slide — no
+              3D effect, so nothing has to be re-measured per frame and the
+              gallery renders once, not five times over. */}
+          <Swiper
+            key={isArabic ? "ar" : "en"}
+            dir={isArabic ? "rtl" : "ltr"}
+            grabCursor={true}
+            centeredSlides={true}
+            loop={gallery.length > 3}
+            slidesPerView={1.35}
+            spaceBetween={16}
+            breakpoints={{
+              560: { slidesPerView: 2.1, spaceBetween: 20 },
+              900: { slidesPerView: 3, spaceBetween: 24 },
+              1200: { slidesPerView: 3.4, spaceBetween: 28 },
+            }}
+            speed={600}
+            watchSlidesProgress={true}
+            /* The gallery mounts before the responsive breakpoint and the
+               lazy-loaded screenshots have settled, so Swiper's first
+               measurement is stale and it centres the wrong slide. These make
+               it re-measure whenever the size actually changes. */
+            observer={true}
+            observeParents={true}
+            resizeObserver={true}
+            keyboard={{ enabled: true }}
+            autoplay={
+              prefersReducedMotion
+                ? false
+                : {
+                    delay: 3800,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }
+            }
+            navigation={{
+              prevEl: ".mpd-gallery-prev",
+              nextEl: ".mpd-gallery-next",
+            }}
+            modules={[Navigation, Autoplay, Keyboard]}
+            className="mpd-gallery-swiper"
+            onSwiper={(instance) => {
+              setSwiper(instance);
+              // One forced re-measure after layout settles, so the first
+              // painted frame is already correctly centred.
+              requestAnimationFrame(() => {
+                if (instance.destroyed) return;
+                instance.update();
+                instance.slideToLoop(0, 0, false);
+              });
+            }}
+            onSlideChange={(instance) => setActiveIndex(instance.realIndex)}
+            onAutoplayStart={() => setIsPlaying(true)}
+            onAutoplayStop={() => setIsPlaying(false)}
+          >
+            {gallery.map((src, index) => (
+              <SwiperSlide key={index} className="mpd-gallery-slide">
+                <button
+                  type="button"
+                  className="mpd-shot"
+                  onClick={() => openLightbox(index)}
+                  aria-label={
+                    isArabic
+                      ? `عرض ${shotLabel(index)} بالحجم الكامل`
+                      : `View ${shotLabel(index)} full size`
+                  }
+                  // Only the centred screenshot is reachable by Tab; the
+                  // rest are decorative until swiped into view.
+                  tabIndex={index === activeIndex ? 0 : -1}
+                >
                   <PhoneMockup
                     src={src}
-                    alt={`${project.title} screenshot ${(index % gallery.length) + 1}`}
+                    alt={`${project.title} — ${shotLabel(index)}`}
                     size="gallery"
                   />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+                  <span className="mpd-shot-zoom" aria-hidden="true">
+                    <IoExpandOutline />
+                  </span>
+                </button>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-          <button className="mpd-gallery-nav mpd-gallery-prev" aria-label="Previous screenshot">
-            {isArabic ? <IoChevronForwardCircleOutline /> : <IoChevronBackCircleOutline />}
+          <button
+            type="button"
+            className="mpd-gallery-nav mpd-gallery-prev"
+            aria-label={isArabic ? "اللقطة السابقة" : "Previous screenshot"}
+          >
+            {isArabic ? (
+              <IoChevronForwardCircleOutline />
+            ) : (
+              <IoChevronBackCircleOutline />
+            )}
           </button>
-          <button className="mpd-gallery-nav mpd-gallery-next" aria-label="Next screenshot">
-            {isArabic ? <IoChevronBackCircleOutline /> : <IoChevronForwardCircleOutline />}
+          <button
+            type="button"
+            className="mpd-gallery-nav mpd-gallery-next"
+            aria-label={isArabic ? "اللقطة التالية" : "Next screenshot"}
+          >
+            {isArabic ? (
+              <IoChevronBackCircleOutline />
+            ) : (
+              <IoChevronForwardCircleOutline />
+            )}
           </button>
         </div>
 
-        <div className="mpd-gallery-pagination" />
+        {/* Thumbnail rail — direct access to any screenshot, which the
+            prev/next-only carousel could not offer. */}
+        <div
+          className="mpd-thumbs"
+          role="tablist"
+          aria-label={isArabic ? "لقطات التطبيق" : "App screenshots"}
+        >
+          {gallery.map((src, index) => (
+            <button
+              type="button"
+              key={index}
+              role="tab"
+              aria-selected={index === activeIndex}
+              aria-label={shotLabel(index)}
+              className={`mpd-thumb ${index === activeIndex ? "is-active" : ""}`}
+              onClick={() => goToSlide(index)}
+            >
+              <img src={getImagePath(src)} alt="" loading="lazy" />
+            </button>
+          ))}
+        </div>
+
+        <div className="mpd-gallery-controls">
+          <span className="mpd-gallery-counter" aria-live="polite">
+            <strong>{activeIndex + 1}</strong>
+            <span>/</span>
+            <span>{gallery.length}</span>
+          </span>
+          {!prefersReducedMotion && (
+            <button
+              type="button"
+              className="mpd-gallery-playpause"
+              onClick={toggleAutoplay}
+              aria-label={
+                isPlaying
+                  ? isArabic
+                    ? "إيقاف العرض التلقائي"
+                    : "Pause slideshow"
+                  : isArabic
+                    ? "تشغيل العرض التلقائي"
+                    : "Play slideshow"
+              }
+            >
+              {isPlaying ? <IoPause /> : <IoPlay />}
+            </button>
+          )}
+        </div>
       </section>
 
       {/* Footer CTA */}
@@ -461,6 +636,68 @@ const MobileProjectDetails = ({ project, isArabic }) => {
           </div>
         </div>
       </motion.section>
+
+      {/* Full-size screenshot viewer */}
+      {isLightboxOpen && (
+        <div
+          className="mpd-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={isArabic ? "عارض اللقطات" : "Screenshot viewer"}
+          ref={lightboxRef}
+          tabIndex={-1}
+          onClick={closeLightbox}
+        >
+          <button
+            type="button"
+            className="mpd-lightbox-close"
+            onClick={closeLightbox}
+            aria-label={isArabic ? "إغلاق" : "Close"}
+          >
+            <IoClose />
+          </button>
+
+          {gallery.length > 1 && (
+            <button
+              type="button"
+              className="mpd-lightbox-nav mpd-lightbox-prev"
+              onClick={(event) => {
+                event.stopPropagation();
+                stepLightbox(-1);
+              }}
+              aria-label={isArabic ? "السابق" : "Previous"}
+            >
+              {isArabic ? <IoChevronForward /> : <IoChevronBack />}
+            </button>
+          )}
+
+          {/* Stop propagation so clicking the image itself does not close. */}
+          <figure
+            className="mpd-lightbox-figure"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <img
+              src={getImagePath(gallery[lightboxIndex])}
+              alt={`${project.title} — ${shotLabel(lightboxIndex)}`}
+            />
+            <figcaption>{shotLabel(lightboxIndex)}</figcaption>
+          </figure>
+
+          {gallery.length > 1 && (
+            <button
+              type="button"
+              className="mpd-lightbox-nav mpd-lightbox-next"
+              onClick={(event) => {
+                event.stopPropagation();
+                stepLightbox(1);
+              }}
+              aria-label={isArabic ? "التالي" : "Next"}
+            >
+              {isArabic ? <IoChevronBack /> : <IoChevronForward />}
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 };

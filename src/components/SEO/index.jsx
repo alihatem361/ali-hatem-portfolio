@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
+import { SITE_URL, getAbsoluteImageUrl } from "../../helpers";
 
-const BASE_URL = "https://www.alihatem.me";
+const BASE_URL = SITE_URL;
 
 const SEO = ({
   title = "Ali Hatem | Senior Frontend Developer - React & Next.js Expert",
@@ -22,7 +23,6 @@ const SEO = ({
 
   const normalizedPath = withLeadingSlash(location.pathname || "/");
   const url = canonicalUrl || toAbsoluteUrl(normalizedPath);
-  const arabicUrl = `${BASE_URL}/ar${normalizedPath === "/" ? "" : normalizedPath}`;
 
   // JSON-LD Structured Data for Person
   const personStructuredData = {
@@ -127,14 +127,17 @@ const SEO = ({
         name: project.title,
         description: project.description,
         url: url,
-        image: project.image ? `${BASE_URL}/${project.image}` : ogImage,
+        image: getAbsoluteImageUrl(project.image, ogImage),
         author: {
           "@id": `${BASE_URL}/#person`,
         },
         creator: {
           "@id": `${BASE_URL}/#person`,
         },
-        dateCreated: project.dateCreated || new Date().toISOString(),
+        // Omitted when unknown. Defaulting to "now" made the prerendered
+        // JSON-LD differ on every build and told search engines the work was
+        // created the day the site was deployed.
+        ...(project.dateCreated && { dateCreated: project.dateCreated }),
         keywords: project.technology?.join(", "),
         ...(project.demo && { mainEntityOfPage: project.demo }),
       }
@@ -231,13 +234,13 @@ const SEO = ({
         />
       )}
 
-      {/* Language alternates */}
-      <link rel="alternate" hrefLang="en" href={url} />
-      <link
-        rel="alternate"
-        hrefLang="ar"
-        href={url.replace(BASE_URL, `${BASE_URL}/ar`)}
-      />
+      {/*
+        Both languages are served from the same URL — the site switches
+        language client-side and has no /ar routes. The previous markup
+        advertised `${BASE_URL}/ar/...` alternates that 404, which Search
+        Console reports as hreflang errors. A single self-referencing
+        x-default is the correct signal for a one-URL bilingual page.
+      */}
       <link rel="alternate" hrefLang="x-default" href={url} />
 
       {/* Open Graph / Facebook */}

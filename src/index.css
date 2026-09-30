@@ -7,14 +7,16 @@
   font-family: "Cairo", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* border: 1px solid red !important; */
 }
 
 :root {
+  /* Surfaces */
   --primary-color: #0a0a0a;
   --secondary-color: #1a1a1a;
   --tertiary-color: #2a2a2a;
   --quaternary-color: #ffffff;
+
+  /* Brand */
   --accent-color: #d4af37;
   --gold-color: #d4af37;
   --gold-gradient: linear-gradient(
@@ -23,13 +25,60 @@
     #f7dc6f 50%,
     #d4af37 100%
   );
+
+  /* Status */
   --danger-color: #dc3545;
   --warning-color: #ffc107;
+  --success-color: #22c55e;
+
+  /* Text */
   --text-color: #ffffff;
   --text-secondary: #a0a0a0;
+
+  /* Glass surfaces — used by cards, badges, and inputs across sections */
+  --surface-1: rgba(255, 255, 255, 0.03);
+  --surface-2: rgba(255, 255, 255, 0.05);
+  --surface-3: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --border-accent: rgba(212, 175, 55, 0.3);
+
+  /* Spacing scale */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 60px;
+  --space-3xl: 80px;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 50px;
+
+  /* Elevation */
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.3);
+  --shadow-gold: 0 8px 30px rgba(212, 175, 55, 0.3);
+
+  /* Section rhythm — one knob for vertical spacing between home sections */
+  --section-padding-y: 80px;
+  --section-padding-x: 20px;
+
+  /* Motion */
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --bounce-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   --smooth-transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding-y: 56px;
+    --section-padding-x: 16px;
+  }
 }
 
 body {
@@ -39,18 +88,132 @@ body {
   font-size: 16px;
 }
 
+/* ============================================
+   FOCUS VISIBILITY
+   Keyboard users must always see where they are.
+   ============================================ */
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Only suppress the ring for pointer interactions, never for keyboard. */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.skip-to-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  z-index: 2000;
+  padding: 12px 24px;
+  background: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: 700;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.skip-to-content:focus-visible {
+  transform: translate(-50%, 0);
+  color: var(--primary-color);
+}
+
+/* ============================================
+   SHARED SECTION HEADING SYSTEM
+   Every home page section (Skills, Experience,
+   Certifications, Projects) renders the same
+   badge / title / subtitle / divider stack.
+   ============================================ */
+.skills-header h2,
+.experience-header h2,
+.certifications-header h2,
+.project-header {
+  background: var(--gold-gradient);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-transform: none;
+  animation: goldShimmer 3s linear infinite;
+  margin: 0 0 var(--space-md) 0;
+}
+
+.project-header {
+  margin: var(--space-2xl) 0 var(--space-lg);
+}
+
+.skills-subtitle,
+.experience-subtitle,
+.certifications-subtitle {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 620px;
+  margin: 0 auto var(--space-lg);
+  text-transform: none;
+}
+
+.skills-divider,
+.experience-divider,
+.certifications-divider {
+  width: 80px;
+  height: 4px;
+  background: var(--gold-gradient);
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Section eyebrow badge, shared by Experience and Certifications */
+.experience-header .header-badge,
+.certifications-header .header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 6px 16px;
+  margin-bottom: var(--space-md);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
 .btn {
   font-size: 1rem !important;
   color: var(--text-color) !important;
 }
+
 .button1 {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
   color: var(--text-color);
-  margin: 1rem 0;
-  padding: 0.6rem 1.2rem;
+  margin: var(--space-md) 0;
+  padding: 0.75rem 1.5rem;
   font-size: 0.95rem;
-  border-radius: 8px;
-  border: 1px solid var(--quaternary-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+  background-color: var(--surface-3);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   transition: var(--transition);
@@ -66,13 +229,13 @@ body {
 .button1:hover {
   background-color: var(--quaternary-color);
   color: var(--primary-color);
+  border-color: var(--quaternary-color);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
-.button1:active,
-.button1:focus {
-  outline: none !important;
-  box-shadow: none !important;
+.button1:active {
+  transform: translateY(0);
 }
 
 .language-toggle {
@@ -86,7 +249,7 @@ body {
   background: var(--accent-color) !important;
   color: var(--primary-color) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3) !important;
+  box-shadow: var(--shadow-gold) !important;
 }
 
 .language-toggle:active {
@@ -94,39 +257,26 @@ body {
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2) !important;
 }
 
-.project-header {
-  background: linear-gradient(135deg, #d4af37 0%, #f7dc6f 50%, #d4af37 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  font-family: monospace;
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 900;
-  animation: goldShimmer 3s linear infinite;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  margin: 2rem 0;
-}
-
 .lazy-load-image-loaded {
   width: 100%;
 }
 
+/* ============================================
+   FORM CONTROLS
+   ============================================ */
 input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
   padding: 0.75rem 1rem;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--tertiary-color);
-  background-color: rgba(255, 255, 255, 0.05) !important;
+  background-color: var(--surface-2) !important;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   color: var(--text-color);
   font-size: 1rem;
-  margin: 1rem 0;
+  margin: var(--space-md) 0;
   transition: var(--transition);
 }
 
@@ -134,7 +284,8 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
   border-color: var(--accent-color) !important;
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25) !important;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2) !important;
+  outline: none;
 }
 
 .btn-close {
@@ -149,6 +300,7 @@ input[type="password"]:focus {
 .btn-close:hover,
 .btn-close:focus {
   background-color: #fff !important;
+  opacity: 1;
 }
 
 @media (min-width: 992px) {
@@ -157,82 +309,13 @@ input[type="password"]:focus {
   }
 }
 
-.header-text {
-  padding: 2.5rem;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.03);
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-}
-
-.greeting {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-  color: var(--highlight-color);
-}
-
-.name {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.highlight {
-  background: linear-gradient(
-    120deg,
-    var(--accent-color) 0%,
-    var(--secondary-color) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding: 0 0.5rem;
-  position: relative;
-}
-
-.bio p {
-  line-height: 1.7;
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
-}
-
-.download-cv {
-  background: var(--highlight-color);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  transition: var(--transition);
-}
-
-.download-cv:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.header-img {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: var(--transition);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.header-img.hover-effect:hover {
-  transform: translateY(-5px);
-}
-
-.profile-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition);
-}
-
-.header-img:hover .profile-image {
-  transform: scale(1.08);
-}
-
-/* Enhanced Animations */
+/* ============================================
+   ANIMATION LIBRARY
+   Keyframes here are global utilities. Anything
+   component-specific is namespaced in that
+   component's stylesheet so definitions cannot
+   collide across files.
+   ============================================ */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -328,47 +411,22 @@ input[type="password"]:focus {
   animation: glow 2s ease-in-out infinite;
 }
 
-/* Particle animation background */
-.particles-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
+/* ============================================
+   SCROLLBAR & SELECTION
+   ============================================ */
+html {
+  scroll-behavior: smooth;
 }
 
-.particle {
-  position: absolute;
-  background: radial-gradient(
-    circle,
-    rgba(212, 175, 55, 0.8) 0%,
-    rgba(212, 175, 55, 0.2) 50%,
-    transparent 100%
-  );
-  border-radius: 50%;
-  animation: particleFloat 8s linear infinite;
+/* Keep anchored sections clear of the sticky header. */
+#home,
+#skills,
+#experience,
+#certifications,
+#contact {
+  scroll-margin-top: 90px;
 }
 
-@keyframes particleFloat {
-  0% {
-    transform: translateY(100vh) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-10vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-/* Enhanced scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -386,7 +444,6 @@ input[type="password"]:focus {
   background: linear-gradient(135deg, #f7dc6f, var(--gold-color));
 }
 
-/* Selection styles */
 ::selection {
   background: rgba(212, 175, 55, 0.3);
   color: var(--text-color);
@@ -395,4 +452,24 @@ input[type="password"]:focus {
 ::-moz-selection {
   background: rgba(212, 175, 55, 0.3);
   color: var(--text-color);
+}
+
+/* ============================================
+   GLOBAL REDUCED MOTION
+   A single guard so decorative motion added to
+   any section is covered by default.
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

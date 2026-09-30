@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 // components
 import ProjectCardButtons from "../ProjectCardButtons";
 // helpers
-import { createSlug } from "../../../../helpers";
+import { getProjectSlug } from "../../../../helpers";
 
 const PojectItem = ({ project, onCollectionClick }) => {
   const { i18n, t } = useTranslation();
@@ -79,7 +79,7 @@ const PojectItem = ({ project, onCollectionClick }) => {
                 </Link>
               ) : (
                 <Link
-                  to={`/project/${createSlug(project.title)}`}
+                  to={`/project/${getProjectSlug(project)}`}
                   className="view-details-btn"
                   aria-label="View project details"
                 >
@@ -113,7 +113,7 @@ const PojectItem = ({ project, onCollectionClick }) => {
               </Link>
             ) : (
               <Link
-                to={`/project/${createSlug(project.title)}`}
+                to={`/project/${getProjectSlug(project)}`}
                 className="project-title-link"
               >
                 <h3 className="project-title">

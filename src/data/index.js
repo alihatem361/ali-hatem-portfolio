@@ -1,18 +1,11 @@
-// Technologies extracted from projects.json - only include skills used in visible projects
-export const techSkills = [
-  "ReactJs",
-  "NextJs",
-  "Redux",
-  "JavaScript",
-  "TypeScript",
-  "NodeJs",
-  "ExpressJs",
-  "HTML",
-  "CSS",
-  "Tailwind",
-  "Bootstrap",
-  "MaterialUI",
-  "Firebase",
-  "Vite",
-  "Api",
-];
+import content from "./content.json";
+
+/**
+ * Technologies that appear on at least one visible project, most-used first.
+ *
+ * Generated from the CMS at build time. This was previously a hand-maintained
+ * list that had drifted from the data: three entries matched no visible project
+ * (so those filters returned nothing), while 22 technologies in use had no
+ * filter at all.
+ */
+export const techSkills = content.technologies || [];

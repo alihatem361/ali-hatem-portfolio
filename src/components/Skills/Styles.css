@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 20px;
+  padding: var(--section-padding-y) var(--section-padding-x);
   background-color: var(--primary-color);
   position: relative;
   overflow: hidden;
@@ -18,55 +18,13 @@
   z-index: 2;
 }
 
-.skills-header h2 {
-  background: var(--gold-gradient);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  font-family: monospace;
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 900;
-  animation: goldShimmer 3s linear infinite;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  margin: 0 0 16px 0;
-}
 
-@keyframes goldShimmer {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 .skills-title-accent {
   color: var(--accent-color);
 }
 
-.skills-subtitle {
-  font-size: 15px;
-  color: var(--text-secondary);
-  font-weight: 400;
-  margin-bottom: 20px;
-  font-family: "Cairo", sans-serif;
-  text-transform: capitalize;
-}
 
-.skills-divider {
-  width: 80px;
-  height: 4px;
-  background: var(--gold-gradient);
-  margin: 0 auto;
-  border-radius: 2px;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-}
 
 /* Skills Content */
 .skills-content {
@@ -86,6 +44,27 @@
   position: relative;
   padding: 40px 0;
   margin-bottom: 60px;
+  /* The marquee is pinned to LTR in both languages. Its card order and the
+     translateX loop are direction-dependent, so inheriting RTL from the
+     Arabic layout reverses the scroll and breaks the seamless wrap. The
+     card labels are Latin technology names either way. */
+  direction: ltr;
+  /* Fade the track into the background at both edges so cards
+     do not appear to be sliced off by the container. */
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
 }
 
 .skills-track {
@@ -93,9 +72,18 @@
   animation: scroll 40s linear infinite;
   white-space: nowrap;
   gap: 24px;
+  width: max-content;
 }
 
-.skills-track:hover {
+/* The clone wrapper exists only to carry aria-hidden; it must not create a
+   box, or the marquee's -50% loop offset would no longer line up. */
+.skills-track-clone {
+  display: contents;
+}
+
+/* Pause for pointer users and for keyboard users tabbing through. */
+.skills-carousel:hover .skills-track,
+.skills-carousel:focus-within .skills-track {
   animation-play-state: paused;
 }
 
@@ -121,12 +109,11 @@
 /* Skill Card Styles */
 .skill-card,
 .skill-grid-item {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
+  background: var(--surface-2);
+  border-radius: var(--radius-lg);
   padding: 32px 24px;
   text-align: center;
   position: relative;
-  cursor: pointer;
   transition: var(--transition);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
@@ -271,10 +258,10 @@
 
 .skill-card:hover .skill-hover-effect,
 .skill-grid-item:hover .skill-hover-effect {
-  animation: shimmer 0.6s ease-in-out;
+  animation: skillSheen 0.6s ease-in-out;
 }
 
-@keyframes shimmer {
+@keyframes skillSheen {
   0% {
     transform: translateX(-100%) translateY(-100%) rotate(45deg);
     opacity: 0;
@@ -290,10 +277,6 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .skills-container {
-    padding: 60px 20px;
-  }
-
   .skills-carousel {
     display: flex;
     padding: 20px 0;
@@ -302,26 +285,10 @@
   .skills-track {
     animation-duration: 30s;
   }
-
-  .skills-grid {
-    display: none;
-  }
 }
 @media (max-width: 768px) {
-  .skills-container {
-    padding: 40px 16px;
-  }
-
   .skills-header {
     margin-bottom: 40px;
-  }
-
-  .skills-header h2 {
-    font-size: 30px;
-  }
-
-  .skills-subtitle {
-    font-size: 16px;
   }
 
   .skills-carousel {
@@ -349,10 +316,6 @@
 
   .skill-category {
     font-size: 12px;
-  }
-
-  .skills-grid {
-    display: none;
   }
 }
 
@@ -382,13 +345,22 @@
   .skill-category {
     font-size: 10px;
   }
-
-  .skills-grid {
-    display: none;
-  }
 }
 
-/* All screen sizes use carousel */
-.skills-grid {
-  display: none;
+/* ============================================
+   REDUCED MOTION
+   Freezing the marquee mid-transform would hide
+   half the skills, so stop it at the start and
+   let the user scroll the track instead.
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .skills-carousel {
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .skills-track {
+    animation: none !important;
+    transform: none !important;
+  }
 }

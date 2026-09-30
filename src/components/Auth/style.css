@@ -235,7 +235,7 @@
 }
 
 .header-action-btn .spin {
-  animation: spin 1s linear infinite;
+  animation: authSpin 1s linear infinite;
 }
 
 /* ============================================
@@ -366,16 +366,16 @@
 }
 
 .footer-btn .spin {
-  animation: spin 1s linear infinite;
+  animation: authSpin 1s linear infinite;
 }
 
 /* Animations */
-@keyframes spin {
+@keyframes authSpin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-@keyframes pulse {
+@keyframes authPulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.1); }
 }
@@ -484,7 +484,6 @@
     border: none;
   }
 }
-}
 
 .cv-modal-title {
   color: var(--text-color) !important;
@@ -576,7 +575,7 @@
   border: 3px solid transparent;
   border-top: 3px solid var(--accent-color);
   border-radius: 50%;
-  animation: spin 1.5s linear infinite;
+  animation: authSpin 1.5s linear infinite;
 }
 
 .spinner-ring:nth-child(2) {
@@ -700,7 +699,7 @@
 }
 
 /* Animations */
-@keyframes spin {
+@keyframes authSpin {
   0% {
     transform: rotate(0deg);
   }
@@ -719,7 +718,7 @@
   }
 }
 
-@keyframes pulse {
+@keyframes authPulse {
   0%,
   100% {
     transform: scale(1);
@@ -940,7 +939,7 @@
 }
 
 .cv-action-btn .spin {
-  animation: spin 1s linear infinite;
+  animation: authSpin 1s linear infinite;
 }
 
 /* Clean Modal Body */

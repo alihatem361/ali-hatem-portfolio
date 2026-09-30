@@ -1,0 +1,1256 @@
+{
+  "_comment": "GENERATED FILE — do not edit. Produced by scripts/fetch-sanity-content.js. Edit content in Sanity Studio.",
+  "generatedAt": "2026-09-30T08:27:52.307Z",
+  "projects": [
+    {
+      "slug": "cruisara-tours",
+      "title": {
+        "en": "Cruisara Tours",
+        "ar": "Cruisara Tours"
+      },
+      "description": {
+        "en": "Built a multilingual tourism booking platform using Next.js and Tailwind CSS with FSD architecture. Developed a dynamic booking system with real-time availability, pricing logic, and automated offers. Integrated Sanity CMS with Gemini AI for automatic translation into 6 languages, alongside PayPal payments and automated email workflows via Resend.",
+        "ar": "قمت ببناء منصة حجز سياحي متعددة اللغات باستخدام Next.js و Tailwind CSS مع معمارية FSD. طورت نظام حجز ديناميكي يوفر توافرًا لحظيًا، ومنطق تسعير، وعروضًا تلقائية. دمجت Sanity CMS مع Gemini AI للترجمة التلقائية إلى 6 لغات، بالإضافة إلى مدفوعات PayPal وسير عمل بريد إلكتروني آلي عبر Resend."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/ce7680d0370ed1b6532bcf227c3c7ae2fa69b0c0-1849x941.png",
+      "technology": [
+        "NextJs",
+        "ReactJs",
+        "Tailwind",
+        "Zustand",
+        "Sanity",
+        "PayPal API",
+        "Gemini AI",
+        "Resend",
+        "Cloudflare",
+        "Vercel"
+      ],
+      "demo": "https://cruisara.com/",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "masaakin-al-mawil",
+      "title": {
+        "en": "Masaakin Al-Mawil",
+        "ar": "مساكن المؤيل"
+      },
+      "description": {
+        "en": "A comprehensive real estate mobile application featuring secure user authentication, integrated payment processing, maintenance request management, push notifications, and a robust REST API integration built for tenants and property managers alike.",
+        "ar": "تطبيق عقاري متكامل يوفر تسجيل دخول آمن، معالجة دفع إلكتروني متكاملة، إدارة طلبات الصيانة، إشعارات فورية، وربط قوي مع واجهات REST API لخدمة المستأجرين ومدراء العقارات على حد سواء."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/4488ae3aa4eeb003d45548c4292e4d8c91e5096f-1351x629.png",
+      "technology": [
+        "Ionic React",
+        "React",
+        "TypeScript",
+        "Capacitor",
+        "Zustand"
+      ],
+      "demo": "https://real-estate-app-1ic.pages.dev",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "type": "mobile",
+      "tagline": {
+        "en": "Real estate, reimagined for your pocket.",
+        "ar": "عقارات بين يديك، بتجربة أذكى."
+      },
+      "platform": [
+        "iOS",
+        "Android"
+      ],
+      "gallery": [
+        "https://cdn.sanity.io/images/ca2s0qsl/production/fcc865e57d032e495ac2169493d9bb557f9b7e6c-578x1280.jpg",
+        "https://cdn.sanity.io/images/ca2s0qsl/production/e9b75b8c3b3b93ee7019c887130c949d7e29f718-578x1280.jpg",
+        "https://cdn.sanity.io/images/ca2s0qsl/production/289f19bdb136aa1d8e5ad8577a77a4d03fea47c5-578x1280.jpg",
+        "https://cdn.sanity.io/images/ca2s0qsl/production/74123d6e674887fe83c77438e48556c9754ce04d-578x1280.jpg",
+        "https://cdn.sanity.io/images/ca2s0qsl/production/aab1636237105bf877f623f34acae69deb52bc23-578x1280.jpg",
+        "https://cdn.sanity.io/images/ca2s0qsl/production/c74c792943c03241c7aaf1434186213d35eb99b5-578x1280.jpg",
+        "https://cdn.sanity.io/images/ca2s0qsl/production/bf79ab036b891e4caa18cba4428480e9167a34b2-578x1280.jpg",
+        "https://cdn.sanity.io/images/ca2s0qsl/production/f7b78f07abeeba4f656b7358144646aa03b7cc86-578x1280.jpg"
+      ],
+      "features": [
+        {
+          "key": "auth",
+          "icon": "shield",
+          "title": {
+            "en": "Secure Authentication"
+          },
+          "description": {
+            "en": "Verified tenant accounts with rich profile management and role-based access control."
+          },
+          "image": "https://cdn.sanity.io/images/ca2s0qsl/production/f7b78f07abeeba4f656b7358144646aa03b7cc86-578x1280.jpg"
+        },
+        {
+          "key": "payments",
+          "icon": "card",
+          "title": {
+            "en": "Seamless Payments"
+          },
+          "description": {
+            "en": "Book units and pay rent online through fast, secure, integrated payment processing."
+          },
+          "image": "https://cdn.sanity.io/images/ca2s0qsl/production/74123d6e674887fe83c77438e48556c9754ce04d-578x1280.jpg"
+        },
+        {
+          "key": "maintenance",
+          "icon": "wrench",
+          "title": {
+            "en": "Maintenance Requests"
+          },
+          "description": {
+            "en": "Submit and track maintenance tickets in real time, from request to resolution."
+          },
+          "image": "https://cdn.sanity.io/images/ca2s0qsl/production/aab1636237105bf877f623f34acae69deb52bc23-578x1280.jpg"
+        },
+        {
+          "key": "notifications",
+          "icon": "bell",
+          "title": {
+            "en": "Push Notifications"
+          },
+          "description": {
+            "en": "Real-time alerts keep tenants informed on bookings, contracts, and maintenance status."
+          },
+          "image": "https://cdn.sanity.io/images/ca2s0qsl/production/bf79ab036b891e4caa18cba4428480e9167a34b2-578x1280.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "masaakin-al-mawil-dashboard",
+      "title": {
+        "en": "Masaakin Al Mawil Dashboard",
+        "ar": "لوحة تحكم مساكن المؤيل"
+      },
+      "description": {
+        "en": "Developed an RTL property management dashboard with authentication, role-based access, maintenance and financial modules, and reusable admin components.",
+        "ar": "طورت لوحة تحكم لإدارة العقارات بالعربية (RTL) تتضمن تسجيل دخول آمن، صلاحيات وصول حسب الدور، وحدات للصيانة والشؤون المالية، ومكونات إدارية قابلة لإعادة الاستخدام."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/c392829a241cd8c6d552cd313146e183e3a99ce5-1358x906.png",
+      "technology": [
+        "ReactJs",
+        "TypeScript",
+        "Ant Design",
+        "React Query",
+        "Axios",
+        "Recharts",
+        "FramerMotion",
+        "Vite"
+      ],
+      "demo": "https://masaakin-al-mawil-dashboard.vercel.app",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "gz-school",
+      "title": {
+        "en": "GZ School",
+        "ar": "مدرسة GZ"
+      },
+      "description": {
+        "en": "Built a Next.js App Router marketing site with an embedded Sanity Studio, localized content objects, Tailwind v4 neon theme, and Framer Motion animations. Added fallback data hooks so pages render without Sanity, plus scripts for seeding and maintenance.",
+        "ar": "طورت موقعًا تسويقيًا وتعريفيًا لمدرسة GZ باستخدام Next.js (App Router) مع استوديو Sanity مدمج. استخدمت كائنات محتوى متعددة اللغات، وثيم Tailwind v4 بنمط نيون داكن، ورسوم Framer Motion. أضفت hooks ببيانات احتياطية ليعمل الموقع بدون Sanity، مع سكربتات للبذر والصيانة."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/d7561ee2b799b897ffa42cf5e5a07e9afe262353-1845x935.png",
+      "technology": [
+        "NextJs",
+        "TypeScript",
+        "Tailwind",
+        "Sanity",
+        "FramerMotion"
+      ],
+      "demo": "https://www.genzschool.net",
+      "github": "https://github.com/alihatem361/gz-school",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "novirahealth",
+      "title": {
+        "en": "NoviraHealth",
+        "ar": "نوفيرا هيلث"
+      },
+      "description": {
+        "en": "Led front-end development for a healthcare marketing platform using React 18 and TypeScript. Architected component structure with shadcn/ui, integrated Sanity CMS with custom GROQ queries, and built a global modal system for contact forms. Implemented smooth Framer Motion animations and optimized SEO using react-helmet-async. Delivered a fully responsive, accessible interface.",
+        "ar": "قدت تطوير الواجهة الأمامية لمنصة تسويق الرعاية الصحية باستخدام React 18 وTypeScript. صممت هيكل المكونات مع shadcn/ui، ودمجت Sanity CMS مع استعلامات GROQ مخصصة، وبنيت نظام نوافذ منبثقة عام. نفذت رسوم متحركة سلسة وحسنت SEO باستخدام react-helmet-async."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/7641f874e8eec4d40ffae96ed88e0057396e6be7-1829x942.png",
+      "technology": [
+        "ReactJs",
+        "TypeScript",
+        "Tailwind",
+        "Vite",
+        "shadcn-ui",
+        "Sanity"
+      ],
+      "demo": "https://novirahealth.com/",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "e3melbusiness-org",
+      "title": {
+        "en": "E3melbusiness Org",
+        "ar": "E3melbusiness Org"
+      },
+      "description": {
+        "en": "Developed the complete UI for E3mel Business website. Built pixel-perfect interfaces from Figma designs, implemented responsive layouts for all screen sizes, and optimized performance through code minification. Collaborated closely with designers to ensure design fidelity while maintaining clean, maintainable Tailwind CSS code structure.",
+        "ar": "إعمل بيزنس هي منصة تدريب احترافية بتقدم كورسات وبرامج في مجالات البزنس للأفراد والشركات\nاشتغلت على تطوير الواجهة الأمامية بالكامل للموقع باستخدام HTML و CSS و Tailwind CSS و JavaScript\nركزت على إن التصميم يكون سريع ومتجاوب وجذاب بصريًا عشان يدي تجربة مستخدم سلسة على كل الأجهزة\nاهتميت كمان بسهولة التصفح والأداء العالي"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/6630704fef425bdbb0cdf2356bb2ebe92d5f43d6-403x250.png",
+      "technology": [
+        "HTML",
+        "Tailwind",
+        "JavaScript"
+      ],
+      "demo": "https://e3melbusiness.org/",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "ebu-website",
+      "title": {
+        "en": "EBU Website",
+        "ar": "موقع جامعة EBU"
+      },
+      "description": {
+        "en": "Built the complete front-end for Entrepreneurship & Business University (EBU) from scratch. Developed custom Tailwind configuration with branded color palette (gold/burgundy), implemented responsive mobile-first layouts, and created reusable navigation dropdowns, mobile drawer menu, and accordion components using vanilla JavaScript. Optimized for performance with zero build process overhead.",
+        "ar": "قمت ببناء الواجهة الأمامية الكاملة لجامعة ريادة الأعمال والأعمال (EBU) من الصفر. طورت إعدادات Tailwind مخصصة مع لوحة ألوان العلامة التجارية (ذهبي/عنابي)، ونفذت تصميمات متجاوبة تبدأ من الهاتف، وأنشأت مكونات قابلة لإعادة الاستخدام للقوائم المنسدلة والقائمة الجانبية والأكورديون باستخدام JavaScript."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/34e1b0284a1e25f2ec95b392477a110c864e0279-1848x950.png",
+      "technology": [
+        "HTML",
+        "Tailwind",
+        "JavaScript"
+      ],
+      "demo": "https://www.eb.university",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "alhawmah-cultural-hub",
+      "title": {
+        "en": "alHawmah Cultural Hub",
+        "ar": "مركز الحومة الثقافي"
+      },
+      "description": {
+        "en": "Developed a modern React-based cultural hub website showcasing regional heritage. Built reusable component library with shadcn/ui, implemented smooth page transitions, and created an intuitive navigation system. Focused on delivering an engaging user experience with optimized performance using Vite.",
+        "ar": "طورت موقع مركز ثقافي حديث باستخدام React لعرض التراث الإقليمي. بنيت مكتبة مكونات قابلة لإعادة الاستخدام مع shadcn/ui، ونفذت انتقالات سلسة بين الصفحات، وأنشأت نظام تنقل بديهي. ركزت على تقديم تجربة مستخدم جذابة مع أداء محسن باستخدام Vite."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/0ce5fcb480e6c04e9e21393e41956389ddbf4ec4-403x250.png",
+      "technology": [
+        "ReactJs",
+        "Tailwind",
+        "Vite",
+        "shadcn-ui"
+      ],
+      "demo": "https://www.alhawmah.org/",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "mckeon-dashboard",
+      "title": {
+        "en": "McKeon Dashboard",
+        "ar": "لوحة تحكم ماكيون"
+      },
+      "description": {
+        "en": "Built a comprehensive Arabic RTL property management admin dashboard using static HTML, CSS, and JavaScript. Implemented complete CRUD interfaces with DataTables for listings, integrated ApexCharts for analytics visualization, and utilized FullCalendar for appointment scheduling. Developed with Bootstrap 5, Select2 dropdowns, Flatpickr date pickers, and SweetAlert2 notifications. Features custom gold/green color scheme and Cairo Arabic font.",
+        "ar": "بنيت لوحة تحكم شاملة لإدارة العقارات بالعربية (RTL) باستخدام HTML وCSS وJavaScript الثابت. نفذت واجهات CRUD كاملة مع DataTables للقوائم، ودمجت ApexCharts لتصور التحليلات، واستخدمت FullCalendar لجدولة المواعيد. طورت باستخدام Bootstrap 5، وقوائم Select2 المنسدلة، ومنتقي التواريخ Flatpickr، وإشعارات SweetAlert2. يتميز بنظام ألوان ذهبي/أخضر مخصص وخط القاهرة العربي."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/9f797347d0a6b84b9a31098b0037b7bad998c75d-1856x945.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "jQuery",
+        "DataTables",
+        "ApexCharts",
+        "FullCalendar"
+      ],
+      "demo": "https://mckeon-dashboard.pages.dev/",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "roya-training-packages",
+      "title": {
+        "en": "Roya Training Packages",
+        "ar": "رؤية للحقائب التدريبية"
+      },
+      "description": {
+        "en": "Developed a static Arabic RTL website for Roya Training Packages, a training and educational services company. Implemented the full front-end using pure HTML, CSS, and JavaScript with Bootstrap 5 RTL, Swiper.js carousels, WOW.js animations, and jQuery-based interactions. Focused on reusable section layouts, custom button system, and responsive design across all breakpoints.",
+        "ar": "طورت موقعًا ثابتًا باللغة العربية (اتجاه RTL) لشركة رؤية للحقائب التدريبية والخدمات التعليمية باستخدام HTML وCSS وJavaScript فقط. اعتمدت على Bootstrap 5 RTL لتخطيطات متجاوبة، وSwiper.js للسلايدر، وWOW.js للحركات عند التمرير، بالإضافة إلى jQuery للتفاعلات الديناميكية. ركزت على توحيد نمط الأزرار، وأقسام المحتوى، وتجربة مستخدم سلسة على جميع الأجهزة."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/193fb4020f29a4453fc8c87bc11c16e51e57863f-1822x941.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "SwiperJs",
+        "WOW.js",
+        "jQuery"
+      ],
+      "demo": "https://beta.roaya-tp.com/",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "el-zakeroon",
+      "title": {
+        "en": "El-Zakeroon",
+        "ar": "الذكرون"
+      },
+      "description": {
+        "en": "Developed a free Islamic web app for tracking daily adhkar using Next.js and TypeScript. Implemented state management for tracking progress, built an intuitive counter interface, and ensured RTL support for Arabic content. Focused on accessibility and mobile-first responsive design.",
+        "ar": "طورت تطبيق ويب إسلامي مجاني لتتبع الأذكار اليومية باستخدام Next.js وTypeScript. نفذت إدارة الحالة لتتبع التقدم، وبنيت واجهة عداد بديهية، وضمنت دعم RTL للمحتوى العربي. ركزت على سهولة الوصول والتصميم المتجاوب للهاتف أولاً."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/9ace6b75bff24d98b2c01e73f7ad2ee0c019aa80-1280x720.png",
+      "technology": [
+        "NextJs",
+        "Tailwind",
+        "TypeScript"
+      ],
+      "demo": "https://el-zakeroon.vercel.app/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "video": "https://youtu.be/16rQx06Fl4Q",
+      "videoKey": "16rQx06Fl4Q"
+    },
+    {
+      "slug": "contiva",
+      "title": {
+        "en": "Contiva",
+        "ar": "كونتيفا"
+      },
+      "description": {
+        "en": "Built a modern content discovery platform from the ground up using React and Vite. Designed and implemented a sleek component architecture with shadcn/ui, created responsive layouts for all devices, and optimized the user interface for seamless content exploration and navigation.",
+        "ar": "بنيت منصة اكتشاف محتوى حديثة من الصفر باستخدام React وVite. صممت ونفذت هيكل مكونات أنيق مع shadcn/ui، وأنشأت تخطيطات متجاوبة لجميع الأجهزة، وحسنت واجهة المستخدم للتصفح والتنقل السلس."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/33b4f9c51d36883d64e94962fe1b79c3f76f0c03-403x250.png",
+      "technology": [
+        "ReactJs",
+        "Tailwind",
+        "Vite",
+        "shadcn-ui"
+      ],
+      "demo": "https://contiva-learning.vercel.app/",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "saudi-national-day",
+      "title": {
+        "en": "Saudi National Day",
+        "ar": "اليوم الوطني السعودي"
+      },
+      "description": {
+        "en": "Designed and developed a promotional landing page for Saudi National Day campaign. Created visually striking UI with themed color palette, implemented engaging animations, and built responsive layouts optimized for conversions. Delivered under tight deadline while maintaining high code quality.",
+        "ar": "صممت وطورت صفحة هبوط ترويجية لحملة اليوم الوطني السعودي. أنشأت واجهة مستخدم جذابة بصرياً مع لوحة ألوان مستوحاة من المناسبة، ونفذت رسوم متحركة جذابة، وبنيت تخطيطات متجاوبة محسنة للتحويلات. سلمت المشروع في وقت قياسي مع الحفاظ على جودة الكود العالية."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/aa2b3aa52949f64bc44b44a5c77225dc63f195a8-403x250.png",
+      "technology": [
+        "HTML",
+        "Tailwind",
+        "JavaScript"
+      ],
+      "demo": "https://e3mel-business-national-saudi-day.pages.dev/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "collectionId": "e3mel-landing-collection"
+    },
+    {
+      "slug": "1m-brothers",
+      "title": {
+        "en": "1M Brothers",
+        "ar": "1M الإخوة"
+      },
+      "description": {
+        "en": "Led entire front-end development for my graduation project - a donation platform for patient cases. Built complex forms for case submissions with document uploads, integrated payment gateway, and implemented Redux state management for user flows. Designed intuitive UI/UX and connected with backend APIs for real-time data.",
+        "ar": "قدت تطوير الواجهة الأمامية بالكامل لمشروع تخرجي - منصة تبرعات لحالات المرضى. بنيت نماذج معقدة لتقديم الحالات مع رفع المستندات، ودمجت بوابة الدفع، ونفذت إدارة الحالة باستخدام Redux. صممت واجهة مستخدم بديهية وربطتها بـ APIs للبيانات الحية."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/96566f0e653da76dba4b1d7986bc01f3c08fe9de-403x250.png",
+      "technology": [
+        "ReactJs",
+        "Redux",
+        "Bootstrap",
+        "Api"
+      ],
+      "demo": "http://imbr.surge.sh/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "video": "https://youtu.be/BDsHi7dYvxc",
+      "videoKey": "BDsHi7dYvxc"
+    },
+    {
+      "slug": "ebu-certificate",
+      "title": {
+        "en": "EBU Certificate",
+        "ar": "شهادة EBU"
+      },
+      "description": {
+        "en": "Built a professional landing page for EBU's certification program. Developed clean, conversion-focused UI with clear call-to-actions, implemented smooth scroll animations, and ensured cross-browser compatibility. Created responsive design optimized for lead generation.",
+        "ar": "بنيت صفحة هبوط احترافية لبرنامج شهادات EBU. طورت واجهة مستخدم نظيفة وموجهة للتحويلات مع أزرار دعوة للعمل واضحة، ونفذت رسوم متحركة سلسة عند التمرير، وضمنت التوافق مع جميع المتصفحات. أنشأت تصميماً متجاوباً محسناً لتوليد العملاء المحتملين."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/0792d6071a5d13c865bb1b09e4165ffa7a6ee033-403x250.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demo": "https://hadaf-training-center.pages.dev/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "collectionId": "e3mel-landing-collection"
+    },
+    {
+      "slug": "shahadat-alhadaf",
+      "title": {
+        "en": "shahadat alhadaf",
+        "ar": "شهادات الهدف"
+      },
+      "description": {
+        "en": "Developed a certificate showcase landing page featuring 50+ accredited programs. Built dynamic certificate filtering system, implemented engaging hover effects, and created a visually organized grid layout. Optimized for fast loading and mobile responsiveness.",
+        "ar": "طورت صفحة هبوط لعرض الشهادات تضم أكثر من 50 برنامجاً معتمداً. بنيت نظام تصفية ديناميكي للشهادات، ونفذت تأثيرات hover جذابة، وأنشأت تخطيط شبكة منظم بصرياً. حسنت الأداء للتحميل السريع والتجاوب مع الهاتف."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/533bde3d4ebfb8b3ad6d2300b62e3af5229c19ea-403x250.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demo": "https://certificates-5z9.pages.dev/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "collectionId": "e3mel-landing-collection"
+    },
+    {
+      "slug": "alshaatir-academy",
+      "title": {
+        "en": "Alshaatir Academy",
+        "ar": "منصة الشاطر التعليمية"
+      },
+      "description": {
+        "en": "Developed an educational platform using Next.js with server-side rendering for optimal performance. Built interactive lesson components, implemented quiz/test functionality, and created student progress tracking UI. Designed intuitive navigation for seamless learning experience across devices.",
+        "ar": "طورت منصة تعليمية باستخدام Next.js مع عرض من جانب الخادم للأداء الأمثل. بنيت مكونات دروس تفاعلية، ونفذت وظائف الاختبارات والامتحانات، وأنشأت واجهة تتبع تقدم الطالب. صممت تنقلاً بديهياً لتجربة تعليمية سلسة عبر الأجهزة."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/ac8d0e3729a84952c9585f81ccaa27c48b7da282-403x250.png",
+      "technology": [
+        "NextJs",
+        "Tailwind"
+      ],
+      "demo": "https://alshaatir-academy.vercel.app/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "video": "https://youtu.be/40jQddkcsg8",
+      "videoKey": "40jQddkcsg8",
+      "collectionId": "teachers-collection"
+    },
+    {
+      "slug": "hadafik-altaelimia",
+      "title": {
+        "en": "Hadafik Altaelimia",
+        "ar": "Hadafik Altaelimia"
+      },
+      "description": {
+        "en": "Built a free educational platform landing page with course catalog UI. Implemented responsive card layouts for courses, created smooth navigation with anchor links, and developed interactive elements to boost user engagement. Focused on clean code structure and maintainability.",
+        "ar": "بنيت صفحة هبوط لمنصة تعليمية مجانية مع واجهة كتالوج الدورات. نفذت تخطيطات بطاقات متجاوبة للدورات، وأنشأت تنقلاً سلساً مع روابط المراسي، وطورت عناصر تفاعلية لتعزيز تفاعل المستخدم. ركزت على هيكل الكود النظيف وقابلية الصيانة."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/03f2753bc114c8b075d4e6851d075f2900154f7f-403x250.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demo": "https://hadafuk.vercel.app/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "collectionId": "teachers-collection"
+    },
+    {
+      "slug": "mr-mohamed",
+      "title": {
+        "en": "Mr Mohamed",
+        "ar": "الأستاذ محمد"
+      },
+      "description": {
+        "en": "Developed a bilingual personal portfolio with Arabic/English language switching and RTL support. Implemented dark/light theme toggle with localStorage persistence, built responsive layouts for all sections, and created smooth transitions between language modes.",
+        "ar": "طورت موقع سيرة ذاتية ثنائي اللغة مع تبديل اللغة العربية/الإنجليزية ودعم RTL. نفذت تبديل الوضع الداكن/الفاتح مع حفظ التفضيلات في localStorage، وبنيت تخطيطات متجاوبة لجميع الأقسام، وأنشأت انتقالات سلسة بين أوضاع اللغة."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/86dde146fcd617e7dd9e9b104dae4d750b8a16ff-403x250.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Tailwind"
+      ],
+      "demo": "https://vclasses-msr-mohamed.pages.dev/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "collectionId": "teachers-collection"
+    },
+    {
+      "slug": "mr-abdullah",
+      "title": {
+        "en": "Mr Abdullah",
+        "ar": "الأستاذ عبد الله"
+      },
+      "description": {
+        "en": "Built a professional bilingual portfolio featuring Arabic/English support with seamless RTL/LTR switching. Developed custom dark/light theme system, implemented smooth scroll navigation, and created engaging profile sections with optimized performance.",
+        "ar": "بنيت موقع سيرة ذاتية ثنائي اللغة احترافي مع دعم العربية/الإنجليزية وتبديل RTL/LTR السلس. طورت نظام وضع داكن/فاتح مخصص، ونفذت تنقلاً سلساً بالتمرير، وأنشأت أقسام ملف شخصي جذابة مع أداء محسن."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/ecaf82f4f08c16e6a1c16bde3e51353be5427790-403x250.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Tailwind"
+      ],
+      "demo": "https://vclasses-abdullah-nasr.pages.dev",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "collectionId": "teachers-collection"
+    },
+    {
+      "slug": "mr-ahmed",
+      "title": {
+        "en": "Mr Ahmed",
+        "ar": "الأستاذ أحمد"
+      },
+      "description": {
+        "en": "Created a polished bilingual portfolio with full Arabic/English localization. Implemented theme switching functionality, built responsive grid layouts for achievements display, and ensured cross-browser compatibility. Delivered pixel-perfect design implementation.",
+        "ar": "أنشأت موقع سيرة ذاتية مصقول ثنائي اللغة مع توطين كامل للعربية/الإنجليزية. نفذت وظيفة تبديل الثيم، وبنيت تخطيطات شبكية متجاوبة لعرض الإنجازات، وضمنت التوافق مع جميع المتصفحات. قدمت تنفيذاً دقيقاً للتصميم."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/068f180905bf917d0e8280e3570aee1955f86e9c-403x250.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Tailwind"
+      ],
+      "demo": "https://vclasses-mr-ahmed.pages.dev/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "collectionId": "teachers-collection"
+    },
+    {
+      "slug": "fawri-elmaliiik",
+      "title": {
+        "en": "Fawri Elmaliiik",
+        "ar": "فوري الماليك"
+      },
+      "description": {
+        "en": "Developed a full-stack customer management system for express agency offices. Built complex CRUD interfaces with Material UI, implemented Redux for state management, integrated Firebase for real-time data sync, and created RESTful API endpoints with Node.js. Designed intuitive dashboards with search and filtering capabilities.",
+        "ar": "طورت نظام إدارة عملاء متكامل Full-Stack لمكاتب توكيل فوري. بنيت واجهات CRUD معقدة مع Material UI، ونفذت Redux لإدارة الحالة، ودمجت Firebase للمزامنة الفورية للبيانات، وأنشأت endpoints RESTful API مع Node.js. صممت لوحات تحكم بديهية مع إمكانيات البحث والتصفية."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/7815e68c5aa32fe567b637ddf09ee36dbc14070f-403x250.png",
+      "technology": [
+        "ReactJs",
+        "Redux",
+        "MaterialUI",
+        "Api",
+        "Firebase",
+        "NodeJs"
+      ],
+      "demo": "",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "video": "https://youtu.be/Zw9_UgIOrGg",
+      "videoKey": "Zw9_UgIOrGg",
+      "hidden": true
+    },
+    {
+      "slug": "salil",
+      "title": {
+        "en": "Salil",
+        "ar": "سليل"
+      },
+      "description": {
+        "en": "\"Saleel\" is an architectural masterpiece that embodies the highest meanings of luxury and comfort. Designed to be more than just a residence, it is an integrated lifestyle that offers its residents an exceptional experience combining the tranquility of nature with the liveliness of the city, while providing all the amenities and services that meet your aspirations.",
+        "ar": "\"سليل\" هو تحفة معمارية تجسد أرقى معاني الفخامة والراحة. صُمم ليكون أكثر من مجرد سكن، فهو أسلوب حياة متكامل يمنح سكانه تجربة استثنائية تجمع بين هدوء الطبيعة وحيوية المدينة، ويوفر جميع وسائل الراحة والخدمات التي تلبي تطلعاتك."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/f9b021e0629518ce073997aa583c474a52671497-1853x942.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Tailwind"
+      ],
+      "demo": "https://salil-real-estate-project-page.pages.dev/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "hidden": true
+    },
+    {
+      "slug": "makhabrash",
+      "title": {
+        "en": "Makhabrash",
+        "ar": "Makhabrash"
+      },
+      "description": {
+        "en": "Built an anonymous messaging platform from concept to deployment. Developed React components for message creation and display, integrated Firebase Firestore for real-time message storage, implemented user profile generation with shareable links, and created a clean, modern UI with Tailwind CSS.",
+        "ar": "بنيت منصة رسائل مجهولة من الفكرة إلى النشر. طورت مكونات React لإنشاء وعرض الرسائل، ودمجت Firebase Firestore للتخزين الفوري، ونفذت إنشاء ملفات تعريف المستخدمين مع روابط قابلة للمشاركة، وأنشأت واجهة مستخدم حديثة ونظيفة مع Tailwind CSS."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/c5ab68a947f4eeabead6d235d9e812a27367a178-403x250.png",
+      "technology": [
+        "ReactJs",
+        "Tailwind",
+        "Firebase"
+      ],
+      "demo": "https://makhabrash.vercel.app/",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "reactjs-ecommerce",
+      "title": {
+        "en": "ReactJs Ecommerce",
+        "ar": "التجارة الإلكترونية باستخدام ReactJs"
+      },
+      "description": {
+        "en": "Developed a complete e-commerce front-end with React and Redux. Built product catalog with filtering/sorting, implemented shopping cart with persistent state, created checkout flow with form validation, and integrated product APIs. Focused on smooth user experience and responsive design.",
+        "ar": "طورت واجهة أمامية كاملة للتجارة الإلكترونية مع React وRedux. بنيت كتالوج منتجات مع التصفية/الفرز، ونفذت عربة تسوق مع حالة مستمرة، وأنشأت تدفق الدفع مع التحقق من النماذج، ودمجت APIs المنتجات. ركزت على تجربة مستخدم سلسة وتصميم متجاوب."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/e9f10bcca613d219cd93ad9e80a80d06f0ea7ff9-1280x720.webp",
+      "technology": [
+        "ReactJs",
+        "Redux",
+        "Bootstrap",
+        "Api"
+      ],
+      "demo": "",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "video": "https://youtu.be/GBpBnKl0Rr8",
+      "videoKey": "GBpBnKl0Rr8"
+    },
+    {
+      "slug": "lecture-management-and-attendance-recording-system",
+      "title": {
+        "en": "Lecture management and attendance recording system",
+        "ar": "إدارة المحاضرات ونظام تسجيل الحضور"
+      },
+      "description": {
+        "en": "Built a lecture management system with React and Firebase. Developed attendance tracking interface, created scheduling components with calendar integration, and implemented real-time data sync. Designed clean Material UI dashboards for instructors to manage classes efficiently.",
+        "ar": "بنيت نظام إدارة محاضرات مع React وFirebase. طورت واجهة تتبع الحضور، وأنشأت مكونات جدولة مع تكامل التقويم، ونفذت مزامنة البيانات الفورية. صممت لوحات تحكم Material UI نظيفة للمدرسين لإدارة الفصول بكفاءة."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/49b3b7d2a704e6b801d9a1c2f67acaf7ad3c4ea4-1924x1080.jpg",
+      "technology": [
+        "ReactJs",
+        "MaterialUI",
+        "Firebase"
+      ],
+      "demo": "",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "video": "https://youtu.be/12NFx9-F-IU",
+      "videoKey": "12NFx9-F-IU",
+      "hidden": true
+    },
+    {
+      "slug": "preisliste-ecommerce-full-stack",
+      "title": {
+        "en": "Preisliste-ecommerce (Full Stack)",
+        "ar": "Preisliste-ecommerce (Full Stack)"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/a26cc17053fe95137b8be6011f64d9d5b73a2aa1-1228x635.png",
+      "technology": [
+        "ReactJs",
+        "MaterialUI",
+        "NodeJs",
+        "expressJs",
+        "Firebase"
+      ],
+      "demo": "",
+      "github": "",
+      "video": "https://youtu.be/lCVyxbbBXVM",
+      "videoKey": "lCVyxbbBXVM",
+      "hidden": true
+    },
+    {
+      "slug": "dr-mayada-salah",
+      "title": {
+        "en": "Dr. Mayada Salah",
+        "ar": "د.ميادة صلاح"
+      },
+      "description": {
+        "en": "A personal website for Dr. Mayada Salah, showcasing her professional profile, achievements, and contact information.",
+        "ar": "موقع ويب شخصي للدكتورة ميادة صلاح، طبيبة متخصصة في طب الأطفال. يهدف الموقع إلى تقديم معلومات حول خدماتها الطبية، خبراتها، ومواعيد العمل."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/35203033a557d5d0757e5eb75d2884ff51e6edc7-1842x946.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demo": "https://alihatem360.github.io/basmatalnarjis/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "loomVideo": "https://www.loom.com/share/c17e174a3721453bbfb77ce2911fa553?sid=cb9b92d1-0401-4cdf-90c1-3be5b8342e5d",
+      "hidden": true
+    },
+    {
+      "slug": "pest-sweepy-dashboard",
+      "title": {
+        "en": "pest-sweepy Dashboard",
+        "ar": "pest-sweepy Dashboard"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/01289aaf3f89b2e9c789c8be25ab25b360fccd4c-1857x938.png",
+      "technology": [
+        "ReactJs",
+        "Redux",
+        "MaterialUI",
+        "Api"
+      ],
+      "demo": "https://nifty-tendency.surge.sh/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "loomVideo": "https://www.loom.com/share/c701533416d94618a1bcdafa8713a405?sid=b71a4010-c8aa-4f27-a617-2a123dbad16a",
+      "hidden": true
+    },
+    {
+      "slug": "mohammed-al-huwaila",
+      "title": {
+        "en": "mohammed-al-huwaila",
+        "ar": "محمد الحويلة"
+      },
+      "description": {
+        "en": "Developed a professional React portfolio with dynamic content loading via API. Implemented Redux for state management, built responsive layouts with Bootstrap, and created smooth navigation transitions. Optimized for performance and SEO.",
+        "ar": "طورت موقع سيرة ذاتية React احترافي مع تحميل محتوى ديناميكي عبر API. نفذت Redux لإدارة الحالة، وبنيت تخطيطات متجاوبة مع Bootstrap، وأنشأت انتقالات تنقل سلسة. حسنت الأداء وSEO."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/5792272797b019f497408c23b21bc87d3f51db0f-1848x957.png",
+      "technology": [
+        "ReactJs",
+        "Redux",
+        "Bootstrap",
+        "Api"
+      ],
+      "demo": "https://mohammed-al-huwaila2.vercel.app/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "loomVideo": "https://www.loom.com/share/fb99053bff5846338219c06e556ad8a2?sid=3c8e1162-0251-405f-83d7-3082772b7efb",
+      "collectionId": "mps-collection"
+    },
+    {
+      "slug": "thamer-al-suwait",
+      "title": {
+        "en": "thamer-al-suwait",
+        "ar": "ثامر السويط"
+      },
+      "description": {
+        "en": "Built a modern portfolio website using React with Redux state management. Created reusable components for portfolio sections, integrated API for dynamic content, and implemented responsive Bootstrap grid layouts with custom styling.",
+        "ar": "بنيت موقع سيرة ذاتية حديث باستخدام React مع إدارة حالة Redux. أنشأت مكونات قابلة لإعادة الاستخدام لأقسام السيرة الذاتية، ودمجت API للمحتوى الديناميكي، ونفذت تخطيطات شبكة Bootstrap متجاوبة مع تنسيق مخصص."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/11646d71269c79fb10dea6ded557440f27605bfe-1843x952.png",
+      "technology": [
+        "ReactJs",
+        "Redux",
+        "Bootstrap",
+        "Api"
+      ],
+      "demo": "https://thamer-al-suwait.vercel.app/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "collectionId": "mps-collection"
+    },
+    {
+      "slug": "saoud-al-asfour",
+      "title": {
+        "en": "saoud-al-asfour",
+        "ar": "سعود العصفور"
+      },
+      "description": {
+        "en": "Developed a clean portfolio website with React and API integration. Built modular component architecture, implemented smooth scroll navigation, and created engaging animations. Ensured cross-device compatibility with responsive Bootstrap layouts.",
+        "ar": "طورت موقع سيرة ذاتية نظيف مع React وتكامل API. بنيت هيكل مكونات معياري، ونفذت تنقلاً سلساً بالتمرير، وأنشأت رسوم متحركة جذابة. ضمنت التوافق عبر الأجهزة مع تخطيطات Bootstrap المتجاوبة."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/e3e18bdea2a67a7f36f078eda00b6d5e9436a6b0-1838x952.png",
+      "technology": [
+        "ReactJs",
+        "Redux",
+        "Bootstrap",
+        "Api"
+      ],
+      "demo": "https://saoud-al-asfour.vercel.app/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "collectionId": "mps-collection"
+    },
+    {
+      "slug": "abdullah-mutlaq-awad-al-mutairi",
+      "title": {
+        "en": "abdullah-mutlaq-awad-al-mutairi",
+        "ar": "عبد الله مطلق عوض المطيري"
+      },
+      "description": {
+        "en": "Created a professional portfolio using React with centralized Redux state. Developed contact form functionality, built skills showcase sections, and implemented API data fetching. Delivered polished UI with attention to typography and spacing.",
+        "ar": "أنشأت سيرة ذاتية احترافية باستخدام React مع حالة Redux مركزية. طورت وظيفة نموذج الاتصال، وبنيت أقسام عرض المهارات، ونفذت جلب بيانات API. قدمت واجهة مستخدم مصقولة مع اهتمام بالطباعة والمسافات."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/d0f824f344f1143598f4ad57a581e5563817a175-1842x952.png",
+      "technology": [
+        "ReactJs",
+        "Redux",
+        "Bootstrap",
+        "Api"
+      ],
+      "demo": "https://abdullah-mutlaq-awad-al-mutairi.vercel.app/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "collectionId": "mps-collection"
+    },
+    {
+      "slug": "calorie-bot",
+      "title": {
+        "en": "Calorie Bot",
+        "ar": "بوت تلجرام لحساب السعرات الحرارية"
+      },
+      "description": {
+        "en": "Built a Telegram bot using Node.js and Express. Integrated Nutritionix API for food data lookup, implemented natural language parsing for user queries, and created formatted response messages with nutritional breakdowns. Deployed and maintained the bot for real-time user interactions.",
+        "ar": "بنيت بوت تلجرام باستخدام Node.js وExpress. دمجت Nutritionix API للبحث عن بيانات الطعام، ونفذت تحليل اللغة الطبيعية لاستعلامات المستخدم، وأنشأت رسائل استجابة منسقة مع تفاصيل القيم الغذائية. نشرت وأدرت البوت للتفاعلات الحية مع المستخدمين."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/110bcc45f8fb077bdbea5521bcb445039c65ed9c-1024x1024.jpg",
+      "technology": [
+        "NodeJs",
+        "ExpressJs",
+        "TelegramBotApi",
+        "NutritionixApi"
+      ],
+      "demo": "",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "video": "https://youtu.be/XDYKVguRDUU",
+      "videoKey": "XDYKVguRDUU",
+      "hidden": true
+    },
+    {
+      "slug": "laptopstore-contract",
+      "title": {
+        "en": "LaptopStore Contract",
+        "ar": "فاتورة متجر الكمبيوتر"
+      },
+      "description": {
+        "en": "The Laptop Sales Project is a web application built using React.js and Material-UI, designed to streamline the process of selling laptops. It enables selling individuals to fill out a contract form and print the contract using Microsoft Print. This project simplifies the creation of laptop sales contracts.💻📝🖨️",
+        "ar": "مشروع مبيعات أجهزة الكمبيوتر المحمول هو تطبيق ويب تم إنشاؤه باستخدام React.js وMaterial-UI، وهو مصمم لتبسيط عملية بيع أجهزة الكمبيوتر المحمولة. تمكن الأفراد البيع من ملء نموذج العقد وطباعة العقد باستخدام Microsoft Print. يعمل هذا المشروع على تبسيط إنشاء عقود بيع أجهزة الكمبيوتر المحمول.💻📝🖨️"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/6f1461a2bcaff0d318f8586af956579ad256d61c-1785x927.png",
+      "technology": [
+        "ReactJs",
+        "MaterialUI",
+        "react-to-print",
+        "PWA"
+      ],
+      "demo": "https://laptop-store.surge.sh/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "hidden": true
+    },
+    {
+      "slug": "e-learning-reactjs",
+      "title": {
+        "en": "E-Learning ReactJS",
+        "ar": "E-Learning باستخدام ReactJS"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/866fa7975a02d633d36ac5f7a48310bbe7f5ffb7-1901x947.png",
+      "technology": [
+        "Tailwind",
+        "ReactJs",
+        "Vite"
+      ],
+      "demo": "https://e-learningreactjs.pages.dev/",
+      "github": "",
+      "video": "https://youtu.be/L6EqydzzSr8",
+      "videoKey": "L6EqydzzSr8",
+      "hidden": true
+    },
+    {
+      "slug": "greeting-card",
+      "title": {
+        "en": "greeting-card",
+        "ar": "بطاقة التهنئة"
+      },
+      "description": {
+        "en": "A beautiful greeting card template built with React and Tailwind CSS.",
+        "ar": "تطبيق ويب بسيط لإنشاء بطاقات التهنئة باستخدام React وTailwind CSS."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/15aa444e191448ad54758b891bfc04903804f5d1-1920x1113.png",
+      "technology": [
+        "ReactJs",
+        "Tailwind",
+        "Vite"
+      ],
+      "demo": "https://greeting-card-pied.vercel.app/",
+      "github": "",
+      "video": "https://youtu.be/XDKyLS0QXpg",
+      "videoKey": "XDKyLS0QXpg",
+      "hidden": true
+    },
+    {
+      "slug": "hospital-landing-page",
+      "title": {
+        "en": "hospital-landing-page",
+        "ar": "صفحة هبوط المستشفى"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/4e4d1bfd55cee60b2931d97b7e5e52d475513634-1901x955.png",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "demo": "https://hospital-landing-page-sooty.vercel.app/",
+      "github": "",
+      "hidden": true
+    },
+    {
+      "slug": "moviereactjs",
+      "title": {
+        "en": "movieReactJs",
+        "ar": "تطبيق أفلام باستخدام ReactJs"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/9b3af69cd23f504dc4abebc87dc6fdd7a181d5f0-1897x955.webp",
+      "technology": [
+        "ReactJs",
+        "contextApi",
+        "Api",
+        "ReactJs",
+        "Bootstrap"
+      ],
+      "demo": "https://shoping-cart-redux-vite.pages.dev/",
+      "github": "",
+      "hidden": true
+    },
+    {
+      "slug": "alhatab",
+      "title": {
+        "en": "alhatab",
+        "ar": "الحطاب"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/62a4dfb67d7b4a53ddc950e5b15feb904d432544-1902x910.webp",
+      "technology": [
+        "HTML",
+        "CSS"
+      ],
+      "demo": "https://alihatem360.github.io/alhatab/",
+      "github": "",
+      "video": "https://youtu.be/eGk8rV_FJJ4",
+      "videoKey": "eGk8rV_FJJ4",
+      "hidden": true
+    },
+    {
+      "slug": "agrica",
+      "title": {
+        "en": "agrica",
+        "ar": "أجريكا"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/04eb82e5879df13e68a79d39359b26cb433ef88c-1893x940.webp",
+      "technology": [
+        "HTML",
+        "Sass",
+        "JavaScript",
+        "Bootstrap"
+      ],
+      "demo": "https://alihatem360.github.io/agrica/",
+      "github": "",
+      "video": "https://youtu.be/ei4yh9LXXbU",
+      "videoKey": "ei4yh9LXXbU",
+      "hidden": true
+    },
+    {
+      "slug": "portfolio-website",
+      "title": {
+        "en": "Portfolio Website",
+        "ar": "موقع السيرة الذاتية"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/99e2db449862600ae6fbf7c153eaded6ba855507-1917x928.webp",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap"
+      ],
+      "demo": "https://alihatem360.github.io/Portfolio-Template/",
+      "github": "",
+      "hidden": true
+    },
+    {
+      "slug": "js-template",
+      "title": {
+        "en": "Js Template",
+        "ar": "قالب JavaScript"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/776cb3fa244af71aac9f8245343c90300962ef05-1892x900.webp",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap"
+      ],
+      "demo": "https://alihatem360.github.io/Js-Template/",
+      "github": "",
+      "video": "https://youtu.be/IkweYBUhlM4",
+      "videoKey": "IkweYBUhlM4",
+      "hidden": true
+    },
+    {
+      "slug": "bookdownloadpage",
+      "title": {
+        "en": "BookDownloadPage",
+        "ar": "صفحة تحميل الكتب"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/401ec7de3ddb04d8b9d38b89ded4deb1edd2c3bd-1902x952.png",
+      "technology": [
+        "HTML",
+        "CSS"
+      ],
+      "demo": "https://alihatem360.github.io/BookDownloadPage/",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "hidden": true
+    },
+    {
+      "slug": "movies-list-redux",
+      "title": {
+        "en": "movies-list-redux",
+        "ar": "قائمة الأفلام باستخدام Redux"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/b7518b68ebdab140ca98c409d8ab6976ed72b886-1902x957.webp",
+      "technology": [
+        "ReactJs",
+        "Redux",
+        "Bootstrap",
+        "Api"
+      ],
+      "demo": "https://movies-list-redux.pages.dev/",
+      "github": "",
+      "hidden": true
+    },
+    {
+      "slug": "nft-shop",
+      "title": {
+        "en": "NFT-Shop",
+        "ar": "NFT-Shop"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/ce7563b792f5f3d71a1ea8492ba091089657ca7e-1280x720.webp",
+      "technology": [
+        "ReactJs",
+        "Bootstrap",
+        "Api"
+      ],
+      "demo": "",
+      "github": "",
+      "hidden": true
+    },
+    {
+      "slug": "restaurant-website",
+      "title": {
+        "en": "Restaurant Website",
+        "ar": "موقع المطعم"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/7fab77ad48a1d2a287227e00bbf293c0cbbef649-1895x912.webp",
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap"
+      ],
+      "demo": "https://alihatem360.github.io/Restaurant-Template/",
+      "github": "",
+      "hidden": true
+    },
+    {
+      "slug": "udacitymyreadsproject",
+      "title": {
+        "en": "UdacityMyReadsProject",
+        "ar": "مشروع MyReads من Udacity"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/fae67caad2ac62eb8918caa36cc78bc85d4994ec-1906x942.webp",
+      "technology": [
+        "ReactJs",
+        "Bootstrap",
+        "Api"
+      ],
+      "demo": "https://udacitymyreadsproject.pages.dev/",
+      "github": "",
+      "hidden": true
+    },
+    {
+      "slug": "speakersreactjs",
+      "title": {
+        "en": "SpeakersReactjs",
+        "ar": "مكبرات الصوت باستخدام Reactjs"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/a6d6f4d5146d220d606118b84656080742e8ac0f-1897x937.webp",
+      "technology": [
+        "ReactJs",
+        "Bootstrap"
+      ],
+      "demo": "https://speakersreactjs.pages.dev/",
+      "github": "",
+      "hidden": true
+    },
+    {
+      "slug": "farooq-task",
+      "title": {
+        "en": "farooq-task",
+        "ar": "مهمة فاروق"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/dc7612f351bff11d7af31585952edd43837280ea-1897x958.webp",
+      "technology": [
+        "ReactJs",
+        "Bootstrap",
+        "Api"
+      ],
+      "demo": "https://farooq-task.pages.dev/",
+      "github": "",
+      "hidden": true
+    },
+    {
+      "slug": "angularecommercegradproj",
+      "title": {
+        "en": "angularECommerceGradProj",
+        "ar": "مشروع تجارة إلكترونية باستخدام Angular"
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/c4bff804eaa70fdb3917086d2ca0414678721bbb-1906x945.webp",
+      "technology": [
+        "angular",
+        "Bootstrap",
+        "Api"
+      ],
+      "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
+      "github": "",
+      "hidden": true
+    }
+  ],
+  "technologies": [
+    "Tailwind",
+    "ReactJs",
+    "HTML",
+    "JavaScript",
+    "Bootstrap",
+    "CSS",
+    "Api",
+    "Redux",
+    "TypeScript",
+    "NextJs",
+    "Vite",
+    "Sanity",
+    "shadcn-ui",
+    "FramerMotion",
+    "jQuery",
+    "Zustand",
+    "Ant Design",
+    "ApexCharts",
+    "Axios",
+    "Capacitor",
+    "Cloudflare",
+    "DataTables",
+    "Firebase",
+    "FullCalendar",
+    "Gemini AI",
+    "Ionic React",
+    "PayPal API",
+    "React",
+    "React Query",
+    "Recharts",
+    "Resend",
+    "SwiperJs",
+    "Vercel",
+    "WOW.js"
+  ],
+  "socials": [
+    {
+      "id": "social-github",
+      "name": "github",
+      "label": {
+        "en": "github",
+        "ar": "جيثب"
+      },
+      "link": "https://github.com/alihatem361"
+    },
+    {
+      "id": "social-linkedin",
+      "name": "linkedin",
+      "label": {
+        "en": "linkedin",
+        "ar": "لينكد إن"
+      },
+      "link": "https://www.linkedin.com/in/aliihatem-753025203/"
+    },
+    {
+      "id": "social-youtube",
+      "name": "youtube",
+      "label": {
+        "en": "youtube",
+        "ar": "يوتيوب"
+      },
+      "link": "https://www.youtube.com/channel/UC8VBtReu7uU0w7bCVgE-KVA"
+    },
+    {
+      "id": "social-email",
+      "name": "email",
+      "label": {
+        "en": "email",
+        "ar": "البريد الإلكتروني"
+      },
+      "link": "mailto:alihatemramadan5@gmail.com"
+    },
+    {
+      "id": "social-phone",
+      "name": "phone",
+      "label": {
+        "en": "phone",
+        "ar": "الهاتف"
+      },
+      "link": "+201026159353"
+    },
+    {
+      "id": "social-whatsapp",
+      "name": "whatsapp",
+      "label": {
+        "en": "whatsapp",
+        "ar": "واتساب"
+      },
+      "link": "http://wa.me/+201026159353"
+    }
+  ],
+  "aboutme": {
+    "name": {
+      "en": "Ali Hatem",
+      "ar": "علي حاتم"
+    },
+    "bio": [
+      {
+        "en": "A software engineer with a strong focus on React and Next.js ⚛️.",
+        "ar": "مهندس برمجيات متخصص في React و Next.js ⚛️."
+      },
+      {
+        "en": "Passionate about creating visually stunning user interfaces using HTML, CSS, and JavaScript 💻.",
+        "ar": "ملتزم بإنشاء واجهات مستخدم رائعة باستخدام HTML و CSS و JavaScript 💻."
+      },
+      {
+        "en": "Let's collaborate and craft exceptional web experiences together! 🌟",
+        "ar": "لنتعاون ونصمم تجارب ويب استثنائية معًا! 🌟"
+      }
+    ],
+    "roles": [
+      {
+        "en": "Front-End Developer",
+        "ar": "مطور واجهات أمامية"
+      },
+      {
+        "en": "React Specialist",
+        "ar": "متخصص React"
+      },
+      {
+        "en": "UI/UX Enthusiast",
+        "ar": "مهتم بتجربة المستخدم"
+      },
+      {
+        "en": "Problem Solver",
+        "ar": "حلال مشاكل"
+      }
+    ],
+    "headerImage": "https://cdn.sanity.io/images/ca2s0qsl/production/2f211ca15f215ed1ab1d554d028d0f616387b47a-3317x3101.jpg",
+    "footer": "https://cdn.sanity.io/images/ca2s0qsl/production/2bcbbc406ce9203303e0e41c7c7357d4b1a556b4-2369x2376.jpg",
+    "cv": "https://drive.google.com/file/d/1dU6upNzlpnAvgxSFynd2X6sij8cemv8V/view?usp=share_link"
+  }
+}
