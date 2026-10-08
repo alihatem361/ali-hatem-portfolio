@@ -12,13 +12,21 @@ const Footer = () => {
   const [socialsData, setSocialsData] = useState([]);
 
   useEffect(() => {
-    getAboutme().then((data) => {
-      setAboutmeData(data[0][0]);
-    });
+    getAboutme()
+      .then((data) => {
+        setAboutmeData(data[0][0]);
+      })
+      .catch((error) => {
+        console.error("Footer: failed to load hero data:", error);
+      });
 
-    getSocials().then((data) => {
-      setSocialsData(data);
-    });
+    getSocials()
+      .then((data) => {
+        setSocialsData(data);
+      })
+      .catch((error) => {
+        console.error("Footer: failed to load social links:", error);
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n.language]);
 

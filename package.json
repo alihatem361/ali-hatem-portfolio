@@ -9,6 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@google/genai": "^2.6.0",
     "@reduxjs/toolkit": "latest",
+    "@sanity/client": "^7.22.0",
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^5.26.0",
     "@vercel/speed-insights": "^1.0.12",

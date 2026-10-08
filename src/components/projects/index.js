@@ -8,25 +8,44 @@ import PojectItem from "./components/projectItem";
 import Footer from "../footer";
 import GetAllData from "../../data/projects";
 import LoaderCom from "../Utilities/LoaderCom";
+import StateMessage from "../Utilities/StateMessage";
 import LowerCurve from "../Utilities/LowerCurve";
 import { techSkills } from "../../data/index";
 const Projects = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { getProjects } = GetAllData();
   const [filteringItems, setFilteringItems] = useState([]);
   const [projectsDta, setProjectsData] = useState([]);
   const [filteredProjectsData, setFilteredProjectsData] = useState([]);
+  const [status, setStatus] = useState("loading");
+  const [reloadKey, setReloadKey] = useState(0);
 
   // Load (or reload) projects only when the language changes
   useEffect(() => {
-    getProjects().then((data) => {
-      setProjectsData(data[0]);
-      setFilteredProjectsData(data[0]);
-    });
+    let cancelled = false;
+    setStatus("loading");
+
+    getProjects()
+      .then((data) => {
+        if (cancelled) return;
+        setProjectsData(data[0]);
+        setFilteredProjectsData(data[0]);
+        setStatus("ready");
+      })
+      .catch((error) => {
+        if (cancelled) return;
+        // Without this the page would sit on the loader forever.
+        console.error("Failed to load projects from Sanity:", error);
+        setStatus("error");
+      });
+
+    return () => {
+      cancelled = true;
+    };
     // getProjects is intentionally omitted – it reads i18n.language which
     // is already in the dep array, so we don't need the unstable fn ref.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [i18n.language]);
+  }, [i18n.language, reloadKey]);
 
   // Apply / clear filters whenever the selection or the base data changes
   useEffect(() => {
@@ -97,12 +116,26 @@ const Projects = () => {
           </button>
         </div>
         <div className="projects">
-          {filteredProjectsData && filteredProjectsData.length > 0 ? (
+          {status === "loading" ? (
+            <LoaderCom />
+          ) : status === "error" ? (
+            <StateMessage
+              message={t("projects.error")}
+              retryLabel={t("projects.retry")}
+              onRetry={() => setReloadKey((k) => k + 1)}
+            />
+          ) : filteredProjectsData && filteredProjectsData.length > 0 ? (
             filteredProjectsData.map((project, index) => {
               return <PojectItem project={project} key={index} />;
             })
           ) : (
-            <LoaderCom />
+            <StateMessage
+              message={
+                filteringItems.length > 0
+                  ? t("projects.noMatch")
+                  : t("projects.empty")
+              }
+            />
           )}
         </div>
       </div>

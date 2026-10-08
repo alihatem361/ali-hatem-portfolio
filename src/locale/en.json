@@ -6,7 +6,11 @@
   "direction": "ltr",
   "projects": {
     "backbutoon": "Back to home",
-    "homebutton": " View All Projects"
+    "homebutton": " View All Projects",
+    "empty": "No projects to show right now.",
+    "noMatch": "No projects match this filter.",
+    "error": "Couldn't load projects right now.",
+    "retry": "Try again"
   },
   "language": {
     "arabic": "Arabic",

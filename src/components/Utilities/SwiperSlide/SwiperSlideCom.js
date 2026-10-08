@@ -10,6 +10,7 @@ import "./swiper.css";
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 import PojectItem from "../../projects/components/projectItem";
 import LoaderCom from "../LoaderCom";
+import StateMessage from "../StateMessage";
 // import { useSelector, useDispatch } from "react-redux";
 // import { fetchProjectData } from "../../../store/reducers/projectSlice";
 import { useTranslation } from "react-i18next";
@@ -17,22 +18,43 @@ import GetAllData from "../../../data/projects";
 const OurTeamCom = () => {
   const { getProjects } = GetAllData();
   const [projectsDta, setProjectsData] = useState([]);
-  const { i18n } = useTranslation();
+  const [status, setStatus] = useState("loading");
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    getProjects().then((data) => {
-      setTimeout(() => {
-        setProjectsData(data[0]);
-      }, 1000);
-    });
+    let cancelled = false;
+    let timer;
+    setStatus("loading");
+
+    getProjects()
+      .then((data) => {
+        if (cancelled) return;
+        timer = setTimeout(() => {
+          if (cancelled) return;
+          setProjectsData(data[0]);
+          setStatus("ready");
+        }, 1000);
+      })
+      .catch((error) => {
+        if (cancelled) return;
+        console.error("Failed to load featured projects from Sanity:", error);
+        setStatus("error");
+      });
+
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n.language]);
 
   return (
     <div className="container">
-      {projectsDta !== undefined &&
-      projectsDta !== null &&
-      projectsDta.length > 0 ? (
+      {status === "error" ? (
+        <StateMessage message={t("projects.error")} />
+      ) : projectsDta !== undefined &&
+        projectsDta !== null &&
+        projectsDta.length > 0 ? (
         <Swiper
           effect={"coverflow"}
           grabCursor={true}

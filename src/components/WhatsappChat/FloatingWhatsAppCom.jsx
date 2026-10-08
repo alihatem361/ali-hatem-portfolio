@@ -12,9 +12,13 @@ const FloatingWhatsAppCom = () => {
 
   const [aboutmeData, setAboutmeData] = useState([]);
   useEffect(() => {
-    getAboutme().then((data) => {
-      setAboutmeData(data[0][0]);
-    });
+    getAboutme()
+      .then((data) => {
+        setAboutmeData(data[0][0]);
+      })
+      .catch((error) => {
+        console.error("WhatsApp widget: failed to load hero data:", error);
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n.language]);
 

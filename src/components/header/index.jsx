@@ -16,9 +16,13 @@ const Header = () => {
   const [aboutmeData, setAboutmeData] = useState([]);
 
   const fetchAboutMe = useCallback(() => {
-    getAboutme().then((data) => {
-      setAboutmeData(data[0][0]);
-    });
+    getAboutme()
+      .then((data) => {
+        setAboutmeData(data[0][0]);
+      })
+      .catch((error) => {
+        console.error("Header: failed to load hero data:", error);
+      });
   }, [getAboutme]);
 
   useEffect(() => {

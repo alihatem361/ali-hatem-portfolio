@@ -38,13 +38,20 @@ const ProjectDetail = ({ projectId }) => {
   const isRTL = i18n.language === "ar";
 
   useEffect(() => {
-    getProjects().then((data) => {
-      const foundProject = data[0].find(
-        (p) => createSlug(p.titleEn || p.title || "") === normalizedProjectId,
-      );
-      setProject(foundProject);
-      setLoading(false);
-    });
+    getProjects()
+      .then((data) => {
+        const foundProject = data[0].find(
+          (p) => createSlug(p.titleEn || p.title || "") === normalizedProjectId,
+        );
+        setProject(foundProject);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("ProjectDetail: failed to load project:", error);
+        // Must clear loading here too, otherwise the page spins forever.
+        setProject(undefined);
+        setLoading(false);
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [normalizedProjectId, i18n.language]);
 

@@ -18,9 +18,13 @@ const SocialMedia = () => {
   const [socialsData, setSocialsData] = useState([]);
 
   useEffect(() => {
-    getSocials().then((data) => {
-      setSocialsData(data[0]);
-    });
+    getSocials()
+      .then((data) => {
+        setSocialsData(data[0]);
+      })
+      .catch((error) => {
+        console.error("SocialMedia: failed to load social links:", error);
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

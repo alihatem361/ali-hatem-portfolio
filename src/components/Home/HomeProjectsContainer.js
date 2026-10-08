@@ -19,9 +19,13 @@ const HomeProjectsContainer = () => {
   const { getProjects } = GetAllData();
 
   useEffect(() => {
-    getProjects().then((data) => {
-      setProjectsData(data[0].slice(0, 3));
-    });
+    getProjects()
+      .then((data) => {
+        setProjectsData(data[0].slice(0, 3));
+      })
+      .catch((error) => {
+        console.error("Home: failed to load featured projects:", error);
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n.language]);
 
