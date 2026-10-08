@@ -6,7 +6,7 @@ import Nav from "../src/components/nav";
 import { getRequestLocale } from "./lib/locale";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://abdulrahman-hatem-saranader123s-projects.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://ali-hatem-portfolio-liart.vercel.app";
 
 const METADATA_BY_LOCALE = {
   en: {
