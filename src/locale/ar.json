@@ -71,5 +71,32 @@
   "View Collection": "عرض المجموعة",
   "Browse Collection": "تصفح المجموعة",
   "View Details": "عرض التفاصيل",
-  "Live Demo": "عرض مباشر"
+  "Live Demo": "عرض مباشر",
+  "hero": {
+    "role": "مطور واجهات أمامية — React · Next.js · TypeScript",
+    "viewProjects": "عرض المشاريع",
+    "contact": "تواصل معي"
+  },
+  "hire": {
+    "title": "تبحث عن مطور واجهات أمامية؟",
+    "text": "أنا متاح لفرص العمل في تطوير الواجهات الأمامية و React و Next.js. أسرع طريقة للتواصل معي هي البريد الإلكتروني أو LinkedIn.",
+    "email": "راسلني",
+    "linkedin": "LinkedIn",
+    "location": "مقيم في الجيزة، مصر"
+  },
+  "projectDetails": {
+    "role": "دوري",
+    "context": "السياق",
+    "problem": "المشكلة",
+    "contributions": "ما قمت ببنائه",
+    "decisions": "قرارات تقنية أساسية",
+    "challenge": "مشكلة صعبة قمت بحلها",
+    "outcome": "النتيجة",
+    "period": "الفترة",
+    "codeNote": "الكود المصدري",
+    "type": {
+      "web": "مشروع ويب",
+      "mobile": "تطبيق موبايل"
+    }
+  }
 }

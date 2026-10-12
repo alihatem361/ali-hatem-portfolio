@@ -93,3 +93,26 @@ export const getImagePath = (imagePath) => {
   }
   return imagePath.startsWith("/") ? imagePath : `/${imagePath}`;
 };
+
+/**
+ * Sized, format-negotiated variant of a Sanity CDN image. Sanity serves the
+ * original upload by default (the hero photo is 3317×3101), so anything shown
+ * small should go through this. Non-Sanity URLs pass through untouched.
+ */
+export const sanityImage = (url, { width, height, quality = 80 } = {}) => {
+  if (!url || !/^https:\/\/cdn\.sanity\.io\//.test(url)) return url || "";
+  const params = new URLSearchParams({ auto: "format", q: String(quality) });
+  if (width) params.set("w", String(width));
+  if (height) params.set("h", String(height));
+  if (width && height) params.set("fit", "crop");
+  return `${url}${url.includes("?") ? "&" : "?"}${params}`;
+};
+
+/** srcset of Sanity variants at the given widths (square when `square`). */
+export const sanitySrcSet = (url, widths, { square = false } = {}) =>
+  widths
+    .map(
+      (w) =>
+        `${sanityImage(url, { width: w, height: square ? w : undefined })} ${w}w`,
+    )
+    .join(", ");

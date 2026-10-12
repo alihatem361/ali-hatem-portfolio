@@ -82,7 +82,11 @@ const PhoneMockup = ({ src, alt, size = "md", tilt = 0, className = "" }) => (
   </div>
 );
 
-const MobileProjectDetails = ({ project, isArabic }) => {
+const MobileProjectDetails = ({
+  project,
+  isArabic,
+  onLinkClick = () => undefined,
+}) => {
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -289,6 +293,7 @@ const MobileProjectDetails = ({ project, isArabic }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mpd-action-btn mpd-action-primary"
+                  onClick={onLinkClick("demo", "detail_hero")}
                 >
                   <IoGlobeOutline />
                   <span>{isArabic ? "معاينة مباشرة" : "Live Demo"}</span>
@@ -624,6 +629,7 @@ const MobileProjectDetails = ({ project, isArabic }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mpd-action-btn mpd-action-primary"
+                onClick={onLinkClick("demo", "detail_footer")}
               >
                 <IoGlobeOutline />
                 <span>{isArabic ? "جرّب التطبيق" : "Try The Demo"}</span>

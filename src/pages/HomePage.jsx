@@ -4,6 +4,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import HomeProjectsContainer from "../components/Home/HomeProjectsContainer";
 import SEO from "../components/SEO";
+import HireMe from "../components/HireMe";
 
 const HomePage = () => {
   const { i18n } = useTranslation();
@@ -15,12 +16,12 @@ const HomePage = () => {
         title={
           isArabic
             ? "علي حاتم | مطور واجهات أمامية - React و Next.js"
-            : "Ali Hatem | Senior Frontend Developer - React & Next.js Expert"
+            : "Ali Hatem | Frontend Developer - React & Next.js"
         }
         description={
           isArabic
-            ? "مطور واجهات أمامية من مصر متخصص في React.js و Next.js وتقنيات الويب الحديثة. أكثر من 4 سنوات خبرة في بناء تطبيقات ويب عالية الأداء."
-            : "Senior Frontend Developer from Egypt specializing in React.js, Next.js, TypeScript, and modern web technologies. 4+ years of experience building high-performance web applications."
+            ? "مطور واجهات أمامية من مصر متخصص في React و Next.js و TypeScript. استعرض المشاريع ودراسات الحالة وحمّل سيرتي الذاتية."
+            : "Frontend Developer from Egypt specializing in React, Next.js and TypeScript. Explore case studies and live projects, and download my CV."
         }
         keywords={
           isArabic
@@ -31,6 +32,7 @@ const HomePage = () => {
       />
       <Header />
       <HomeProjectsContainer />
+      <HireMe placement="home" />
       <Footer />
     </React.Fragment>
   );

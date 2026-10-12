@@ -2,8 +2,17 @@ import React from "react";
 import VideoPopup from "./VideoPopup";
 import { FaGithub } from "react-icons/fa";
 import { BiGlobe } from "react-icons/bi";
+import { getProjectSlug } from "../../../helpers";
+import { track } from "../../../helpers/analytics";
 
-const ProjectCardButtons = ({ project, noVideo }) => {
+const ProjectCardButtons = ({ project, noVideo, placement = "card" }) => {
+  const trackLink = (linkType) => () =>
+    track("project_link_click", {
+      link_type: linkType,
+      project_slug: getProjectSlug(project),
+      placement,
+    });
+
   return (
     <div className="card-buttons enhanced-buttons">
       {project.github && project.github !== "" && (
@@ -12,6 +21,9 @@ const ProjectCardButtons = ({ project, noVideo }) => {
           href={project.codeStatus === "PRIVATE" ? null : project.github}
           target="_blank"
           rel="noreferrer"
+          onClick={
+            project.codeStatus === "PRIVATE" ? undefined : trackLink("github")
+          }
           title={
             project.codeStatus === "PRIVATE"
               ? "Private Repository"
@@ -34,6 +46,7 @@ const ProjectCardButtons = ({ project, noVideo }) => {
           target="_blank"
           rel="noreferrer"
           title="View Live Demo"
+          onClick={trackLink("demo")}
         >
           <BiGlobe />
           <span className="btn-text">Demo</span>

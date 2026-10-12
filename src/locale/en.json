@@ -71,5 +71,32 @@
   "View Collection": "View Collection",
   "Browse Collection": "Browse Collection",
   "View Details": "View Details",
-  "Live Demo": "Live Demo"
+  "Live Demo": "Live Demo",
+  "hero": {
+    "role": "Frontend Developer — React · Next.js · TypeScript",
+    "viewProjects": "View projects",
+    "contact": "Contact me"
+  },
+  "hire": {
+    "title": "Hiring a frontend developer?",
+    "text": "I'm open to Frontend, React and Next.js roles. The fastest way to reach me is email or LinkedIn.",
+    "email": "Email me",
+    "linkedin": "LinkedIn",
+    "location": "Based in Giza, Egypt"
+  },
+  "projectDetails": {
+    "role": "My role",
+    "context": "Context",
+    "problem": "The problem",
+    "contributions": "What I built",
+    "decisions": "Key technical decisions",
+    "challenge": "A hard problem I solved",
+    "outcome": "Outcome",
+    "period": "Period",
+    "codeNote": "Source code",
+    "type": {
+      "web": "Web project",
+      "mobile": "Mobile app"
+    }
+  }
 }

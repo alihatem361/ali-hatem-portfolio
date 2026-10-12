@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -6,14 +6,18 @@ import { motion } from "framer-motion";
 import YoutubeVideo from "../components/projects/components/YoutubeVideo";
 import LoomVideo from "../components/projects/components/LoomVideo";
 import SEO from "../components/SEO";
+import HireMe from "../components/HireMe";
+import CaseStudy from "../components/projects/components/CaseStudy";
 import MobileProjectDetails from "./MobileProjectDetails";
 import {
   createSlug,
   getProjectSlug,
   getImagePath,
   getAbsoluteImageUrl,
+  sanityImage,
   SITE_URL,
 } from "../helpers";
+import { track } from "../helpers/analytics";
 import { getProjectsForLanguage } from "../data/mergeProjects";
 import "./ProjectDetailsPage.css";
 
@@ -39,31 +43,49 @@ const BASE_URL = SITE_URL;
 const ProjectDetailsPage = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
-  const [project, setProject] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const { t, i18n } = useTranslation();
   const [copied, setCopied] = useState(false);
 
-  useEffect(() => {
+  // Resolved during render, not in an effect, so the prerendered HTML already
+  // carries this project's <title>, description and og:image.
+  const project = useMemo(() => {
     const allProjects = getProjectsForLanguage(i18n.language);
 
     // Match the canonical slug first. The title-derived fallback keeps any
     // previously shared Arabic URL working, since those were built from the
     // translated title before projects carried an explicit slug.
-    const foundProject =
+    return (
       allProjects.find((proj) => getProjectSlug(proj) === slug) ||
-      allProjects.find((proj) => createSlug(proj.title) === slug);
-
-    if (foundProject) {
-      setProject(foundProject);
-    }
-
-    setLoading(false);
+      allProjects.find((proj) => createSlug(proj.title) === slug) ||
+      null
+    );
   }, [slug, i18n.language]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  // Once per slug — a language switch re-renders but is not a new view.
+  // Reported by slug because GA's page titles differ per language.
+  useEffect(() => {
+    if (project) {
+      track("project_view", {
+        project_slug: getProjectSlug(project),
+        project_type: project.type === "mobile" ? "mobile" : "web",
+        collection_id: project.collectionId || "none",
+      });
+    } else {
+      track("project_not_found", { requested_slug: slug });
+    }
+  }, [slug]);
+
+  /** onClick for outbound demo/code/video links. */
+  const trackLink = (linkType, placement) => () =>
+    track("project_link_click", {
+      link_type: linkType,
+      project_slug: project ? getProjectSlug(project) : slug,
+      placement,
+    });
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -72,17 +94,6 @@ const ProjectDetailsPage = () => {
   };
 
   const isArabic = i18n.language === "ar";
-
-  if (loading) {
-    return (
-      <div className="pdp-loading">
-        <div className="pdp-loader">
-          <div className="pdp-loader-ring"></div>
-          <HiSparkles className="pdp-loader-icon" />
-        </div>
-      </div>
-    );
-  }
 
   if (!project) {
     return (
@@ -151,7 +162,12 @@ const ProjectDetailsPage = () => {
     return (
       <>
         {seoElement}
-        <MobileProjectDetails project={project} isArabic={isArabic} />
+        <MobileProjectDetails
+          project={project}
+          isArabic={isArabic}
+          onLinkClick={trackLink}
+        />
+        <HireMe placement="case_study" />
       </>
     );
   }
@@ -174,7 +190,7 @@ const ProjectDetailsPage = () => {
           ) : (
             <div className="pdp-hero-image-container">
               <LazyLoadImage
-                src={getImagePath(project.image)}
+                src={sanityImage(getImagePath(project.image), { width: 1600 })}
                 alt={project.title}
                 className="pdp-hero-image"
                 effect="blur"
@@ -215,7 +231,10 @@ const ProjectDetailsPage = () => {
               transition={{ delay: 0.1 }}
             >
               <HiSparkles />
-              <span>{isArabic ? "مشروع مميز" : "Featured Project"}</span>
+              <span>
+                {project.caseStudy?.role ||
+                  t(`projectDetails.type.${project.type === "mobile" ? "mobile" : "web"}`)}
+              </span>
             </motion.div>
 
             <motion.h1
@@ -257,6 +276,7 @@ const ProjectDetailsPage = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="pdp-action-btn pdp-action-primary"
+                  onClick={trackLink("demo", "detail_hero")}
                 >
                   <IoGlobeOutline />
                   <span>{isArabic ? "معاينة مباشرة" : "Live Demo"}</span>
@@ -268,6 +288,7 @@ const ProjectDetailsPage = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="pdp-action-btn pdp-action-secondary"
+                  onClick={trackLink("github", "detail_hero")}
                 >
                   <FaGithub />
                   <span>{isArabic ? "الكود" : "Code"}</span>
@@ -305,6 +326,8 @@ const ProjectDetailsPage = () => {
             </p>
           </motion.div>
 
+          <CaseStudy caseStudy={project.caseStudy} />
+
           {/* Info Cards Row */}
           <motion.div
             className="pdp-info-row"
@@ -334,6 +357,7 @@ const ProjectDetailsPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="pdp-link-item"
+                    onClick={trackLink("demo", "detail_links")}
                   >
                     <IoGlobeOutline />
                     <span>{isArabic ? "الموقع المباشر" : "Live Website"}</span>
@@ -346,6 +370,7 @@ const ProjectDetailsPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="pdp-link-item"
+                    onClick={trackLink("github", "detail_links")}
                   >
                     <FaGithub />
                     <span>GitHub</span>
@@ -360,6 +385,7 @@ const ProjectDetailsPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="pdp-link-item"
+                    onClick={trackLink("video", "detail_links")}
                   >
                     <FaYoutube />
                     <span>YouTube</span>
@@ -374,27 +400,12 @@ const ProjectDetailsPage = () => {
                     </span>
                   </div>
                 )}
+                {project.caseStudy?.codeNote && (
+                  <p className="pdp-code-note">{project.caseStudy.codeNote}</p>
+                )}
               </div>
             </div>
 
-            {/* Project Status */}
-            <div className="pdp-info-card pdp-status-card">
-              <h3>{isArabic ? "الحالة" : "Status"}</h3>
-              <div className="pdp-status-content">
-                <div className="pdp-status-item">
-                  <span className="pdp-status-indicator"></span>
-                  <span>{isArabic ? "مباشر" : "Live"}</span>
-                </div>
-                <div className="pdp-status-stat">
-                  <span className="pdp-stat-number">
-                    {project.technology?.length || 0}
-                  </span>
-                  <span className="pdp-stat-label">
-                    {isArabic ? "تقنيات" : "Technologies"}
-                  </span>
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           {/* Back to Projects */}
@@ -411,6 +422,8 @@ const ProjectDetailsPage = () => {
           </motion.div>
         </div>
       </section>
+
+      <HireMe placement="case_study" />
     </div>
   );
 };

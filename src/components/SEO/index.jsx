@@ -1,12 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { SITE_URL, getAbsoluteImageUrl } from "../../helpers";
+import { getSocialsForLanguage } from "../../data/mergeProjects";
 
 const BASE_URL = SITE_URL;
 
 const SEO = ({
-  title = "Ali Hatem | Senior Frontend Developer - React & Next.js Expert",
-  description = "Senior Frontend Developer from Egypt specializing in React.js, Next.js, TypeScript, and modern web technologies. 4+ years of experience building high-performance web applications. View my portfolio of 30+ professional projects.",
+  title = "Ali Hatem | Frontend Developer - React & Next.js",
+  description = "Frontend Developer from Egypt specializing in React, Next.js and TypeScript. Explore case studies and live projects, and download my CV.",
   canonicalUrl,
   ogImage = `${BASE_URL}/images/og-image.webp`,
   ogType = "website",
@@ -33,7 +34,7 @@ const SEO = ({
     givenName: "Ali",
     familyName: "Hatem",
     alternateName: ["Ali Hatem", "علي حاتم"],
-    jobTitle: "Senior Frontend Developer",
+    jobTitle: "Frontend Developer",
     url: BASE_URL,
     image: {
       "@type": "ImageObject",
@@ -41,11 +42,11 @@ const SEO = ({
       width: 1200,
       height: 630,
     },
-    sameAs: [
-      "https://github.com/alihatem361",
-      "https://www.linkedin.com/in/alihatem360/",
-      "https://twitter.com/alihatem360",
-    ],
+    // Profile URLs come from the CMS social links, so they cannot drift from
+    // the links visitors actually click (a stale LinkedIn URL once lived here).
+    sameAs: getSocialsForLanguage("en")
+      .map((social) => social.link)
+      .filter((link) => /^https?:\/\//.test(link || "") && !/wa\.me/.test(link)),
     address: {
       "@type": "PostalAddress",
       addressLocality: "Giza",
@@ -68,7 +69,6 @@ const SEO = ({
       "React Native",
       "Node.js",
       "REST APIs",
-      "GraphQL",
     ],
     knowsLanguage: ["English", "Arabic"],
     hasOccupation: {
@@ -222,7 +222,8 @@ const SEO = ({
       <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={url} />
+      {/* A noindex page (not-found states) has no canonical URL. */}
+      {!noindex && <link rel="canonical" href={url} />}
 
       {/* Robots */}
       {noindex ? (

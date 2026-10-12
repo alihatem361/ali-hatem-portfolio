@@ -17,10 +17,13 @@ build/*
 .env
 .env.*
 !.env.example
+CLAUDE.md
+/docs
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
 
 # ignore GitHub configuration files
 .github/*
@@ -31,3 +34,6 @@ yarn-error.log*
 # .playwright-mcp
 .playwright-mcp/*
 .vercel
+
+# SSR bundle used only during prerender (deleted after the build)
+build-ssr

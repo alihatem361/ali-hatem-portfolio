@@ -1,0 +1,109 @@
+/* Scoped under .hire-block — component CSS is global after the build. */
+.hire-block {
+  padding: 64px 5%;
+}
+
+.hire-block__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.hire-block__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 12px;
+}
+
+.hire-block__text {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 auto 16px;
+  max-width: 560px;
+}
+
+.hire-block__email {
+  display: inline-block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-decoration: none;
+  margin-bottom: 24px;
+  word-break: break-all;
+}
+
+.hire-block__email:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.hire-block__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hire-block__btn,
+.hire-block .cv__modal__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.hire-block__btn:hover,
+.hire-block .cv__modal__btn:hover {
+  color: var(--text-color);
+  border-color: rgba(212, 175, 55, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hire-block__btn--primary,
+.hire-block__btn--primary:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #0a0a0a;
+}
+
+.hire-block__meta {
+  margin: 20px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 600px) {
+  .hire-block {
+    padding: 40px 16px;
+  }
+
+  .hire-block__inner {
+    padding: 28px 18px;
+  }
+
+  .hire-block__actions > * {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hire-block .cv__modal,
+  .hire-block .cv__modal__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

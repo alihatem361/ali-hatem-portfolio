@@ -34,6 +34,8 @@ export const CONTENT_QUERY = /* groq */ `{
     order,
     projectType,
     collectionId,
+    featured,
+    caseStudy,
     tagline,
     platform,
     "gallery": gallery[].asset->url,
@@ -89,13 +91,84 @@ export const compact = (object) =>
 export const locale = (value) =>
   value ? compact({ en: value.en, ar: value.ar }) : undefined;
 
+/**
+ * One spelling per technology. The CMS had grown several for the same thing
+ * (ReactJs / React, Tailwind / Tailwind CSS, HTML / HTML5, JS / JavaScript),
+ * which doubled the filter pills on /projects and split their counts.
+ * Keys are lowercase; anything not listed keeps its CMS spelling.
+ */
+const TECHNOLOGY_ALIASES = {
+  reactjs: "React",
+  "react.js": "React",
+  react: "React",
+  nextjs: "Next.js",
+  "next js": "Next.js",
+  "next.js": "Next.js",
+  tailwind: "Tailwind CSS",
+  tailwindcss: "Tailwind CSS",
+  "tailwind css": "Tailwind CSS",
+  html: "HTML",
+  html5: "HTML",
+  css: "CSS",
+  css3: "CSS",
+  js: "JavaScript",
+  javascript: "JavaScript",
+  typescript: "TypeScript",
+  api: "REST API",
+  "rest api": "REST API",
+  framermotion: "Framer Motion",
+  "framer motion": "Framer Motion",
+  "shadcn-ui": "shadcn/ui",
+  shadcn: "shadcn/ui",
+  "shadcn/ui": "shadcn/ui",
+  swiperjs: "Swiper",
+  swiper: "Swiper",
+  materialui: "Material UI",
+  "material ui": "Material UI",
+  mui: "Material UI",
+  nodejs: "Node.js",
+  "node.js": "Node.js",
+  expressjs: "Express",
+  express: "Express",
+  sass: "Sass",
+  contextapi: "Context API",
+  angular: "Angular",
+};
+
+export const canonicalTechnology = (name) => {
+  const trimmed = String(name || "").trim();
+  return TECHNOLOGY_ALIASES[trimmed.toLowerCase()] || trimmed;
+};
+
+const normaliseTechnologies = (list = []) => [
+  ...new Set(list.map(canonicalTechnology).filter(Boolean)),
+];
+
+/** Localized case-study fields; every one is optional. */
+const toCaseStudy = (caseStudy) => {
+  if (!caseStudy) return undefined;
+  const localeList = (items) =>
+    (items || []).map(locale).filter((item) => item?.en);
+  return compact({
+    role: locale(caseStudy.role),
+    period: caseStudy.period || undefined,
+    context: locale(caseStudy.context),
+    problem: locale(caseStudy.problem),
+    contributions: localeList(caseStudy.contributions),
+    decisions: localeList(caseStudy.decisions),
+    challenge: locale(caseStudy.challenge),
+    outcome: locale(caseStudy.outcome),
+    codeNote: locale(caseStudy.codeNote),
+  });
+};
+
 export const toLegacyProject = (project) => {
   const base = {
     slug: project.slug,
     title: locale(project.title),
     description: locale(project.description),
     image: project.image,
-    technology: project.technology || [],
+    technology: normaliseTechnologies(project.technology),
     demo: project.demo || "",
     github: project.github || "",
     // The app checks `codeStatus === "PRIVATE"`.
@@ -106,6 +179,8 @@ export const toLegacyProject = (project) => {
     // The app treats a missing `hidden` as visible.
     hidden: project.isVisible === false ? true : undefined,
     collectionId: project.collectionId || undefined,
+    featured: project.featured === true ? true : undefined,
+    caseStudy: toCaseStudy(project.caseStudy),
   };
 
   if (project.projectType === "mobile") {

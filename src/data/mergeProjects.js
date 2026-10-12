@@ -40,6 +40,23 @@ const localiseProject = (project, language) => {
     localised.tagline = pickLocale(project.tagline, language);
   }
 
+  if (project.caseStudy) {
+    const cs = project.caseStudy;
+    localised.caseStudy = {
+      ...cs,
+      role: pickLocale(cs.role, language),
+      context: pickLocale(cs.context, language),
+      problem: pickLocale(cs.problem, language),
+      contributions: (cs.contributions || []).map((item) =>
+        pickLocale(item, language),
+      ),
+      decisions: (cs.decisions || []).map((item) => pickLocale(item, language)),
+      challenge: pickLocale(cs.challenge, language),
+      outcome: pickLocale(cs.outcome, language),
+      codeNote: pickLocale(cs.codeNote, language),
+    };
+  }
+
   if (project.features) {
     localised.features = project.features.map((feature) =>
       localiseFeature(feature, language),

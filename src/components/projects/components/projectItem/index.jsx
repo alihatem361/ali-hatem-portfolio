@@ -12,9 +12,10 @@ import { useTranslation } from "react-i18next";
 // components
 import ProjectCardButtons from "../ProjectCardButtons";
 // helpers
-import { getProjectSlug } from "../../../../helpers";
+import { getProjectSlug, sanityImage } from "../../../../helpers";
+import { track } from "../../../../helpers/analytics";
 
-const PojectItem = ({ project, onCollectionClick }) => {
+const PojectItem = ({ project, onCollectionClick, placement = "grid" }) => {
   const { i18n, t } = useTranslation();
   const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
@@ -25,9 +26,24 @@ const PojectItem = ({ project, onCollectionClick }) => {
     ? `/collection/${project.collectionId}`
     : null;
 
+  const trackSelect = () =>
+    track("select_content", {
+      content_type: isCollection ? "collection" : "project",
+      item_id: isCollection ? project.collectionId : getProjectSlug(project),
+      placement,
+    });
+
+  // Links inside a collection card: stop the card's own click handler from
+  // tracking (and navigating) a second time.
+  const handleCollectionLinkClick = (e) => {
+    e.stopPropagation();
+    trackSelect();
+  };
+
   // Handle click for collection cards - navigate to collection page
   const handleCardClick = (e) => {
     if (isCollection) {
+      trackSelect();
       e.preventDefault();
       navigate(collectionUrl);
     }
@@ -72,6 +88,7 @@ const PojectItem = ({ project, onCollectionClick }) => {
                 <Link
                   to={collectionUrl}
                   className="view-details-btn"
+                  onClick={handleCollectionLinkClick}
                   aria-label="View collection"
                 >
                   <FaLayerGroup />
@@ -81,6 +98,7 @@ const PojectItem = ({ project, onCollectionClick }) => {
                 <Link
                   to={`/project/${getProjectSlug(project)}`}
                   className="view-details-btn"
+                  onClick={trackSelect}
                   aria-label="View project details"
                 >
                   <FaEye />
@@ -90,10 +108,10 @@ const PojectItem = ({ project, onCollectionClick }) => {
             </div>
           </div>
           <LazyLoadImage
-            src={project.image}
+            src={sanityImage(project.image, { width: 720 })}
             alt={project.title}
             className="project-image"
-            placeholderSrc={project.image}
+            placeholderSrc={sanityImage(project.image, { width: 40, quality: 30 })}
             onLoad={() => setImageLoaded(true)}
           />
         </div>
@@ -101,7 +119,11 @@ const PojectItem = ({ project, onCollectionClick }) => {
         <div className="card-content">
           <div className="card-header">
             {isCollection ? (
-              <Link to={collectionUrl} className="project-title-link">
+              <Link
+                to={collectionUrl}
+                className="project-title-link"
+                onClick={handleCollectionLinkClick}
+              >
                 <h3 className="project-title">
                   {project.title}
                   {i18n.language === "ar" ? (
@@ -115,6 +137,7 @@ const PojectItem = ({ project, onCollectionClick }) => {
               <Link
                 to={`/project/${getProjectSlug(project)}`}
                 className="project-title-link"
+                onClick={trackSelect}
               >
                 <h3 className="project-title">
                   {project.title}
@@ -149,12 +172,16 @@ const PojectItem = ({ project, onCollectionClick }) => {
 
           <div className="card-footer">
             {isCollection ? (
-              <Link to={collectionUrl} className="view-collection-btn">
+              <Link
+                to={collectionUrl}
+                className="view-collection-btn"
+                onClick={handleCollectionLinkClick}
+              >
                 <FaLayerGroup />
                 <span>{t("Browse Collection")}</span>
               </Link>
             ) : (
-              <ProjectCardButtons project={project} />
+              <ProjectCardButtons project={project} placement={placement} />
             )}
           </div>
         </div>

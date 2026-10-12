@@ -29,7 +29,7 @@ const datasetOverride = process.argv
  * Rewrites the prerender route list from live content. It was 56 hand-kept
  * routes, which silently drifted whenever a project was added or renamed.
  */
-const updateReactSnapRoutes = async (projects) => {
+const updatePrerenderRoutes = async (projects) => {
   const pkgPath = path.join(rootDir, "package.json");
   const raw = await readFile(pkgPath, "utf8");
   const pkg = JSON.parse(raw);
@@ -51,8 +51,8 @@ const updateReactSnapRoutes = async (projects) => {
     ...projects.map((p) => `/project/${p.slug}`).sort(),
   ];
 
-  const previous = pkg.reactSnap?.include || [];
-  pkg.reactSnap = { ...pkg.reactSnap, include: routes };
+  const previous = pkg.prerenderRoutes || [];
+  pkg.prerenderRoutes = routes;
 
   // Preserve the file's original indentation and trailing newline.
   await writeFile(pkgPath, `${JSON.stringify(pkg, null, 2)}\n`, "utf8");
@@ -117,7 +117,7 @@ const run = async () => {
       `${content.socials.length} socials, site settings ✓`,
   );
 
-  const routes = await updateReactSnapRoutes(projects);
+  const routes = await updatePrerenderRoutes(projects);
   console.log(`Prerender routes: ${routes.count}`);
   if (routes.added.length) console.log(`  added:   ${routes.added.join(", ")}`);
   if (routes.removed.length) console.log(`  removed: ${routes.removed.join(", ")}`);

@@ -1,6 +1,6 @@
 {
   "_comment": "GENERATED FILE — do not edit. Produced by scripts/fetch-sanity-content.js. Edit content in Sanity Studio.",
-  "generatedAt": "2026-09-30T12:12:18.044Z",
+  "generatedAt": "2026-10-12T08:05:42.999Z",
   "projects": [
     {
       "slug": "cruisara-tours",
@@ -14,9 +14,9 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/ce7680d0370ed1b6532bcf227c3c7ae2fa69b0c0-1849x941.png",
       "technology": [
-        "NextJs",
-        "ReactJs",
-        "Tailwind",
+        "Next.js",
+        "React",
+        "Tailwind CSS",
         "Zustand",
         "Sanity",
         "PayPal API",
@@ -128,18 +128,132 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/c392829a241cd8c6d552cd313146e183e3a99ce5-1358x906.png",
       "technology": [
-        "ReactJs",
+        "React",
         "TypeScript",
         "Ant Design",
         "React Query",
         "Axios",
         "Recharts",
-        "FramerMotion",
+        "Framer Motion",
         "Vite"
       ],
       "demo": "https://masaakin-al-mawil-dashboard.vercel.app",
       "github": "",
       "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "mobdion-platform",
+      "title": {
+        "en": "Mobdion Platform",
+        "ar": "منصة مبديون"
+      },
+      "description": {
+        "en": "A static Arabic RTL training-center website for the King Abdulaziz University Creative Center, built with HTML, Tailwind CSS, and Vanilla JavaScript. The platform includes educational programs, media content, authentication pages, events, policies, and responsive interactive components.",
+        "ar": "موقع تدريبي عربي متجاوب لمركز الإبداع بجامعة الملك عبدالعزيز، مبني باستخدام HTML وTailwind CSS وJavaScript، ويضم البرامج التعليمية والمحتوى الإعلامي وصفحات التسجيل وتسجيل الدخول والفعاليات والسياسات مع تجربة استخدام متجاوبة."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/a9d57d2c263ec4502854eed06ec113efa5c98c6d-1896x775.png",
+      "technology": [
+        "HTML",
+        "Tailwind CSS",
+        "JavaScript",
+        "RTL"
+      ],
+      "demo": "https://mobdion-platform.alihatem7201738.workers.dev/",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "music-player-app",
+      "title": {
+        "en": "Music Player App",
+        "ar": "تطبيق مشغل الموسيقى"
+      },
+      "description": {
+        "en": "A cross-platform music player built with React Native and Expo, featuring authentication, music discovery, search, playlists, favorites, audio streaming, and a persistent mini player.",
+        "ar": "تطبيق مشغل موسيقى متعدد المنصات مبني باستخدام React Native وExpo، يوفر تسجيل الدخول واكتشاف الموسيقى والبحث وقوائم التشغيل والمفضلة وتشغيل الصوت مع مشغل مصغر متاح أثناء التنقل داخل التطبيق."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/42a12d8d13161bf2d251459c39c2806c45f15be9-1376x768.jpg",
+      "technology": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "React",
+        "Redux Toolkit",
+        "Axios",
+        "React Navigation"
+      ],
+      "demo": "https://github.com/alihatem361/music-player-app/releases/tag/v1.0.0",
+      "github": "",
+      "codeStatus": "PRIVATE",
+      "type": "mobile",
+      "tagline": {
+        "en": "A Modern Cross-Platform Music Experience",
+        "ar": "تجربة موسيقية عصرية متعددة المنصات"
+      },
+      "platform": [
+        "Android"
+      ],
+      "gallery": [
+        "https://cdn.sanity.io/images/ca2s0qsl/production/a9597a4c1f4b5b79f5a35c8601dff45155b33c73-304x691.png",
+        "https://cdn.sanity.io/images/ca2s0qsl/production/fc5906b41e3d685971549fee20bca48086ba3116-308x688.png",
+        "https://cdn.sanity.io/images/ca2s0qsl/production/b2dacb630db7dad673583de00b6e110a2d7ffcb1-306x681.png",
+        "https://cdn.sanity.io/images/ca2s0qsl/production/4a3efbd551625ef6f32e469625d55098889b619b-302x683.png",
+        "https://cdn.sanity.io/images/ca2s0qsl/production/e8c97ac4d8889ddd2de791e6c36970f583dc3088-308x688.png"
+      ],
+      "features": [
+        {
+          "key": "music-discovery",
+          "icon": "bell",
+          "title": {
+            "en": "Music Discovery",
+            "ar": "اكتشاف الموسيقى"
+          },
+          "description": {
+            "en": "Discover recommended tracks and featured playlists through a focused music discovery experience.",
+            "ar": "اكتشف الأغاني المقترحة وقوائم التشغيل المميزة من خلال تجربة متكاملة لاكتشاف الموسيقى."
+          },
+          "image": "https://cdn.sanity.io/images/ca2s0qsl/production/a9597a4c1f4b5b79f5a35c8601dff45155b33c73-304x691.png"
+        },
+        {
+          "key": "audio-streaming",
+          "icon": "wrench",
+          "title": {
+            "en": "Audio Streaming",
+            "ar": "بث وتشغيل الصوت"
+          },
+          "description": {
+            "en": "Stream music with play, pause, resume, and seeking controls for a seamless listening experience.",
+            "ar": "استمع إلى الموسيقى مع إمكانية التشغيل والإيقاف والاستئناف والتنقل داخل المقطع لتجربة استماع سلسة."
+          },
+          "image": "https://cdn.sanity.io/images/ca2s0qsl/production/79fe38ecfade7fabad5d7d77ebd22960ebf62fb1-306x685.png"
+        },
+        {
+          "key": "playlists",
+          "icon": "shield",
+          "title": {
+            "en": "Playlist Management",
+            "ar": "إدارة قوائم التشغيل"
+          },
+          "description": {
+            "en": "Create, rename, delete, and manage playlists while adding or removing tracks.",
+            "ar": "أنشئ قوائم التشغيل وأعد تسميتها وحذفها وإدارتها مع إمكانية إضافة الأغاني وإزالتها."
+          },
+          "image": "https://cdn.sanity.io/images/ca2s0qsl/production/5adc44308d5f0ecaad3e964a327abdd54211c7d1-309x704.png"
+        },
+        {
+          "key": "favorites",
+          "icon": "card",
+          "title": {
+            "en": "Favorites",
+            "ar": "المفضلة"
+          },
+          "description": {
+            "en": "Like and save your favorite tracks for quick access whenever you want to listen.",
+            "ar": "أضف الأغاني المفضلة لديك واحفظها للوصول إليها وتشغيلها بسهولة في أي وقت."
+          },
+          "image": "https://cdn.sanity.io/images/ca2s0qsl/production/e8c97ac4d8889ddd2de791e6c36970f583dc3088-308x688.png"
+        }
+      ]
     },
     {
       "slug": "winwin-platform",
@@ -155,10 +269,32 @@
       "technology": [
         "HTML",
         "CSS",
-        "JS",
+        "JavaScript",
         "RTL"
       ],
       "demo": "https://win-win-platform.vercel.app/",
+      "github": "",
+      "codeStatus": "PRIVATE"
+    },
+    {
+      "slug": "manar-platform",
+      "title": {
+        "en": "Manar Platform",
+        "ar": "منصة منار الجنوب"
+      },
+      "description": {
+        "en": "A modern Arabic RTL educational platform for Manar Al-Janoub College, designed to provide a clear and responsive digital experience for educational programs, professional diplomas, fellowships, certificates, courses, media content, registration, and communication.",
+        "ar": "منصة تعليمية عربية حديثة لكلية منار الجنوب، مصممة لتقديم تجربة رقمية واضحة ومتجاوبة للبرامج التعليمية والدبلومات المهنية والزمالات والشهادات والدورات والمحتوى الإعلامي والتسجيل والتواصل."
+      },
+      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/9f1a0cc7505091e5bc45650517ef9f32752cfb21-1891x944.png",
+      "technology": [
+        "HTML",
+        "Tailwind CSS",
+        "JavaScript",
+        "Responsive Design",
+        "RTL"
+      ],
+      "demo": "https://e3melbusiness-manar-platform.alihatem7201738.workers.dev/",
       "github": "",
       "codeStatus": "PRIVATE"
     },
@@ -174,36 +310,14 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/d7561ee2b799b897ffa42cf5e5a07e9afe262353-1845x935.png",
       "technology": [
-        "NextJs",
+        "Next.js",
         "TypeScript",
-        "Tailwind",
+        "Tailwind CSS",
         "Sanity",
-        "FramerMotion"
+        "Framer Motion"
       ],
       "demo": "https://www.genzschool.net",
       "github": "https://github.com/alihatem361/gz-school",
-      "codeStatus": "PRIVATE"
-    },
-    {
-      "slug": "manar-platform",
-      "title": {
-        "en": "Manar Platform",
-        "ar": "منصة منار الجنوب"
-      },
-      "description": {
-        "en": "A modern Arabic RTL educational platform for Manar Al-Janoub College, designed to provide a clear and responsive digital experience for educational programs, professional diplomas, fellowships, certificates, courses, media content, registration, and communication.",
-        "ar": "منصة تعليمية عربية حديثة لكلية منار الجنوب، مصممة لتقديم تجربة رقمية واضحة ومتجاوبة للبرامج التعليمية والدبلومات المهنية والزمالات والشهادات والدورات والمحتوى الإعلامي والتسجيل والتواصل."
-      },
-      "image": "https://cdn.sanity.io/images/ca2s0qsl/production/9f1a0cc7505091e5bc45650517ef9f32752cfb21-1891x944.png",
-      "technology": [
-        "HTML5",
-        "Tailwind CSS",
-        "JavaScript",
-        "Responsive Design",
-        "RTL"
-      ],
-      "demo": "https://e3melbusiness-manar-platform.alihatem7201738.workers.dev/",
-      "github": "",
       "codeStatus": "PRIVATE"
     },
     {
@@ -218,11 +332,11 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/7641f874e8eec4d40ffae96ed88e0057396e6be7-1829x942.png",
       "technology": [
-        "ReactJs",
+        "React",
         "TypeScript",
-        "Tailwind",
+        "Tailwind CSS",
         "Vite",
-        "shadcn-ui",
+        "shadcn/ui",
         "Sanity"
       ],
       "demo": "https://novirahealth.com/",
@@ -242,7 +356,7 @@
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/6630704fef425bdbb0cdf2356bb2ebe92d5f43d6-403x250.png",
       "technology": [
         "HTML",
-        "Tailwind",
+        "Tailwind CSS",
         "JavaScript"
       ],
       "demo": "https://e3melbusiness.org/",
@@ -262,7 +376,7 @@
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/34e1b0284a1e25f2ec95b392477a110c864e0279-1848x950.png",
       "technology": [
         "HTML",
-        "Tailwind",
+        "Tailwind CSS",
         "JavaScript"
       ],
       "demo": "https://www.eb.university",
@@ -281,10 +395,10 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/0ce5fcb480e6c04e9e21393e41956389ddbf4ec4-403x250.png",
       "technology": [
-        "ReactJs",
-        "Tailwind",
+        "React",
+        "Tailwind CSS",
         "Vite",
-        "shadcn-ui"
+        "shadcn/ui"
       ],
       "demo": "https://www.alhawmah.org/",
       "github": "",
@@ -331,7 +445,7 @@
         "CSS",
         "JavaScript",
         "Bootstrap",
-        "SwiperJs",
+        "Swiper",
         "WOW.js",
         "jQuery"
       ],
@@ -351,8 +465,8 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/9ace6b75bff24d98b2c01e73f7ad2ee0c019aa80-1280x720.png",
       "technology": [
-        "NextJs",
-        "Tailwind",
+        "Next.js",
+        "Tailwind CSS",
         "TypeScript"
       ],
       "demo": "https://el-zakeroon.vercel.app/",
@@ -373,10 +487,10 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/33b4f9c51d36883d64e94962fe1b79c3f76f0c03-403x250.png",
       "technology": [
-        "ReactJs",
-        "Tailwind",
+        "React",
+        "Tailwind CSS",
         "Vite",
-        "shadcn-ui"
+        "shadcn/ui"
       ],
       "demo": "https://contiva-learning.vercel.app/",
       "github": "",
@@ -395,7 +509,7 @@
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/aa2b3aa52949f64bc44b44a5c77225dc63f195a8-403x250.png",
       "technology": [
         "HTML",
-        "Tailwind",
+        "Tailwind CSS",
         "JavaScript"
       ],
       "demo": "https://e3mel-business-national-saudi-day.pages.dev/",
@@ -415,10 +529,10 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/96566f0e653da76dba4b1d7986bc01f3c08fe9de-403x250.png",
       "technology": [
-        "ReactJs",
+        "React",
         "Redux",
         "Bootstrap",
-        "Api"
+        "REST API"
       ],
       "demo": "http://imbr.surge.sh/",
       "github": "",
@@ -450,7 +564,7 @@
     {
       "slug": "shahadat-alhadaf",
       "title": {
-        "en": "shahadat alhadaf",
+        "en": "Shahadat Alhadaf",
         "ar": "شهادات الهدف"
       },
       "description": {
@@ -480,8 +594,8 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/ac8d0e3729a84952c9585f81ccaa27c48b7da282-403x250.png",
       "technology": [
-        "NextJs",
-        "Tailwind"
+        "Next.js",
+        "Tailwind CSS"
       ],
       "demo": "https://alshaatir-academy.vercel.app/",
       "github": "",
@@ -526,7 +640,7 @@
         "HTML",
         "CSS",
         "JavaScript",
-        "Tailwind"
+        "Tailwind CSS"
       ],
       "demo": "https://vclasses-msr-mohamed.pages.dev/",
       "github": "",
@@ -548,7 +662,7 @@
         "HTML",
         "CSS",
         "JavaScript",
-        "Tailwind"
+        "Tailwind CSS"
       ],
       "demo": "https://vclasses-abdullah-nasr.pages.dev",
       "github": "",
@@ -570,7 +684,7 @@
         "HTML",
         "CSS",
         "JavaScript",
-        "Tailwind"
+        "Tailwind CSS"
       ],
       "demo": "https://vclasses-mr-ahmed.pages.dev/",
       "github": "",
@@ -589,12 +703,12 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/7815e68c5aa32fe567b637ddf09ee36dbc14070f-403x250.png",
       "technology": [
-        "ReactJs",
+        "React",
         "Redux",
-        "MaterialUI",
-        "Api",
+        "Material UI",
+        "REST API",
         "Firebase",
-        "NodeJs"
+        "Node.js"
       ],
       "demo": "",
       "github": "",
@@ -618,7 +732,7 @@
         "HTML",
         "CSS",
         "JavaScript",
-        "Tailwind"
+        "Tailwind CSS"
       ],
       "demo": "https://salil-real-estate-project-page.pages.dev/",
       "github": "",
@@ -637,8 +751,8 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/c5ab68a947f4eeabead6d235d9e812a27367a178-403x250.png",
       "technology": [
-        "ReactJs",
-        "Tailwind",
+        "React",
+        "Tailwind CSS",
         "Firebase"
       ],
       "demo": "https://makhabrash.vercel.app/",
@@ -657,10 +771,10 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/e9f10bcca613d219cd93ad9e80a80d06f0ea7ff9-1280x720.webp",
       "technology": [
-        "ReactJs",
+        "React",
         "Redux",
         "Bootstrap",
-        "Api"
+        "REST API"
       ],
       "demo": "",
       "github": "",
@@ -680,8 +794,8 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/49b3b7d2a704e6b801d9a1c2f67acaf7ad3c4ea4-1924x1080.jpg",
       "technology": [
-        "ReactJs",
-        "MaterialUI",
+        "React",
+        "Material UI",
         "Firebase"
       ],
       "demo": "",
@@ -699,10 +813,10 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/a26cc17053fe95137b8be6011f64d9d5b73a2aa1-1228x635.png",
       "technology": [
-        "ReactJs",
-        "MaterialUI",
-        "NodeJs",
-        "expressJs",
+        "React",
+        "Material UI",
+        "Node.js",
+        "Express",
         "Firebase"
       ],
       "demo": "",
@@ -741,10 +855,10 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/01289aaf3f89b2e9c789c8be25ab25b360fccd4c-1857x938.png",
       "technology": [
-        "ReactJs",
+        "React",
         "Redux",
-        "MaterialUI",
-        "Api"
+        "Material UI",
+        "REST API"
       ],
       "demo": "https://nifty-tendency.surge.sh/",
       "github": "",
@@ -755,7 +869,7 @@
     {
       "slug": "mohammed-al-huwaila",
       "title": {
-        "en": "mohammed-al-huwaila",
+        "en": "Mohammed Al-Huwaila",
         "ar": "محمد الحويلة"
       },
       "description": {
@@ -764,10 +878,10 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/5792272797b019f497408c23b21bc87d3f51db0f-1848x957.png",
       "technology": [
-        "ReactJs",
+        "React",
         "Redux",
         "Bootstrap",
-        "Api"
+        "REST API"
       ],
       "demo": "https://mohammed-al-huwaila2.vercel.app/",
       "github": "",
@@ -778,7 +892,7 @@
     {
       "slug": "thamer-al-suwait",
       "title": {
-        "en": "thamer-al-suwait",
+        "en": "Thamer Al-Suwait",
         "ar": "ثامر السويط"
       },
       "description": {
@@ -787,10 +901,10 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/11646d71269c79fb10dea6ded557440f27605bfe-1843x952.png",
       "technology": [
-        "ReactJs",
+        "React",
         "Redux",
         "Bootstrap",
-        "Api"
+        "REST API"
       ],
       "demo": "https://thamer-al-suwait.vercel.app/",
       "github": "",
@@ -800,7 +914,7 @@
     {
       "slug": "saoud-al-asfour",
       "title": {
-        "en": "saoud-al-asfour",
+        "en": "Saoud Al-Asfour",
         "ar": "سعود العصفور"
       },
       "description": {
@@ -809,10 +923,10 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/e3e18bdea2a67a7f36f078eda00b6d5e9436a6b0-1838x952.png",
       "technology": [
-        "ReactJs",
+        "React",
         "Redux",
         "Bootstrap",
-        "Api"
+        "REST API"
       ],
       "demo": "https://saoud-al-asfour.vercel.app/",
       "github": "",
@@ -822,7 +936,7 @@
     {
       "slug": "abdullah-mutlaq-awad-al-mutairi",
       "title": {
-        "en": "abdullah-mutlaq-awad-al-mutairi",
+        "en": "Abdullah Mutlaq Awad Al-Mutairi",
         "ar": "عبد الله مطلق عوض المطيري"
       },
       "description": {
@@ -831,10 +945,10 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/d0f824f344f1143598f4ad57a581e5563817a175-1842x952.png",
       "technology": [
-        "ReactJs",
+        "React",
         "Redux",
         "Bootstrap",
-        "Api"
+        "REST API"
       ],
       "demo": "https://abdullah-mutlaq-awad-al-mutairi.vercel.app/",
       "github": "",
@@ -853,8 +967,8 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/110bcc45f8fb077bdbea5521bcb445039c65ed9c-1024x1024.jpg",
       "technology": [
-        "NodeJs",
-        "ExpressJs",
+        "Node.js",
+        "Express",
         "TelegramBotApi",
         "NutritionixApi"
       ],
@@ -877,8 +991,8 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/6f1461a2bcaff0d318f8586af956579ad256d61c-1785x927.png",
       "technology": [
-        "ReactJs",
-        "MaterialUI",
+        "React",
+        "Material UI",
         "react-to-print",
         "PWA"
       ],
@@ -895,8 +1009,8 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/866fa7975a02d633d36ac5f7a48310bbe7f5ffb7-1901x947.png",
       "technology": [
-        "Tailwind",
-        "ReactJs",
+        "Tailwind CSS",
+        "React",
         "Vite"
       ],
       "demo": "https://e-learningreactjs.pages.dev/",
@@ -917,8 +1031,8 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/15aa444e191448ad54758b891bfc04903804f5d1-1920x1113.png",
       "technology": [
-        "ReactJs",
-        "Tailwind",
+        "React",
+        "Tailwind CSS",
         "Vite"
       ],
       "demo": "https://greeting-card-pied.vercel.app/",
@@ -951,10 +1065,9 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/9b3af69cd23f504dc4abebc87dc6fdd7a181d5f0-1897x955.webp",
       "technology": [
-        "ReactJs",
-        "contextApi",
-        "Api",
-        "ReactJs",
+        "React",
+        "Context API",
+        "REST API",
         "Bootstrap"
       ],
       "demo": "https://shoping-cart-redux-vite.pages.dev/",
@@ -1057,10 +1170,10 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/b7518b68ebdab140ca98c409d8ab6976ed72b886-1902x957.webp",
       "technology": [
-        "ReactJs",
+        "React",
         "Redux",
         "Bootstrap",
-        "Api"
+        "REST API"
       ],
       "demo": "https://movies-list-redux.pages.dev/",
       "github": "",
@@ -1074,9 +1187,9 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/ce7563b792f5f3d71a1ea8492ba091089657ca7e-1280x720.webp",
       "technology": [
-        "ReactJs",
+        "React",
         "Bootstrap",
-        "Api"
+        "REST API"
       ],
       "demo": "",
       "github": "",
@@ -1107,9 +1220,9 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/fae67caad2ac62eb8918caa36cc78bc85d4994ec-1906x942.webp",
       "technology": [
-        "ReactJs",
+        "React",
         "Bootstrap",
-        "Api"
+        "REST API"
       ],
       "demo": "https://udacitymyreadsproject.pages.dev/",
       "github": "",
@@ -1123,7 +1236,7 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/a6d6f4d5146d220d606118b84656080742e8ac0f-1897x937.webp",
       "technology": [
-        "ReactJs",
+        "React",
         "Bootstrap"
       ],
       "demo": "https://speakersreactjs.pages.dev/",
@@ -1138,9 +1251,9 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/dc7612f351bff11d7af31585952edd43837280ea-1897x958.webp",
       "technology": [
-        "ReactJs",
+        "React",
         "Bootstrap",
-        "Api"
+        "REST API"
       ],
       "demo": "https://farooq-task.pages.dev/",
       "github": "",
@@ -1154,9 +1267,9 @@
       },
       "image": "https://cdn.sanity.io/images/ca2s0qsl/production/c4bff804eaa70fdb3917086d2ca0414678721bbb-1906x945.webp",
       "technology": [
-        "angular",
+        "Angular",
         "Bootstrap",
-        "Api"
+        "REST API"
       ],
       "demo": "https://21dfe692.angularecommercegradproj.pages.dev/login",
       "github": "",
@@ -1164,43 +1277,43 @@
     }
   ],
   "technologies": [
-    "Tailwind",
+    "Tailwind CSS",
     "HTML",
     "JavaScript",
-    "ReactJs",
+    "React",
     "CSS",
     "Bootstrap",
-    "Api",
     "Redux",
+    "REST API",
     "TypeScript",
-    "NextJs",
+    "Next.js",
     "Vite",
-    "Sanity",
-    "shadcn-ui",
-    "FramerMotion",
-    "jQuery",
     "RTL",
+    "Sanity",
+    "shadcn/ui",
+    "Axios",
+    "Framer Motion",
+    "jQuery",
     "Zustand",
     "Ant Design",
     "ApexCharts",
-    "Axios",
     "Capacitor",
     "Cloudflare",
     "DataTables",
+    "Expo",
     "Firebase",
     "FullCalendar",
     "Gemini AI",
-    "HTML5",
     "Ionic React",
-    "JS",
     "PayPal API",
-    "React",
+    "React Native",
+    "React Navigation",
     "React Query",
     "Recharts",
+    "Redux Toolkit",
     "Resend",
     "Responsive Design",
-    "SwiperJs",
-    "Tailwind CSS",
+    "Swiper",
     "Vercel",
     "WOW.js"
   ],

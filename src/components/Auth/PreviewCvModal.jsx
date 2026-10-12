@@ -2,147 +2,25 @@ import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { FaTimes, FaDownload, FaSpinner, FaEye } from "react-icons/fa";
+import { FaTimes, FaDownload, FaEye } from "react-icons/fa";
 import { cvDataEN, cvDataAR } from "../../data/cvData";
-import html2pdf from "html2pdf.js";
+import { CV_FILES } from "../../data/cvTemplate";
+import { track } from "../../helpers/analytics";
 import "./style.css";
 
-// Generate CV HTML for PDF export
-const generateCVHTML = (cvData, lang) => {
-  const direction = lang === "ar" ? "rtl" : "ltr";
-  return `
-    <div style="font-family: 'Segoe UI', Arial, sans-serif; width: 210mm; padding: 40px; background: white; color: #333; direction: ${direction}; box-sizing: border-box;">
-      <header style="text-align: center; padding-bottom: 16px; margin-bottom: 20px; border-bottom: 2px solid #d4af37;">
-        <h1 style="font-size: 24px; font-weight: 700; color: #111; margin: 0 0 4px 0;">${cvData.personal.name}</h1>
-        <p style="font-size: 13px; color: #555; font-style: italic; margin: 0 0 12px 0;">${cvData.personal.title}</p>
-        <div style="font-size: 11px; color: #444; margin-bottom: 4px;">
-          ${cvData.personal.email} | ${cvData.personal.location} | ${cvData.personal.phone}
-        </div>
-        <div style="font-size: 11px; color: #2563eb;">
-          LinkedIn | Portfolio | GitHub
-        </div>
-      </header>
-
-      <section style="margin-bottom: 18px;">
-        <h3 style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #111; margin: 0 0 8px 0; padding-bottom: 3px; border-bottom: 2px solid #d4af37; display: inline-block;">${lang === "ar" ? "الأهداف" : "OBJECTIVES"}</h3>
-        <p style="margin: 0; font-size: 12px; color: #444; text-align: justify;">${cvData.objective}</p>
-      </section>
-
-      <section style="margin-bottom: 18px;">
-        <h3 style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #111; margin: 0 0 8px 0; padding-bottom: 3px; border-bottom: 2px solid #d4af37; display: inline-block;">${lang === "ar" ? "الخبرات العملية" : "WORK EXPERIENCE"}</h3>
-        ${cvData.experience
-          .map(
-            (exp) => `
-          <div style="margin-bottom: 12px;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-              <strong style="font-size: 12px; color: #222;">${exp.title}</strong>
-              <span style="font-size: 11px; color: #666;">${exp.period}</span>
-            </div>
-            <div style="font-size: 11px; color: #555; font-style: italic; margin-bottom: 4px;">${exp.company}${exp.location ? " • " + exp.location : ""}</div>
-            ${exp.description ? '<p style="margin: 4px 0 0 0; font-size: 11px; color: #444;">' + exp.description + "</p>" : ""}
-          </div>
-        `,
-          )
-          .join("")}
-      </section>
-
-      <section style="margin-bottom: 18px;">
-        <h3 style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #111; margin: 0 0 8px 0; padding-bottom: 3px; border-bottom: 2px solid #d4af37; display: inline-block;">${lang === "ar" ? "المهارات" : "SKILLS"}</h3>
-        <p style="font-size: 11px; color: #333; line-height: 1.6;">${cvData.skills.join(" • ")}</p>
-      </section>
-
-      <section style="margin-bottom: 18px;">
-        <h3 style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #111; margin: 0 0 8px 0; padding-bottom: 3px; border-bottom: 2px solid #d4af37; display: inline-block;">${lang === "ar" ? "التعليم" : "EDUCATION"}</h3>
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <strong style="font-size: 12px; color: #222;">${cvData.education.degree}</strong>
-          <span style="font-size: 11px; color: #666;">${cvData.education.period}</span>
-        </div>
-        <div style="font-size: 11px; color: #555; font-style: italic;">${cvData.education.university} • ${cvData.education.location}</div>
-      </section>
-
-      <section style="margin-bottom: 18px;">
-        <h3 style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #111; margin: 0 0 8px 0; padding-bottom: 3px; border-bottom: 2px solid #d4af37; display: inline-block;">${lang === "ar" ? "المشاريع" : "PROJECTS"}</h3>
-        ${cvData.projects
-          .slice(0, 6)
-          .map(
-            (proj) => `
-          <div style="margin-bottom: 8px;">
-            <strong style="font-size: 11px; color: #222;">${proj.title}</strong>
-            <p style="margin: 2px 0 0 0; font-size: 10px; color: #555;">${proj.description}</p>
-          </div>
-        `,
-          )
-          .join("")}
-      </section>
-
-      <section>
-        <h3 style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #111; margin: 0 0 8px 0; padding-bottom: 3px; border-bottom: 2px solid #d4af37; display: inline-block;">${lang === "ar" ? "الجوائز" : "AWARDS"}</h3>
-        ${cvData.awards
-          .map(
-            (award) => `
-          <div style="margin-bottom: 6px;">
-            <strong style="font-size: 11px; color: #d4af37;">${award.title}</strong>
-            <p style="margin: 2px 0 0 0; font-size: 10px; color: #444;">${award.description}</p>
-          </div>
-        `,
-          )
-          .join("")}
-      </section>
-    </div>
-  `;
-};
-
-// Shared CV download function
-export const downloadCV = async (lang = "en") => {
-  const cvData = lang === "ar" ? cvDataAR : cvDataEN;
-  const cvHTML = generateCVHTML(cvData, lang);
-
-  const container = document.createElement("div");
-  container.innerHTML = cvHTML;
-  container.style.cssText =
-    "position: fixed; left: -9999px; top: 0; background: white;";
-  document.body.appendChild(container);
-
-  // Get the actual CV element (first element child, not text node)
-  const cvElement = container.querySelector("div");
-
-  await new Promise((resolve) => setTimeout(resolve, 150));
-
-  const opt = {
-    margin: [10, 10, 10, 10],
-    filename: `Ali-Hatem-Ramadan-CV-${lang.toUpperCase()}.pdf`,
-    image: { type: "jpeg", quality: 0.95 },
-    html2canvas: { scale: 2, useCORS: true, backgroundColor: "#ffffff" },
-    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-  };
-
-  await html2pdf().set(opt).from(cvElement).save();
-  document.body.removeChild(container);
-};
-
-function PreviewCvModal() {
+function PreviewCvModal({ placement = "hero" }) {
   const [show, setShow] = useState(false);
-  const [isGenerating, setIsGenerating] = useState(false);
   const { t, i18n } = useTranslation();
   const lang = i18n.language === "ar" ? "ar" : "en";
   const cvData = lang === "ar" ? cvDataAR : cvDataEN;
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  // Download PDF using the shared function
-  const handleDownload = async () => {
-    if (isGenerating) return;
-    setIsGenerating(true);
-
-    try {
-      await downloadCV(lang);
-    } catch (error) {
-      console.error("PDF generation failed:", error);
-    } finally {
-      setIsGenerating(false);
-    }
+  const handleShow = () => {
+    setShow(true);
+    track("cv_preview_open", { cv_language: lang, placement });
   };
+  const handleDownload = () =>
+    track("cv_download", { cv_language: lang, placement: "cv_modal" });
 
   return (
     <div className="cv__modal">
@@ -165,20 +43,15 @@ function PreviewCvModal() {
         <div className="cv-modal-header-clean">
           <span className="cv-modal-title-clean">{t("cv.modalTitle")}</span>
           <div className="cv-modal-actions">
-            <button
+            <a
               className="cv-action-btn download"
+              href={CV_FILES[lang]}
+              download
               onClick={handleDownload}
-              disabled={isGenerating}
             >
-              {isGenerating ? <FaSpinner className="spin" /> : <FaDownload />}
-              <span>
-                {isGenerating
-                  ? lang === "ar"
-                    ? "جاري..."
-                    : "..."
-                  : t("cv.downloadButton")}
-              </span>
-            </button>
+              <FaDownload />
+              <span>{t("cv.downloadButton")}</span>
+            </a>
             <button className="cv-action-btn close" onClick={handleClose}>
               <FaTimes />
             </button>

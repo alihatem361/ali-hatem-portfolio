@@ -37,5 +37,11 @@ export default defineConfig(({ command, mode }) => {
       outDir: "build",
       target: "es2019",
     },
+    // The prerender bundle (src/entry-server.jsx) runs in plain Node. Several
+    // dependencies use extensionless/directory ESM imports that Node cannot
+    // resolve, so bundle everything instead of importing from node_modules.
+    ssr: {
+      noExternal: true,
+    },
   };
 });

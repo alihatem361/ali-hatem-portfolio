@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import LoaderCom from "../Utilities/LoaderCom";
+import { sanityImage, sanitySrcSet } from "../../helpers";
 
 const HeaderImage = ({ aboutmeData }) => {
   // Animation variants
@@ -81,7 +82,15 @@ const HeaderImage = ({ aboutmeData }) => {
         <div className="profile-image-wrapper">
           {aboutmeData.headerImage ? (
             <motion.img
-              src={aboutmeData.headerImage}
+              src={sanityImage(aboutmeData.headerImage, { width: 680 })}
+              srcSet={sanitySrcSet(
+                aboutmeData.headerImage,
+                [280, 400, 560, 680],
+              )}
+              sizes="(max-width: 600px) 280px, 340px"
+              width={340}
+              height={340}
+              fetchPriority="high"
               alt="Ali Hatem - Frontend Developer"
               className="hero-profile-image"
               initial={{ filter: "blur(10px)" }}

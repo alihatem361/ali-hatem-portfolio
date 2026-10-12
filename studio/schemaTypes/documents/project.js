@@ -10,6 +10,7 @@ export const project = defineType({
   icon: RocketIcon,
   groups: [
     {name: 'content', title: 'Content', default: true},
+    {name: 'caseStudy', title: 'Case study'},
     {name: 'media', title: 'Media'},
     {name: 'links', title: 'Links'},
     {name: 'settings', title: 'Settings'},
@@ -168,6 +169,86 @@ export const project = defineType({
           {title: 'E3mel landing pages', value: 'e3mel-landing-collection'},
         ],
       },
+    }),
+
+    defineField({
+      name: 'featured',
+      title: 'Featured',
+      type: 'boolean',
+      group: 'settings',
+      initialValue: false,
+      description:
+        'Shown in the homepage carousel. When no project is featured, the carousel shows every visible project.',
+    }),
+
+    // --- Case study --------------------------------------------------------
+    /**
+     * Optional write-up rendered on the project page, one section per filled
+     * field. Only state what you can stand behind — no invented metrics.
+     */
+    defineField({
+      name: 'caseStudy',
+      title: 'Case study',
+      type: 'object',
+      group: 'caseStudy',
+      options: {collapsible: true, collapsed: false},
+      fields: [
+        defineField({
+          name: 'role',
+          title: 'My role',
+          type: 'localeString',
+          description: 'e.g. "Sole frontend developer", "Frontend lead in a team of 4".',
+        }),
+        defineField({
+          name: 'period',
+          title: 'Period',
+          type: 'string',
+          description: 'e.g. "03/2025 – 06/2025". Language-neutral.',
+        }),
+        defineField({
+          name: 'context',
+          title: 'Context',
+          type: 'localeText',
+          description: 'Who the client/product is and who used it.',
+        }),
+        defineField({
+          name: 'problem',
+          title: 'The problem',
+          type: 'localeText',
+        }),
+        defineField({
+          name: 'contributions',
+          title: 'What I built',
+          type: 'array',
+          of: [defineArrayMember({type: 'localeString'})],
+          description: '3–6 bullets of your own work.',
+        }),
+        defineField({
+          name: 'decisions',
+          title: 'Key technical decisions',
+          type: 'array',
+          of: [defineArrayMember({type: 'localeString'})],
+          description: 'A decision and why — e.g. a state-management or rendering choice.',
+        }),
+        defineField({
+          name: 'challenge',
+          title: 'A hard problem I solved',
+          type: 'localeText',
+        }),
+        defineField({
+          name: 'outcome',
+          title: 'Outcome',
+          type: 'localeText',
+          description: 'Verifiable results only. Qualitative is fine.',
+        }),
+        defineField({
+          name: 'codeNote',
+          title: 'Source-code note',
+          type: 'localeString',
+          description:
+            'Shown under the links, e.g. "Private — client NDA; walkthrough video available on request".',
+        }),
+      ],
     }),
 
     // --- Mobile-app only -------------------------------------------------

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -8,9 +8,11 @@ import {
   getProjectSlug,
   getImagePath,
   getAbsoluteImageUrl,
+  sanityImage,
   SITE_URL,
 } from "../helpers";
 import { getProjectsForLanguage } from "../data/mergeProjects";
+import { track } from "../helpers/analytics";
 import "./CollectionPage.css";
 
 // Icons
@@ -20,8 +22,6 @@ import { HiSparkles } from "react-icons/hi2";
 import { BiCopy, BiCheck } from "react-icons/bi";
 
 const BASE_URL = SITE_URL;
-
-const canonicalUrl = `${BASE_URL}${window.location.pathname}`;
 
 // Collection definitions (should match projects/index.jsx)
 const COLLECTIONS_CONFIG = {
@@ -69,67 +69,59 @@ const CollectionPage = () => {
   const { collectionId } = useParams();
   const navigate = useNavigate();
   const { i18n } = useTranslation();
-  const [collection, setCollection] = useState(null);
-  const [subProjects, setSubProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [copied, setCopied] = useState(false);
 
   const isArabic = i18n.language === "ar";
 
-  useEffect(() => {
+  // Resolved during render, not in an effect, so the prerendered HTML already
+  // carries this collection's <title>, description and og:image.
+  const { collection, subProjects } = useMemo(() => {
     const config = COLLECTIONS_CONFIG[collectionId];
-
-    if (!config) {
-      setLoading(false);
-      return;
-    }
+    if (!config) return { collection: null, subProjects: [] };
 
     const allProjects = getProjectsForLanguage(i18n.language);
 
-    // Find projects that belong to this collection
-    const projectsInCollection = allProjects.filter((proj) =>
-      config.titles.some(
-        (title) => title.toLowerCase() === proj.title?.toLowerCase(),
-      ),
+    // Membership comes from the CMS `collectionId`, so renaming a project
+    // cannot drop it from its collection. The title list is only a fallback
+    // for records that predate that field.
+    const projectsInCollection = allProjects.filter(
+      (proj) =>
+        proj.collectionId === collectionId ||
+        (!proj.collectionId &&
+          config.titles.some(
+            (title) => title.toLowerCase() === proj.title?.toLowerCase(),
+          )),
     );
 
-    // Build collection object
-    const collectionData = {
-      id: collectionId,
-      title: config.name[i18n.language] || config.name.en,
-      description: config.description[i18n.language] || config.description.en,
-      image: projectsInCollection[0]?.image,
-      technology: [
-        ...new Set(projectsInCollection.flatMap((p) => p.technology || [])),
-      ],
-      projectCount: projectsInCollection.length,
+    return {
+      collection: {
+        id: collectionId,
+        title: config.name[i18n.language] || config.name.en,
+        description:
+          config.description[i18n.language] || config.description.en,
+        image: projectsInCollection[0]?.image,
+        technology: [
+          ...new Set(projectsInCollection.flatMap((p) => p.technology || [])),
+        ],
+        projectCount: projectsInCollection.length,
+      },
+      subProjects: projectsInCollection,
     };
-
-    setCollection(collectionData);
-    setSubProjects(projectsInCollection);
-    setLoading(false);
   }, [collectionId, i18n.language]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
+  useEffect(() => {
+    if (collection) track("collection_view", { collection_id: collectionId });
+  }, [collectionId]);
+
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-
-  if (loading) {
-    return (
-      <div className="cp-loading">
-        <div className="cp-loader">
-          <div className="cp-loader-ring"></div>
-          <FaLayerGroup className="cp-loader-icon" />
-        </div>
-      </div>
-    );
-  }
 
   if (!collection) {
     return (
@@ -180,7 +172,6 @@ const CollectionPage = () => {
         ogType="collection"
         keywords={`${collection.title}, ${collection.technology?.join(", ") || ""}, Ali Hatem, Portfolio Collection`}
         language={i18n.language}
-        canonicalUrl={canonicalUrl}
       />
       {/* Hero Section */}
       <section className="cp-hero-section">
@@ -297,7 +288,7 @@ const CollectionPage = () => {
             >
               <div className="cp-project-image">
                 <LazyLoadImage
-                  src={getImagePath(project.image)}
+                  src={sanityImage(getImagePath(project.image), { width: 720 })}
                   alt={project.title}
                   effect="blur"
                   wrapperClassName="cp-image-wrapper"
@@ -306,6 +297,13 @@ const CollectionPage = () => {
                   <Link
                     to={`/project/${getProjectSlug(project)}`}
                     className="cp-view-btn"
+                    onClick={() =>
+                      track("select_content", {
+                        content_type: "project",
+                        item_id: getProjectSlug(project),
+                        placement: "collection",
+                      })
+                    }
                   >
                     {isArabic ? "عرض التفاصيل" : "View Details"}
                   </Link>
@@ -316,6 +314,13 @@ const CollectionPage = () => {
                 <Link
                   to={`/project/${getProjectSlug(project)}`}
                   className="cp-project-title-link"
+                  onClick={() =>
+                    track("select_content", {
+                    content_type: "project",
+                    item_id: getProjectSlug(project),
+                    placement: "collection",
+                    })
+                  }
                 >
                   <h3 className="cp-project-title">{project.title}</h3>
                 </Link>
@@ -341,6 +346,13 @@ const CollectionPage = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cp-demo-btn"
+                      onClick={() =>
+                        track("project_link_click", {
+                          link_type: "demo",
+                          project_slug: getProjectSlug(project),
+                          placement: "collection",
+                        })
+                      }
                     >
                       <FaExternalLinkAlt />
                       <span>{isArabic ? "عرض مباشر" : "Live Demo"}</span>
@@ -349,6 +361,13 @@ const CollectionPage = () => {
                   <Link
                     to={`/project/${getProjectSlug(project)}`}
                     className="cp-details-btn"
+                    onClick={() =>
+                      track("select_content", {
+                        content_type: "project",
+                        item_id: getProjectSlug(project),
+                        placement: "collection",
+                      })
+                    }
                   >
                     {isArabic ? "التفاصيل" : "Details"}
                     {isArabic ? <IoChevronBack /> : <IoChevronForward />}

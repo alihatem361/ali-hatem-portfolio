@@ -4,9 +4,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Google Tag Manager -->
+    <!--
+      Google Tag Manager — production host only, so localhost, `vite preview`
+      and Vercel preview deployments never send hits to the GA4 property.
+
+      Visiting any page with ?internal=1 marks this browser as internal
+      (cookie ah_internal=1, one year); ?internal=0 clears it. GTM reads the
+      cookie into GA4's traffic_type parameter — see docs/analytics-setup.md.
+    -->
     <script>
       (function (w, d, s, l, i) {
+        var host = w.location.hostname;
+        if (host !== "www.alihatem.me" && host !== "alihatem.me") return;
+        try {
+          var internal = new URLSearchParams(w.location.search).get("internal");
+          if (internal === "1") {
+            d.cookie = "ah_internal=1; path=/; max-age=31536000; SameSite=Lax";
+          } else if (internal === "0") {
+            d.cookie = "ah_internal=; path=/; max-age=0; SameSite=Lax";
+          }
+        } catch (e) {}
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
@@ -66,36 +83,18 @@
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <!-- Cairo is the only web font in use. -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+    />
 
-    <!-- fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/0f87fe999d.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-W7W2WPMT"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

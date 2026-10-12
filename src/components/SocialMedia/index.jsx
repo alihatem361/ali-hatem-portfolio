@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import GetAllData from "../../data/projects";
+import { trackSocialClick } from "../../helpers/analytics";
 import {
   FaGithub,
   FaLinkedin,
@@ -40,7 +41,8 @@ const toHref = (social) => {
   return link;
 };
 
-const SocialMedia = () => {
+/** `placement` (hero, footer, hire…) is reported with each click. */
+const SocialMedia = ({ placement = "unknown" }) => {
   const { i18n } = useTranslation();
   const { getSocials } = GetAllData();
   const [socialsData, setSocialsData] = useState([]);
@@ -68,6 +70,7 @@ const SocialMedia = () => {
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel="noreferrer"
+              onClick={() => trackSocialClick(social.name, placement)}
               aria-label={label}
               title={label}
             >

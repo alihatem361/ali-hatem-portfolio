@@ -661,3 +661,58 @@
 [dir="rtl"] .pdp-hero-actions {
   justify-content: flex-start;
 }
+
+/* ============================================
+   CASE STUDY (optional CMS sections)
+   ============================================ */
+.pdp-case-study {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.pdp-case-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+}
+
+.pdp-case-fact {
+  padding: 12px 18px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pdp-case-fact dt {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+.pdp-case-fact dd {
+  margin: 4px 0 0;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.pdp-case-list {
+  margin: 0;
+  padding-inline-start: 20px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.pdp-case-list li + li {
+  margin-top: 6px;
+}
+
+.pdp-code-note {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}

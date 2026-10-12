@@ -1,14 +1,16 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import "./style.css";
 // components
 import PojectItem from "./components/projectItem";
 import Footer from "../footer";
-import GetAllData from "../../data/projects";
+import { getVisibleProjectsForLanguage } from "../../data/mergeProjects";
 import LoaderCom from "../Utilities/LoaderCom";
 import { getTechSkills } from "../../data/index";
 import SEO from "../SEO";
+import HireMe from "../HireMe";
+import { track } from "../../helpers/analytics";
 
 // Project titles to group into collections
 const TEACHERS_COLLECTION_TITLES = [
@@ -164,28 +166,31 @@ const groupProjectsIntoCollections = (projects, language) => {
 
 const Projects = () => {
   const { t, i18n } = useTranslation();
-  const { getProjects } = GetAllData();
   const [filteringItems, setFilteringItems] = useState([]);
-  const [projectsDta, setProjectsData] = useState([]);
-  const [filteredProjectsData, setFilteredProjectsData] = useState([]);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-  const getProjectsFromApi = () => {
-    getProjects().then((data) => {
-      const rawProjects = data[0];
-      const groupedProjects = groupProjectsIntoCollections(
-        rawProjects,
+  // Derived during render (content is bundled), so the prerendered HTML
+  // already lists every project card and link.
+  const projectsDta = useMemo(
+    () =>
+      groupProjectsIntoCollections(
+        getVisibleProjectsForLanguage(i18n.language),
         i18n.language,
-      );
-      setProjectsData(groupedProjects);
-      setFilteredProjectsData(groupedProjects);
-    });
-  };
+      ),
+    [i18n.language],
+  );
 
-  useEffect(() => {
-    // Reload projects when language changes
-    getProjectsFromApi();
-  }, [i18n.language]);
+  const filteredProjectsData = useMemo(() => {
+    if (!filteringItems.length) return projectsDta;
+    const selected = filteringItems.map((item) => item.toLowerCase());
+    // Optional chaining: a project without technologies used to throw here
+    // and take the whole listing down.
+    return projectsDta.filter((project) =>
+      (project.technology || []).some((tech) =>
+        selected.includes(String(tech).toLowerCase()),
+      ),
+    );
+  }, [projectsDta, filteringItems]);
 
   const handelFilterClick = (name) => {
     if (filteringItems.includes(name)) {
@@ -195,33 +200,13 @@ const Projects = () => {
     }
   };
 
-  useEffect(() => {
-    filterItems();
-  }, [filteringItems]);
-
-  const filterItems = () => {
-    if (filteringItems.length > 0) {
-      const selected = filteringItems.map((item) => item.toLowerCase());
-      const filteredProjects = projectsDta.filter((project) =>
-        // Optional chaining: a project without technologies used to throw here
-        // and take the whole listing down.
-        (project.technology || []).some((tech) =>
-          selected.includes(String(tech).toLowerCase()),
-        ),
-      );
-      setFilteredProjectsData(filteredProjects);
-    } else {
-      getProjectsFromApi();
-    }
-  };
-
   // A single technology is selectable at a time, so the active filter is the
-  // first (and only) entry. Kept as an array because filterItems() expects one.
+  // first (and only) entry.
   const activeFilter = filteringItems[0] || null;
 
   /**
    * How many cards each technology would yield, counted over the same list
-   * filterItems() filters — including the grouped collection cards — so the
+   * filteredProjectsData filters — including the grouped collection cards — so the
    * number next to a filter always matches what clicking it shows.
    */
   const techCounts = useMemo(() => {
@@ -241,6 +226,9 @@ const Projects = () => {
   };
 
   const selectFilter = (skill) => {
+    if (!filteringItems.includes(skill)) {
+      track("project_filter", { technology: skill });
+    }
     handelFilterClick(skill);
     setIsFilterOpen(false);
   };
@@ -257,8 +245,8 @@ const Projects = () => {
         }
         description={
           isArabic
-            ? "استكشف مجموعة مشاريعي في تطوير الويب باستخدام React و Next.js و TypeScript وتقنيات الويب الحديثة. أكثر من 30 مشروع احترافي."
-            : "Explore my portfolio of web development projects built with React, Next.js, TypeScript, and modern web technologies. 30+ professional projects showcasing my expertise."
+            ? "مشاريع ويب وموبايل مبنية باستخدام React و Next.js و TypeScript، مع روابط للمعاينة المباشرة."
+            : "Web and mobile projects built with React, Next.js and TypeScript, with live demos and project write-ups."
         }
         keywords={
           isArabic
@@ -368,6 +356,7 @@ const Projects = () => {
                   return (
                     <PojectItem
                       project={project}
+                      placement="projects_grid"
                       key={project.collectionId || project.slug || index}
                     />
                   );
@@ -380,6 +369,7 @@ const Projects = () => {
         </div>
       </div>
 
+      <HireMe placement="projects_page" />
       <Footer />
     </React.Fragment>
   );

@@ -12,6 +12,8 @@ import {
 } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi";
 import "./style.css";
+import { getProjectSlug } from "../../helpers";
+import { track } from "../../helpers/analytics";
 
 function Gproject({ gproject }) {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -64,7 +66,7 @@ function Gproject({ gproject }) {
 
   const renderButton = (link, text, icon, isPrimary = false) => {
     if (!link) return null;
-    const isDisabled = text === "GitHub" && codeStatus === "PRIVATE";
+    const isDisabled = link === github && codeStatus === "PRIVATE";
 
     return (
       <motion.a
@@ -72,6 +74,17 @@ function Gproject({ gproject }) {
         href={isDisabled ? undefined : link}
         target="_blank"
         rel="noreferrer"
+        onClick={
+          isDisabled
+            ? undefined
+            : () =>
+                track("project_link_click", {
+                  link_type:
+                    link === github ? "github" : link === demo ? "demo" : "video",
+                  project_slug: getProjectSlug(gproject),
+                  placement: "home_spotlight",
+                })
+        }
         variants={buttonVariants}
         whileHover={!isDisabled ? "hover" : undefined}
         whileTap={!isDisabled ? "tap" : undefined}

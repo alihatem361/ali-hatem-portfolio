@@ -1,88 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SocialMedia from "../SocialMedia/index";
-import PreviewCvModal, { downloadCV } from "../Auth/PreviewCvModal";
-import { FaFileDownload, FaSpinner } from "react-icons/fa";
-
-// Typewriter effect component
-const TypewriterText = ({
-  texts,
-  speed = 100,
-  deleteSpeed = 50,
-  delay = 2000,
-}) => {
-  const [displayText, setDisplayText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const currentText = texts[currentIndex];
-
-    const timeout = setTimeout(
-      () => {
-        if (!isDeleting) {
-          if (displayText.length < currentText.length) {
-            setDisplayText(currentText.slice(0, displayText.length + 1));
-          } else {
-            setTimeout(() => setIsDeleting(true), delay);
-          }
-        } else {
-          if (displayText.length > 0) {
-            setDisplayText(currentText.slice(0, displayText.length - 1));
-          } else {
-            setIsDeleting(false);
-            setCurrentIndex((prev) => (prev + 1) % texts.length);
-          }
-        }
-      },
-      isDeleting ? deleteSpeed : speed,
-    );
-
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentIndex, texts, speed, deleteSpeed, delay]);
-
-  return (
-    <span className="typewriter-text">
-      {displayText}
-      <span className="typewriter-cursor">|</span>
-    </span>
-  );
-};
+import { FaFileDownload, FaArrowRight, FaEnvelope } from "react-icons/fa";
+import { CV_FILES } from "../../data/cvTemplate";
+import { track } from "../../helpers/analytics";
 
 const HeaderBio = ({ aboutmeData }) => {
   const { t, i18n } = useTranslation();
-  const [isDownloading, setIsDownloading] = useState(false);
-
-  const roles =
-    i18n.language === "en"
-      ? [
-          "Front-End Developer",
-          "React Specialist",
-          "UI/UX Enthusiast",
-          "Problem Solver",
-        ]
-      : [
-          "مطور واجهات أمامية",
-          "متخصص React",
-          "مهتم بتجربة المستخدم",
-          "حلال مشاكل",
-        ];
-
-  // Handle CV download using shared function
-  const handleDownload = async () => {
-    if (isDownloading) return;
-    setIsDownloading(true);
-
-    try {
-      const lang = i18n.language === "ar" ? "ar" : "en";
-      await downloadCV(lang);
-    } catch (error) {
-      console.error("PDF generation failed:", error);
-    } finally {
-      setIsDownloading(false);
-    }
-  };
+  const lang = i18n.language === "ar" ? "ar" : "en";
 
   // Animation variants
   const itemVariants = {
@@ -140,16 +67,10 @@ const HeaderBio = ({ aboutmeData }) => {
         </h1>
       </motion.div>
 
-      {/* Typewriter Role */}
-      <motion.div className="hero-role" variants={itemVariants}>
-        <span className="role-prefix">{i18n.language === "en" ? "A" : ""}</span>
-        <TypewriterText
-          texts={roles}
-          speed={80}
-          deleteSpeed={40}
-          delay={2500}
-        />
-      </motion.div>
+      {/* Role — static so the specialization is readable at a glance */}
+      <motion.p className="hero-role" variants={itemVariants}>
+        {t("hero.role")}
+      </motion.p>
 
       {/* Bio Description */}
       <motion.div className="hero-description" variants={itemVariants}>
@@ -166,33 +87,44 @@ const HeaderBio = ({ aboutmeData }) => {
 
       {/* CTA Buttons */}
       <motion.div className="hero-buttons" variants={itemVariants}>
-        <motion.button
-          className="btn-primary-gradient"
-          onClick={handleDownload}
-          disabled={isDownloading}
-          variants={buttonVariants}
-          whileHover="hover"
-          whileTap="tap"
-        >
-          {isDownloading ? (
-            <>
-              <FaSpinner className="btn-icon spin" />
-              <span>
-                {i18n.language === "en" ? "Generating..." : "جاري التحميل..."}
-              </span>
-            </>
-          ) : (
-            <>
-              <span>
-                {i18n.language === "en" ? "Download CV" : "تحميل السيرة"}
-              </span>
-              <FaFileDownload className="btn-icon" />
-            </>
-          )}
-        </motion.button>
+        <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
+          <Link
+            to="/projects"
+            className="btn-primary-gradient"
+            onClick={() =>
+              track("cta_click", { cta: "view_projects", placement: "hero" })
+            }
+          >
+            <span>{t("hero.viewProjects")}</span>
+            <FaArrowRight className="btn-icon btn-icon--directional" />
+          </Link>
+        </motion.div>
 
         <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
-          <PreviewCvModal />
+          <a
+            href={CV_FILES[lang]}
+            download
+            className="btn-hero-secondary"
+            onClick={() =>
+              track("cv_download", { cv_language: lang, placement: "hero" })
+            }
+          >
+            <span>{t("cv.downloadButton")}</span>
+            <FaFileDownload className="btn-icon" />
+          </a>
+        </motion.div>
+
+        <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
+          <a
+            href="#hire"
+            className="btn-hero-secondary"
+            onClick={() =>
+              track("cta_click", { cta: "contact", placement: "hero" })
+            }
+          >
+            <span>{t("hero.contact")}</span>
+            <FaEnvelope className="btn-icon" />
+          </a>
         </motion.div>
       </motion.div>
 
@@ -202,7 +134,7 @@ const HeaderBio = ({ aboutmeData }) => {
           {i18n.language === "en" ? "Connect with me" : "تواصل معي"}
         </span>
         <div className="social-divider"></div>
-        <SocialMedia />
+        <SocialMedia placement="hero" />
       </motion.div>
     </div>
   );

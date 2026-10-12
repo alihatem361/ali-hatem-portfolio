@@ -206,42 +206,16 @@
   }
 }
 
-/* Typewriter Role */
+/* Role line */
 .hero-role {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 40px;
-}
-
-.role-prefix {
-  color: var(--text-secondary);
-}
-
-.typewriter-text {
+  font-size: 1.35rem;
+  font-weight: 600;
   color: var(--accent-color);
-  position: relative;
+  margin: 0;
 }
 
-.typewriter-cursor {
-  display: inline-block;
-  color: var(--accent-color);
-  animation: blink 1s step-end infinite;
-  margin-left: 2px;
-}
-
-@keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
+[dir="rtl"] .btn-icon--directional {
+  transform: scaleX(-1);
 }
 
 /* Hero Description */
@@ -279,8 +253,13 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary-gradient:hover {
+  color: #0a0a0a;
 }
 
 .btn-primary-gradient:hover {
@@ -313,7 +292,8 @@
 }
 
 /* Preview CV Button Styling Override */
-.hero-buttons .cv__modal__btn {
+.hero-buttons .cv__modal__btn,
+.btn-hero-secondary {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -330,7 +310,13 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
-.hero-buttons .cv__modal__btn:hover {
+.btn-hero-secondary {
+  text-decoration: none;
+}
+
+.hero-buttons .cv__modal__btn:hover,
+.btn-hero-secondary:hover {
+  color: var(--text-color);
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(212, 175, 55, 0.5);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
@@ -771,13 +757,15 @@
   }
 
   .hero-content {
-    order: 2;
+    order: 1;
     align-items: center;
   }
 
+  /* Text and actions first: recruiters on phones should see who this is and
+     what to click before scrolling past the photo. */
   .hero-image-container {
-    order: 1;
-    min-height: 400px;
+    order: 2;
+    min-height: 360px;
   }
 
   .hero-description {
@@ -811,9 +799,7 @@
   }
 
   .hero-role {
-    font-size: 1.2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    font-size: 1.05rem;
   }
 
   .hero-description p {
@@ -871,10 +857,16 @@
     padding: 0 20px;
   }
 
+  .hero-buttons > * {
+    width: 100%;
+  }
+
   .btn-primary-gradient,
+  .btn-hero-secondary,
   .hero-buttons .cv__modal__btn {
     width: 100%;
     justify-content: center;
+    padding: 12px 20px;
   }
 
   .hero-social {
@@ -928,8 +920,4 @@
     background-position: 0% center;
   }
 
-  .typewriter-cursor {
-    animation: none;
-    opacity: 1;
-  }
 }

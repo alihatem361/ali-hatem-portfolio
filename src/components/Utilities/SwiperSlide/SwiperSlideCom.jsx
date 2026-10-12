@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useMemo,
+  useRef,
+} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -19,54 +25,20 @@ import {
 } from "react-icons/fa";
 
 const EnhancedProjectSwiper = () => {
-  const [projectsData, setProjectsData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadingProgress, setLoadingProgress] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [swiperInstance, setSwiperInstance] = useState(null);
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
-  const [error, setError] = useState(null);
   const { t, i18n } = useTranslation();
   const swiperRef = useRef(null);
 
-  // Simulate loading progress
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setLoadingProgress((prev) => {
-        if (prev >= 90) {
-          clearInterval(timer);
-          return 90;
-        }
-        return prev + Math.random() * 15;
-      });
-    }, 100);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  // Fetch projects data when language changes
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setIsLoading(true);
-        setError(null);
-
-        const visibleProjects = getVisibleProjectsForLanguage(i18n.language);
-
-        // Simulate network delay for smooth loading animation
-        setTimeout(() => {
-          setProjectsData(visibleProjects || []);
-          setLoadingProgress(100);
-          setTimeout(() => setIsLoading(false), 300);
-        }, 1200);
-      } catch (err) {
-        setError("Failed to load projects. Please try again.");
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
+  // Content is bundled at build time, so the list is derived during render
+  // (and therefore present in the prerendered HTML).
+  // Featured projects (a CMS flag) lead; without any, every visible one shows.
+  const projectsData = useMemo(() => {
+    const visibleProjects = getVisibleProjectsForLanguage(i18n.language);
+    const featured = visibleProjects.filter((project) => project.featured);
+    return featured.length ? featured : visibleProjects;
   }, [i18n.language]);
 
   const toggleAutoPlay = useCallback(() => {
@@ -85,7 +57,7 @@ const EnhancedProjectSwiper = () => {
   // Keyboard navigation
   const handleKeyPress = useCallback(
     (e) => {
-      if (!swiperInstance || isLoading) return;
+      if (!swiperInstance) return;
 
       switch (e.key) {
         case "ArrowLeft":
@@ -106,7 +78,7 @@ const EnhancedProjectSwiper = () => {
           break;
       }
     },
-    [swiperInstance, isLoading, toggleAutoPlay],
+    [swiperInstance, toggleAutoPlay],
   );
 
   useEffect(() => {
@@ -167,51 +139,6 @@ const EnhancedProjectSwiper = () => {
       swiperInstance.autoplay.start();
     }
   }, [swiperInstance, isAutoPlay]);
-
-  // Loading Component
-  const LoadingComponent = () => (
-    <div className="enhanced-loader">
-      <div className="loader-background">
-        <div className="loader-content">
-          <div className="loader-animation">
-            <div className="loader-circle"></div>
-            <div className="loader-pulse"></div>
-          </div>
-          <h3 className="loader-title">Loading Amazing Projects</h3>
-          <p className="loader-description">
-            Preparing something special for you...
-          </p>
-          <div className="progress-container">
-            <div
-              className="progress-bar"
-              style={{ width: `${loadingProgress}%` }}
-            ></div>
-            <span className="progress-text">
-              {Math.round(loadingProgress)}%
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-
-  // Error Component
-  const ErrorComponent = () => (
-    <div className="error-container">
-      <div className="error-content">
-        <div className="error-icon">⚠️</div>
-        <h3>Oops! Something went wrong</h3>
-        <p>{error}</p>
-        <button className="retry-btn" onClick={() => window.location.reload()}>
-          Try Again
-        </button>
-      </div>
-    </div>
-  );
-
-  if (error) {
-    return <ErrorComponent />;
-  }
 
   if (!projectsData || projectsData.length === 0) {
     return (
@@ -371,7 +298,7 @@ const EnhancedProjectSwiper = () => {
           {projectsData.map((project, index) => (
             <SwiperSlide key={project.id || index} className="enhanced-slide">
               <div className="slide-content">
-                <PojectItem project={project} />
+                <PojectItem project={project} placement="home_carousel" />
               </div>
             </SwiperSlide>
           ))}
